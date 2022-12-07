@@ -11,58 +11,109 @@ public class Node : MonoBehaviour
     [SerializeField] NodeData _nodeData;
 
     private int id;
-    private TMP_Text _titleText;
-    private TMP_Text _descriptionText;
+    [SerializeField] private TMP_Text _titleText;
+    [SerializeField] private TMP_Text _descriptionText;
+    [SerializeField] private List<Node> _connectedNodes;
 
+    [SerializeField] private GameObject popUpNode;
+    private TMP_Text popUpNodeText;
+    private bool popUpNodeIsOn;
     private string _name;
-    private Node[] _connectedNodes;
-
-    private bool canTravelTo;
+    public bool canTravelTo;
     private bool playerTravelAlready;
 
     Color cantTravelColor;
     Color canTravelColor;
     Color travelAlreadyColor;
+    Color InNodeColor;
 
-    private Image _image;
+    private Sprite backGroundSprite;
     private float dangerPercentage;
     private float amountOfFuelNeeded;
 
+    private Image _image;
+    private Vector3 mousePosition;
+    private Vector3 mousePositionOld;
+
+    private float popUpNodeYChange;
+    private float popUpNodeXChange;
+    private Map _map;
+    private bool canClickMap;
+    private NodeHolder _nodeHolder;
+
+
     private void Awake()
     {
+        _image = GetComponent<Image>();
+        popUpNodeText = popUpNode.GetComponentInChildren<TMP_Text>();
+
         InitiateNode();
-        if (!canTravelTo)
-            _image.color = cantTravelColor;
-        else
-            _image.color = canTravelColor;
+        _image.color = !canTravelTo ? cantTravelColor : canTravelColor;
     }
 
+    private void Start()
+    {
+        _map = GetComponentInParent<Map>();
+        _nodeHolder = GetComponentInParent<NodeHolder>();
+    }
+
+    private void Update()
+    {
+        canClickMap = _map.CanClickOnMap();
+        if (!canClickMap) return;
+        PopUpController();
+    }
+
+    private void PopUpController()
+    {
+        mousePosition = Input.mousePosition;;
+        
+        if (popUpNodeIsOn)
+        {
+            var popUpRect = popUpNode.GetComponent<RectTransform>();
+            var nodeRect = GetComponent<RectTransform>();
+            var newPos = new Vector3(nodeRect.position.x + popUpNodeXChange, nodeRect.position.y - popUpNodeYChange, nodeRect.position.z);
+            popUpRect.position = newPos;
+        }
+    }
 
     private void InitiateNode()
     {
         id = _nodeData.id;
         _name = _nodeData.name;
-        _image = _nodeData._image;
-        _titleText = _nodeData.titleText;
-        _descriptionText = _nodeData.descriptionText;
+        backGroundSprite = _nodeData.backGroundSprite;
+        _titleText.text = _nodeData.titleText;
+        _descriptionText.text = _nodeData.descriptionText;
         cantTravelColor = _nodeData.cantTravelColor;
         canTravelColor = _nodeData.canTravelColor;
         travelAlreadyColor = _nodeData.travelAlreadyColor;
         dangerPercentage = _nodeData.dangerPercentage;
-        _connectedNodes = _nodeData.connectedNodes;
         canTravelTo = _nodeData.canTravelTo;
         playerTravelAlready = _nodeData.playerTravelAlready;
         amountOfFuelNeeded = _nodeData.amountOfFuelNeeded;
+        popUpNodeText.text = _nodeData.popUpNodeText;
+        popUpNodeYChange = _nodeData.popUpNodeYChange;
+        popUpNodeXChange = _nodeData.popUpNodeXChange;
+        InNodeColor = _nodeData.InNodeColor;
     }
 
 
     public void TravelTo()
     {
+        if (!canClickMap) return;
         if (!playerTravelAlready && canTravelTo)
         {
+            _nodeHolder.ChangeCurrNode(this);
             playerTravelAlready = true;
-            _image.color = travelAlreadyColor;
+            foreach (var node in _connectedNodes)
+            {
+                if (node._image.color == InNodeColor)
+                {
+                    node._image.color = travelAlreadyColor;
+                }
+            }
 
+            _image.color = InNodeColor;
             foreach (var node in _connectedNodes)
             {
                 if (!node.playerTravelAlready && !node.canTravelTo)
@@ -72,5 +123,49 @@ public class Node : MonoBehaviour
                 }
             }
         }
+    }
+
+    public void MouseIsOn()
+    {
+        if (!canClickMap) return;
+        if (popUpNodeIsOn) return;
+        popUpNode.SetActive(true);
+        popUpNodeIsOn = true;
+    }
+
+    public void MouseIsOff()
+    {
+        if (!canClickMap) return;
+        popUpNode.SetActive(false);
+        popUpNodeIsOn = false;
+    }
+
+    public bool GetAlreadyTravelTo()
+    {
+        return playerTravelAlready;
+    }
+
+    public List<Node> GetConnectedNodes()
+    {
+        return _connectedNodes;
+    }
+
+    public void MackCantCanVisit()
+    {
+        canTravelTo = false;
+        if (!playerTravelAlready)
+        {
+            _image.color = cantTravelColor;
+        }
+    }
+
+    public Color GetInNodeColor()
+    {
+        return InNodeColor;
+    }
+
+    public void ChangeColorNode(Color newColor)
+    {
+        _image.color = newColor;
     }
 }

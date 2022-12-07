@@ -12,15 +12,17 @@ public class NodeData : ScriptableObject
     [Header("General")]
     public int id;
     public string nameOfNode = "Node";
-    public Image _image;
+    public Sprite backGroundSprite;
     [Space(20)]
     
     [Header("Text")]
-    public TMP_Text titleText;
-    public TMP_Text descriptionText;
+    public string titleText;
+    public string descriptionText;
+    public string popUpNodeText;
     [Space(20)]
     
     [Header("Colors")] 
+    public Color InNodeColor = Color.yellow;
     public Color cantTravelColor = Color.black;
     public Color canTravelColor = Color.white;
     public Color travelAlreadyColor = Color.red;
@@ -28,11 +30,16 @@ public class NodeData : ScriptableObject
     
     [Header("Travel")]
     public float dangerPercentage;
-    public Node[] connectedNodes;
+    public List<Node> connectedNodes;
     public bool canTravelTo = false;
     public bool playerTravelAlready = false;
     [Space(20)]
     
     [Header("Requirement")]
     public float amountOfFuelNeeded;
+    
+    [Header("PopUp")]
+    public float popUpNodeYChange = 50f;
+    public float popUpNodeXChange = 50f;
+
 }
