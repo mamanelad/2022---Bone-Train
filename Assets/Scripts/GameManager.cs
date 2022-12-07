@@ -1,12 +1,16 @@
 using System;
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 [DefaultExecutionOrder(-999)]
 public class GameManager : MonoBehaviour
 {
     public static GameManager Shared { get; set; }
+
+    [HideInInspector] public int SoulStones { get; set; }
+    [HideInInspector] public int GoodSouls { get; set; }
+    [HideInInspector] public int BadSouls { get; set; }
+
+    [HideInInspector] public Morale morale = Morale.Neutral;
 
     private void Awake()
     {
@@ -18,6 +22,18 @@ public class GameManager : MonoBehaviour
         else
             Destroy(gameObject);
     }
-    
-    
+
+    private void Update()
+    {
+        print(SoulStones);
+    }
+}
+
+public enum Morale : int
+{
+    VeryBad,
+    Bad,
+    Neutral,
+    Good,
+    VeryGood,
 }

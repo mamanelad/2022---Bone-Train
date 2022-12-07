@@ -9,13 +9,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f70644a41e4ffff4181cb001be470b10, type: 3}
-  m_Name: New Event Data
+  m_Script: {fileID: 11500000, guid: af40f787166e700409d25022cecd13ef, type: 3}
+  m_Name: New Level Data
   m_EditorClassIdentifier: 
-  background: {fileID: 0}
-  foreground: {fileID: 0}
-  character: {fileID: 0}
-  textTitle: 
-  textBody: 
-  buttonLeft: {fileID: 0}
-  buttonRight: {fileID: 0}
+  interactions:
+  - {fileID: 11400000, guid: 9e3a03edd4907cd4fad49dbf143e306f, type: 2}
+  - {fileID: 11400000, guid: 9e3a03edd4907cd4fad49dbf143e306f, type: 2}
+  delayBetweenInteractions: 10
