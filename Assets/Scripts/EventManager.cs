@@ -1,4 +1,5 @@
 using System;
+using System.Collections;
 using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
@@ -7,7 +8,7 @@ public class EventManager : MonoBehaviour
 {
     #region Inspector Control
 
-    [SerializeField] private EventData data;
+    public EventData data;
 
     [Space(20)]
     [Header("Artwork")]
@@ -31,11 +32,16 @@ public class EventManager : MonoBehaviour
     
     [SerializeField] private TextMeshProUGUI textBody;
 
+    [Space(20)] 
+    [Header("Others")] 
+    [SerializeField] private float clickDelay = 1f;
+
     #endregion
 
     #region Class Variables
 
     private Interaction curInteraction;
+    private bool isEventOver;
 
     #endregion
 
@@ -46,10 +52,10 @@ public class EventManager : MonoBehaviour
         buttonRight.SetActive(false);
         buttonLeft.SetActive(false);
         
-        ConfigureEvent();
+        //ConfigureEvent();
     }
     
-    private void ConfigureEvent()
+    public void ConfigureEvent()
     {
         if (background != null)
             background.sprite = data.background;
@@ -103,10 +109,21 @@ public class EventManager : MonoBehaviour
 
     public void InteractionAction(bool accept)
     {
+        if (isEventOver)
+            return;
+        
         var action = accept ? curInteraction.interactionAccept : curInteraction.interactionDeny;
         GameManager.Shared.SoulStones += action.soulStones;
         GameManager.Shared.GoodSouls += action.goodSouls;
         GameManager.Shared.BadSouls += action.badSouls;
+        StartCoroutine(FinishEvent());
+    }
+
+    private IEnumerator FinishEvent()
+    {
+        isEventOver = true;
+        yield return new WaitForSecondsRealtime(clickDelay);
+        LevelManager.Shared.FinishEvent();
     }
 
 }
