@@ -126,5 +126,5 @@ public class EventManager : MonoBehaviour
         yield return new WaitForSecondsRealtime(clickDelay);
         LevelManager.Shared.FinishEvent();
     }
-
+    
 }

@@ -14,5 +14,5 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   interactions:
   - {fileID: 11400000, guid: 9e3a03edd4907cd4fad49dbf143e306f, type: 2}
-  - {fileID: 11400000, guid: 9e3a03edd4907cd4fad49dbf143e306f, type: 2}
-  delayBetweenInteractions: 10
+  - {fileID: 11400000, guid: 2755bf51d353ec74e8c38f705b5922c0, type: 2}
+  delayBetweenInteractions: 5
