@@ -430,7 +430,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 61cccc5cc1c67c74a89248ad75865c9e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  data: {fileID: 11400000, guid: 1424f4c239909754781087950a63af4d, type: 2}
+  data: {fileID: 0}
   uiEvent: {fileID: 2056801261}
 --- !u!1 &1034460424
 GameObject:
@@ -545,6 +545,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1087cd3f00155da418aaacf6cfc76723, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  levelManager: {fileID: 737289601}
+  ld: {fileID: 11400000, guid: f932f7aea25990a4b873b423af122054, type: 2}
   morale: 0
 --- !u!4 &1364759498
 Transform:
