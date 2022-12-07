@@ -34,7 +34,7 @@ MonoBehaviour:
       soulStones: 0
       goodSouls: 50
       badSouls: 20
-      moraleImpact: 2
+      moraleImpact: 4
     interactionDeny:
       soulStones: 0
       goodSouls: 0

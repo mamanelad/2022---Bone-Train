@@ -15,8 +15,8 @@ MonoBehaviour:
   background: {fileID: 21300000, guid: f7631454c5d6f4f4db8cc32eb25c795e, type: 3}
   foreground: {fileID: 21300000, guid: f214715b9508f8942b47b8d3c45c49c8, type: 3}
   character: {fileID: 21300000, guid: f56e811244a600e4abec22226094a23a, type: 3}
-  buttonLeft: {fileID: 21300000, guid: adbf4c837be6b8143be92a4e0b253057, type: 3}
-  buttonRight: {fileID: 21300000, guid: 0410684883c37354cbb9371405a1507e, type: 3}
+  buttonDeny: {fileID: 21300000, guid: adbf4c837be6b8143be92a4e0b253057, type: 3}
+  buttonAccept: {fileID: 21300000, guid: 0410684883c37354cbb9371405a1507e, type: 3}
   buttonSingle: {fileID: 0}
   textTitle: Miser
   interactions:
