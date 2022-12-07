@@ -53,7 +53,7 @@ public class LevelManager : MonoBehaviour
 
         InEvent = true;
         Time.timeScale = 0;
-        curEvent = Instantiate(eventPrefab, transform.position, transform.rotation);
+        curEvent = Instantiate(eventPrefab);
         curEvent.transform.parent = uiPanel.transform;
         var eventManager = curEvent.GetComponent<EventManager>();
         eventManager.data = data.interactions[interactionIndex];

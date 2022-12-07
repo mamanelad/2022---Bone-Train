@@ -47,7 +47,6 @@ public class EventManager : MonoBehaviour
 
     private void Start()
     {
-        curInteraction = GetInteraction();
         buttonSingle.SetActive(false);
         buttonRight.SetActive(false);
         buttonLeft.SetActive(false);
@@ -57,6 +56,8 @@ public class EventManager : MonoBehaviour
     
     public void ConfigureEvent()
     {
+        curInteraction = GetInteraction();
+        
         if (background != null)
             background.sprite = data.background;
 
