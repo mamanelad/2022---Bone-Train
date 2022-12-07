@@ -12,11 +12,24 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f70644a41e4ffff4181cb001be470b10, type: 3}
   m_Name: A1.1
   m_EditorClassIdentifier: 
-  background: {fileID: 0}
-  foreground: {fileID: 0}
-  character: {fileID: 0}
+  background: {fileID: 21300000, guid: 294c2702d9a51d9479a40c7f2aaffde7, type: 3}
+  foreground: {fileID: 21300000, guid: f214715b9508f8942b47b8d3c45c49c8, type: 3}
+  character: {fileID: 21300000, guid: 9349fca17bc16214bab0cadc787580d0, type: 3}
   buttonLeft: {fileID: 0}
   buttonRight: {fileID: 0}
-  buttonSingle: {fileID: 0}
-  textTitle: 
-  interactions: []
+  buttonSingle: {fileID: 21300000, guid: c6d0c2dfda03e7c43802875f6a9195e5, type: 3}
+  textTitle: Toll road
+  interactions:
+  - morale: 2
+    textBody: Standing guard at the checkpoint, the Imp presses you- "50 Souls for
+      safe passage"
+    interactionAccept:
+      soulStones: 0
+      goodSouls: -50
+      badSouls: 0
+      moraleImpact: 2
+    interactionDeny:
+      soulStones: 0
+      goodSouls: 0
+      badSouls: 0
+      moraleImpact: 0
