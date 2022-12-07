@@ -34,4 +34,5 @@ public class InteractionAction
     public int soulStones;
     public int goodSouls;
     public int badSouls;
+    public Morale moraleImpact;
 }
