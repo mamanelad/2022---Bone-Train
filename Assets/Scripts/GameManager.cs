@@ -6,6 +6,10 @@ public class GameManager : MonoBehaviour
 {
     public static GameManager Shared { get; set; }
 
+    [SerializeField] private LevelManager levelManager;
+
+    public LevelData ld;
+
     [HideInInspector] public int SoulStones { get; set; }
     [HideInInspector] public int GoodSouls { get; set; }
     [HideInInspector] public int BadSouls { get; set; }
@@ -25,8 +29,12 @@ public class GameManager : MonoBehaviour
 
     private void Update()
     {
+        if (Input.GetKeyDown(KeyCode.A))
+            levelManager.StartLevel(ld);
+        
         print(SoulStones);
     }
+    
 }
 
 public enum Morale : int

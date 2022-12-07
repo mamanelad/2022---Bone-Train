@@ -44,12 +44,12 @@ public class LevelManager : MonoBehaviour
             EndLevel();
             return;
         }
-
+        
         InEvent = true;
         Time.timeScale = 0;
+        uiEvent.SetActive(true);
         var eventManager = uiEvent.GetComponent<EventManager>();
         eventManager.data = data.interactions[interactionIndex];
-        uiEvent.SetActive(true);
         eventManager.ConfigureEvent();
         timer = data.delayBetweenInteractions;
         interactionIndex += 1;
@@ -62,14 +62,16 @@ public class LevelManager : MonoBehaviour
         Time.timeScale = 1;
     }
     
-    public void StartLevel(LevelData levelData)
+    public bool StartLevel(LevelData levelData)
     {
         if (InLevel)
-            return;
+            return false;
 
         InLevel = true;
         data = levelData;
+        interactionIndex = 0;
         timer = data.delayBetweenInteractions;
+        return true;
     }
 
     public void EndLevel()
