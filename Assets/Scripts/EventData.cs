@@ -10,8 +10,8 @@ public class EventData : ScriptableObject
     public Sprite character;
 
     [Header("Button Artwork")]
-    public Sprite buttonLeft;
-    public Sprite buttonRight;
+    public Sprite buttonDeny;
+    public Sprite buttonAccept;
     public Sprite buttonSingle;
 
     [Space(20)] [Header("Text")] 

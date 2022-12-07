@@ -15,9 +15,9 @@ MonoBehaviour:
   background: {fileID: 21300000, guid: f7631454c5d6f4f4db8cc32eb25c795e, type: 3}
   foreground: {fileID: 21300000, guid: 1701f5325e211814dbdee77be3843b87, type: 3}
   character: {fileID: 21300000, guid: 7b513ec7032ff1f44afa49d000e0c92c, type: 3}
-  buttonLeft: {fileID: 21300000, guid: adbf4c837be6b8143be92a4e0b253057, type: 3}
-  buttonRight: {fileID: 21300000, guid: 0410684883c37354cbb9371405a1507e, type: 3}
-  buttonSingle: {fileID: 0}
+  buttonDeny: {fileID: 21300000, guid: adbf4c837be6b8143be92a4e0b253057, type: 3}
+  buttonAccept: {fileID: 21300000, guid: 0410684883c37354cbb9371405a1507e, type: 3}
+  buttonSingle: {fileID: 21300000, guid: 887b7e09991949647930e583d39b659d, type: 3}
   textTitle: Title Deamon
   interactions:
   - morale: 2
@@ -29,7 +29,9 @@ MonoBehaviour:
       soulStones: 10
       goodSouls: 10
       badSouls: 10
+      moraleImpact: 2
     interactionDeny:
       soulStones: -10
       goodSouls: -10
       badSouls: -10
+      moraleImpact: 0

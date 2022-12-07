@@ -19,9 +19,9 @@ public class EventManager : MonoBehaviour
 
     [SerializeField] private Image character;
 
-    [SerializeField] private GameObject buttonRight;
+    [SerializeField] private GameObject buttonAccept;
     
-    [SerializeField] private GameObject buttonLeft;
+    [SerializeField] private GameObject buttonDeny;
     
     [SerializeField] private GameObject buttonSingle;
     
@@ -49,10 +49,10 @@ public class EventManager : MonoBehaviour
     {
         curInteraction = GetInteraction();
         buttonSingle.SetActive(false);
-        buttonRight.SetActive(false);
-        buttonLeft.SetActive(false);
+        buttonAccept.SetActive(false);
+        buttonDeny.SetActive(false);
         
-        //ConfigureEvent();
+        ConfigureEvent();
     }
     
     public void ConfigureEvent()
@@ -73,13 +73,13 @@ public class EventManager : MonoBehaviour
         }
         else
         {
-            buttonRight.SetActive(true);
-            buttonLeft.SetActive(true);
-            if (buttonRight != null)
-                buttonRight.GetComponent<Image>().sprite = data.buttonRight;
+            buttonAccept.SetActive(true);
+            buttonDeny.SetActive(true);
+            if (buttonAccept != null)
+                buttonAccept.GetComponent<Image>().sprite = data.buttonAccept;
         
-            if (buttonLeft != null)
-                buttonLeft.GetComponent<Image>().sprite = data.buttonLeft;
+            if (buttonDeny != null)
+                buttonDeny.GetComponent<Image>().sprite = data.buttonDeny;
         }
         
         if (textBody != null)
