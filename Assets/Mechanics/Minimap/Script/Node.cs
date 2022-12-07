@@ -5,37 +5,57 @@ using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
 using static Map;
+
 public class Node : MonoBehaviour
 {
-    public int id;
+    [SerializeField] NodeData _nodeData;
 
-    [SerializeField] private TMP_Text _titleText;
-    [SerializeField] private TMP_Text _descriptionText;
+    private int id;
+    private TMP_Text _titleText;
+    private TMP_Text _descriptionText;
 
-    [SerializeField] private string _name = "Node";
-    [SerializeField] private Node[] _connectedNodes;
+    private string _name;
+    private Node[] _connectedNodes;
 
-    [SerializeField] bool canTravelTo = false;
-    [SerializeField] private bool playerTravelAlready = false;
-    
-    [SerializeField] Color cantTravelColor = Color.black;
-    [SerializeField] Color canTravelColor = Color.white;
-    [SerializeField] Color travelAlreadyColor = Color.red;
-    
+    private bool canTravelTo;
+    private bool playerTravelAlready;
+
+    Color cantTravelColor;
+    Color canTravelColor;
+    Color travelAlreadyColor;
+
     private Image _image;
+    private float dangerPercentage;
+    private float amountOfFuelNeeded;
 
     private void Awake()
     {
-        _name += id;
-        _image = GetComponent<Image>();
-        if (!canTravelTo) 
+        InitiateNode();
+        if (!canTravelTo)
             _image.color = cantTravelColor;
         else
             _image.color = canTravelColor;
     }
-    
 
-    //This function is called when you click the node
+
+    private void InitiateNode()
+    {
+        id = _nodeData.id;
+        _name = _nodeData.name;
+        _image = _nodeData._image;
+        _titleText = _nodeData.titleText;
+        _descriptionText = _nodeData.descriptionText;
+        cantTravelColor = _nodeData.cantTravelColor;
+        canTravelColor = _nodeData.canTravelColor;
+        travelAlreadyColor = _nodeData.travelAlreadyColor;
+        dangerPercentage = _nodeData.dangerPercentage;
+        _connectedNodes = _nodeData.connectedNodes;
+        canTravelTo = _nodeData.canTravelTo;
+        playerTravelAlready = _nodeData.playerTravelAlready;
+        amountOfFuelNeeded = _nodeData.amountOfFuelNeeded;
+    }
+
+
     public void TravelTo()
     {
         if (!playerTravelAlready && canTravelTo)

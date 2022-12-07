@@ -32,9 +32,13 @@ public class Repository : MonoBehaviour
 
     public bool EnoughResources()
     {
-        foreach (var item in r)
+        foreach (var item in repDic)
         {
-            
+            var howMuchThePlayerHave = mapRepository.repDic[item.Key];
+            if (howMuchThePlayerHave < item.Value)
+                return false;
         }
+
+        return true;
     }
 }
