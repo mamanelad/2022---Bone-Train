@@ -18,9 +18,11 @@ public class EventManager : MonoBehaviour
 
     [SerializeField] private Image character;
 
-    [SerializeField] private Image buttonRight;
+    [SerializeField] private GameObject buttonRight;
     
-    [SerializeField] private Image buttonLeft;
+    [SerializeField] private GameObject buttonLeft;
+    
+    [SerializeField] private GameObject buttonSingle;
     
     [Space(20)]
     [Header("Text")]
@@ -49,13 +51,23 @@ public class EventManager : MonoBehaviour
         
         if (character != null)
             character.sprite = data.character;
-        
-        if (buttonRight != null)
-            buttonRight.sprite = data.buttonRight;
-        
-        if (buttonLeft != null)
-            buttonLeft.sprite = data.buttonLeft;
 
+        if (data.buttonSingle)
+        {
+            buttonSingle.SetActive(true);
+            buttonSingle.GetComponent<Image>().sprite = data.buttonSingle;
+        }
+        else
+        {
+            buttonRight.SetActive(true);
+            buttonLeft.SetActive(true);
+            if (buttonRight != null)
+                buttonRight.GetComponent<Image>().sprite = data.buttonRight;
+        
+            if (buttonLeft != null)
+                buttonLeft.GetComponent<Image>().sprite = data.buttonLeft;
+        }
+        
         if (textBody != null)
             textBody.text = curInteraction.textBody;
 

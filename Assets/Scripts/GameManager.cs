@@ -1,3 +1,4 @@
+using System;
 using UnityEngine;
 
 [DefaultExecutionOrder(-999)]
@@ -21,7 +22,11 @@ public class GameManager : MonoBehaviour
         else
             Destroy(gameObject);
     }
-    
+
+    private void Update()
+    {
+        print(SoulStones);
+    }
 }
 
 public enum Morale : int
