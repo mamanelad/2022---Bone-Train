@@ -3,16 +3,20 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
-[CreateAssetMenu(menuName = "Event")]
+[CreateAssetMenu(menuName = "Interaction")]
 public class EventData : ScriptableObject
 {
+    [Header("Artwork")]
     public Sprite background;
     public Sprite foreground;
     public Sprite character;
 
-    public string textTitle;
-    public string textBody;
-
+    [Header("Button Artwork")]
     public Sprite buttonLeft;
     public Sprite buttonRight;
+
+    [Space(20)] [Header("Text")] 
+    public string textTitle;
+    [TextArea] public string textBody;
 }
+

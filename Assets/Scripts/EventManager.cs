@@ -1,6 +1,8 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using TMPro;
+using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -8,6 +10,9 @@ public class EventManager : MonoBehaviour
 {
     [SerializeField] private EventData data;
 
+    [Space(20)]
+    [Header("Artwork")]
+    
     [SerializeField] private Image background;
 
     [SerializeField] private Image foreground;
@@ -17,10 +22,13 @@ public class EventManager : MonoBehaviour
     [SerializeField] private Image buttonRight;
     
     [SerializeField] private Image buttonLeft;
-
-    [SerializeField] private TextMeshProUGUI textBody;
-
+    
+    [Space(20)]
+    [Header("Text")]
+    
     [SerializeField] private TextMeshProUGUI textTitle;
+    
+    [SerializeField] private TextMeshProUGUI textBody;
 
     void Start()
     {
@@ -44,7 +52,6 @@ public class EventManager : MonoBehaviour
         
         if (textTitle != null)
             textTitle.text = data.textTitle;
-
     }
     
 }
