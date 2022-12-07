@@ -1,13 +1,12 @@
 using System;
-using System.Collections;
-using System.Collections.Generic;
 using TMPro;
-using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.UI;
 
 public class EventManager : MonoBehaviour
 {
+    #region Inspector Control
+
     [SerializeField] private EventData data;
 
     [Space(20)]
@@ -30,8 +29,18 @@ public class EventManager : MonoBehaviour
     
     [SerializeField] private TextMeshProUGUI textBody;
 
-    void Start()
+    #endregion
+
+    #region Class Variables
+
+    private Interaction curInteraction;
+
+    #endregion
+
+    private void Start()
     {
+        curInteraction = GetInteraction();
+        
         if (background != null)
             background.sprite = data.background;
 
@@ -48,18 +57,17 @@ public class EventManager : MonoBehaviour
             buttonLeft.sprite = data.buttonLeft;
 
         if (textBody != null)
-            textBody.text = GetTextBody();
-
+            textBody.text = curInteraction.textBody;
 
         if (textTitle != null)
             textTitle.text = data.textTitle;
     }
-
-    private string GetTextBody()
+    
+    private Interaction GetInteraction()
     {
         var morale = GameManager.Shared.morale;
         var bestDistance = Math.Abs(morale - data.interactions[0].morale);
-        var curTextBody = data.interactions[0].textBody;
+        var curInter = data.interactions[0];
         
         foreach (var interaction in data.interactions)
         {
@@ -67,10 +75,18 @@ public class EventManager : MonoBehaviour
             if (bestDistance > curDistance)
             {
                 bestDistance = curDistance;
-                curTextBody = interaction.textBody;
+                curInter = interaction;
             }
         }
-        return curTextBody;
+        return curInter;
+    }
+
+    public void InteractionAction(bool accept)
+    {
+        var action = accept ? curInteraction.interactionAccept : curInteraction.interactionDeny;
+        GameManager.Shared.SoulStones += action.soulStones;
+        GameManager.Shared.GoodSouls += action.goodSouls;
+        GameManager.Shared.BadSouls += action.badSouls;
     }
     
 }
