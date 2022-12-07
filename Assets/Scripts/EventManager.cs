@@ -42,7 +42,15 @@ public class EventManager : MonoBehaviour
     private void Start()
     {
         curInteraction = GetInteraction();
+        buttonSingle.SetActive(false);
+        buttonRight.SetActive(false);
+        buttonLeft.SetActive(false);
         
+        ConfigureEvent();
+    }
+    
+    private void ConfigureEvent()
+    {
         if (background != null)
             background.sprite = data.background;
 
@@ -100,5 +108,5 @@ public class EventManager : MonoBehaviour
         GameManager.Shared.GoodSouls += action.goodSouls;
         GameManager.Shared.BadSouls += action.badSouls;
     }
-    
+
 }
