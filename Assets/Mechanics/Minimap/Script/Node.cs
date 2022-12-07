@@ -41,6 +41,7 @@ public class Node : MonoBehaviour
     private bool canClickMap;
     private NodeHolder _nodeHolder;
 
+    private Canvas _canvas;
 
     private void Awake()
     {
@@ -53,6 +54,7 @@ public class Node : MonoBehaviour
 
     private void Start()
     {
+        _canvas = GetComponentInParent<Canvas>();
         _map = GetComponentInParent<Map>();
         _nodeHolder = GetComponentInParent<NodeHolder>();
     }
@@ -66,13 +68,16 @@ public class Node : MonoBehaviour
 
     private void PopUpController()
     {
-        mousePosition = Input.mousePosition;;
-        
+        if (!canTravelTo) return;
+        var newXChange = popUpNodeXChange * _canvas.scaleFactor;
+        var newYChange = popUpNodeYChange * _canvas.scaleFactor;
+
         if (popUpNodeIsOn)
         {
             var popUpRect = popUpNode.GetComponent<RectTransform>();
             var nodeRect = GetComponent<RectTransform>();
-            var newPos = new Vector3(nodeRect.position.x + popUpNodeXChange, nodeRect.position.y - popUpNodeYChange, nodeRect.position.z);
+            var newPos = new Vector3(nodeRect.position.x + newXChange, nodeRect.position.y - newYChange,
+                nodeRect.position.z);
             popUpRect.position = newPos;
         }
     }
@@ -127,6 +132,7 @@ public class Node : MonoBehaviour
 
     public void MouseIsOn()
     {
+        if (!canTravelTo) return;
         if (!canClickMap) return;
         if (popUpNodeIsOn) return;
         popUpNode.SetActive(true);

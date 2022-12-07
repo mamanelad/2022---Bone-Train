@@ -27,5 +27,5 @@ MonoBehaviour:
   canTravelTo: 1
   playerTravelAlready: 0
   amountOfFuelNeeded: 0
-  popUpNodeYChange: 10
-  popUpNodeXChange: 10
+  popUpNodeYChange: 9
+  popUpNodeXChange: 9
