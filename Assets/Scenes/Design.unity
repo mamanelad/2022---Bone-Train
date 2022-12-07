@@ -631,5 +631,9 @@ PrefabInstance:
       propertyPath: m_Name
       value: Event
       objectReference: {fileID: 0}
+    - target: {fileID: 8040730133793856703, guid: 5dfc3128221a8df42aac269dfed79bb5, type: 3}
+      propertyPath: data
+      value: 
+      objectReference: {fileID: 11400000, guid: 453470c3f7dfe9c47a34245d579b42af, type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 5dfc3128221a8df42aac269dfed79bb5, type: 3}
