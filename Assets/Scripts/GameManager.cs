@@ -8,6 +8,8 @@ public class GameManager : MonoBehaviour
 {
     public static GameManager Shared { get; set; }
 
+    [HideInInspector] public Morale morale = Morale.Neutral;
+
     private void Awake()
     {
         if (Shared == null)
@@ -19,5 +21,13 @@ public class GameManager : MonoBehaviour
             Destroy(gameObject);
     }
     
-    
+}
+
+public enum Morale : int
+{
+    VeryBad,
+    Bad,
+    Neutral,
+    Good,
+    VeryGood,
 }

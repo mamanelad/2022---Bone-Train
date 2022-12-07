@@ -17,6 +17,12 @@ public class EventData : ScriptableObject
 
     [Space(20)] [Header("Text")] 
     public string textTitle;
-    [TextArea] public string textBody;
+    public List<Interaction> interactions;
 }
 
+[System.Serializable]
+public class Interaction
+{
+    public Morale morale;
+    [TextArea] public string textBody;
+}

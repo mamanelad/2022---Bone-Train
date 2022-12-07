@@ -46,12 +46,31 @@ public class EventManager : MonoBehaviour
         
         if (buttonLeft != null)
             buttonLeft.sprite = data.buttonLeft;
-        
+
         if (textBody != null)
-            textBody.text = data.textBody;
-        
+            textBody.text = GetTextBody();
+
+
         if (textTitle != null)
             textTitle.text = data.textTitle;
+    }
+
+    private string GetTextBody()
+    {
+        var morale = GameManager.Shared.morale;
+        var bestDistance = Math.Abs(morale - data.interactions[0].morale);
+        var curTextBody = data.interactions[0].textBody;
+        
+        foreach (var interaction in data.interactions)
+        {
+            var curDistance = Math.Abs(morale - interaction.morale);
+            if (bestDistance > curDistance)
+            {
+                bestDistance = curDistance;
+                curTextBody = interaction.textBody;
+            }
+        }
+        return curTextBody;
     }
     
 }
