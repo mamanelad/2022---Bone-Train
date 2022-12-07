@@ -23,7 +23,7 @@ public class LevelManager : MonoBehaviour
     private void Start()
     {
         uiEvent.SetActive(false);
-        StartLevel(data);
+        //StartLevel(data);
     }
     
     private void Update()
@@ -66,7 +66,7 @@ public class LevelManager : MonoBehaviour
     {
         if (InLevel)
             return false;
-
+        
         InLevel = true;
         data = levelData;
         interactionIndex = 0;
