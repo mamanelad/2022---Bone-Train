@@ -10,7 +10,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: f70644a41e4ffff4181cb001be470b10, type: 3}
-  m_Name: B1.2
+  m_Name: 3.2
   m_EditorClassIdentifier: 
   background: {fileID: 21300000, guid: 2e5bb61ed52027045a9ea3cac95bf9e7, type: 3}
   foreground: {fileID: 21300000, guid: 1701f5325e211814dbdee77be3843b87, type: 3}
@@ -34,9 +34,9 @@ MonoBehaviour:
       soulStones: 0
       goodSouls: 50
       badSouls: 20
-      moraleImpact: 4
+      moraleImpact: 3
     interactionDeny:
       soulStones: 0
       goodSouls: 0
       badSouls: 0
-      moraleImpact: 0
+      moraleImpact: 1

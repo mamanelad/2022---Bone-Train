@@ -10,29 +10,26 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: f70644a41e4ffff4181cb001be470b10, type: 3}
-  m_Name: A1.2
+  m_Name: 4.2
   m_EditorClassIdentifier: 
-  background: {fileID: 21300000, guid: f7631454c5d6f4f4db8cc32eb25c795e, type: 3}
-  foreground: {fileID: 21300000, guid: f214715b9508f8942b47b8d3c45c49c8, type: 3}
-  character: {fileID: 21300000, guid: f56e811244a600e4abec22226094a23a, type: 3}
+  background: {fileID: 21300000, guid: 2e5bb61ed52027045a9ea3cac95bf9e7, type: 3}
+  foreground: {fileID: 21300000, guid: 1701f5325e211814dbdee77be3843b87, type: 3}
+  character: {fileID: 21300000, guid: b110bcf2e03b3854b9ab886d827d18b5, type: 3}
   buttonDeny: {fileID: 21300000, guid: adbf4c837be6b8143be92a4e0b253057, type: 3}
   buttonAccept: {fileID: 21300000, guid: 0410684883c37354cbb9371405a1507e, type: 3}
-  buttonSingle: {fileID: 0}
-  textTitle: Miser
+  buttonSingle: {fileID: 21300000, guid: 0410684883c37354cbb9371405a1507e, type: 3}
+  textTitle: hell breaks loose
   interactions:
   - morale: 2
-    textBody: 'With a sinister grin, the merchant from hell approaches you, eager
-      to strike a deal:
-
-      "Friend! your engine runs light. suppose some of your
-      good souls join me, and I will reward you generously with soulstone"'
+    textBody: down the tracks you notice a gang of demons charging towards the train.
+      You and the souls must stand your ground, or perish.
     interactionAccept:
-      soulStones: 50
+      soulStones: 100
       goodSouls: -100
       badSouls: 0
-      moraleImpact: 1
+      moraleImpact: 2
     interactionDeny:
       soulStones: 0
       goodSouls: 0
       badSouls: 0
-      moraleImpact: 2
+      moraleImpact: 0

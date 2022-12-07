@@ -10,25 +10,31 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: f70644a41e4ffff4181cb001be470b10, type: 3}
-  m_Name: B1.1
+  m_Name: 2.2
   m_EditorClassIdentifier: 
-  background: {fileID: 21300000, guid: f7631454c5d6f4f4db8cc32eb25c795e, type: 3}
+  background: {fileID: 21300000, guid: 2e5bb61ed52027045a9ea3cac95bf9e7, type: 3}
   foreground: {fileID: 21300000, guid: 1701f5325e211814dbdee77be3843b87, type: 3}
-  character: {fileID: 21300000, guid: d184f130085329041b3b408d58d8a15c, type: 3}
+  character: {fileID: 21300000, guid: 55b4e640d77b3ab49b2c1463e77faf58, type: 3}
   buttonDeny: {fileID: 21300000, guid: adbf4c837be6b8143be92a4e0b253057, type: 3}
   buttonAccept: {fileID: 21300000, guid: 0410684883c37354cbb9371405a1507e, type: 3}
   buttonSingle: {fileID: 21300000, guid: 0410684883c37354cbb9371405a1507e, type: 3}
-  textTitle: 'Roadblock:'
+  textTitle: 'gathering of souls:'
   interactions:
   - morale: 2
-    textBody: The track is treacherous, and eventually leads you to halting ruins.
-      To press on, you will have to break through, burning an unfortunate amount
-      of soulstone.
+    textBody: 'Under the burned tree
+
+      dozens of souls swing , crying for help.
+
+      will
+      you cut them down and bring them along?
+
+      or will they remain in torment,
+      the ropes tight around their weak necks.'
     interactionAccept:
-      soulStones: -50
-      goodSouls: 0
-      badSouls: 0
-      moraleImpact: 2
+      soulStones: 0
+      goodSouls: 50
+      badSouls: 20
+      moraleImpact: 4
     interactionDeny:
       soulStones: 0
       goodSouls: 0

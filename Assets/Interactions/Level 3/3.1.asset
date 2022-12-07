@@ -10,26 +10,27 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: f70644a41e4ffff4181cb001be470b10, type: 3}
-  m_Name: A1.1
+  m_Name: 3.1
   m_EditorClassIdentifier: 
-  background: {fileID: 21300000, guid: 294c2702d9a51d9479a40c7f2aaffde7, type: 3}
+  background: {fileID: 21300000, guid: f7631454c5d6f4f4db8cc32eb25c795e, type: 3}
   foreground: {fileID: 21300000, guid: f214715b9508f8942b47b8d3c45c49c8, type: 3}
-  character: {fileID: 21300000, guid: 9349fca17bc16214bab0cadc787580d0, type: 3}
-  buttonLeft: {fileID: 0}
-  buttonRight: {fileID: 0}
-  buttonSingle: {fileID: 21300000, guid: c6d0c2dfda03e7c43802875f6a9195e5, type: 3}
-  textTitle: Toll road
+  character: {fileID: 21300000, guid: 89574e0c29795fe43abe552f09ef495e, type: 3}
+  buttonDeny: {fileID: 0}
+  buttonAccept: {fileID: 0}
+  buttonSingle: {fileID: 21300000, guid: 0410684883c37354cbb9371405a1507e, type: 3}
+  textTitle: 'spectral protector:'
   interactions:
   - morale: 2
-    textBody: Standing guard at the checkpoint, the Imp presses you- "50 Souls for
-      safe passage"
+    textBody: 'on a rocky perch you spot a looming figure bathed in warm light, a
+      fallen angel in soul form looks straight into your eyes and with a booming
+      voice he speaks:'
     interactionAccept:
-      soulStones: 0
-      goodSouls: -50
+      soulStones: 50
+      goodSouls: 0
       badSouls: 0
       moraleImpact: 2
     interactionDeny:
       soulStones: 0
       goodSouls: 0
       badSouls: 0
-      moraleImpact: 0
+      moraleImpact: 2

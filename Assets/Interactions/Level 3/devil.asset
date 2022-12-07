@@ -1,0 +1,41 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f70644a41e4ffff4181cb001be470b10, type: 3}
+  m_Name: devil
+  m_EditorClassIdentifier: 
+  background: {fileID: 21300000, guid: f7631454c5d6f4f4db8cc32eb25c795e, type: 3}
+  foreground: {fileID: 21300000, guid: f214715b9508f8942b47b8d3c45c49c8, type: 3}
+  character: {fileID: 21300000, guid: 7b513ec7032ff1f44afa49d000e0c92c, type: 3}
+  buttonDeny: {fileID: 0}
+  buttonAccept: {fileID: 0}
+  buttonSingle: {fileID: 21300000, guid: 0410684883c37354cbb9371405a1507e, type: 3}
+  textTitle: 'devil: Out of fuel and out of luck, your train lays dormant on the
+    track. To your side, the lord of the pit himself appears, a contract in hand:
+    "For to breathe life again into your enginedevil:'
+  interactions:
+  - morale: 2
+    textBody: 'Out of fuel and out of luck, your train lays dormant on the track.
+      To your side, the lord of the pit himself appears, a contract in hand:
+
+      "For
+      to breathe life again into your engine, permit me, and I will take some souls
+      from you, damned forever"'
+    interactionAccept:
+      soulStones: 50
+      goodSouls: -100
+      badSouls: 0
+      moraleImpact: 1
+    interactionDeny:
+      soulStones: 0
+      goodSouls: 0
+      badSouls: 0
+      moraleImpact: 2
