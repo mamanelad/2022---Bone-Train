@@ -26,14 +26,6 @@ public class GameManager : MonoBehaviour
         else
             Destroy(gameObject);
     }
-
-    private void Update()
-    {
-        if (Input.GetKeyDown(KeyCode.A))
-            levelManager.StartLevel(ld);
-        
-        print(SoulStones);
-    }
     
 }
 
