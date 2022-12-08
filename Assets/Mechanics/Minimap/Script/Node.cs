@@ -105,6 +105,7 @@ public class Node : MonoBehaviour
 
     public void TravelTo()
     {
+        _map.changeScale = true;
         if (!canClickMap) return;
         if (!playerTravelAlready && canTravelTo)
         {
@@ -174,5 +175,10 @@ public class Node : MonoBehaviour
     public void ChangeColorNode(Color newColor)
     {
         _image.color = newColor;
+    }
+
+    public void DisablPopUp()
+    {
+        popUpNode.SetActive(false);
     }
 }

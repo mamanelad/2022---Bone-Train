@@ -16,16 +16,53 @@ public class GameManager : MonoBehaviour
 
     [HideInInspector] public Morale morale = Morale.Neutral;
 
+
+    [SerializeField] private Map _map;
+    [SerializeField] private LevelData[] _levelsData;
+    [SerializeField] private int levelIndex;
+    public bool goToNextLevel;
     private void Awake()
     {
-        if (Shared == null)
-        {
-            Shared = this;
-            DontDestroyOnLoad(gameObject);
-        }
-        else
-            Destroy(gameObject);
+        Shared = this;
+        // if (Shared == null)
+        // {
+        //     Shared = this;
+        //     DontDestroyOnLoad(gameObject);
+        // }
+        // else
+        //     Destroy(gameObject);
     }
+
+    private void Update()
+    {
+        if (goToNextLevel)
+        {
+            NextLevel();
+        }
+    }
+
+    public void NextLevel()
+    {
+        goToNextLevel = false;
+        levelManager.StartLevel(_levelsData[levelIndex]);
+        levelIndex += 1;
+        if (levelIndex == _levelsData.Length)
+        {
+            EndGame(); 
+        }
+    }
+
+    public void OpenMap()
+    {
+        _map.changeScale = true;
+    }
+    
+    private void EndGame()////////////////////
+    {
+        Application.Quit();
+        print("end game");
+    }
+    
     
 }
 

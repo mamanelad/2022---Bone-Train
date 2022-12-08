@@ -17,6 +17,10 @@ public class Map : MonoBehaviour
     [SerializeField] private GameObject smallMapPosition;
     private RectTransform curPosition;
     public bool canClickMap;
+
+    [SerializeField] private float GoToSmallMapDelayTime = 2f;
+    private float GoToSmallMapDelayTimer;
+    
     private void Awake()
     {
         GameMap = this;
@@ -44,6 +48,11 @@ public class Map : MonoBehaviour
 
     private void ChangeScale()
     {
+        foreach (var node in _nodeList)
+        {
+            node.DisablPopUp();
+        }
+        
         changeScale = false;
         var nowBigMap = (curScale >= bigScale);
         
@@ -53,6 +62,7 @@ public class Map : MonoBehaviour
             ChangeCanClick(false);
             transform.localScale = new Vector3(smallScale, smallScale, smallScale);
             curScale = smallScale;
+            GameManager.Shared.NextLevel(); ///////////////
         }
         else
         {
@@ -61,7 +71,6 @@ public class Map : MonoBehaviour
             transform.localScale = new Vector3(bigScale, bigScale, bigScale);
             curScale = bigScale;
         }
-        
         
     }
 
