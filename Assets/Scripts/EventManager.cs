@@ -34,7 +34,7 @@ public class EventManager : MonoBehaviour
 
     [Space(20)] 
     [Header("Others")] 
-    [SerializeField] private float clickDelay = 1f;
+    [SerializeField] private float clickDelay = 0.1f;
 
     #endregion
 
@@ -47,7 +47,6 @@ public class EventManager : MonoBehaviour
 
     private void Start()
     {
-        curInteraction = GetInteraction();
         buttonSingle.SetActive(false);
         buttonAccept.SetActive(false);
         buttonDeny.SetActive(false);
@@ -57,6 +56,8 @@ public class EventManager : MonoBehaviour
     
     public void ConfigureEvent()
     {
+        curInteraction = GetInteraction();
+        
         if (background != null)
             background.sprite = data.background;
 
@@ -123,7 +124,8 @@ public class EventManager : MonoBehaviour
     {
         isEventOver = true;
         yield return new WaitForSecondsRealtime(clickDelay);
+        isEventOver = false;
         LevelManager.Shared.FinishEvent();
     }
-
+    
 }

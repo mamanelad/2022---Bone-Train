@@ -5,31 +5,25 @@ using UnityEngine;
 public class LevelManager : MonoBehaviour
 {
     [SerializeField] private LevelData data;
-    [SerializeField] private GameObject eventPrefab;
-    [SerializeField] private GameObject uiPanel;
+    [SerializeField] private GameObject uiEvent;
 
     public static LevelManager Shared { get; set; }
 
     public bool InEvent { get; private set; }
+    public bool InLevel { get; private set; }
     
     private float timer;
-    private int interactionIndex = 0;
-    private GameObject curEvent;
-    
+    private int interactionIndex;
+
     private void Awake()
     {
         Shared = this;
     }
 
-    public void StartLevel(LevelData levelData)
+    private void Start()
     {
-        data = levelData;
-        timer = data.delayBetweenInteractions;
-    }
-
-    public void EndLevel()
-    {
-        data = null;
+        uiEvent.SetActive(false);
+        //StartLevel(data);
     }
     
     private void Update()
@@ -50,12 +44,11 @@ public class LevelManager : MonoBehaviour
             EndLevel();
             return;
         }
-
+        
         InEvent = true;
         Time.timeScale = 0;
-        curEvent = Instantiate(eventPrefab, transform.position, transform.rotation);
-        curEvent.transform.parent = uiPanel.transform;
-        var eventManager = curEvent.GetComponent<EventManager>();
+        uiEvent.SetActive(true);
+        var eventManager = uiEvent.GetComponent<EventManager>();
         eventManager.data = data.interactions[interactionIndex];
         eventManager.ConfigureEvent();
         timer = data.delayBetweenInteractions;
@@ -65,7 +58,26 @@ public class LevelManager : MonoBehaviour
     public void FinishEvent()
     {
         InEvent = false;
-        Destroy(curEvent);
+        uiEvent.SetActive(false);
         Time.timeScale = 1;
+    }
+    
+    public bool StartLevel(LevelData levelData)
+    {
+        if (InLevel)
+            return false;
+        
+        InLevel = true;
+        data = levelData;
+        interactionIndex = 0;
+        timer = data.delayBetweenInteractions;
+        return true;
+    }
+
+    public void EndLevel()
+    {
+        InLevel = false;
+        data = null;
+        GameManager.Shared.OpenMap();
     }
 }
