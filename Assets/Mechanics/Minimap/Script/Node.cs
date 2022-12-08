@@ -132,6 +132,7 @@ public class Node : MonoBehaviour
 
     public void MouseIsOn()
     {
+        if (playerTravelAlready) return;
         if (!canTravelTo) return;
         if (!canClickMap) return;
         if (popUpNodeIsOn) return;
