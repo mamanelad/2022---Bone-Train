@@ -21,6 +21,15 @@ public class GameManager : MonoBehaviour
     [SerializeField] private LevelData[] _levelsData;
     [SerializeField] private int levelIndex;
     public bool goToNextLevel;
+    public LevelData nextLevel;
+    
+    public enum Road
+    {
+        Up,
+        Down
+    }
+
+    public Road curRoad;
     private void Awake()
     {
         Shared = this;
@@ -44,12 +53,17 @@ public class GameManager : MonoBehaviour
     public void NextLevel()
     {
         goToNextLevel = false;
-        levelManager.StartLevel(_levelsData[levelIndex]);
-        levelIndex += 1;
-        if (levelIndex == _levelsData.Length)
-        {
-            EndGame(); 
-        }
+
+        // foreach (var node in _map.GetComponentsInChildren<Node>())
+        // {
+        //     if (node.InThisNode())
+        //     {
+        //         nextLevel = node.GetLevelData();
+        //     }
+        // }
+        
+        levelManager.StartLevel(nextLevel);
+        
     }
 
     public void OpenMap()

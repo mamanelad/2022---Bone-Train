@@ -37,9 +37,18 @@ public class NodeData : ScriptableObject
     
     [Header("Requirement")]
     public float amountOfFuelNeeded;
+    [Space(20)]
     
     [Header("PopUp")]
     public float popUpNodeYChange = 50f;
     public float popUpNodeXChange = 50f;
+    [Space(20)]
+    
+    [Header("Levels")]
+    public LevelData[] levelsData;
+    
+
+
+
 
 }

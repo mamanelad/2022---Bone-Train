@@ -10,10 +10,9 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: af40f787166e700409d25022cecd13ef, type: 3}
-  m_Name: LevelB
+  m_Name: level3
   m_EditorClassIdentifier: 
   interactions:
-  - {fileID: 11400000, guid: 496e368965e0558428990a913fc7735a, type: 2}
-  - {fileID: 11400000, guid: de0fb0aef159e20439e93b57160a5c77, type: 2}
-  - {fileID: 11400000, guid: f722ec617f88431419110406b0a8fdf3, type: 2}
+  - {fileID: 11400000, guid: f97773c9a44da6d41a8324d6ab1cefa7, type: 2}
+  - {fileID: 11400000, guid: 02a06b3d9cc3fff48b342b4734da5d11, type: 2}
   delayBetweenInteractions: 2

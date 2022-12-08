@@ -2484,9 +2484,12 @@ MonoBehaviour:
   _map: {fileID: 527707718}
   _levelsData:
   - {fileID: 11400000, guid: 18c307619bbf1fa408e5f9e7ff2b7ee2, type: 2}
+  - {fileID: 11400000, guid: 367bf490127cee44eb266ff1bd14805e, type: 2}
   - {fileID: 11400000, guid: f2bedc2da9eb26d4386e0923d79d8d10, type: 2}
   levelIndex: 0
   goToNextLevel: 0
+  nextLevel: {fileID: 0}
+  curRoad: 0
 --- !u!4 &1631775376
 Transform:
   m_ObjectHideFlags: 0

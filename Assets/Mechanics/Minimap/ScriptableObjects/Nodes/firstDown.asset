@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 717506eb132607a409e5ab870af57a57, type: 3}
   m_Name: firstDown
   m_EditorClassIdentifier: 
-  id: 0
+  id: 11
   nameOfNode: Node
   backGroundSprite: {fileID: 21300000, guid: 46f7903c604aed7488c041ac842accba, type: 3}
   titleText: Stop B
@@ -29,3 +29,5 @@ MonoBehaviour:
   amountOfFuelNeeded: 0
   popUpNodeYChange: 80
   popUpNodeXChange: 80
+  levelsData:
+  - {fileID: 11400000, guid: f2bedc2da9eb26d4386e0923d79d8d10, type: 2}

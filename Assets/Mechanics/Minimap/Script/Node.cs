@@ -27,6 +27,7 @@ public class Node : MonoBehaviour
     Color travelAlreadyColor;
     Color InNodeColor;
 
+    private bool inMe;
     private Sprite backGroundSprite;
     private float dangerPercentage;
     private float amountOfFuelNeeded;
@@ -40,11 +41,16 @@ public class Node : MonoBehaviour
     private Map _map;
     private bool canClickMap;
     private NodeHolder _nodeHolder;
+    private LevelData[] _levelsData ;
 
     private Canvas _canvas;
 
     private void Awake()
     {
+        if (id == 0)
+        {
+            inMe = true;
+        }
         _image = GetComponent<Image>();
         popUpNodeText = popUpNode.GetComponentInChildren<TMP_Text>();
 
@@ -100,11 +106,25 @@ public class Node : MonoBehaviour
         popUpNodeYChange = _nodeData.popUpNodeYChange;
         popUpNodeXChange = _nodeData.popUpNodeXChange;
         InNodeColor = _nodeData.InNodeColor;
+        _levelsData = _nodeData.levelsData;
     }
 
 
     public void TravelTo()
     {
+        if (id == 10)
+        {
+            GameManager.Shared.curRoad = GameManager.Road.Up;
+        }
+        
+        if (id == 11)
+        {
+            GameManager.Shared.curRoad = GameManager.Road.Down;
+        }
+
+        inMe = true;
+        GameManager.Shared.nextLevel = GetLevelData();
+        
         _map.changeScale = true;
         if (!canClickMap) return;
         if (!playerTravelAlready && canTravelTo)
@@ -115,6 +135,7 @@ public class Node : MonoBehaviour
             {
                 if (node._image.color == InNodeColor)
                 {
+                    inMe = false;
                     node._image.color = travelAlreadyColor;
                 }
             }
@@ -180,5 +201,31 @@ public class Node : MonoBehaviour
     public void DisablPopUp()
     {
         popUpNode.SetActive(false);
+    }
+
+    public LevelData GetLevelData()
+    {
+        
+        if (_levelsData.Length > 1)
+        {
+            if (GameManager.Shared.curRoad == GameManager.Road.Up)
+            {
+                return _levelsData[0];    
+            }
+
+            if (GameManager.Shared.curRoad == GameManager.Road.Down)
+            {
+                return _levelsData[0];
+            }
+        }
+        
+        return _levelsData[0];
+        
+        
+    }
+
+    public bool InThisNode()
+    {
+        return inMe;
     }
 }
