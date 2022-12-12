@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.18028334, g: 0.22571328, b: 0.3069217, a: 1}
+  m_IndirectSpecularColor: {r: 0.18028378, g: 0.22571412, b: 0.30692285, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -152,7 +152,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   spline: {fileID: 1633896505}
-  duration: 50
+  speed: 500
+  speedSensitivity: 10
   lookForward: 1
   mode: 1
 --- !u!1 &450394645
@@ -364,13 +365,13 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   points:
   - {x: -71.68635, y: 0.3796959, z: 0}
-  - {x: -43.56904, y: 0.3796959, z: 45.94792}
-  - {x: -24.112764, y: 5.962536, z: 44.996487}
+  - {x: -43.56904, y: 53.557186, z: 3.4477386}
+  - {x: -24.112764, y: -7.3207855, z: 71.85205}
   - {x: -1.3254261, y: -2.6782122, z: 24.170734}
-  - {x: 46.00229, y: 0.67883587, z: 4.5307026}
-  - {x: 21.149292, y: -9.070885, z: -36.687622}
-  - {x: -9.536278, y: 0, z: -36.687622}
-  - {x: -77.633255, y: 10.00312, z: -41.447075}
+  - {x: 21.936266, y: 0.67883587, z: -23.252577}
+  - {x: 21.149292, y: -1.239903, z: -41.328686}
+  - {x: -9.536278, y: 0, z: -41.328686}
+  - {x: -77.633255, y: 10.00312, z: -46.088142}
   - {x: -72.46414, y: 0.3796959, z: -51.702347}
   - {x: -71.68635, y: 0.3796959, z: 0}
   modes: 00000000000000000000000000000000

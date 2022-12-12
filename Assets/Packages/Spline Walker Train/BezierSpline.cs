@@ -76,7 +76,7 @@ public class BezierSpline : MonoBehaviour {
 	public BezierControlPointMode GetControlPointMode (int index) {
 		return modes[(index + 1) / 3];
 	}
-
+	
 	public void SetControlPointMode (int index, BezierControlPointMode mode) {
 		int modeIndex = (index + 1) / 3;
 		modes[modeIndex] = mode;
@@ -149,6 +149,20 @@ public class BezierSpline : MonoBehaviour {
 		}
 		return transform.TransformPoint(Bezier.GetPoint(points[i], points[i + 1], points[i + 2], points[i + 3], t));
 	}
+
+	public float GetLength()
+	{
+		float len = 0f;
+		float detailLevel = 100f;
+		for (float i = 0; i < detailLevel; i++)
+		{
+			var pointA = GetPoint(i / detailLevel);
+			var pointB = GetPoint(i+1 / detailLevel);
+			len += Vector3.Distance(pointA, pointB);
+		}
+		return len;
+	}
+	
 	
 	public Vector3 GetVelocity (float t) {
 		int i;
