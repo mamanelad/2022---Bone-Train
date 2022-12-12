@@ -92,7 +92,7 @@ public class EventManager : MonoBehaviour
     
     private Interaction GetInteraction()
     {
-        var morale = GameManager.Shared.morale;
+        var morale = GameManager.shared.morale;
         var bestDistance = Math.Abs(morale - data.interactions[0].morale);
         var curInter = data.interactions[0];
         
@@ -114,9 +114,9 @@ public class EventManager : MonoBehaviour
             return;
         
         var action = accept ? curInteraction.interactionAccept : curInteraction.interactionDeny;
-        GameManager.Shared.SoulStones += action.soulStones;
-        GameManager.Shared.GoodSouls += action.goodSouls;
-        GameManager.Shared.BadSouls += action.badSouls;
+        GameManager.shared.AddToSoulStones(action.soulStones);
+        GameManager.shared.AddToGoodSouls(action.goodSouls);
+        GameManager.shared.AddToBadSouls(action.badSouls);
         StartCoroutine(FinishEvent());
     }
 

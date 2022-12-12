@@ -62,7 +62,7 @@ public class Map : MonoBehaviour
             ChangeCanClick(false);
             transform.localScale = new Vector3(smallScale, smallScale, smallScale);
             curScale = smallScale;
-            GameManager.Shared.NextLevel(); ///////////////
+            GameManager.shared.NextLevel(); ///////////////
         }
         else
         {
