@@ -47,10 +47,7 @@ public class EventManager : MonoBehaviour
 
     private void Start()
     {
-        buttonSingle.SetActive(false);
-        buttonAccept.SetActive(false);
-        buttonDeny.SetActive(false);
-        
+        CloseButtons();
         ConfigureEvent();
     }
     
@@ -124,8 +121,16 @@ public class EventManager : MonoBehaviour
     {
         isEventOver = true;
         yield return new WaitForSecondsRealtime(clickDelay);
+        CloseButtons();
         isEventOver = false;
         LevelManager.Shared.FinishEvent();
+    }
+
+    private void CloseButtons()
+    {
+        buttonSingle.SetActive(false);
+        buttonAccept.SetActive(false);
+        buttonDeny.SetActive(false);
     }
     
 }

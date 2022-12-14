@@ -27,7 +27,6 @@ public class UIManager : MonoBehaviour
     public void ChangeGoodSouls()
     {
         goodSoulsNumberText.text = Convert.ToString(GameManager.shared.GoodSouls); 
-        print(GameManager.shared.GoodSouls);
     }
     
     public void ChangeBadSouls()

@@ -4,25 +4,37 @@ using UnityEngine;
 [DefaultExecutionOrder(-999)]
 public class GameManager : MonoBehaviour
 {
-    public static GameManager shared;
+    [Space(20)] [Header("Map")] [SerializeField]
+    private Map _map;
 
-    [SerializeField] private LevelManager levelManager;
+    [Space(20)] [Header("Levels")] [SerializeField]
+    private LevelData[] _levelsData;
 
-    public LevelData ld;
-
-    [HideInInspector] public Morale morale = Morale.Neutral;
-
-
-    [SerializeField] private Map _map;
-    [SerializeField] private LevelData[] _levelsData;
     [SerializeField] private int levelIndex;
     public bool goToNextLevel;
     public LevelData nextLevel;
-    [Space(20)] [Header("UI")] private UIManager _uiManager;
-    [SerializeField] public int SoulStones;
-    [SerializeField] public int GoodSouls;
-    [SerializeField] public int BadSouls;
+    [SerializeField] private LevelManager levelManager;
 
+    [Space(20)] [Header("Event")] private EventData currEventData;
+    private bool inEvent;
+    private bool gotToNewEvent;
+    private EventManager _eventManager;
+
+
+    [Space(20)] [Header("UI")] private UIManager _uiManager;
+    [SerializeField] public int SoulStonesInitializeValue;
+    [SerializeField] public int GoodSoulsInitializeValue;
+    [SerializeField] public int BadSoulsInitializeValue;
+
+    [NonSerialized] public int SoulStones;
+    [NonSerialized] public int GoodSouls;
+    [NonSerialized] public int BadSouls;
+
+    [Space(20)] [Header("Extra")] public static GameManager shared;
+    public LevelData ld;
+    [HideInInspector] public Morale morale = Morale.Neutral;
+
+    [Space(20)] [Header("Road")] public Road curRoad;
 
     public enum Road
     {
@@ -30,13 +42,14 @@ public class GameManager : MonoBehaviour
         Down
     }
 
-    public Road curRoad;
 
     private void Awake()
     {
-
-        _uiManager = FindObjectOfType<UIManager>();
         shared = this;
+        SoulStones = SoulStonesInitializeValue;
+        GoodSouls = GoodSoulsInitializeValue;
+        BadSouls = BadSoulsInitializeValue;
+        
         //
         // if (shared == null)
         // {
@@ -46,15 +59,26 @@ public class GameManager : MonoBehaviour
         // else
         //     Destroy(gameObject);
     }
-    
+
 
     private void Update()
     {
-        UIController();
-        if (goToNextLevel)
-        {
-            NextLevel();
-        }
+        if (_eventManager == null)
+            _eventManager = FindObjectOfType<EventManager>();
+        
+        if (_uiManager == null)
+            _uiManager = FindObjectOfType<UIManager>();
+        
+        if (gotToNewEvent)
+            ActivateNewEvent();
+        
+    }
+
+    private void ActivateNewEvent()
+    {
+        gotToNewEvent = false;
+        _eventManager.data = currEventData;
+        _eventManager.ConfigureEvent();
     }
 
     public void NextLevel()
@@ -74,13 +98,6 @@ public class GameManager : MonoBehaviour
         print("end game");
     }
 
-    private void UIController()
-    {
-        _uiManager.ChangeBadSouls();
-
-        _uiManager.ChangeSoulStones();
-    }
-    
     public void AddToGoodSouls(int addNum)
     {
         if (GoodSouls + addNum < 0) return;
@@ -92,8 +109,8 @@ public class GameManager : MonoBehaviour
     {
         return GoodSouls;
     }
-    
-    
+
+
     public void AddToBadSouls(int addNum)
     {
         if (BadSouls + addNum < 0) return;
@@ -116,6 +133,12 @@ public class GameManager : MonoBehaviour
     public int GetSoulStones()
     {
         return SoulStones;
+    }
+
+    public void GotToEvent(EventData newEventData)
+    {
+        gotToNewEvent = true;
+        currEventData = newEventData;
     }
 }
 
