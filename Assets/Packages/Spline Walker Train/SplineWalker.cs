@@ -23,7 +23,9 @@ public class SplineWalker : MonoBehaviour {
 		splineLenght = spline.GetLength();
 	}
 	
-	private void Update () {
+	private void Update ()
+	{
+		print(spline.GetDistFromEnd(progress));
 		ChangeSpeed();
 		if (goingForward) {
 			progress += (Time.deltaTime / splineLenght * speed);
