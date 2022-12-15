@@ -162,6 +162,21 @@ public class BezierSpline : MonoBehaviour {
 		}
 		return len;
 	}
+
+	public float GetDistFromEnd(float curPos)
+	{
+		float len = 0f;
+		float detailLevel = 100f;
+		for (float i = 0; i < detailLevel; i++)
+		{
+			if (i / detailLevel < curPos)
+				continue;
+			var pointA = GetPoint(i / detailLevel);
+			var pointB = GetPoint(i+1 / detailLevel);
+			len += Vector3.Distance(pointA, pointB);
+		}
+		return len;
+	}
 	
 	
 	public Vector3 GetVelocity (float t) {
