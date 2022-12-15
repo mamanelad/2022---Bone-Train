@@ -12,49 +12,49 @@ public class SplineWalker : MonoBehaviour {
 
 	public SplineWalkerMode mode;
 
-	private float splineLenght;
+	public float SplineLenght;
 
-	private float progress;
+	public float Progress { get; set; }
 	
 	private bool goingForward = true;
 
 	private void Start()
 	{
-		splineLenght = spline.GetLength();
+		SplineLenght = spline.GetLength();
 	}
 	
 	private void Update ()
 	{
-		print(spline.GetDistFromEnd(progress));
 		ChangeSpeed();
+		SplineLenght = spline.GetLength();
 		if (goingForward) {
-			progress += (Time.deltaTime / splineLenght * speed);
-			if (progress > 1f) {
+			Progress += (Time.deltaTime / SplineLenght * speed);
+			if (Progress > 1f) {
 				if (mode == SplineWalkerMode.Once) {
-					progress = 1f;
+					Progress = 1f;
 				}
 				else if (mode == SplineWalkerMode.Loop) {
-					progress -= 1f;
+					Progress -= 1f;
 				}
 				else {
-					progress = 2f - progress;
+					Progress = 2f - Progress;
 					goingForward = false;
 				}
 			}
 		}
 		else
 		{
-			progress -= Time.deltaTime / splineLenght * speed;
-			if (progress < 0f) {
-				progress = - progress;
+			Progress -= Time.deltaTime / SplineLenght * speed;
+			if (Progress < 0f) {
+				Progress = - Progress;
 				goingForward = true;
 			}
 		}
 		
-		Vector3 position = spline.GetPoint(progress);
+		Vector3 position = spline.GetPoint(Progress);
 		transform.localPosition = position;
 		if (lookForward) {
-			transform.LookAt(position + spline.GetDirection(progress));
+			transform.LookAt(position + spline.GetDirection(Progress));
 		}
 	}
 
