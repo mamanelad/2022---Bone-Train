@@ -4,33 +4,24 @@ using UnityEngine;
 [DefaultExecutionOrder(-999)]
 public class GameManager : MonoBehaviour
 {
-    [Space(20)] [Header("Map")] [SerializeField]
-    private Map _map;
+    [Header("Map")] [SerializeField] private Map map;
 
-    [Space(20)] [Header("Levels")] [SerializeField]
-    private LevelData[] _levelsData;
-
-    [SerializeField] private int levelIndex;
-    public bool goToNextLevel;
-    public LevelData nextLevel;
-    [SerializeField] private LevelManager levelManager;
-
-    [Space(20)] [Header("Event")] private EventData currEventData;
-    private bool inEvent;
-    private bool gotToNewEvent;
-    private EventManager _eventManager;
+    [Space(20)] [Header("Event")] private EventData _currEventData;
+    private bool _inEvent;
+    private bool _gotToNewEvent;
+    [SerializeField] private EventManager _eventManager;
 
 
     [Space(20)] [Header("UI")] private UIManager _uiManager;
-    [SerializeField] public int SoulStonesInitializeValue;
-    [SerializeField] public int GoodSoulsInitializeValue;
-    [SerializeField] public int BadSoulsInitializeValue;
+    [SerializeField] public int soulStonesInitializeValue;
+    [SerializeField] public int goodSoulsInitializeValue;
+    [SerializeField] public int badSoulsInitializeValue;
 
     [NonSerialized] public int SoulStones;
     [NonSerialized] public int GoodSouls;
     [NonSerialized] public int BadSouls;
 
-    [Space(20)] [Header("Extra")] public static GameManager shared;
+    [Space(20)] [Header("Extra")] public static GameManager Shared;
     public LevelData ld;
     [HideInInspector] public Morale morale = Morale.Neutral;
 
@@ -42,14 +33,27 @@ public class GameManager : MonoBehaviour
         Down
     }
 
+    [Space(20)] [Header("Speed")] [SerializeField]
+    private GameObject speedHandle;
+
+    private float _trainSpeed;
+    [SerializeField] private SpeedState speedState = SpeedState.Stop; 
+    public enum SpeedState
+    {
+        Max,
+        Mid,
+        Low, 
+        Stop
+    }
+
 
     private void Awake()
     {
-        shared = this;
-        SoulStones = SoulStonesInitializeValue;
-        GoodSouls = GoodSoulsInitializeValue;
-        BadSouls = BadSoulsInitializeValue;
-        
+        Shared = this;
+        SoulStones = soulStonesInitializeValue;
+        GoodSouls = goodSoulsInitializeValue;
+        BadSouls = badSoulsInitializeValue;
+
         //
         // if (shared == null)
         // {
@@ -64,32 +68,41 @@ public class GameManager : MonoBehaviour
     private void Update()
     {
         if (_eventManager == null)
+        {
+            print("Drag the event manager of the scene to the game manager");
             _eventManager = FindObjectOfType<EventManager>();
-        
+            _eventManager.gameObject.SetActive(false);
+        }
+
+
         if (_uiManager == null)
             _uiManager = FindObjectOfType<UIManager>();
-        
-        if (gotToNewEvent)
+
+        if (_gotToNewEvent)
             ActivateNewEvent();
-        
     }
 
     private void ActivateNewEvent()
     {
-        gotToNewEvent = false;
-        _eventManager.data = currEventData;
+        if (_inEvent) return;
+        _inEvent = true;
+        Time.timeScale = 0;
+        _gotToNewEvent = false;
+        _eventManager.gameObject.SetActive(true);
+        _eventManager.data = _currEventData;
         _eventManager.ConfigureEvent();
     }
 
-    public void NextLevel()
+    public void ReturnFromEvent()
     {
-        goToNextLevel = false;
-        levelManager.StartLevel(nextLevel);
+        Time.timeScale = 1;
+        _inEvent = false;
     }
+
 
     public void OpenMap()
     {
-        _map.changeScale = true;
+        map.changeScale = true;
     }
 
     private void EndGame()
@@ -137,8 +150,8 @@ public class GameManager : MonoBehaviour
 
     public void GotToEvent(EventData newEventData)
     {
-        gotToNewEvent = true;
-        currEventData = newEventData;
+        _gotToNewEvent = true;
+        _currEventData = newEventData;
     }
 }
 

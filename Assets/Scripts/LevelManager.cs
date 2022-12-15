@@ -78,6 +78,6 @@ public class LevelManager : MonoBehaviour
     {
         InLevel = false;
         data = null;
-        GameManager.shared.OpenMap();
+        GameManager.Shared.OpenMap();
     }
 }

@@ -6,9 +6,10 @@ using UnityEngine;
 public class InteractionGate : MonoBehaviour
 {
     [SerializeField] private EventData myEventData;
-    
+
     private void OnTriggerEnter(Collider other)
     {
-        GameManager.shared.GotToEvent(myEventData);
+        if (other.gameObject.CompareTag("Train"))
+            GameManager.Shared.GotToEvent(myEventData);
     }
 }

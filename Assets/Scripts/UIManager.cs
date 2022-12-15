@@ -26,16 +26,16 @@ public class UIManager : MonoBehaviour
 
     public void ChangeGoodSouls()
     {
-        goodSoulsNumberText.text = Convert.ToString(GameManager.shared.GoodSouls); 
+        goodSoulsNumberText.text = Convert.ToString(GameManager.Shared.GoodSouls); 
     }
     
     public void ChangeBadSouls()
     {
-        badSoulsNumberText.text = Convert.ToString(GameManager.shared.BadSouls); 
+        badSoulsNumberText.text = Convert.ToString(GameManager.Shared.BadSouls); 
     }
     
     public void ChangeSoulStones()
     {
-        soulStonesAmountNumberText.text = Convert.ToString(GameManager.shared.SoulStones); 
+        soulStonesAmountNumberText.text = Convert.ToString(GameManager.Shared.SoulStones); 
     }
 }

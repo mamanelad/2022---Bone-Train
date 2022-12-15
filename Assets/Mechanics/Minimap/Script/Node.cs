@@ -114,16 +114,16 @@ public class Node : MonoBehaviour
     {
         if (id == 10)
         {
-            GameManager.shared.curRoad = GameManager.Road.Up;
+            GameManager.Shared.curRoad = GameManager.Road.Up;
         }
         
         if (id == 11)
         {
-            GameManager.shared.curRoad = GameManager.Road.Down;
+            GameManager.Shared.curRoad = GameManager.Road.Down;
         }
 
         inMe = true;
-        GameManager.shared.nextLevel = GetLevelData();
+        // GameManager.Shared.nextLevel = GetLevelData();
         
         _map.changeScale = true;
         if (!canClickMap) return;
@@ -208,12 +208,12 @@ public class Node : MonoBehaviour
         
         if (_levelsData.Length > 1)
         {
-            if (GameManager.shared.curRoad == GameManager.Road.Up)
+            if (GameManager.Shared.curRoad == GameManager.Road.Up)
             {
                 return _levelsData[0];    
             }
 
-            if (GameManager.shared.curRoad == GameManager.Road.Down)
+            if (GameManager.Shared.curRoad == GameManager.Road.Down)
             {
                 return _levelsData[0];
             }
