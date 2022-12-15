@@ -3081,8 +3081,8 @@ Transform:
   - {fileID: 1025130061}
   - {fileID: 910358068}
   - {fileID: 871170756}
-  - {fileID: 950828949}
   - {fileID: 2042514859}
+  - {fileID: 950828949}
   - {fileID: 1109975110}
   - {fileID: 1657610483}
   - {fileID: 1138775656}
@@ -5471,7 +5471,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: -8679921383154817045, guid: 4b3526700d0ab0f429ad592ca8497825, type: 3}
       propertyPath: m_RootOrder
-      value: 12
+      value: 13
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 4b3526700d0ab0f429ad592ca8497825, type: 3}
       propertyPath: m_LocalScale.x
@@ -11147,7 +11147,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: -8679921383154817045, guid: 4b3526700d0ab0f429ad592ca8497825, type: 3}
       propertyPath: m_RootOrder
-      value: 13
+      value: 12
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 4b3526700d0ab0f429ad592ca8497825, type: 3}
       propertyPath: m_LocalScale.x
