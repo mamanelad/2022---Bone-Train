@@ -1,4 +1,5 @@
 using System;
+using UnityEditor;
 using UnityEngine;
 
 [DefaultExecutionOrder(-999)]
@@ -26,6 +27,7 @@ public class GameManager : MonoBehaviour
     [HideInInspector] public Morale morale = Morale.Neutral;
 
     [Space(20)] [Header("Road")] public Road curRoad;
+    
 
     public enum Road
     {
@@ -152,6 +154,16 @@ public class GameManager : MonoBehaviour
     {
         _gotToNewEvent = true;
         _currEventData = newEventData;
+    }
+
+    public float GetSpeed()
+    {
+        return _trainSpeed;
+    }
+    
+    public void SetSpeed(float newSpeed)
+    {
+        _trainSpeed = newSpeed;
     }
 }
 
