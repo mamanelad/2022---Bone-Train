@@ -5,7 +5,7 @@ using UnityEngine;
 
 public class TrackChange : MonoBehaviour
 {
-    private SplineWalker _train;
+    private SplineWalker train;
     private BezierSpline track;
     private bool didSwitch;
     
@@ -17,21 +17,21 @@ public class TrackChange : MonoBehaviour
     private void OnTriggerEnter(Collider other)
     {
         if (other.CompareTag("Train"))
-            _train = other.GetComponent<SplineWalker>();
+            train = other.GetComponent<SplineWalker>();
     }
 
     private void Update()
     {
-        if (!_train)
+        if (!train)
             return;
 
-        if (!didSwitch && _train.Progress >= 0.7f)
+        if (!didSwitch && train.Progress >= 0.7f)
         {
-            print(_train.Progress);
+            print(train.Progress);
             didSwitch = true;
-            _train.spline = track;
-            var offset = _train.Progress - 0.7f;
-            _train.Progress = 0.38f + offset;
+            train.spline = track;
+            var offset = train.Progress - 0.7f;
+            train.Progress = 0.38f + offset;
         }
     }
 }
