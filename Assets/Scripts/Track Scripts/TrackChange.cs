@@ -27,7 +27,6 @@ public class TrackChange : MonoBehaviour
 
         if (!didSwitch && train.Progress >= 0.7f)
         {
-            print(train.Progress);
             didSwitch = true;
             train.spline = track;
             var offset = train.Progress - 0.7f;

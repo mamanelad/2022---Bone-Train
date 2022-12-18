@@ -181,7 +181,7 @@ public class BezierSpline : MonoBehaviour {
 	
 	public Vector3 GetVelocity (float t) {
 		int i;
-		if (true || t >= 1f) {
+		if (t >= 1f) {
 			t = 1f;
 			i = points.Length - 4;
 		}
@@ -195,6 +195,7 @@ public class BezierSpline : MonoBehaviour {
 	}
 	
 	public Vector3 GetDirection (float t) {
+		print(GetVelocity(t).normalized);
 		return GetVelocity(t).normalized;
 	}
 

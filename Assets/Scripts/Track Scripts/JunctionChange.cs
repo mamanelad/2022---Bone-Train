@@ -23,9 +23,8 @@ public class JunctionChange : MonoBehaviour
 
         if (!didSwitch)
         {
-            print(train.Progress);
             didSwitch = true;
-            train.spline = leftTrack;
+            train.spline = rightTrack;
             train.Progress = 0;
         }
     }

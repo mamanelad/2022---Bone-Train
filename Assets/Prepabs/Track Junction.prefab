@@ -48,7 +48,7 @@ BoxCollider:
   m_Enabled: 1
   serializedVersion: 2
   m_Size: {x: 0.01, y: 3.75, z: 2.32}
-  m_Center: {x: 3, y: 0, z: 0}
+  m_Center: {x: 1.5, y: 0, z: 0}
 --- !u!114 &452506151058238077
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -108,8 +108,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   points:
-  - {x: -3, y: 0, z: 0}
-  - {x: 0.75, y: 0, z: 0}
+  - {x: -1.5, y: 0, z: 0}
+  - {x: 2.25, y: 0, z: 0}
   - {x: 9.184296, y: 0, z: -2.5512962}
   - {x: 19.684296, y: 0, z: 9.448704}
   modes: 0000000000000000
@@ -159,8 +159,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   points:
-  - {x: -3, y: 0, z: 0}
-  - {x: 0.75, y: 0, z: 0}
+  - {x: -1.5, y: 0, z: 0}
+  - {x: 2.25, y: 0, z: 0}
   - {x: 7.5, y: 0, z: 2}
   - {x: 18, y: 0, z: -10}
   modes: 0000000000000000
