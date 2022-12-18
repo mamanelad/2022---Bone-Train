@@ -181,7 +181,7 @@ public class BezierSpline : MonoBehaviour {
 	
 	public Vector3 GetVelocity (float t) {
 		int i;
-		if (t >= 1f) {
+		if (true || t >= 1f) {
 			t = 1f;
 			i = points.Length - 4;
 		}

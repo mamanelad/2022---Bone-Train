@@ -38,7 +38,7 @@ public class SplineWalker : MonoBehaviour {
 				}
 				else {
 					Progress = 2f - Progress;
-					goingForward = false;
+					//goingForward = false;
 				}
 			}
 		}
