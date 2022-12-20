@@ -1,68 +1,138 @@
-﻿using UnityEngine;
+﻿using System;
+using System.Collections;
+using UnityEngine;
 
-public class SplineWalker : MonoBehaviour {
+public class SplineWalker : MonoBehaviour
+{
+    #region Inspector Control
 
-	public BezierSpline spline;
+    public BezierSpline spline;
 
-	public float speed;
+    [SerializeField] private float speed;
 
-	public float speedSensitivity;
+    [SerializeField] private float accelaration;
 
-	public bool lookForward;
+    [SerializeField] private bool lookForward;
 
-	public SplineWalkerMode mode;
+    [SerializeField] private SplineWalkerMode mode;
+    
+    #endregion
 
-	public float SplineLenght;
+    private float splineLenght;
 
-	public float Progress { get; set; }
-	
-	private bool goingForward = true;
+    private bool trackTransition;
 
-	private void Start()
-	{
-		SplineLenght = spline.GetLength();
-	}
-	
-	private void Update ()
-	{
-		ChangeSpeed();
-		SplineLenght = spline.GetLength();
-		if (goingForward) {
-			Progress += (Time.deltaTime / SplineLenght * speed);
-			if (Progress > 1f) {
-				if (mode == SplineWalkerMode.Once) {
-					Progress = 1f;
-				}
-				else if (mode == SplineWalkerMode.Loop) {
-					Progress -= 1f;
-				}
-				else {
-					Progress = 2f - Progress;
-					//goingForward = false;
-				}
-			}
-		}
-		else
-		{
-			Progress -= Time.deltaTime / SplineLenght * speed;
-			if (Progress < 0f) {
-				Progress = - Progress;
-				goingForward = true;
-			}
-		}
-		
-		Vector3 position = spline.GetPoint(Progress);
-		transform.localPosition = position;
-		if (lookForward) {
-			transform.LookAt(position + spline.GetDirection(Progress));
-		}
-	}
+    private float trainSpeed = 0; // pre 0.5 second
 
-	private void ChangeSpeed()
-	{
-		if (Input.GetKey(KeyCode.UpArrow))
-			speed += Time.deltaTime * speedSensitivity;
-		if (Input.GetKey(KeyCode.DownArrow))
-			speed -= Time.deltaTime * speedSensitivity;
-	}
+    private const float timeMeasureUnit = 0.5f;
+    
+
+    public float Progress { get; set; }
+
+    private bool goingForward = true;
+
+    private void Start()
+    {
+        splineLenght = spline.GetLength();
+        StartCoroutine(TrackSpeed());
+    }
+
+    private void Update()
+    {
+         if (trackTransition)
+            return;
+
+         Drive();
+    }
+
+    private void Drive()
+    {
+        if (goingForward)
+        {
+            Progress += Time.deltaTime / splineLenght * speed;
+            if (Progress > 1f)
+            {
+                if (mode == SplineWalkerMode.Once)
+                    Progress = 1f;
+                else if (mode == SplineWalkerMode.Loop)
+                    Progress -= 1f;
+                else
+                {
+                    Progress = 2f - Progress;
+                    goingForward = false;
+                }
+            }
+        }
+        else
+        {
+            Progress -= Time.deltaTime / splineLenght * speed;
+            if (Progress < 0f)
+            {
+                Progress = -Progress;
+                goingForward = true;
+            }
+        }
+
+        Vector3 position = spline.GetPoint(Progress);
+        transform.localPosition = position;
+        if (lookForward)
+            transform.LookAt(position + spline.GetDirection(Progress));
+    }
+
+    private void ChangeSpeed()
+    {
+        if (Input.GetKey(KeyCode.UpArrow))
+            speed += Time.deltaTime * accelaration;
+        if (Input.GetKey(KeyCode.DownArrow))
+            speed -= Time.deltaTime * accelaration;
+    }
+
+    public IEnumerator SwitchTrack(BezierSpline newTrack, Vector3 trackRealPos)
+    {
+        print("RTP: " + trackRealPos);
+        trackTransition = true;
+        spline = null;
+        var currentPosition = transform.position;
+
+        var newPosition = new Vector3(trackRealPos.x, currentPosition.y, trackRealPos.z);
+        var transitionDuration = Vector3.Distance(newPosition, currentPosition) / trainSpeed;
+        
+        var timer = 0f;
+        while (timer < transitionDuration)
+        {
+            var t = Mathf.Min(timer / transitionDuration, 1);
+            var curPos = Vector3.Lerp(currentPosition, newPosition, t);
+            transform.position = curPos;
+            yield return null;
+            timer += Time.deltaTime;
+        }
+
+        transform.position = newPosition;
+
+        spline = newTrack;
+        Progress = 0.50f;
+        print("Train Pos: " + transform.position);
+        trackTransition = false;
+
+        yield return new WaitForSeconds(0.1f);
+        print("Drive Pos: " + transform.position);
+        
+    }
+    
+    private IEnumerator TrackSpeed()
+    {
+        var currentPos = transform.position;
+
+        while (true)
+        {
+            // print(trainSpeed);
+            yield return new WaitForSeconds(timeMeasureUnit);
+            if (!trackTransition)
+            {
+                var newPosition = transform.position;
+                trainSpeed = Vector3.Distance(currentPos, newPosition) / timeMeasureUnit;
+                currentPos = newPosition;
+            }
+        }
+    }
 }

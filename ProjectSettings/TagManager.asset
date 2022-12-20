@@ -8,6 +8,7 @@ TagManager:
   - SWTconnection
   - InteractionGate
   - Train
+  - Pivot
   layers:
   - Default
   - TransparentFX

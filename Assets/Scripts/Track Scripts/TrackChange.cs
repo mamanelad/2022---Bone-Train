@@ -7,30 +7,25 @@ public class TrackChange : MonoBehaviour
 {
     private SplineWalker train;
     private BezierSpline track;
-    private bool didSwitch;
+    private Collider collider;
     
     void Start()
     {
         track = GetComponent<BezierSpline>();
+        collider = GetComponent<Collider>();
+
     }
     
     private void OnTriggerEnter(Collider other)
     {
         if (other.CompareTag("Train"))
-            train = other.GetComponent<SplineWalker>();
-    }
-
-    private void Update()
-    {
-        if (!train)
-            return;
-
-        if (!didSwitch && train.Progress >= 0.7f)
         {
-            didSwitch = true;
-            train.spline = track;
-            var offset = train.Progress - 0.7f;
-            train.Progress = 0.38f + offset;
+            train = other.GetComponent<SplineWalker>();
+            var midPos = (track.GetControlPoint(2) + track.GetControlPoint(1)) / 2;
+            var trackPosition = transform.transform.position - midPos; 
+            train.StartCoroutine(train.SwitchTrack(track, trackPosition));
+            collider.enabled = false;
         }
+            
     }
 }

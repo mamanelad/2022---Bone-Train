@@ -531,8 +531,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   points:
-  - {x: -4.5, y: 0, z: 0}
-  - {x: -3.5, y: 0, z: 0}
+  - {x: -1.76, y: 0, z: 0}
+  - {x: -0.76, y: 0, z: 0}
   - {x: 4, y: 0, z: 0}
   - {x: 5, y: 0, z: 0}
   modes: 0000000000000000
