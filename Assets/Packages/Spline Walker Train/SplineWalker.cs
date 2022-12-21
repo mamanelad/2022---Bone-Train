@@ -8,7 +8,7 @@ public class SplineWalker : MonoBehaviour
 
     public BezierSpline spline;
 
-    [SerializeField] private float speed;
+    [SerializeField] private float baseSpeed = 600;
 
     [SerializeField] private float accelaration;
 
@@ -26,6 +26,7 @@ public class SplineWalker : MonoBehaviour
 
     private const float timeMeasureUnit = 0.5f;
     
+    private float curSpeed;
 
     public float Progress { get; set; }
 
@@ -33,6 +34,7 @@ public class SplineWalker : MonoBehaviour
 
     private void Start()
     {
+        curSpeed = baseSpeed;
         splineLenght = spline.GetLength();
         StartCoroutine(TrackSpeed());
     }
@@ -41,7 +43,7 @@ public class SplineWalker : MonoBehaviour
     {
          if (trackTransition)
             return;
-
+         
          Drive();
     }
 
@@ -49,7 +51,7 @@ public class SplineWalker : MonoBehaviour
     {
         if (goingForward)
         {
-            Progress += Time.deltaTime / splineLenght * speed;
+            Progress += Time.deltaTime / splineLenght * curSpeed;
             if (Progress > 1f)
             {
                 if (mode == SplineWalkerMode.Once)
@@ -65,7 +67,7 @@ public class SplineWalker : MonoBehaviour
         }
         else
         {
-            Progress -= Time.deltaTime / splineLenght * speed;
+            Progress -= Time.deltaTime / splineLenght * curSpeed;
             if (Progress < 0f)
             {
                 Progress = -Progress;
@@ -82,14 +84,14 @@ public class SplineWalker : MonoBehaviour
     private void ChangeSpeed()
     {
         if (Input.GetKey(KeyCode.UpArrow))
-            speed += Time.deltaTime * accelaration;
+            curSpeed += Time.deltaTime * accelaration;
         if (Input.GetKey(KeyCode.DownArrow))
-            speed -= Time.deltaTime * accelaration;
+            curSpeed -= Time.deltaTime * accelaration;
     }
 
-    public IEnumerator SwitchTrack(BezierSpline newTrack, Vector3 trackRealPos)
+    public IEnumerator SwitchTrack(BezierSpline newTrack, Vector3 trackRealPos, float progress, float speedFactor)
     {
-        print("RTP: " + trackRealPos);
+        // print("RTP: " + trackRealPos);
         trackTransition = true;
         spline = null;
         var currentPosition = transform.position;
@@ -110,12 +112,13 @@ public class SplineWalker : MonoBehaviour
         transform.position = newPosition;
 
         spline = newTrack;
-        Progress = 0.50f;
-        print("Train Pos: " + transform.position);
+        Progress = progress;
+        curSpeed = baseSpeed * speedFactor;
+        // print("Train Pos: " + transform.position);
         trackTransition = false;
 
         yield return new WaitForSeconds(0.1f);
-        print("Drive Pos: " + transform.position);
+        // print("Drive Pos: " + transform.position);
         
     }
     
@@ -125,7 +128,6 @@ public class SplineWalker : MonoBehaviour
 
         while (true)
         {
-            // print(trainSpeed);
             yield return new WaitForSeconds(timeMeasureUnit);
             if (!trackTransition)
             {

@@ -1,12 +1,11 @@
-using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class TrackChange : MonoBehaviour
+public class CurveChange : MonoBehaviour
 {
-    [Range(0f,1f)][SerializeField] private float progress = 0.5f;
-    [SerializeField] private float speed = 1f;
+    [Range(0f,1f)][SerializeField] private float progress = 0.0f;
+    [SerializeField] private float speed = 4f;
     private SplineWalker train;
     private BezierSpline track;
     private Collider collider;
@@ -23,9 +22,9 @@ public class TrackChange : MonoBehaviour
         if (other.CompareTag("Train"))
         {
             train = other.GetComponent<SplineWalker>();
-            var midPos = (track.GetControlPoint(2) + track.GetControlPoint(1)) / 2;
+            var midPos = track.GetControlPoint(0);
             var trackPosition = transform.transform.position - midPos; 
-            train.StartCoroutine(train.SwitchTrack(track, trackPosition, progress, 1));
+            train.StartCoroutine(train.SwitchTrack(track, trackPosition, progress, speed));
             collider.enabled = false;
         }
             
