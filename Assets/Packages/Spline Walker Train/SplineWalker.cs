@@ -15,7 +15,7 @@ public class SplineWalker : MonoBehaviour
     [SerializeField] private bool lookForward;
 
     [SerializeField] private SplineWalkerMode mode;
-    
+
     #endregion
 
     private float splineLenght;
@@ -24,8 +24,8 @@ public class SplineWalker : MonoBehaviour
 
     private float trainSpeed = 0; // pre 0.5 second
 
-    private const float timeMeasureUnit = 0.5f;
-    
+    private const float timeMeasureUnit = 0.1f;
+
     private float curSpeed;
 
     public float Progress { get; set; }
@@ -41,10 +41,10 @@ public class SplineWalker : MonoBehaviour
 
     private void Update()
     {
-         if (trackTransition)
+        if (trackTransition)
             return;
-         
-         Drive();
+
+        Drive();
     }
 
     private void Drive()
@@ -98,7 +98,7 @@ public class SplineWalker : MonoBehaviour
 
         var newPosition = new Vector3(trackRealPos.x, currentPosition.y, trackRealPos.z);
         var transitionDuration = Vector3.Distance(newPosition, currentPosition) / trainSpeed;
-        
+
         var timer = 0f;
         while (timer < transitionDuration)
         {
@@ -119,9 +119,8 @@ public class SplineWalker : MonoBehaviour
 
         yield return new WaitForSeconds(0.1f);
         // print("Drive Pos: " + transform.position);
-        
     }
-    
+
     private IEnumerator TrackSpeed()
     {
         var currentPos = transform.position;

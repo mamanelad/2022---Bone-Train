@@ -20,9 +20,10 @@ public class JunctionChange : MonoBehaviour
     {
         if (other.CompareTag("Train"))
         {
+            var track = Random.Range(1, 3) == 1 ? leftTrack : rightTrack;
             train = other.GetComponent<SplineWalker>();
-            var trackPosition = transform.transform.position - rightTrack.GetControlPoint(0); 
-            train.StartCoroutine(train.SwitchTrack(rightTrack, trackPosition, 0.0f, speed));
+            var trackPosition = transform.transform.position - track.GetControlPoint(0); 
+            train.StartCoroutine(train.SwitchTrack(track, trackPosition, 0.0f, speed));
             collider.enabled = false;
         }
             
