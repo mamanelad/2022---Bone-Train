@@ -91,34 +91,34 @@ public class SplineWalker : MonoBehaviour
 
     public IEnumerator SwitchTrack(BezierSpline newTrack, Vector3 trackRealPos, float progress, float speedFactor)
     {
-        // print("RTP: " + trackRealPos);
+        var originalForward = transform.localPosition + spline.GetDirection(Progress);
         trackTransition = true;
         spline = null;
-        var currentPosition = transform.position;
+        var originalPosition = transform.position;
 
-        var newPosition = new Vector3(trackRealPos.x, currentPosition.y, trackRealPos.z);
-        var transitionDuration = Vector3.Distance(newPosition, currentPosition) / trainSpeed;
+        var newPosition = new Vector3(trackRealPos.x, originalPosition.y, trackRealPos.z);
+        var transitionDuration = Vector3.Distance(newPosition, originalPosition) / trainSpeed;
+        var newForward = newPosition + newTrack.GetDirection(progress);
 
         var timer = 0f;
         while (timer < transitionDuration)
         {
             var t = Mathf.Min(timer / transitionDuration, 1);
-            var curPos = Vector3.Lerp(currentPosition, newPosition, t);
+            var curPos = Vector3.Lerp(originalPosition, newPosition, t);
+            var curForward = Vector3.Lerp(originalForward, newForward, t);
             transform.position = curPos;
+            transform.LookAt(curForward);
             yield return null;
             timer += Time.deltaTime;
         }
 
         transform.position = newPosition;
-
         spline = newTrack;
         Progress = progress;
         curSpeed = baseSpeed * speedFactor;
-        // print("Train Pos: " + transform.position);
         trackTransition = false;
-
+        transform.LookAt(transform.localPosition + spline.GetDirection(Progress));
         yield return new WaitForSeconds(0.1f);
-        // print("Drive Pos: " + transform.position);
     }
 
     private IEnumerator TrackSpeed()

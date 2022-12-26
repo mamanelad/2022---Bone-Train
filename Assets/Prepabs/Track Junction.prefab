@@ -63,6 +63,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   leftTrack: {fileID: 6728364435955476832}
   rightTrack: {fileID: 5870016428793797981}
+  speed: 4
 --- !u!1 &6492729532542621877
 GameObject:
   m_ObjectHideFlags: 0
@@ -194,7 +195,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 152e2b496b751ae408c8b2ffc0558f1f, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0.92
+      value: 0.97
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 152e2b496b751ae408c8b2ffc0558f1f, type: 3}
       propertyPath: m_LocalPosition.z
