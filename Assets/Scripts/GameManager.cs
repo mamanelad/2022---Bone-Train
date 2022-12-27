@@ -31,6 +31,8 @@ public class GameManager : MonoBehaviour
 
     [Space(20)] [Header("Road")] public Road curRoad;
     
+    [Space(20)] [Header("Speed")]
+    [SerializeField] public float maxSpeed = 400f;
 
     public enum Road
     {

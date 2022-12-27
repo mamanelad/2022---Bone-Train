@@ -18,7 +18,7 @@ public class SpeedHandle : MonoBehaviour
     
     [Space(20)]
     [Header("Speed")]
-    private float maxSpeed = 1;
+    private float maxSpeed;
     private float curSpeed;
     
     [Space(20)]
@@ -29,6 +29,8 @@ public class SpeedHandle : MonoBehaviour
     {
         slider.onValueChanged.AddListener(delegate { ValueChangeCheck();});
         handle.transform.eulerAngles = new Vector3(0, 0, maxRotation);
+        maxSpeed = GameManager.Shared.maxSpeed;
+        // ValueChangeCheck();
     }
     
     

@@ -3,7 +3,7 @@
 public class SplineWalker : MonoBehaviour {
 
 	public BezierSpline spline;
-
+	
 	public float speed;
 
 	public float speedSensitivity;
@@ -60,9 +60,10 @@ public class SplineWalker : MonoBehaviour {
 
 	private void ChangeSpeed()
 	{
-		if (Input.GetKey(KeyCode.UpArrow))
-			speed += Time.deltaTime * speedSensitivity;
-		if (Input.GetKey(KeyCode.DownArrow))
-			speed -= Time.deltaTime * speedSensitivity;
+		speed = GameManager.Shared.GetSpeed();
+		// if (Input.GetKey(KeyCode.UpArrow))
+		// 	speed += Time.deltaTime * speedSensitivity;
+		// if (Input.GetKey(KeyCode.DownArrow))
+		// 	speed -= Time.deltaTime * speedSensitivity;
 	}
 }
