@@ -21,6 +21,9 @@ public class GameManager : MonoBehaviour
     [NonSerialized] public int SoulStones;
     [NonSerialized] public int GoodSouls;
     [NonSerialized] public int BadSouls;
+    
+    [SerializeField] private Arrow[] _arrows;
+    private bool _arrowsAreOn;
 
     [Space(20)] [Header("Extra")] public static GameManager Shared;
     public LevelData ld;
@@ -64,6 +67,10 @@ public class GameManager : MonoBehaviour
         // }
         // else
         //     Destroy(gameObject);
+        if (_arrows.Length != 2)
+        {
+            print("Drag Arrows to the arrow array");
+        }
     }
 
 
@@ -164,6 +171,23 @@ public class GameManager : MonoBehaviour
     public void SetSpeed(float newSpeed)
     {
         _trainSpeed = newSpeed;
+    }
+
+    public void ArrowSpriteHandler(Arrow.ArrowSide sideToMark)
+    {
+        foreach (var arrow in _arrows)
+        {
+            arrow.ArrowHandler(sideToMark);
+        }
+    }
+    
+    public void ArrowsTurnOnAndOff(bool on)
+    {
+        _arrowsAreOn = on;
+        foreach (var arrow in _arrows)
+        {
+            arrow.gameObject.SetActive(on);
+        }
     }
 }
 

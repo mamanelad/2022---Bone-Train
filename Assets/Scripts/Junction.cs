@@ -1,3 +1,4 @@
+using System;
 using UnityEngine;
 using Random = UnityEngine.Random;
 
@@ -13,10 +14,20 @@ public class Junction : MonoBehaviour
     private void OnTriggerEnter(Collider other)
     {
         if (other.CompareTag("Train"))
+        {
             _train = other.GetComponent<SplineWalker>();
+            GameManager.Shared.ArrowsTurnOnAndOff(true);
+        }
+            
     }
 
-    
+    private void OnTriggerExit(Collider other)
+    {
+        if (other.CompareTag("Train"))
+            GameManager.Shared.ArrowsTurnOnAndOff(false);
+    }
+
+
     private void Update()
     {
         if (!_train)
@@ -34,11 +45,23 @@ public class Junction : MonoBehaviour
     private void DecideTrack()
     {
         if (Input.GetKeyDown(KeyCode.LeftArrow))
+        {
             nextTrack = left;
+            GameManager.Shared.ArrowSpriteHandler(Arrow.ArrowSide.Left);
+        }
+
         if (Input.GetKeyDown(KeyCode.RightArrow))
+        {
             nextTrack = right;
+            GameManager.Shared.ArrowSpriteHandler(Arrow.ArrowSide.Right);
+        }
+            
 
         if (!nextTrack)
+        {
             nextTrack = Random.Range(1, 2) == 1 ? left : right;
+            Arrow.ArrowSide side = nextTrack == left ? Arrow.ArrowSide.Left : Arrow.ArrowSide.Right;
+        }
+            
     }
 }
