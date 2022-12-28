@@ -62,8 +62,6 @@ public class Arrow : MonoBehaviour
 
     public void ClickButton()
     {
-        print("the side was chosen is : " + _arrowSide );
-        
         GameManager.Shared.SetArrowSide(_arrowSide);
     }
 }

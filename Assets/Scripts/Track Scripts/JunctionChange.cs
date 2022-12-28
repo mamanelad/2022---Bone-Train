@@ -19,7 +19,7 @@ public class JunctionChange : MonoBehaviour
     // [SerializeField] private BezierSpline leftTrack;
     [SerializeField] private BezierSpline right;
     [SerializeField] private MiniMapJunction miniMapJunction;
-    [SerializeField] private Junction nextJunction;
+    [SerializeField] private JunctionChange nextJunction;
     [SerializeField] private int id;
     private SplineWalker _train;
     private BezierSpline nextTrack;
@@ -98,6 +98,24 @@ public class JunctionChange : MonoBehaviour
             nextTrack = Random.Range(1, 3) == 1 ? leftTrack : rightTrack;
             Arrow.ArrowSide side = nextTrack == leftTrack ? Arrow.ArrowSide.Left : Arrow.ArrowSide.Right;
         }
+    }
+    
+    public JunctionChange GetNextJunction()
+    {
+        if (nextJunction == null)
+        {
+            print("No next Junction to junction id: "+id);
+        }
+        return nextJunction;
+    }
+    
+    public MiniMapJunction GetMiniMapJunction()
+    {
+        if (miniMapJunction == null)
+        {
+            print("Add the miniMap jUNCTION to his junction that is id is: " + id);
+        }
         
+        return miniMapJunction;
     }
 }
