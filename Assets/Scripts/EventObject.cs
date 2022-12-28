@@ -1,22 +1,20 @@
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-
-[CreateAssetMenu(menuName = "Interaction")]
-public class EventData : ScriptableObject
+[CreateAssetMenu(menuName = "New Event")]
+public class EventObject : ScriptableObject
 {
     [Header("Artwork")]
     public Sprite background;
     public Sprite foreground;
     public Sprite character;
+    public bool singleButton;
 
-    [Header("Button Artwork")]
-    public Sprite buttonDeny;
-    public Sprite buttonAccept;
-    public Sprite buttonSingle;
-
-    [Space(20)] [Header("Text")] 
+    [Header("Text")]
     public string textTitle;
-    public List<Interaction> interactions;
+    [Space(20)]
+    public string textBody;
+    
 }
 
 [System.Serializable]

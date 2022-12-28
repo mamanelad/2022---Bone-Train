@@ -27,6 +27,5 @@ public class CurveChange : MonoBehaviour
             train.StartCoroutine(train.SwitchTrack(track, trackPosition, progress, speed));
             collider.enabled = false;
         }
-            
     }
 }
