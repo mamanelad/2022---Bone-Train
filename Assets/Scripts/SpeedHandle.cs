@@ -19,6 +19,7 @@ public class SpeedHandle : MonoBehaviour
     [Space(20)]
     [Header("Speed")]
     private float maxSpeed;
+    private float minSpeed;
     private float curSpeed;
     
     [Space(20)]
@@ -30,6 +31,9 @@ public class SpeedHandle : MonoBehaviour
         slider.onValueChanged.AddListener(delegate { ValueChangeCheck();});
         handle.transform.eulerAngles = new Vector3(0, 0, maxRotation);
         maxSpeed = GameManager.Shared.maxSpeed;
+        minSpeed = GameManager.Shared.minSpeed;
+        curSpeed = GameManager.Shared.GetSpeed();
+        slider.value = Mathf.InverseLerp(maxSpeed, minSpeed, curSpeed);
         // ValueChangeCheck();
     }
     
@@ -38,7 +42,7 @@ public class SpeedHandle : MonoBehaviour
     public void ValueChangeCheck()
     {
         sliderAmount = slider.value;
-        curSpeed = Mathf.Lerp(0, maxSpeed, sliderAmount);
+        curSpeed = Mathf.Lerp(minSpeed, maxSpeed, sliderAmount);
         GameManager.Shared.SetSpeed(curSpeed);
         RotateHandle();
     }

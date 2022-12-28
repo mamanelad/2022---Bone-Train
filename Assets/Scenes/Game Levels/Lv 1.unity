@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.1482212, g: 0.042579785, b: 0.04522457, a: 1}
+  m_IndirectSpecularColor: {r: 0.14835654, g: 0.04265617, b: 0.045387354, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -705,10 +705,10 @@ MonoBehaviour:
   goodSoulsInitializeValue: 0
   badSoulsInitializeValue: 0
   _arrows: []
-  ld: {fileID: 0}
   morale: 2
   curRoad: 0
-  maxSpeed: 400
+  maxSpeed: 1100
+  minSpeed: 100
   train: {fileID: 1056989853}
   speedHandle: {fileID: 349463109}
   speedState: 3

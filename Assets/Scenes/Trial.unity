@@ -702,10 +702,10 @@ MonoBehaviour:
   _arrows:
   - {fileID: 362859379}
   - {fileID: 1039584042}
-  ld: {fileID: 0}
   morale: 2
   curRoad: 0
-  maxSpeed: 400
+  maxSpeed: 1100
+  minSpeed: 100
   train: {fileID: 1056989853}
   speedHandle: {fileID: 349463109}
   speedState: 3
