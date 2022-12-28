@@ -58,4 +58,9 @@ public class Arrow : MonoBehaviour
     {
         _image.sprite = regularSprite;
     }
+
+    public void ClickButton()
+    {
+        print("WAS CLICKED");
+    }
 }

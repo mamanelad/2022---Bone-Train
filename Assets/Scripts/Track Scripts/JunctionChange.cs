@@ -13,11 +13,33 @@ public class JunctionChange : MonoBehaviour
     private SplineWalker train;
     [SerializeField] private Collider colliderSphere;
     [SerializeField] private Collider colliderBox;
+    
+    
+    [SerializeField] private BezierSpline start;
+    // [SerializeField] private BezierSpline leftTrack;
+    [SerializeField] private BezierSpline right;
+    [SerializeField] private MiniMapJunction miniMapJunction;
+    [SerializeField] private Junction nextJunction;
+    [SerializeField] private int id;
+    private SplineWalker _train;
+    private BezierSpline nextTrack;
+    
 
     private void Start()
     {
         colliderSphere.enabled = true;
         colliderBox.enabled = false;
+    }
+
+    private void Update()
+    {
+        if (!_train)
+        {
+            train = FindObjectOfType<SplineWalker>();
+        }
+            
+
+        // DecideTrack();
     }
 
     private void SwitchColliders()
@@ -38,12 +60,36 @@ public class JunctionChange : MonoBehaviour
 
             else if (colliderBox.enabled)
             {
-                var track = Random.Range(1, 3) == 1 ? leftTrack : rightTrack;
+                GameManager.Shared.ArrowsTurnOnAndOff(false);
                 train = other.GetComponent<SplineWalker>();
-                var trackPosition = transform.transform.position - track.GetControlPoint(0); 
-                train.StartCoroutine(train.SwitchTrack(track, trackPosition, 0.0f, speed));
+                var trackPosition = transform.transform.position - nextTrack.GetControlPoint(0); 
+                train.StartCoroutine(train.SwitchTrack(nextTrack, trackPosition, 0.0f, speed));
                 colliderBox.enabled = false;
             }
+        }
+            
+    }
+    
+    private void DecideTrack(Arrow.ArrowSide sideChosen)
+    {
+        print("inside deside track");
+        if (sideChosen == Arrow.ArrowSide.Left)
+        {
+            nextTrack = leftTrack;
+            GameManager.Shared.ArrowSpriteHandler(Arrow.ArrowSide.Left);
+        }
+
+        if (sideChosen == Arrow.ArrowSide.Right)
+        {
+            nextTrack = rightTrack;
+            GameManager.Shared.ArrowSpriteHandler(Arrow.ArrowSide.Right);
+        }
+            
+
+        if (!nextTrack)
+        {
+            nextTrack = Random.Range(1, 2) == 1 ? leftTrack : rightTrack;
+            Arrow.ArrowSide side = nextTrack == leftTrack ? Arrow.ArrowSide.Left : Arrow.ArrowSide.Right;
         }
             
     }
