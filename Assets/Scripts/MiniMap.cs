@@ -7,7 +7,7 @@ public class MiniMap : MonoBehaviour
 {
     [SerializeField] private Transform train;
     [SerializeField] private Camera miniMapCamara;
-    [SerializeField] private float addToXpOS = 15f;
+    [SerializeField] private float addToXpOS = 400f;
     private float camY;
 
     private void Awake()
