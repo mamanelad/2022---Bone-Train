@@ -112,6 +112,7 @@ GameObject:
   m_Component:
   - component: {fileID: 8012188474441197637}
   - component: {fileID: 8732883942831441075}
+  - component: {fileID: 5642592343244094680}
   - component: {fileID: 6575952261083543391}
   m_Layer: 0
   m_Name: Converge Straight Left
@@ -151,6 +152,19 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 0.01, y: 3.75, z: 2.32}
   m_Center: {x: 1.5, y: 0, z: 0}
+--- !u!135 &5642592343244094680
+SphereCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8309024054152764907}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Radius: 25
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!114 &6575952261083543391
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -166,6 +180,8 @@ MonoBehaviour:
   leftTrack: {fileID: 25356394403312706}
   rightTrack: {fileID: 897230731132584063}
   speed: 4
+  colliderSphere: {fileID: 5642592343244094680}
+  colliderBox: {fileID: 8732883942831441075}
 --- !u!1001 &1936877936247262100
 PrefabInstance:
   m_ObjectHideFlags: 0

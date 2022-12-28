@@ -10,6 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 3617767881384998247}
   - component: {fileID: 2608861690600659345}
+  - component: {fileID: 3902362542860545018}
   - component: {fileID: 452506151058238077}
   m_Layer: 0
   m_Name: Track Junction
@@ -49,6 +50,19 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 0.01, y: 3.75, z: 2.32}
   m_Center: {x: 1.5, y: 0, z: 0}
+--- !u!135 &3902362542860545018
+SphereCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3335605009474470089}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Radius: 25
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!114 &452506151058238077
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -64,6 +78,8 @@ MonoBehaviour:
   leftTrack: {fileID: 6728364435955476832}
   rightTrack: {fileID: 5870016428793797981}
   speed: 4
+  colliderSphere: {fileID: 3902362542860545018}
+  colliderBox: {fileID: 2608861690600659345}
 --- !u!1 &6492729532542621877
 GameObject:
   m_ObjectHideFlags: 0
