@@ -22,8 +22,8 @@ public class JunctionChange : MonoBehaviour
 
     private void SwitchColliders()
     {
-        colliderSphere.enabled = true;
-        colliderBox.enabled = false;
+        colliderSphere.enabled = false;
+        colliderBox.enabled = true;
     }
 
     private void OnTriggerEnter(Collider other)
@@ -32,7 +32,6 @@ public class JunctionChange : MonoBehaviour
         {
             if (colliderSphere.enabled)
             {
-                print("aaaa");
                 GameManager.Shared.ArrowsTurnOnAndOff(true);
                 SwitchColliders();
             }
