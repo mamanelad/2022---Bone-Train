@@ -104,7 +104,7 @@ public class GameManager : MonoBehaviour
         {
             print("Drag the event manager of the scene to the game manager");
             _eventManager = FindObjectOfType<EventManager>();
-            _eventManager.gameObject.SetActive(false);
+            // _eventManager.gameObject.SetActive(false);
         }
 
 

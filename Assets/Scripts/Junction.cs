@@ -20,7 +20,6 @@ public class Junction : MonoBehaviour
             _train = other.GetComponent<SplineWalker>();
             GameManager.Shared.ArrowsTurnOnAndOff(true);
         }
-            
     }
 
    
