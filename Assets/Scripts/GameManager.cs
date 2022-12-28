@@ -5,8 +5,7 @@ using UnityEngine;
 [DefaultExecutionOrder(-999)]
 public class GameManager : MonoBehaviour
 {
-    [Header("Map")]
-    [SerializeField] private Junction curJunction;
+    [Header("Map")] [SerializeField] private Junction curJunction;
     private Junction nextJunction;
 
     [Space(20)] [Header("Event")] private EventData _currEventData;
@@ -23,21 +22,24 @@ public class GameManager : MonoBehaviour
     [NonSerialized] public int SoulStones;
     [NonSerialized] public int GoodSouls;
     [NonSerialized] public int BadSouls;
-    
+
     [SerializeField] private Arrow[] _arrows;
     private bool _arrowsAreOn;
 
     [Space(20)] [Header("Extra")] public static GameManager Shared;
-    public LevelData ld;
     [HideInInspector] public Morale morale = Morale.Neutral;
 
     [Space(20)] [Header("Road")] public Road curRoad;
-    
-    [Space(20)] [Header("Speed")]
-    [SerializeField] public float maxSpeed = 400f;
+
+    [Space(20)] [Header("Speed")] [SerializeField]
+    public float maxSpeed = 1100;
+
+    public float minSpeed = 100;
+    private float curSpeed = 500;
 
     [Space(20)] [Header("Train")] [SerializeField]
-    private GameObject train; 
+    private GameObject train;
+
     public enum Road
     {
         Up,
@@ -47,13 +49,13 @@ public class GameManager : MonoBehaviour
     [Space(20)] [Header("Speed")] [SerializeField]
     private GameObject speedHandle;
 
-    private float _trainSpeed;
-    [SerializeField] private SpeedState speedState = SpeedState.Stop; 
+    [SerializeField] private SpeedState speedState = SpeedState.Stop;
+
     public enum SpeedState
     {
         Max,
         Mid,
-        Low, 
+        Low,
         Stop
     }
 
@@ -64,6 +66,7 @@ public class GameManager : MonoBehaviour
         SoulStones = soulStonesInitializeValue;
         GoodSouls = goodSoulsInitializeValue;
         BadSouls = badSoulsInitializeValue;
+        curSpeed = Mathf.Lerp(minSpeed, maxSpeed, 0.5f);
 
         //
         // if (shared == null)
@@ -84,7 +87,7 @@ public class GameManager : MonoBehaviour
         }
     }
 
-    
+
     private void Update()
     {
         if (nextJunction == null)
@@ -97,9 +100,8 @@ public class GameManager : MonoBehaviour
             {
                 nextJunction = curJunction.GetNextJunction();
             }
-                
         }
-        
+
         if (_eventManager == null)
         {
             print("Drag the event manager of the scene to the game manager");
@@ -189,12 +191,12 @@ public class GameManager : MonoBehaviour
 
     public float GetSpeed()
     {
-        return _trainSpeed;
+        return curSpeed;
     }
-    
+
     public void SetSpeed(float newSpeed)
     {
-        _trainSpeed = newSpeed;
+        curSpeed = newSpeed;
     }
 
     public void ArrowSpriteHandler(Arrow.ArrowSide sideToMark)
@@ -204,7 +206,7 @@ public class GameManager : MonoBehaviour
             arrow.ArrowHandler(sideToMark);
         }
     }
-    
+
     public void ArrowsTurnOnAndOff(bool on)
     {
         _arrowsAreOn = on;
@@ -218,7 +220,7 @@ public class GameManager : MonoBehaviour
     {
         return curJunction;
     }
-    
+
     public Junction GetNextJunction()
     {
         return nextJunction;

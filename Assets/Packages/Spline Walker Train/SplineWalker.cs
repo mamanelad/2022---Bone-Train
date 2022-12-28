@@ -10,8 +10,6 @@ public class SplineWalker : MonoBehaviour
 
     [SerializeField] private float baseSpeed = 600;
 
-    [SerializeField] private float accelaration;
-
     [SerializeField] private bool lookForward;
 
     [SerializeField] private SplineWalkerMode mode;
@@ -28,13 +26,16 @@ public class SplineWalker : MonoBehaviour
 
     private float curSpeed;
 
+    private float speedFactor = 1;
+
     public float Progress { get; set; }
 
     private bool goingForward = true;
 
     private void Start()
     {
-        curSpeed = baseSpeed;
+        baseSpeed = GameManager.Shared.GetSpeed();
+        curSpeed = baseSpeed * speedFactor;
         splineLenght = spline.GetLength();
         StartCoroutine(TrackSpeed());
     }
@@ -80,16 +81,8 @@ public class SplineWalker : MonoBehaviour
         if (lookForward)
             transform.LookAt(position + spline.GetDirection(Progress));
     }
-
-    private void ChangeSpeed()
-    {
-        if (Input.GetKey(KeyCode.UpArrow))
-            curSpeed += Time.deltaTime * accelaration;
-        if (Input.GetKey(KeyCode.DownArrow))
-            curSpeed -= Time.deltaTime * accelaration;
-    }
-
-    public IEnumerator SwitchTrack(BezierSpline newTrack, Vector3 trackRealPos, float progress, float speedFactor)
+    
+    public IEnumerator SwitchTrack(BezierSpline newTrack, Vector3 trackRealPos, float progress, float newSpeedFactor)
     {
         var originalForward = transform.localPosition + spline.GetDirection(Progress);
         trackTransition = true;
@@ -115,6 +108,7 @@ public class SplineWalker : MonoBehaviour
         transform.position = newPosition;
         spline = newTrack;
         Progress = progress;
+        speedFactor = newSpeedFactor;
         curSpeed = baseSpeed * speedFactor;
         trackTransition = false;
         transform.LookAt(transform.localPosition + spline.GetDirection(Progress));
@@ -124,7 +118,10 @@ public class SplineWalker : MonoBehaviour
     private IEnumerator TrackSpeed()
     {
         var currentPos = transform.position;
-
+        baseSpeed = GameManager.Shared.GetSpeed();
+        curSpeed = baseSpeed * speedFactor;
+        print(baseSpeed);
+        
         while (true)
         {
             yield return new WaitForSeconds(timeMeasureUnit);
