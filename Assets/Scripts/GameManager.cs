@@ -5,8 +5,8 @@ using UnityEngine;
 [DefaultExecutionOrder(-999)]
 public class GameManager : MonoBehaviour
 {
-    [Header("Map")] [SerializeField] private Junction curJunction;
-    private Junction nextJunction;
+    [Header("Map")] [SerializeField] private JunctionChange curJunction;
+    private JunctionChange nextJunction;
 
     [Space(20)] [Header("Event")] private EventData _currEventData;
     private bool _inEvent;
@@ -217,12 +217,12 @@ public class GameManager : MonoBehaviour
         }
     }
 
-    public Junction GetCurrJunction()
+    public JunctionChange GetCurrJunction()
     {
         return curJunction;
     }
 
-    public Junction GetNextJunction()
+    public JunctionChange GetNextJunction()
     {
         return nextJunction;
     }
