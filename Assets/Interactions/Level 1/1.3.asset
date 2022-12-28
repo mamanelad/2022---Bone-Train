@@ -1,0 +1,34 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f70644a41e4ffff4181cb001be470b10, type: 3}
+  m_Name: 1.3
+  m_EditorClassIdentifier: 
+  background: {fileID: 21300000, guid: f7631454c5d6f4f4db8cc32eb25c795e, type: 3}
+  foreground: {fileID: 21300000, guid: f214715b9508f8942b47b8d3c45c49c8, type: 3}
+  character: {fileID: 21300000, guid: d184f130085329041b3b408d58d8a15c, type: 3}
+  buttonDeny: {fileID: 0}
+  buttonAccept: {fileID: 0}
+  buttonSingle: {fileID: 1447981932, guid: 4eee0c812de77834ea93df1ba4699aad, type: 3}
+  textTitle: Roadblock
+  interactions:
+  - morale: 2
+    textBody: No other way but through
+    interactionAccept:
+      soulStones: -50
+      goodSouls: 0
+      badSouls: 0
+      moraleImpact: 1
+    interactionDeny:
+      soulStones: 0
+      goodSouls: 0
+      badSouls: 0
+      moraleImpact: 2
