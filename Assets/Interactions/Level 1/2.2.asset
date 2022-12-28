@@ -14,23 +14,19 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   background: {fileID: 21300000, guid: f7631454c5d6f4f4db8cc32eb25c795e, type: 3}
   foreground: {fileID: 21300000, guid: f214715b9508f8942b47b8d3c45c49c8, type: 3}
-  character: {fileID: 21300000, guid: f56e811244a600e4abec22226094a23a, type: 3}
-  buttonDeny: {fileID: 21300000, guid: adbf4c837be6b8143be92a4e0b253057, type: 3}
-  buttonAccept: {fileID: 21300000, guid: 0410684883c37354cbb9371405a1507e, type: 3}
-  buttonSingle: {fileID: 0}
-  textTitle: Miser
+  character: {fileID: 21300000, guid: 9349fca17bc16214bab0cadc787580d0, type: 3}
+  buttonDeny: {fileID: 0}
+  buttonAccept: {fileID: 0}
+  buttonSingle: {fileID: 1447981932, guid: 4eee0c812de77834ea93df1ba4699aad, type: 3}
+  textTitle: Toll Booth
   interactions:
   - morale: 2
-    textBody: 'With a sinister grin, the merchant from hell approaches you, eager
-      to strike a deal:
-
-      "Friend! your engine runs light. suppose some of your
-      good souls join me, and I will reward you generously with soulstone"'
+    textBody: Everyone pays, eventually
     interactionAccept:
-      soulStones: 50
-      goodSouls: -100
+      soulStones: 0
+      goodSouls: -50
       badSouls: 0
-      moraleImpact: 1
+      moraleImpact: 2
     interactionDeny:
       soulStones: 0
       goodSouls: 0
