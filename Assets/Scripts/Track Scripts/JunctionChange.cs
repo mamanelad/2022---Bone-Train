@@ -6,16 +6,16 @@ using Random = UnityEngine.Random;
 
 public class JunctionChange : MonoBehaviour
 {
-
-    [SerializeField]private BezierSpline leftTrack;
-    [SerializeField]private BezierSpline rightTrack;
+    [SerializeField] private BezierSpline leftTrack;
+    [SerializeField] private BezierSpline rightTrack;
     [SerializeField] private float speed = 4f;
     private SplineWalker train;
     [SerializeField] private Collider colliderSphere;
     [SerializeField] private Collider colliderBox;
-    
-    
+
+
     [SerializeField] private BezierSpline start;
+
     // [SerializeField] private BezierSpline leftTrack;
     [SerializeField] private BezierSpline right;
     [SerializeField] private MiniMapJunction miniMapJunction;
@@ -23,7 +23,7 @@ public class JunctionChange : MonoBehaviour
     [SerializeField] private int id;
     private SplineWalker _train;
     private BezierSpline nextTrack;
-    
+
 
     private void Start()
     {
@@ -64,20 +64,23 @@ public class JunctionChange : MonoBehaviour
 
             else if (colliderBox.enabled)
             {
+                if (GameManager.Shared.GetArrowSide() == Arrow.ArrowSide.None)
+                {
+                    DecideTrack(Arrow.ArrowSide.None);
+                }
+
                 GameManager.Shared.ArrowsTurnOnAndOff(false);
-                GameManager.Shared.SetArrowSide(Arrow.ArrowSide.None );
+                GameManager.Shared.SetArrowSide(Arrow.ArrowSide.None);
                 train = other.GetComponent<SplineWalker>();
-                var trackPosition = transform.transform.position - nextTrack.GetControlPoint(0); 
+                var trackPosition = transform.transform.position - nextTrack.GetControlPoint(0);
                 train.StartCoroutine(train.SwitchTrack(nextTrack, trackPosition, 0.0f, speed));
                 colliderBox.enabled = false;
             }
         }
-            
     }
-    
+
     private void DecideTrack(Arrow.ArrowSide sideChosen)
     {
-        print("inside deside track");
         if (sideChosen == Arrow.ArrowSide.Left)
         {
             nextTrack = leftTrack;
@@ -89,14 +92,12 @@ public class JunctionChange : MonoBehaviour
             nextTrack = rightTrack;
             GameManager.Shared.ArrowSpriteHandler(Arrow.ArrowSide.Right);
         }
-            
 
-        if (!nextTrack)
+        if (sideChosen == Arrow.ArrowSide.None)
         {
-            nextTrack = Random.Range(1, 2) == 1 ? leftTrack : rightTrack;
+            nextTrack = Random.Range(1, 3) == 1 ? leftTrack : rightTrack;
             Arrow.ArrowSide side = nextTrack == leftTrack ? Arrow.ArrowSide.Left : Arrow.ArrowSide.Right;
         }
-            
+        
     }
-
 }

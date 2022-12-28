@@ -122,7 +122,6 @@ public class SplineWalker : MonoBehaviour
         {
             baseSpeed = GameManager.Shared.GetSpeed();
             curSpeed = baseSpeed * speedFactor;
-            print(baseSpeed);
             
             yield return new WaitForSeconds(timeMeasureUnit);
             if (!trackTransition)
