@@ -11,11 +11,12 @@ public class Arrow : MonoBehaviour
 
     public enum ArrowSide
     {
+        None,
         Left,
         Right
     }
 
-    [SerializeField] private ArrowSide _arrowSide = ArrowSide.Right;
+    [SerializeField] private ArrowSide _arrowSide;
     
     void Start()
     {
@@ -61,6 +62,8 @@ public class Arrow : MonoBehaviour
 
     public void ClickButton()
     {
-        print("WAS CLICKED");
+        print("the side was chosen is : " + _arrowSide );
+        
+        GameManager.Shared.SetArrowSide(_arrowSide);
     }
 }

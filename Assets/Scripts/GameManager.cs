@@ -25,6 +25,7 @@ public class GameManager : MonoBehaviour
 
     [SerializeField] private Arrow[] _arrows;
     private bool _arrowsAreOn;
+    private Arrow.ArrowSide _arrowSide = Arrow.ArrowSide.None; 
 
     [Space(20)] [Header("Extra")] public static GameManager Shared;
     [HideInInspector] public Morale morale = Morale.Neutral;
@@ -229,6 +230,21 @@ public class GameManager : MonoBehaviour
     public GameObject GetTrain()
     {
         return train;
+    }
+
+    public bool GetIsArrowsAreOn()
+    {
+        return _arrowsAreOn;
+    }
+    
+    public Arrow.ArrowSide GetArrowSide()
+    {
+        return _arrowSide;
+    }
+    
+    public void SetArrowSide(Arrow.ArrowSide sideChosen)
+    {
+        _arrowSide = sideChosen;
     }
 }
 

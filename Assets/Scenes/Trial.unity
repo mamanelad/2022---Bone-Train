@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.14835654, g: 0.04265617, b: 0.045387354, a: 1}
+  m_IndirectSpecularColor: {r: 0.1482212, g: 0.042579785, b: 0.04522457, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -1020,10 +1020,18 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1135348182}
     m_Modifications:
+    - target: {fileID: 3217299756777854189, guid: 5aae4924b0e74d94fb69769bd0210c8c, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 4333621673550438190, guid: 5aae4924b0e74d94fb69769bd0210c8c, type: 3}
       propertyPath: m_Sprite
       value: 
       objectReference: {fileID: 2114883448, guid: 9c0e0072db3ee7343b7dc56857f25d08, type: 3}
+    - target: {fileID: 4333621673550438191, guid: 5aae4924b0e74d94fb69769bd0210c8c, type: 3}
+      propertyPath: _arrowSide
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 4333621673550438191, guid: 5aae4924b0e74d94fb69769bd0210c8c, type: 3}
       propertyPath: markSprite
       value: 
@@ -1036,6 +1044,10 @@ PrefabInstance:
       propertyPath: m_Sprite
       value: 
       objectReference: {fileID: 2114883448, guid: 9c0e0072db3ee7343b7dc56857f25d08, type: 3}
+    - target: {fileID: 4333621674062832157, guid: 5aae4924b0e74d94fb69769bd0210c8c, type: 3}
+      propertyPath: _arrowSide
+      value: 2
+      objectReference: {fileID: 0}
     - target: {fileID: 4333621674062832157, guid: 5aae4924b0e74d94fb69769bd0210c8c, type: 3}
       propertyPath: markSprite
       value: 
@@ -1131,6 +1143,14 @@ PrefabInstance:
     - target: {fileID: 4333621674785910763, guid: 5aae4924b0e74d94fb69769bd0210c8c, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7482679922637254506, guid: 5aae4924b0e74d94fb69769bd0210c8c, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 1039584042}
+    - target: {fileID: 7482679922637254506, guid: 5aae4924b0e74d94fb69769bd0210c8c, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: ClickButton
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 5aae4924b0e74d94fb69769bd0210c8c, type: 3}
@@ -13679,11 +13699,11 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 3510639080996009002, guid: 4fea3e6ae6712c549ae2d1718e06903d, type: 3}
       propertyPath: m_AnchorMax.y
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 3510639081037911944, guid: 4fea3e6ae6712c549ae2d1718e06903d, type: 3}
       propertyPath: m_AnchorMax.y
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 3510639081412655596, guid: 4fea3e6ae6712c549ae2d1718e06903d, type: 3}
       propertyPath: m_Pivot.x
@@ -13772,6 +13792,10 @@ PrefabInstance:
     - target: {fileID: 3510639081412655597, guid: 4fea3e6ae6712c549ae2d1718e06903d, type: 3}
       propertyPath: m_Name
       value: Dashboard
+      objectReference: {fileID: 0}
+    - target: {fileID: 3510639081412655597, guid: 4fea3e6ae6712c549ae2d1718e06903d, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 4fea3e6ae6712c549ae2d1718e06903d, type: 3}
