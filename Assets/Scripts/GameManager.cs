@@ -5,7 +5,9 @@ using UnityEngine;
 [DefaultExecutionOrder(-999)]
 public class GameManager : MonoBehaviour
 {
-    [Header("Map")] [SerializeField] private Map map;
+    [Header("Map")]
+    [SerializeField] private Junction curJunction;
+    private Junction nextJunction;
 
     [Space(20)] [Header("Event")] private EventData _currEventData;
     private bool _inEvent;
@@ -34,6 +36,8 @@ public class GameManager : MonoBehaviour
     [Space(20)] [Header("Speed")]
     [SerializeField] public float maxSpeed = 400f;
 
+    [Space(20)] [Header("Train")] [SerializeField]
+    private GameObject train; 
     public enum Road
     {
         Up,
@@ -73,11 +77,29 @@ public class GameManager : MonoBehaviour
         {
             print("Drag Arrows to the arrow array");
         }
+
+        if (train == null)
+        {
+            print("Drag the train first to the game manager");
+        }
     }
 
-
+    
     private void Update()
     {
+        if (nextJunction == null)
+        {
+            if (curJunction == null)
+            {
+                print("Drag the first Junction in the game to the game manager");
+            }
+            else
+            {
+                nextJunction = curJunction.GetNextJunction();
+            }
+                
+        }
+        
         if (_eventManager == null)
         {
             print("Drag the event manager of the scene to the game manager");
@@ -111,10 +133,10 @@ public class GameManager : MonoBehaviour
     }
 
 
-    public void OpenMap()
-    {
-        map.changeScale = true;
-    }
+    // public void OpenMap()
+    // {
+    //     map.changeScale = true;
+    // }
 
     private void EndGame()
     {
@@ -190,6 +212,21 @@ public class GameManager : MonoBehaviour
         {
             arrow.gameObject.SetActive(on);
         }
+    }
+
+    public Junction GetCurrJunction()
+    {
+        return curJunction;
+    }
+    
+    public Junction GetNextJunction()
+    {
+        return nextJunction;
+    }
+
+    public GameObject GetTrain()
+    {
+        return train;
     }
 }
 
