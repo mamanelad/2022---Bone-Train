@@ -37,7 +37,11 @@ public class JunctionChange : MonoBehaviour
         {
             train = FindObjectOfType<SplineWalker>();
         }
-            
+
+        if (GameManager.Shared.GetIsArrowsAreOn())
+        {
+            DecideTrack(GameManager.Shared.GetArrowSide());
+        }
 
         // DecideTrack();
     }
@@ -61,6 +65,7 @@ public class JunctionChange : MonoBehaviour
             else if (colliderBox.enabled)
             {
                 GameManager.Shared.ArrowsTurnOnAndOff(false);
+                GameManager.Shared.SetArrowSide(Arrow.ArrowSide.None );
                 train = other.GetComponent<SplineWalker>();
                 var trackPosition = transform.transform.position - nextTrack.GetControlPoint(0); 
                 train.StartCoroutine(train.SwitchTrack(nextTrack, trackPosition, 0.0f, speed));
