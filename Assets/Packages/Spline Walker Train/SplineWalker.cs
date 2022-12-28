@@ -8,8 +8,6 @@ public class SplineWalker : MonoBehaviour
 
     public BezierSpline spline;
 
-    [SerializeField] private float baseSpeed = 600;
-
     [SerializeField] private bool lookForward;
 
     [SerializeField] private SplineWalkerMode mode;
@@ -31,6 +29,8 @@ public class SplineWalker : MonoBehaviour
     public float Progress { get; set; }
 
     private bool goingForward = true;
+    
+    private float baseSpeed;
 
     private void Start()
     {
@@ -118,12 +118,12 @@ public class SplineWalker : MonoBehaviour
     private IEnumerator TrackSpeed()
     {
         var currentPos = transform.position;
-        baseSpeed = GameManager.Shared.GetSpeed();
-        curSpeed = baseSpeed * speedFactor;
-        print(baseSpeed);
-        
         while (true)
         {
+            baseSpeed = GameManager.Shared.GetSpeed();
+            curSpeed = baseSpeed * speedFactor;
+            print(baseSpeed);
+            
             yield return new WaitForSeconds(timeMeasureUnit);
             if (!trackTransition)
             {
