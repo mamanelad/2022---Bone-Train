@@ -9,6 +9,7 @@ public class InteractionGate : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
+        print("kaka");
         if (other.gameObject.CompareTag("Train"))
             GameManager.Shared.GotToEvent(myEventData);
     }
