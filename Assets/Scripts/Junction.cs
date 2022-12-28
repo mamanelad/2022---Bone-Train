@@ -23,11 +23,7 @@ public class Junction : MonoBehaviour
             
     }
 
-    private void OnTriggerExit(Collider other)
-    {
-        if (other.CompareTag("Train"))
-            GameManager.Shared.ArrowsTurnOnAndOff(false);
-    }
+   
 
 
     private void Update()
@@ -65,6 +61,12 @@ public class Junction : MonoBehaviour
             Arrow.ArrowSide side = nextTrack == left ? Arrow.ArrowSide.Left : Arrow.ArrowSide.Right;
         }
             
+    }
+    
+    private void OnTriggerExit(Collider other)
+    {
+        if (other.CompareTag("Train"))
+            GameManager.Shared.ArrowsTurnOnAndOff(false);
     }
 
     public Junction GetNextJunction()
