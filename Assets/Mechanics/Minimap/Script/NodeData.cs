@@ -42,13 +42,4 @@ public class NodeData : ScriptableObject
     [Header("PopUp")]
     public float popUpNodeYChange = 50f;
     public float popUpNodeXChange = 50f;
-    [Space(20)]
-    
-    [Header("Levels")]
-    public LevelData[] levelsData;
-    
-
-
-
-
 }

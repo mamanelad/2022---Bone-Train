@@ -41,7 +41,6 @@ public class Node : MonoBehaviour
     private Map _map;
     private bool canClickMap;
     private NodeHolder _nodeHolder;
-    private LevelData[] _levelsData ;
 
     private Canvas _canvas;
 
@@ -106,7 +105,6 @@ public class Node : MonoBehaviour
         popUpNodeYChange = _nodeData.popUpNodeYChange;
         popUpNodeXChange = _nodeData.popUpNodeXChange;
         InNodeColor = _nodeData.InNodeColor;
-        _levelsData = _nodeData.levelsData;
     }
 
 
@@ -202,28 +200,7 @@ public class Node : MonoBehaviour
     {
         popUpNode.SetActive(false);
     }
-
-    public LevelData GetLevelData()
-    {
-        
-        if (_levelsData.Length > 1)
-        {
-            if (GameManager.Shared.curRoad == GameManager.Road.Up)
-            {
-                return _levelsData[0];    
-            }
-
-            if (GameManager.Shared.curRoad == GameManager.Road.Down)
-            {
-                return _levelsData[0];
-            }
-        }
-        
-        return _levelsData[0];
-        
-        
-    }
-
+    
     public bool InThisNode()
     {
         return inMe;

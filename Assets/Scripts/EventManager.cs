@@ -48,44 +48,45 @@ public class EventManager : MonoBehaviour
     private void Start()
     {
         CloseButtons();
-        // ConfigureEvent();
+        ConfigureEvent();
     }
     
-    // public void ConfigureEvent()
-    // {
-    //     curInteraction = GetInteraction();
-    //     
-    //     if (background != null)
-    //         background.sprite = data.background;
-    //
-    //     if (foreground != null)
-    //         foreground.sprite = data.foreground;
-    //     
-    //     if (character != null)
-    //         character.sprite = data.character;
-    //
-    //     if (data.buttonSingle)
-    //     {
-    //         buttonSingle.SetActive(true);
-    //         buttonSingle.GetComponent<Image>().sprite = data.buttonSingle;
-    //     }
-    //     else
-    //     {
-    //         buttonAccept.SetActive(true);
-    //         buttonDeny.SetActive(true);
-    //         if (buttonAccept != null)
-    //             buttonAccept.GetComponent<Image>().sprite = data.buttonAccept;
-    //     
-    //         if (buttonDeny != null)
-    //             buttonDeny.GetComponent<Image>().sprite = data.buttonDeny;
-    //     }
-    //     
-    //     if (textBody != null)
-    //         textBody.text = curInteraction.textBody;
-    //
-    //     if (textTitle != null)
-    //         textTitle.text = data.textTitle;
-    // }
+    public void ConfigureEvent()
+    {
+        print("aaa");
+        // curInteraction = GetInteraction();
+        //
+        // if (background != null)
+        //     background.sprite = data.background;
+        //
+        // if (foreground != null)
+        //     foreground.sprite = data.foreground;
+        //
+        // if (character != null)
+        //     character.sprite = data.character;
+        //
+        // if (data.buttonSingle)
+        // {
+        //     buttonSingle.SetActive(true);
+        //     buttonSingle.GetComponent<Image>().sprite = data.buttonSingle;
+        // }
+        // else
+        // {
+        //     buttonAccept.SetActive(true);
+        //     buttonDeny.SetActive(true);
+        //     if (buttonAccept != null)
+        //         buttonAccept.GetComponent<Image>().sprite = data.buttonAccept;
+        //
+        //     if (buttonDeny != null)
+        //         buttonDeny.GetComponent<Image>().sprite = data.buttonDeny;
+        // }
+        //
+        // if (textBody != null)
+        //     textBody.text = curInteraction.textBody;
+        //
+        // if (textTitle != null)
+        //     textTitle.text = data.textTitle;
+    }
     //
     // private Interaction GetInteraction()
     // {

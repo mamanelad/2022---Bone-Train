@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.1482212, g: 0.042579785, b: 0.04522457, a: 1}
+  m_IndirectSpecularColor: {r: 0.14835654, g: 0.04265617, b: 0.045387354, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -1227,7 +1227,7 @@ PrefabInstance:
     - target: {fileID: 4333621673550438190, guid: 5aae4924b0e74d94fb69769bd0210c8c, type: 3}
       propertyPath: m_Sprite
       value: 
-      objectReference: {fileID: 2114883448, guid: 9c0e0072db3ee7343b7dc56857f25d08, type: 3}
+      objectReference: {fileID: 588235758, guid: 9c0e0072db3ee7343b7dc56857f25d08, type: 3}
     - target: {fileID: 4333621673550438191, guid: 5aae4924b0e74d94fb69769bd0210c8c, type: 3}
       propertyPath: _arrowSide
       value: 1
@@ -1235,15 +1235,15 @@ PrefabInstance:
     - target: {fileID: 4333621673550438191, guid: 5aae4924b0e74d94fb69769bd0210c8c, type: 3}
       propertyPath: markSprite
       value: 
-      objectReference: {fileID: -1334500917, guid: 9c0e0072db3ee7343b7dc56857f25d08, type: 3}
+      objectReference: {fileID: -927105196, guid: 9c0e0072db3ee7343b7dc56857f25d08, type: 3}
     - target: {fileID: 4333621673550438191, guid: 5aae4924b0e74d94fb69769bd0210c8c, type: 3}
       propertyPath: regularSprite
       value: 
-      objectReference: {fileID: 2114883448, guid: 9c0e0072db3ee7343b7dc56857f25d08, type: 3}
+      objectReference: {fileID: 588235758, guid: 9c0e0072db3ee7343b7dc56857f25d08, type: 3}
     - target: {fileID: 4333621674062832156, guid: 5aae4924b0e74d94fb69769bd0210c8c, type: 3}
       propertyPath: m_Sprite
       value: 
-      objectReference: {fileID: 2114883448, guid: 9c0e0072db3ee7343b7dc56857f25d08, type: 3}
+      objectReference: {fileID: 588235758, guid: 9c0e0072db3ee7343b7dc56857f25d08, type: 3}
     - target: {fileID: 4333621674062832157, guid: 5aae4924b0e74d94fb69769bd0210c8c, type: 3}
       propertyPath: _arrowSide
       value: 2
@@ -1251,11 +1251,11 @@ PrefabInstance:
     - target: {fileID: 4333621674062832157, guid: 5aae4924b0e74d94fb69769bd0210c8c, type: 3}
       propertyPath: markSprite
       value: 
-      objectReference: {fileID: -1334500917, guid: 9c0e0072db3ee7343b7dc56857f25d08, type: 3}
+      objectReference: {fileID: -927105196, guid: 9c0e0072db3ee7343b7dc56857f25d08, type: 3}
     - target: {fileID: 4333621674062832157, guid: 5aae4924b0e74d94fb69769bd0210c8c, type: 3}
       propertyPath: regularSprite
       value: 
-      objectReference: {fileID: 2114883448, guid: 9c0e0072db3ee7343b7dc56857f25d08, type: 3}
+      objectReference: {fileID: 588235758, guid: 9c0e0072db3ee7343b7dc56857f25d08, type: 3}
     - target: {fileID: 4333621674785910760, guid: 5aae4924b0e74d94fb69769bd0210c8c, type: 3}
       propertyPath: m_Name
       value: Arrows
@@ -14847,8 +14847,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 85390902d01b4ca4098e3800b00ba77c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  train: {fileID: 543450653180573783}
-  miniMapCamara: {fileID: 1929801188}
+  train: {fileID: 0}
+  miniMapCamara: {fileID: 0}
   addToXpOS: 15
 --- !u!4 &1333329909 stripped
 Transform:

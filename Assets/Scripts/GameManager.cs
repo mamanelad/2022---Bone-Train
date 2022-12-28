@@ -8,7 +8,7 @@ public class GameManager : MonoBehaviour
     [Header("Map")] [SerializeField] private JunctionChange curJunction;
     private JunctionChange nextJunction;
 
-    [Space(20)] [Header("Event")] private EventData _currEventData;
+    [Space(20)] [Header("Event")] private EventObject _currEventData;
     private bool _inEvent;
     private bool _gotToNewEvent;
     [SerializeField] private EventManager _eventManager;
@@ -183,13 +183,8 @@ public class GameManager : MonoBehaviour
     {
         return SoulStones;
     }
-
-    public void GotToEvent(EventData newEventData)
-    {
-        _gotToNewEvent = true;
-        _currEventData = newEventData;
-    }
-
+    
+    
     public float GetSpeed()
     {
         return curSpeed;
