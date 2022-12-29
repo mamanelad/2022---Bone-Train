@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.14835882, g: 0.042655848, b: 0.04538798, a: 1}
+  m_IndirectSpecularColor: {r: 0.14835654, g: 0.04265617, b: 0.045387354, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -933,7 +933,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   devilEvent: {fileID: 11400000, guid: bb8f1b7c80298be4aad77eb50d772a9d, type: 2}
-  soulStonesInitializeValue: 100
+  soulStonesInitializeValue: 70
   goodSoulsInitializeValue: 100
   badSoulsInitializeValue: 100
   _arrows:
