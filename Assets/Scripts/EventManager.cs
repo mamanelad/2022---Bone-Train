@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using TMPro;
@@ -27,7 +28,24 @@ public class EventManager : MonoBehaviour
     [SerializeField] private GameObject fGoodSouls;
     [SerializeField] private GameObject fBadSouls;
 
-    
+    private Sprite buttonAcceptSprite;
+    private Sprite buttonRejectSprite;
+    private Sprite buttonSingleSprite;
+
+    private void Start()
+    {
+        buttonAcceptSprite = buttonAccept.GetComponent<Image>().sprite;
+        buttonRejectSprite = buttonReject.GetComponent<Image>().sprite;
+        buttonSingleSprite = buttonSingle.GetComponent<Image>().sprite;
+    }
+
+    private void ResetButtonsSprite()
+    {
+        buttonAccept.GetComponent<Image>().sprite = buttonAcceptSprite;
+        buttonReject.GetComponent<Image>().sprite = buttonRejectSprite;
+        buttonSingle.GetComponent<Image>().sprite = buttonSingleSprite;
+    }
+
     private void ConfigureEvent(EventObject newData)
     {
         data = newData;
@@ -125,6 +143,7 @@ public class EventManager : MonoBehaviour
     public IEnumerator EndEvent()
     {
         yield return new WaitForSecondsRealtime(0.2f);
+        ResetButtonsSprite();
         gameObject.SetActive(false);
         GameManager.Shared.ContinueTrain();
         Time.timeScale = 1;
