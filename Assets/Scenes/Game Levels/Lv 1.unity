@@ -932,7 +932,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1087cd3f00155da418aaacf6cfc76723, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _eventManager: {fileID: 0}
+  devilEvent: {fileID: 11400000, guid: bb8f1b7c80298be4aad77eb50d772a9d, type: 2}
   soulStonesInitializeValue: 100
   goodSoulsInitializeValue: 100
   badSoulsInitializeValue: 100
@@ -7766,7 +7766,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b873472a890439e4bbd804b0756fb2a2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  eventData: {fileID: 0}
+  eventData: {fileID: 11400000, guid: 11f052ebb7a5f3443a058b4b7d3d7e5c, type: 2}
   eventManager: {fileID: 1087434138}
 --- !u!4 &745675588 stripped
 Transform:
@@ -8118,7 +8118,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b873472a890439e4bbd804b0756fb2a2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  eventData: {fileID: 0}
+  eventData: {fileID: 11400000, guid: 9c7ffbae095ed4643a4e0a3d92781f6b, type: 2}
   eventManager: {fileID: 1087434138}
 --- !u!4 &778308606 stripped
 Transform:
@@ -10878,7 +10878,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b873472a890439e4bbd804b0756fb2a2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  eventData: {fileID: 0}
+  eventData: {fileID: 11400000, guid: f0cfd0f4c94a89446be30dc0ffc92b05, type: 2}
   eventManager: {fileID: 1087434138}
 --- !u!4 &1049535419 stripped
 Transform:
@@ -11886,7 +11886,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b873472a890439e4bbd804b0756fb2a2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  eventData: {fileID: 0}
+  eventData: {fileID: 11400000, guid: 97112364c9706d64f8edf28d1da83d7c, type: 2}
   eventManager: {fileID: 1087434138}
 --- !u!4 &1118014948 stripped
 Transform:
@@ -12770,7 +12770,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b873472a890439e4bbd804b0756fb2a2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  eventData: {fileID: 0}
+  eventData: {fileID: 11400000, guid: 3aedd55c1826dbd49a4d1d34001c7b39, type: 2}
   eventManager: {fileID: 1087434138}
 --- !u!1001 &1214099765
 PrefabInstance:
@@ -20665,7 +20665,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b873472a890439e4bbd804b0756fb2a2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  eventData: {fileID: 0}
+  eventData: {fileID: 11400000, guid: e395e2fb248f61440801d0b26167b3d9, type: 2}
   eventManager: {fileID: 1087434138}
 --- !u!1 &2080849785
 GameObject:

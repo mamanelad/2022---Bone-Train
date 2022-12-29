@@ -20,5 +20,5 @@ MonoBehaviour:
   textBody: What choice do you have?
   action:
     soulStones: 100
-    goodSouls: 666
+    goodSouls: -666
     badSouls: 0

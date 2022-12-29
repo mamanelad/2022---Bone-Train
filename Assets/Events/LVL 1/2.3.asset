@@ -20,5 +20,5 @@ MonoBehaviour:
   textBody: Fuel for souls, Best discounts around
   action:
     soulStones: 50
-    goodSouls: 50
+    goodSouls: -50
     badSouls: 0
