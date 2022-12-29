@@ -21,7 +21,7 @@ public class MiniMap : MonoBehaviour
         newPos.y = camY;
         newPos.x += 5;
         miniMapCamara.transform.position = newPos;
-        miniMapCamara.transform.rotation = Quaternion.Euler(90f, train.eulerAngles.y, 0f);
+        // miniMapCamara.transform.rotation = Quaternion.Euler(90f, train.eulerAngles.y, 0f);
         
     }
 

@@ -10,31 +10,22 @@ public class UIManager : MonoBehaviour
     [SerializeField] public TextMeshProUGUI goodSoulsNumberText;
     [SerializeField] public TextMeshProUGUI badSoulsNumberText;
     [SerializeField] public TextMeshProUGUI soulStonesAmountNumberText;
-    
-    
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
 
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
+    
 
-    public void ChangeGoodSouls()
+    public void SetGoodSouls()
     {
         goodSoulsNumberText.text = Convert.ToString(GameManager.Shared.GoodSouls); 
     }
     
-    public void ChangeBadSouls()
+    
+    
+    public void SetBadSouls()
     {
         badSoulsNumberText.text = Convert.ToString(GameManager.Shared.BadSouls); 
     }
     
-    public void ChangeSoulStones()
+    public void SetSoulStones()
     {
         soulStonesAmountNumberText.text = Convert.ToString(GameManager.Shared.SoulStones); 
     }

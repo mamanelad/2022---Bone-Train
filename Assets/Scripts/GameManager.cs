@@ -5,9 +5,6 @@ using UnityEngine;
 [DefaultExecutionOrder(-999)]
 public class GameManager : MonoBehaviour
 {
-    [Header("Map")] [SerializeField] private JunctionChange curJunction;
-    private JunctionChange nextJunction;
-
     [Space(20)] [Header("Event")] private EventObject _currEventData;
     private bool _inEvent;
     private bool _gotToNewEvent;
@@ -25,7 +22,7 @@ public class GameManager : MonoBehaviour
 
     [SerializeField] private Arrow[] _arrows;
     private bool _arrowsAreOn;
-    private Arrow.ArrowSide _arrowSide = Arrow.ArrowSide.None; 
+    private Arrow.ArrowSide _arrowSide = Arrow.ArrowSide.None;
 
     [Space(20)] [Header("Extra")] public static GameManager Shared;
     [HideInInspector] public Morale morale = Morale.Neutral;
@@ -38,8 +35,14 @@ public class GameManager : MonoBehaviour
     public float minSpeed = 100;
     private float curSpeed = 500;
 
+    private GameObject speedHandle;
+
+    [SerializeField] private SpeedState speedState = SpeedState.Low;
+
     [Space(20)] [Header("Train")] [SerializeField]
     private GameObject train;
+
+    [Space(20)] [Header("Fuel")] private FuelManager _fuelManager;
 
     public enum Road
     {
@@ -47,26 +50,20 @@ public class GameManager : MonoBehaviour
         Down
     }
 
-    [Space(20)] [Header("Speed")] [SerializeField]
-    private GameObject speedHandle;
-
-    [SerializeField] private SpeedState speedState = SpeedState.Stop;
 
     public enum SpeedState
     {
         Max,
         Mid,
         Low,
-        Stop
+        Stop,
+        Run
     }
 
 
     private void Awake()
     {
         Shared = this;
-        SoulStones = soulStonesInitializeValue;
-        GoodSouls = goodSoulsInitializeValue;
-        BadSouls = badSoulsInitializeValue;
         curSpeed = Mathf.Lerp(minSpeed, maxSpeed, 0.5f);
 
         //
@@ -91,17 +88,17 @@ public class GameManager : MonoBehaviour
 
     private void Update()
     {
-        if (nextJunction == null)
+        if (_fuelManager == null)
         {
-            if (curJunction == null)
-            {
-                print("Drag the first Junction in the game to the game manager");
-            }
-            else
-            {
-                nextJunction = curJunction.GetNextJunction();
-            }
+            _fuelManager = FindObjectOfType<FuelManager>();
         }
+        
+        InitUiNumbers();
+
+        SpeedStateHandler();
+        bool drivingMode = speedState != SpeedState.Stop;
+        _fuelManager.SetDriving(drivingMode);
+
 
         if (_eventManager == null)
         {
@@ -116,6 +113,47 @@ public class GameManager : MonoBehaviour
 
         if (_gotToNewEvent)
             ActivateNewEvent();
+    }
+
+
+    private void InitUiNumbers()
+    {
+        if (_uiManager == null)
+        {
+            _uiManager = FindObjectOfType<UIManager>();
+            if (_uiManager != null)
+            {
+                ChangeByBadSouls(badSoulsInitializeValue);
+                ChangeByGoodSouls(goodSoulsInitializeValue);
+                ChangeBySoulStones(soulStonesInitializeValue);    
+            }
+        }
+    }
+    private void SpeedStateHandler()
+    {
+        if (speedState == SpeedState.Stop) return;
+        if (curSpeed <= maxSpeed / 3)
+        {
+            speedState = SpeedState.Low;
+        }
+        else if (curSpeed <= maxSpeed / 2)
+        {
+            speedState = SpeedState.Mid;
+        }
+        else
+        {
+            speedState = SpeedState.Max;
+        }
+    }
+
+    public void StopTrain()
+    {
+        speedState = SpeedState.Stop;
+    }
+
+    public void ContinueTrain()
+    {
+        speedState = SpeedState.Run;
     }
 
     private void ActivateNewEvent()
@@ -135,22 +173,17 @@ public class GameManager : MonoBehaviour
     }
 
 
-    // public void OpenMap()
-    // {
-    //     map.changeScale = true;
-    // }
-
     private void EndGame()
     {
         Application.Quit();
         print("end game");
     }
 
-    public void AddToGoodSouls(int addNum)
+    public void ChangeByGoodSouls(int addNum)
     {
         if (GoodSouls + addNum < 0) return;
         GoodSouls += addNum;
-        _uiManager.ChangeGoodSouls();
+        _uiManager.SetGoodSouls();
     }
 
     public int GetGoodSouls()
@@ -159,11 +192,11 @@ public class GameManager : MonoBehaviour
     }
 
 
-    public void AddToBadSouls(int addNum)
+    public void ChangeByBadSouls(int addNum)
     {
         if (BadSouls + addNum < 0) return;
         BadSouls += addNum;
-        _uiManager.ChangeBadSouls();
+        _uiManager.SetBadSouls();
     }
 
     public int GetBadSouls()
@@ -171,19 +204,19 @@ public class GameManager : MonoBehaviour
         return BadSouls;
     }
 
-    public void AddToSoulStones(int addNum)
+    public void ChangeBySoulStones(int addNum)
     {
         if (SoulStones + addNum < 0) return;
         SoulStones += addNum;
-        _uiManager.ChangeSoulStones();
+        _uiManager.SetSoulStones();
     }
 
     public int GetSoulStones()
     {
         return SoulStones;
     }
-    
-    
+
+
     public float GetSpeed()
     {
         return curSpeed;
@@ -211,15 +244,6 @@ public class GameManager : MonoBehaviour
         }
     }
 
-    public JunctionChange GetCurrJunction()
-    {
-        return curJunction;
-    }
-
-    public JunctionChange GetNextJunction()
-    {
-        return nextJunction;
-    }
 
     public GameObject GetTrain()
     {
@@ -230,15 +254,20 @@ public class GameManager : MonoBehaviour
     {
         return _arrowsAreOn;
     }
-    
+
     public Arrow.ArrowSide GetArrowSide()
     {
         return _arrowSide;
     }
-    
+
     public void SetArrowSide(Arrow.ArrowSide sideChosen)
     {
         _arrowSide = sideChosen;
+    }
+
+    public float GetMaxSpeed()
+    {
+        return maxSpeed;
     }
 }
 
