@@ -112,9 +112,9 @@ public class EventManager : MonoBehaviour
             return;
         
         var action = accept ? curInteraction.interactionAccept : curInteraction.interactionDeny;
-        GameManager.Shared.AddToSoulStones(action.soulStones);
-        GameManager.Shared.AddToGoodSouls(action.goodSouls);
-        GameManager.Shared.AddToBadSouls(action.badSouls);
+        GameManager.Shared.ChangeBySoulStones(action.soulStones);
+        GameManager.Shared.ChangeByGoodSouls(action.goodSouls);
+        GameManager.Shared.ChangeByBadSouls(action.badSouls);
         StartCoroutine(FinishEvent());
     }
 
