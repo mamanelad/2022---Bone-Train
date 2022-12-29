@@ -163,8 +163,7 @@ public class GameManager : MonoBehaviour
         Time.timeScale = 0;
         _gotToNewEvent = false;
         _eventManager.gameObject.SetActive(true);
-        _eventManager.data = _currEventData;
-        _eventManager.ConfigureEvent();
+        _eventManager.StartEvent(_currEventData);
     }
 
     public void ReturnFromEvent()

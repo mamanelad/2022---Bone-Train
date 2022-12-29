@@ -23,7 +23,6 @@ public class CovergeTrack : MonoBehaviour
     
     private void OnTriggerEnter(Collider other)
     {
-        print("bbbb");
         if (other.CompareTag("Train"))
         {
             print("aaaa");

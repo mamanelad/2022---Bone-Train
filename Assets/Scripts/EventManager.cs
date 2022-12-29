@@ -1,138 +1,131 @@
-using System;
 using System.Collections;
+using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
 
 public class EventManager : MonoBehaviour
 {
-    #region Inspector Control
-
     public EventObject data;
 
-    [Space(20)]
-    [Header("Artwork")]
-    
     [SerializeField] private Image background;
-
     [SerializeField] private Image foreground;
-
     [SerializeField] private Image character;
 
+    [SerializeField] private TextMeshProUGUI title;
+    [SerializeField] private TextMeshProUGUI body;
+
     [SerializeField] private GameObject buttonAccept;
-    
-    [SerializeField] private GameObject buttonDeny;
-    
+    [SerializeField] private GameObject buttonReject;
     [SerializeField] private GameObject buttonSingle;
+
+    [SerializeField] private GameObject rSoulStone;
+    [SerializeField] private GameObject rGoodSouls;
+    [SerializeField] private GameObject rBadSouls;
     
-    [Space(20)]
-    [Header("Text")]
+    [SerializeField] private GameObject fSoulStone;
+    [SerializeField] private GameObject fGoodSouls;
+    [SerializeField] private GameObject fBadSouls;
+
     
-    [SerializeField] private TextMeshProUGUI textTitle;
-    
-    [SerializeField] private TextMeshProUGUI textBody;
-
-    [Space(20)] 
-    [Header("Others")] 
-    [SerializeField] private float clickDelay = 0.1f;
-
-    #endregion
-
-    #region Class Variables
-
-    private Interaction curInteraction;
-    private bool isEventOver;
-
-    #endregion
-
-    private void Start()
+    private void ConfigureEvent(EventObject newData)
     {
-        CloseButtons();
-        ConfigureEvent();
-    }
-    
-    public void ConfigureEvent()
-    {
-        print("aaa");
-        // curInteraction = GetInteraction();
-        //
-        // if (background != null)
-        //     background.sprite = data.background;
-        //
-        // if (foreground != null)
-        //     foreground.sprite = data.foreground;
-        //
-        // if (character != null)
-        //     character.sprite = data.character;
-        //
-        // if (data.buttonSingle)
-        // {
-        //     buttonSingle.SetActive(true);
-        //     buttonSingle.GetComponent<Image>().sprite = data.buttonSingle;
-        // }
-        // else
-        // {
-        //     buttonAccept.SetActive(true);
-        //     buttonDeny.SetActive(true);
-        //     if (buttonAccept != null)
-        //         buttonAccept.GetComponent<Image>().sprite = data.buttonAccept;
-        //
-        //     if (buttonDeny != null)
-        //         buttonDeny.GetComponent<Image>().sprite = data.buttonDeny;
-        // }
-        //
-        // if (textBody != null)
-        //     textBody.text = curInteraction.textBody;
-        //
-        // if (textTitle != null)
-        //     textTitle.text = data.textTitle;
-    }
-    //
-    // private Interaction GetInteraction()
-    // {
-    //     var morale = GameManager.Shared.morale;
-    //     var bestDistance = Math.Abs(morale - data.interactions[0].morale);
-    //     var curInter = data.interactions[0];
-    //     
-    //     foreach (var interaction in data.interactions)
-    //     {
-    //         var curDistance = Math.Abs(morale - interaction.morale);
-    //         if (bestDistance > curDistance)
-    //         {
-    //             bestDistance = curDistance;
-    //             curInter = interaction;
-    //         }
-    //     }
-    //     return curInter;
-    // }
+        data = newData;
 
-    public void InteractionAction(bool accept)
-    {
-        if (isEventOver)
-            return;
+        background.sprite = data.background;
+        foreground.sprite = data.foreground;
+        character.sprite = data.character;
         
-        var action = accept ? curInteraction.interactionAccept : curInteraction.interactionDeny;
-        GameManager.Shared.ChangeBySoulStones(action.soulStones);
-        GameManager.Shared.ChangeByGoodSouls(action.goodSouls);
-        GameManager.Shared.ChangeByBadSouls(action.badSouls);
-        StartCoroutine(FinishEvent());
+        if (data.singleButton)
+        {
+            buttonSingle.SetActive(true);
+            buttonAccept.SetActive(false);
+            buttonReject.SetActive(false);
+        }
+        else
+        {
+            buttonSingle.SetActive(false);
+            buttonAccept.SetActive(true);
+            buttonReject.SetActive(true);
+        }
+
+        title.text = data.textTitle;
+        body.text = data.textBody;
+        
+        ConfigureContent();
     }
 
-    private IEnumerator FinishEvent()
+    private void ConfigureContent()
     {
-        isEventOver = true;
-        yield return new WaitForSecondsRealtime(clickDelay);
-        CloseButtons();
-        isEventOver = false;
-        GameManager.Shared.ReturnFromEvent();
-        // LevelManager.Shared.FinishEvent();
+        rSoulStone.SetActive(false);
+        rGoodSouls.SetActive(false);
+        rBadSouls.SetActive(false);
+        fSoulStone.SetActive(false);
+        fGoodSouls.SetActive(false);
+        fBadSouls.SetActive(false);
+
+        if (data.action.soulStones > 0)
+        {
+            rSoulStone.SetActive(true);
+            rSoulStone.GetComponentInChildren<TextMeshProUGUI>().text = data.action.soulStones.ToString();
+        }
+        
+        if (data.action.soulStones < 0)
+        {
+            fSoulStone.SetActive(true);
+            fSoulStone.GetComponentInChildren<TextMeshProUGUI>().text = data.action.soulStones.ToString();
+        }
+        
+        if (data.action.goodSouls > 0)
+        {
+            rGoodSouls.SetActive(true);
+            rGoodSouls.GetComponentInChildren<TextMeshProUGUI>().text = data.action.goodSouls.ToString();
+        }
+        
+        if (data.action.soulStones < 0)
+        {
+            fGoodSouls.SetActive(true);
+            fGoodSouls.GetComponentInChildren<TextMeshProUGUI>().text = data.action.goodSouls.ToString();
+        }
+        
+        if (data.action.badSouls > 0)
+        {
+            rBadSouls.SetActive(true);
+            rBadSouls.GetComponentInChildren<TextMeshProUGUI>().text = data.action.badSouls.ToString();
+        }
+        
+        if (data.action.badSouls < 0)
+        {
+            rBadSouls.SetActive(true);
+            rBadSouls.GetComponentInChildren<TextMeshProUGUI>().text = data.action.badSouls.ToString();
+        }
     }
 
-    private void CloseButtons()
+    public void Accept()
     {
-        buttonSingle.SetActive(false);
-        buttonAccept.SetActive(false);
-        buttonDeny.SetActive(false);
+        GameManager.Shared.SoulStones += data.action.soulStones;
+        GameManager.Shared.GoodSouls += data.action.goodSouls;
+        GameManager.Shared.BadSouls += data.action.badSouls;
+        StartCoroutine(EndEvent());
+    }
+
+    public void Reject()
+    {
+        StartCoroutine(EndEvent());
+    }
+
+    public void StartEvent(EventObject newData)
+    {
+        gameObject.SetActive(true);
+        ConfigureEvent(newData);
+        Time.timeScale = 0;
     }
     
+    public IEnumerator EndEvent()
+    {
+        yield return new WaitForSecondsRealtime(0.2f);
+        gameObject.SetActive(false);
+        Time.timeScale = 1;
+    }
 }
+
