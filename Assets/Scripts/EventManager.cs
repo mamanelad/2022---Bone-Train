@@ -103,9 +103,9 @@ public class EventManager : MonoBehaviour
 
     public void Accept()
     {
-        GameManager.Shared.SoulStones += data.action.soulStones;
-        GameManager.Shared.GoodSouls += data.action.goodSouls;
-        GameManager.Shared.BadSouls += data.action.badSouls;
+        GameManager.Shared.ChangeBySoulStones(data.action.soulStones);
+        GameManager.Shared.ChangeByGoodSouls(data.action.goodSouls);
+        GameManager.Shared.ChangeByBadSouls(data.action.badSouls);
         StartCoroutine(EndEvent());
     }
 
@@ -117,6 +117,7 @@ public class EventManager : MonoBehaviour
     public void StartEvent(EventObject newData)
     {
         gameObject.SetActive(true);
+        GameManager.Shared.StopTrain();
         ConfigureEvent(newData);
         Time.timeScale = 0;
     }
@@ -125,6 +126,7 @@ public class EventManager : MonoBehaviour
     {
         yield return new WaitForSecondsRealtime(0.2f);
         gameObject.SetActive(false);
+        GameManager.Shared.ContinueTrain();
         Time.timeScale = 1;
     }
 }
