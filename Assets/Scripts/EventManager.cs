@@ -100,7 +100,7 @@ public class EventManager : MonoBehaviour
             rGoodSouls.GetComponentInChildren<TextMeshProUGUI>().text = data.action.goodSouls.ToString();
         }
         
-        if (data.action.soulStones < 0)
+        if (data.action.goodSouls < 0)
         {
             fGoodSouls.SetActive(true);
             fGoodSouls.GetComponentInChildren<TextMeshProUGUI>().text = data.action.goodSouls.ToString();
