@@ -8,7 +8,8 @@ public class GameManager : MonoBehaviour
     [Space(20)] [Header("Event")] private EventObject _currEventData;
     private bool _inEvent;
     private bool _gotToNewEvent;
-    [SerializeField] private EventManager _eventManager;
+    private EventManager _eventManager;
+    [SerializeField] private EventObject devilEvent;
 
 
     [Space(20)] [Header("UI")] private UIManager _uiManager;
@@ -88,6 +89,11 @@ public class GameManager : MonoBehaviour
 
     private void Update()
     {
+        if (_eventManager == null)
+        {
+            _eventManager = FindObjectOfType<EventManager>();
+        }
+        
         if (_fuelManager == null)
         {
             _fuelManager = FindObjectOfType<FuelManager>();
@@ -98,16 +104,7 @@ public class GameManager : MonoBehaviour
         SpeedStateHandler();
         bool drivingMode = speedState != SpeedState.Stop;
         _fuelManager.SetDriving(drivingMode);
-
-
-        if (_eventManager == null)
-        {
-            print("Drag the event manager of the scene to the game manager");
-            _eventManager = FindObjectOfType<EventManager>();
-            // _eventManager.gameObject.SetActive(false);
-        }
-
-
+        
         if (_uiManager == null)
             _uiManager = FindObjectOfType<UIManager>();
 
@@ -181,7 +178,7 @@ public class GameManager : MonoBehaviour
 
     public void ChangeByGoodSouls(int addNum)
     {
-        if (GoodSouls + addNum < 0) return;
+        if (GoodSouls + addNum < 0) {};
         GoodSouls += addNum;
         _uiManager.SetGoodSouls();
     }
@@ -206,7 +203,19 @@ public class GameManager : MonoBehaviour
 
     public void ChangeBySoulStones(int addNum)
     {
-        if (SoulStones + addNum < 0) return;
+        if (SoulStones + addNum < 0)
+        {
+            SoulStones = 0;
+            if (devilEvent == null)
+            {
+                print("No devil event");
+            }
+            else
+            {
+                _eventManager.StartEvent(devilEvent);    
+            }
+            
+        }
         SoulStones += addNum;
         _uiManager.SetSoulStones();
     }
