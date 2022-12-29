@@ -8,6 +8,7 @@ public class Arrow : MonoBehaviour
     private Image _image;
     [SerializeField] private Sprite regularSprite;
     [SerializeField] private Sprite markSprite;
+    [SerializeField] private Arrow otherArrow;
 
     public enum ArrowSide
     {
@@ -63,5 +64,7 @@ public class Arrow : MonoBehaviour
     public void ClickButton()
     {
         GameManager.Shared.SetArrowSide(_arrowSide);
+        ArrowHandler(_arrowSide);
+        otherArrow.ArrowHandler(_arrowSide);
     }
 }

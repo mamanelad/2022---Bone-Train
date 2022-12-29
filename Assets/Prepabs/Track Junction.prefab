@@ -61,7 +61,7 @@ SphereCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Radius: 25
+  m_Radius: 40
   m_Center: {x: 0, y: 0, z: 0}
 --- !u!114 &452506151058238077
 MonoBehaviour:
@@ -80,6 +80,11 @@ MonoBehaviour:
   speed: 4
   colliderSphere: {fileID: 3902362542860545018}
   colliderBox: {fileID: 2608861690600659345}
+  start: {fileID: 0}
+  right: {fileID: 0}
+  miniMapJunction: {fileID: 0}
+  nextJunction: {fileID: 0}
+  id: 0
 --- !u!1 &6492729532542621877
 GameObject:
   m_ObjectHideFlags: 0
