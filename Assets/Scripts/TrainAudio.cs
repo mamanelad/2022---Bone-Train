@@ -3,20 +3,23 @@ using UnityEngine;
 
 public class TrainAudio : MonoBehaviour
 {
-    private AudioSource _audioSource;
+    public AudioSource _audioSource;
 
-    public Queue<AudioClip> _AudioQueue;
+    public Queue<AudioClip> _AudioQueue = new Queue<AudioClip>();
 
-    private void Start()
-    {
-        _audioSource = GetComponent<AudioSource>();
-    }
+    // private void Start()
+    // {
+    //     _audioSource = GetComponent<AudioSource>();
+    // }
 
     private void Update()
     {
+        if (!_audioSource)
+            return;
+        
         if (_AudioQueue.Count > 0 && !_audioSource.isPlaying)
         {
-            _audioSource.clip = _AudioQueue.Dequeue(); 
+            _audioSource.clip = _AudioQueue.Dequeue();;
             _audioSource.Play(0);
         }
     }
