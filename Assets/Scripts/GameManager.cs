@@ -1,6 +1,7 @@
 using System;
 using UnityEditor;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 [DefaultExecutionOrder(-999)]
 public class GameManager : MonoBehaviour
@@ -89,6 +90,11 @@ public class GameManager : MonoBehaviour
 
     private void Update()
     {
+        if ((Input.GetKeyDown(KeyCode.Escape)))
+        {
+            SceneManager.LoadScene("MainMenue");
+        }
+        
         if (_eventManager == null)
         {
             _eventManager = FindObjectOfType<EventManager>();
