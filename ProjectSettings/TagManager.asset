@@ -9,6 +9,7 @@ TagManager:
   - InteractionGate
   - Train
   - Pivot
+  - Track
   layers:
   - Default
   - TransparentFX
