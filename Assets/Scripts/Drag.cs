@@ -1,20 +1,23 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using System.Timers;
 using Unity.VisualScripting;
+using UnityEditor;
 using UnityEngine;
 using UnityEngine.EventSystems;
 
 public class Drag : MonoBehaviour, IDragHandler, IBeginDragHandler, IEndDragHandler
 {
+    [SerializeField] private GameObject fuelIconPrefab;
     [SerializeField] private float dampingSpeed = .05f;
-    Canvas canvas;
+    
+    private Canvas _canvas;
     private RectTransform _draggingObjectRectTransform;
     private Vector3 _velocity = Vector3.zero;
+    private Furnace _furnace;
 
-
-    [SerializeField] private GameObject fuelIconPrefab;
-
+    private int i = 0;
     private void Awake()
     {
         _draggingObjectRectTransform = transform as RectTransform;
@@ -22,8 +25,46 @@ public class Drag : MonoBehaviour, IDragHandler, IBeginDragHandler, IEndDragHand
 
     private void Update()
     {
-        if (!canvas)
-            canvas = FindObjectOfType<UIManager>().gameObject.GetComponent<Canvas>();
+        if (!_canvas)
+            _canvas = FindObjectOfType<UIManager>().gameObject.GetComponent<Canvas>();
+
+        if (!_furnace)
+            _furnace = FindObjectOfType<Furnace>();
+
+        if (RectOverlap(transform.GetComponent<RectTransform>(), _furnace.GetComponent<RectTransform>()))
+            TouchFurnace();
+        
+        
+    }
+
+    private void TouchFurnace()
+    {
+        
+    }
+
+    private bool RectOverlap(RectTransform firstRect, RectTransform secondRect)
+    {
+        if (firstRect.position.x + firstRect.rect.width * 0.5f < secondRect.position.x - secondRect.rect.width * 0.5f)
+        {
+            return false;
+        }
+
+        if (secondRect.position.x + secondRect.rect.width * 0.5f < firstRect.position.x - firstRect.rect.width * 0.5f)
+        {
+            return false;
+        }
+
+        if (firstRect.position.y + firstRect.rect.height * 0.5f < secondRect.position.y - secondRect.rect.height * 0.5f)
+        {
+            return false;
+        }
+
+        if (secondRect.position.y + secondRect.rect.height * 0.5f < firstRect.position.y - firstRect.rect.height * 0.5f)
+        {
+            return false;
+        }
+
+        return true;
     }
 
     public void OnDrag(PointerEventData eventData)
@@ -40,9 +81,10 @@ public class Drag : MonoBehaviour, IDragHandler, IBeginDragHandler, IEndDragHand
     public void OnBeginDrag(PointerEventData eventData)
     {
         var newFuelIcon = Instantiate(fuelIconPrefab, transform.position, Quaternion.identity);
-        newFuelIcon.transform.SetParent(canvas.transform);
+        newFuelIcon.transform.SetParent(_canvas.transform);
         newFuelIcon.transform.localScale = transform.localScale;
-        newFuelIcon.GetComponent<Drag>().SetCanvas(canvas);
+        newFuelIcon.GetComponent<Drag>().SetCanvas(_canvas);
+        newFuelIcon.GetComponent<Drag>().SetFurnace(_furnace);
     }
 
 
@@ -53,11 +95,11 @@ public class Drag : MonoBehaviour, IDragHandler, IBeginDragHandler, IEndDragHand
 
     public void SetCanvas(Canvas newCanvas)
     {
-        canvas = newCanvas;
+        _canvas = newCanvas;
     }
-
-    private void OnTriggerEnter2D(Collider2D other)
+    
+    public void SetFurnace(Furnace newFurnace)
     {
-        print("kaka");
+        _furnace = newFurnace;
     }
 }
