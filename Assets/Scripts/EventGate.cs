@@ -29,7 +29,7 @@ public class EventGate : MonoBehaviour
                     other.gameObject.GetComponent<TrainAudio>().AddClip(eventData.environmentAudio);
             }
         
-            if (eventTrigger.enabled)
+            else if (eventTrigger.enabled)
             {
                 if (eventData.eventAudio)
                     other.gameObject.GetComponent<TrainAudio>().AddClip(eventData.eventAudio);
