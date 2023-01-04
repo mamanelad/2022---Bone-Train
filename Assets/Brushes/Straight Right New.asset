@@ -13,10 +13,10 @@ MonoBehaviour:
   m_Name: Straight Right New
   m_EditorClassIdentifier: 
   m_Cells:
-  - m_GameObject: {fileID: 0}
+  - m_GameObject: {fileID: 3519421896473368712, guid: 887dc3b6cc1bc594288041230d1daab4, type: 3}
     m_Offset: {x: 0, y: 0, z: 0}
     m_Scale: {x: 1, y: 1, z: 1}
-    m_Orientation: {x: 0, y: 0, z: 0, w: 1}
+    m_Orientation: {x: 0, y: 0.38268346, z: 0, w: 0.9238795}
   m_Size: {x: 1, y: 1, z: 1}
   m_Pivot: {x: 0, y: 0, z: 0}
   m_CanChangeZPosition: 0
