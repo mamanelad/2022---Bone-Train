@@ -26,13 +26,13 @@ public class EventGate : MonoBehaviour
                 sphereTrigger.enabled = false;
                 eventTrigger.enabled = true;
                 if (eventData.environmentAudio)
-                    other.gameObject.GetComponent<TrainAudio>().AddClip(eventData.environmentAudio);
+                    other.gameObject.GetComponentInChildren<TrainAudio>().AddClip(eventData.environmentAudio);
             }
-        
+
             else if (eventTrigger.enabled)
             {
                 if (eventData.eventAudio)
-                    other.gameObject.GetComponent<TrainAudio>().AddClip(eventData.eventAudio);
+                    other.gameObject.GetComponentInChildren<TrainAudio>().AddClip(eventData.eventAudio);
                 eventManager.StartEvent(eventData);
             }
         }

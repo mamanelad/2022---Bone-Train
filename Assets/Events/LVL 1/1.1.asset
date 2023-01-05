@@ -18,6 +18,8 @@ MonoBehaviour:
   singleButton: 0
   textTitle: 'Gathering of souls '
   textBody: Come one, Come all
+  eventAudio: {fileID: 8300000, guid: 136b7bf7cd901b849827868253bbc5a8, type: 3}
+  environmentAudio: {fileID: 8300000, guid: aafa232765c140f45b593e7529b3325e, type: 3}
   action:
     soulStones: 0
     goodSouls: 50
