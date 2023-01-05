@@ -37,6 +37,10 @@ public class GameManager : MonoBehaviour
     public float minSpeed = 100;
     private float curSpeed = 500;
 
+    public int addToSpeedFuel;
+    public int addToSpeedGoodSoul;
+    public int addToSpeedBadSoul;
+    
     private GameObject speedHandle;
 
     [SerializeField] private SpeedState speedState = SpeedState.Low;
@@ -239,6 +243,7 @@ public class GameManager : MonoBehaviour
 
     public void SetSpeed(float newSpeed)
     {
+        print(curSpeed);
         curSpeed = newSpeed;
     }
 
@@ -283,6 +288,11 @@ public class GameManager : MonoBehaviour
     public float GetMaxSpeed()
     {
         return maxSpeed;
+    }
+
+    public SpeedState GetSpeedState()
+    {
+        return speedState;
     }
 }
 
