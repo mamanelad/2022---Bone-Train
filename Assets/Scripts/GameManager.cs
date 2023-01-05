@@ -1,6 +1,8 @@
 using System;
+using System.Collections.Generic;
 using UnityEditor;
 using UnityEngine;
+using UnityEngine.EventSystems;
 using UnityEngine.SceneManagement;
 
 [DefaultExecutionOrder(-999)]
@@ -23,6 +25,7 @@ public class GameManager : MonoBehaviour
     [NonSerialized] public int BadSouls;
 
     [SerializeField] private Arrow[] _arrows;
+    private Arrow curMouseOnArrow;
     private bool _arrowsAreOn;
     private Arrow.ArrowSide _arrowSide = Arrow.ArrowSide.None;
 
@@ -40,7 +43,7 @@ public class GameManager : MonoBehaviour
     public int addToSpeedFuel;
     public int addToSpeedGoodSoul;
     public int addToSpeedBadSoul;
-    
+
     private GameObject speedHandle;
 
     [SerializeField] private SpeedState speedState = SpeedState.Low;
@@ -94,27 +97,28 @@ public class GameManager : MonoBehaviour
 
     private void Update()
     {
+        ArrowOverHandler();
         if ((Input.GetKeyDown(KeyCode.Escape)))
         {
             SceneManager.LoadScene("MainMenue");
         }
-        
+
         if (_eventManager == null)
         {
             _eventManager = FindObjectOfType<EventManager>();
         }
-        
+
         if (_fuelManager == null)
         {
             _fuelManager = FindObjectOfType<FuelManager>();
         }
-        
+
         InitUiNumbers();
 
         SpeedStateHandler();
         bool drivingMode = speedState != SpeedState.Stop;
         _fuelManager.SetDriving(drivingMode);
-        
+
         if (_uiManager == null)
             _uiManager = FindObjectOfType<UIManager>();
 
@@ -132,10 +136,11 @@ public class GameManager : MonoBehaviour
             {
                 ChangeByBadSouls(badSoulsInitializeValue);
                 ChangeByGoodSouls(goodSoulsInitializeValue);
-                ChangeBySoulStones(soulStonesInitializeValue);    
+                ChangeBySoulStones(soulStonesInitializeValue);
             }
         }
     }
+
     private void SpeedStateHandler()
     {
         if (speedState == SpeedState.Stop) return;
@@ -188,7 +193,11 @@ public class GameManager : MonoBehaviour
 
     public void ChangeByGoodSouls(int addNum)
     {
-        if (GoodSouls + addNum < 0) {};
+        if (GoodSouls + addNum < 0)
+        {
+        }
+
+        ;
         GoodSouls += addNum;
         _uiManager.SetGoodSouls();
     }
@@ -222,10 +231,10 @@ public class GameManager : MonoBehaviour
             }
             else
             {
-                _eventManager.StartEvent(devilEvent);    
+                _eventManager.StartEvent(devilEvent);
             }
-            
         }
+
         SoulStones += addNum;
         _uiManager.SetSoulStones();
     }
@@ -243,7 +252,6 @@ public class GameManager : MonoBehaviour
 
     public void SetSpeed(float newSpeed)
     {
-        print(curSpeed);
         curSpeed = newSpeed;
     }
 
@@ -264,6 +272,20 @@ public class GameManager : MonoBehaviour
         }
     }
 
+    private void ArrowOverHandler()
+    {
+        if (IsMouseOverUI())
+        {
+            ArrowsMouseOver();
+        }
+        else
+        {
+            if (curMouseOnArrow)
+            {
+                curMouseOnArrow.SetIsMouseIsOn(false);
+            }
+        }
+    }
 
     public GameObject GetTrain()
     {
@@ -293,6 +315,29 @@ public class GameManager : MonoBehaviour
     public SpeedState GetSpeedState()
     {
         return speedState;
+    }
+
+    private bool IsMouseOverUI()
+    {
+        return EventSystem.current.IsPointerOverGameObject();
+    }
+
+    private void ArrowsMouseOver()
+    {
+        PointerEventData pointerEventData = new PointerEventData(EventSystem.current);
+        pointerEventData.position = Input.mousePosition;
+        List<RaycastResult> raycastResultsList = new List<RaycastResult>();
+        EventSystem.current.RaycastAll(pointerEventData, raycastResultsList);
+
+        for (int i = 0; i < raycastResultsList.Count; i++)
+        {
+            var arrow = raycastResultsList[i].gameObject.GetComponent<Arrow>();
+            if (arrow)
+            {
+                arrow.SetIsMouseIsOn(true);
+                curMouseOnArrow = arrow;
+            }
+        }
     }
 }
 

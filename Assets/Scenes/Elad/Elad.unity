@@ -24169,6 +24169,18 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1482559270718216188, guid: 2eb667ae7826ab74da654026fedcbece, type: 3}
+      propertyPath: mouseOverColor.b
+      value: 0.373131
+      objectReference: {fileID: 0}
+    - target: {fileID: 1482559270718216188, guid: 2eb667ae7826ab74da654026fedcbece, type: 3}
+      propertyPath: mouseOverColor.g
+      value: 0.373131
+      objectReference: {fileID: 0}
+    - target: {fileID: 1482559270718216188, guid: 2eb667ae7826ab74da654026fedcbece, type: 3}
+      propertyPath: mouseOverColor.r
+      value: 0.4056604
+      objectReference: {fileID: 0}
     - target: {fileID: 2933820549329733672, guid: 2eb667ae7826ab74da654026fedcbece, type: 3}
       propertyPath: m_Pivot.x
       value: 0
@@ -24256,6 +24268,30 @@ PrefabInstance:
     - target: {fileID: 2933820549329733677, guid: 2eb667ae7826ab74da654026fedcbece, type: 3}
       propertyPath: m_Name
       value: Canvas-UiManager
+      objectReference: {fileID: 0}
+    - target: {fileID: 3609074990448486888, guid: 2eb667ae7826ab74da654026fedcbece, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3609074990448486888, guid: 2eb667ae7826ab74da654026fedcbece, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Mode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3609074990448486888, guid: 2eb667ae7826ab74da654026fedcbece, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 3609074990448486888, guid: 2eb667ae7826ab74da654026fedcbece, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_TargetAssemblyTypeName
+      value: Arrow, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 6599676527444299107, guid: 2eb667ae7826ab74da654026fedcbece, type: 3}
+      propertyPath: m_Color.a
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6599676527444299107, guid: 2eb667ae7826ab74da654026fedcbece, type: 3}
+      propertyPath: m_Enabled
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 6869622879521357174, guid: 2eb667ae7826ab74da654026fedcbece, type: 3}
       propertyPath: train
