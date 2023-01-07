@@ -8,8 +8,7 @@ public class CovergeTrack : MonoBehaviour
     [SerializeField] private BezierSpline leftTrack;
     [SerializeField] private BezierSpline rightTrack;
     [SerializeField] private float speed = 4f;
-    [SerializeField]private Collider collider1;
-    [SerializeField]private Collider collider2;
+    [SerializeField] private Collider _collider;
 
     private BezierSpline GetTrack(Vector3 trainPos)
     {
@@ -31,8 +30,7 @@ public class CovergeTrack : MonoBehaviour
             var midPos = track.GetControlPoint(0);
             var trackPosition = transform.transform.position - midPos; 
             train.StartCoroutine(train.SwitchTrack(track, trackPosition, progress, speed));
-            collider1.enabled = false;
-            collider2.enabled = false;
+            _collider.enabled = false;
         }
     }
     

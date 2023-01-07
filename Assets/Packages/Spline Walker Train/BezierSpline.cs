@@ -3,7 +3,7 @@ using System;
 
 public class BezierSpline : MonoBehaviour
 {
-    [SerializeField] private Vector3[] points;
+    [SerializeField] public Vector3[] points;
 
     [SerializeField] private BezierControlPointMode[] modes;
 
@@ -257,6 +257,19 @@ public class BezierSpline : MonoBehaviour
             modes[modes.Length - 1] = modes[0];
             EnforceMode(0);
         }
+    }
+    
+    public void AddPoint(Vector3[] point)
+    {
+        // possibly add a point in between current last point and new point
+        Array.Resize(ref points, points.Length + 3);
+        points[^3] = point[0];
+        points[^2] = point[1];
+        points[^1] = point[2];
+
+        Array.Resize(ref modes, modes.Length + 1);
+        modes[^1] = modes[^2];
+        EnforceMode(points.Length - 4);
     }
 
     public void Reset()

@@ -10,6 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 3617767881384998247}
   - component: {fileID: 5804021587203802286}
+  - component: {fileID: 8344772913514152679}
   m_Layer: 0
   m_Name: Track Junction Converge
   m_TagString: Track
@@ -51,8 +52,20 @@ MonoBehaviour:
   leftTrack: {fileID: 787425756270997532}
   rightTrack: {fileID: 2791817656143938479}
   speed: 4
-  collider1: {fileID: 1265635220096874171}
-  collider2: {fileID: 149729428212366926}
+  _collider: {fileID: 8344772913514152679}
+--- !u!65 &8344772913514152679
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3335605009474470089}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 3.7692556, y: 8.273791, z: 21.610737}
+  m_Center: {x: -13.850891, y: 0.4649086, z: 0.99017334}
 --- !u!1 &5666313008123383278
 GameObject:
   m_ObjectHideFlags: 0
