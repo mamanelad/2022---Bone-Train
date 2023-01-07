@@ -24,12 +24,11 @@ public class CovergeTrack : MonoBehaviour
     {
         if (other.CompareTag("Train"))
         {
-            print("aaaa");
             var track = GetTrack(other.transform.position);
             var train = other.GetComponent<SplineWalker>();
             var midPos = track.GetControlPoint(0);
             var trackPosition = transform.transform.position - midPos; 
-            train.StartCoroutine(train.SwitchTrack(track, trackPosition, progress, speed));
+            //train.StartCoroutine(train.SwitchTrack(track, trackPosition, progress, speed));
             _collider.enabled = false;
         }
     }

@@ -90,6 +90,7 @@ public class GameManager : MonoBehaviour
 
     private void Update()
     {
+        return;
         if ((Input.GetKeyDown(KeyCode.Escape)))
         {
             SceneManager.LoadScene("MainMenue");

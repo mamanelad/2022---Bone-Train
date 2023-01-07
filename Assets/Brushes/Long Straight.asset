@@ -9,14 +9,14 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c560575263fb6d244b3244e3eb095a3f, type: 3}
-  m_Name: Curve Left 45 New
+  m_Script: {fileID: 11500000, guid: 6387ad4b6c83a164589b38e778ab2387, type: 3}
+  m_Name: Long Straight
   m_EditorClassIdentifier: 
   m_Cells:
-  - m_GameObject: {fileID: 6073166341855200700, guid: 71862a8b96e87d249829a88df567f4c0, type: 3}
-    m_Offset: {x: -0.1, y: 0, z: -0.02}
+  - m_GameObject: {fileID: 3519421896473368712, guid: 887dc3b6cc1bc594288041230d1daab4, type: 3}
+    m_Offset: {x: 0, y: 0, z: 0}
     m_Scale: {x: 1, y: 1, z: 1}
-    m_Orientation: {x: 0, y: 0.4027467, z: 0, w: 0.91531146}
+    m_Orientation: {x: 0, y: 0, z: 0, w: 1}
   m_Size: {x: 1, y: 1, z: 1}
   m_Pivot: {x: 0, y: 0, z: 0}
   m_CanChangeZPosition: 0

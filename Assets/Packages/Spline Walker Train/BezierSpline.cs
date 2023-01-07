@@ -180,10 +180,10 @@ public class BezierSpline : MonoBehaviour
         return transform.TransformPoint(Bezier.GetPoint(points[i], points[i + 1], points[i + 2], points[i + 3], t));
     }
 
-    public float GetLength()
+    public float GetLength(float steps = 1000f)
     {
         float len = 0f;
-        float detailLevel = 10000f;
+        float detailLevel = steps;
         for (float i = 0; i < detailLevel; i++)
         {
             var pointA = GetPoint(i / detailLevel);

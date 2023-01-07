@@ -20,7 +20,7 @@ public class SplineWalker : MonoBehaviour
 
     private float trainSpeed = 0; // pre 0.5 second
 
-    private const float timeMeasureUnit = 0.1f;
+    private const float timeMeasureUnit = 0.03f;
 
     private float curSpeed;
 
@@ -29,7 +29,7 @@ public class SplineWalker : MonoBehaviour
     public float Progress { get; set; }
 
     private bool goingForward = true;
-    
+
     private float baseSpeed;
 
     private void Start()
@@ -81,55 +81,40 @@ public class SplineWalker : MonoBehaviour
         if (lookForward)
             transform.LookAt(position + spline.GetDirection(Progress));
     }
-    
-    public IEnumerator SwitchTrack(BezierSpline newTrack, Vector3 trackRealPos, float progress, float newSpeedFactor)
+
+    public void SetProgress()
     {
-        var originalForward = transform.localPosition + spline.GetDirection(Progress);
-        trackTransition = true;
-        spline = null;
-        var originalPosition = transform.position;
-
-        var newPosition = new Vector3(trackRealPos.x, originalPosition.y, trackRealPos.z);
-        var transitionDuration = Vector3.Distance(newPosition, originalPosition) / trainSpeed;
-        var newForward = newPosition + newTrack.GetDirection(progress);
-
-        var timer = 0f;
-        while (timer < transitionDuration)
+        var tempPos = Vector3.zero;
+        var curPos = transform.position;
+        var minDist = 100f;
+        float minIndex = 0;
+        float detailLevel = 20000;
+        for (float i = 0; i < detailLevel; i++)
         {
-            var t = Mathf.Min(timer / transitionDuration, 1);
-            var curPos = Vector3.Lerp(originalPosition, newPosition, t);
-            var curForward = Vector3.Lerp(originalForward, newForward, t);
-            transform.position = curPos;
-            transform.LookAt(curForward);
-            yield return null;
-            timer += Time.deltaTime;
+            tempPos = spline.GetPoint(i / detailLevel);
+            var dist = Vector3.Distance(curPos, tempPos); 
+            if (dist < minDist)
+            {
+                minDist = dist;
+                minIndex = i;
+            }
         }
-
-        transform.position = newPosition;
-        spline = newTrack;
-        Progress = progress;
-        speedFactor = newSpeedFactor;
-        curSpeed = baseSpeed * speedFactor;
-        trackTransition = false;
-        transform.LookAt(transform.localPosition + spline.GetDirection(Progress));
-        yield return new WaitForSeconds(0.1f);
+        print(minIndex / detailLevel);
+        Progress = minIndex / detailLevel;
     }
 
     private IEnumerator TrackSpeed()
     {
-        var currentPos = transform.position;
+        //var currentPos = transform.position;
         while (true)
         {
             baseSpeed = GameManager.Shared.GetSpeed();
             curSpeed = baseSpeed * speedFactor;
-            
             yield return new WaitForSeconds(timeMeasureUnit);
-            if (!trackTransition)
-            {
-                var newPosition = transform.position;
-                trainSpeed = Vector3.Distance(currentPos, newPosition) / timeMeasureUnit;
-                currentPos = newPosition;
-            }
+            // var newPosition = transform.position;
+            // trainSpeed = Vector3.Distance(currentPos, newPosition);
+            // //curSpeed *= 0.1f / trainSpeed;
+            // currentPos = newPosition;
         }
     }
 }

@@ -9,10 +9,8 @@ public class ConnectSplines : MonoBehaviour
     [SerializeField] private GameObject gameObjectNewBranch;
 
     private SplineWalker train;
-    
     private BezierSpline splineMaster;
     private BezierSpline splineNewBranch;
-
     private Vector3 offset;
     
     private void Start()

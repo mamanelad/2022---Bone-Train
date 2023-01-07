@@ -24,7 +24,7 @@ public class CurveChange : MonoBehaviour
             train = other.GetComponent<SplineWalker>();
             var midPos = track.GetControlPoint(0);
             var trackPosition = transform.transform.position - midPos; 
-            train.StartCoroutine(train.SwitchTrack(track, trackPosition, progress, speed));
+            //train.StartCoroutine(train.SwitchTrack(track, trackPosition, progress, speed));
             collider.enabled = false;
         }
     }
