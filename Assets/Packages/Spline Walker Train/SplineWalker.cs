@@ -14,7 +14,7 @@ public class SplineWalker : MonoBehaviour
 
     #endregion
 
-    private float splineLenght;
+    public float SplineLenght { get; set; }
 
     private bool trackTransition;
 
@@ -36,7 +36,7 @@ public class SplineWalker : MonoBehaviour
     {
         baseSpeed = GameManager.Shared.GetSpeed();
         curSpeed = baseSpeed * speedFactor;
-        splineLenght = spline.GetLength();
+        SplineLenght = spline.GetLength();
         StartCoroutine(TrackSpeed());
     }
 
@@ -52,7 +52,7 @@ public class SplineWalker : MonoBehaviour
     {
         if (goingForward)
         {
-            Progress += Time.deltaTime / splineLenght * curSpeed;
+            Progress += Time.deltaTime / SplineLenght * curSpeed;
             if (Progress > 1f)
             {
                 if (mode == SplineWalkerMode.Once)
@@ -68,7 +68,7 @@ public class SplineWalker : MonoBehaviour
         }
         else
         {
-            Progress -= Time.deltaTime / splineLenght * curSpeed;
+            Progress -= Time.deltaTime / SplineLenght * curSpeed;
             if (Progress < 0f)
             {
                 Progress = -Progress;
