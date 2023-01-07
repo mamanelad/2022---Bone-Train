@@ -84,23 +84,54 @@ public class SplineWalker : MonoBehaviour
 
     public void SetProgress()
     {
-        var tempPos = Vector3.zero;
+        float min = 0f;
+        float max = 1f;
+        float distMin;
+        float distMax;
+        var tempPos = spline.GetPoint(0.5f);
         var curPos = transform.position;
+        var dist = Vector3.Distance(curPos, tempPos); 
         var minDist = 100f;
         float minIndex = 0;
-        float detailLevel = 20000;
-        for (float i = 0; i < detailLevel; i++)
+        // float detailLevel = 20000;
+        // for (float i = 0; i < detailLevel; i++)
+        // {
+        //     tempPos = spline.GetPoint(i / detailLevel);
+        //     var dist = Vector3.Distance(curPos, tempPos); 
+        //     if (dist < minDist)
+        //     {
+        //         minDist = dist;
+        //         minIndex = i;
+        //     }
+        // }
+        // print(minIndex / detailLevel);
+        // Progress = minIndex / detailLevel;
+
+        var i = 1;
+        while (dist > 0.005f)
         {
-            tempPos = spline.GetPoint(i / detailLevel);
-            var dist = Vector3.Distance(curPos, tempPos); 
-            if (dist < minDist)
+            print(i);
+            i += 1;
+            var posMin = spline.GetPoint(min);
+            var posMax = spline.GetPoint(max);
+            
+            distMin = Vector3.Distance(curPos, posMin); 
+            distMax = Vector3.Distance(curPos, posMax);
+
+            if (distMin < distMax)
             {
-                minDist = dist;
-                minIndex = i;
+                dist = distMin;
+                max = (max + min) / 2f;
+            }
+            else
+            {
+                dist = distMax;
+                min = (max + min) / 2f;
             }
         }
-        print(minIndex / detailLevel);
-        Progress = minIndex / detailLevel;
+        
+        print("AERT:  " + (dist == minDist ? min : max));
+        Progress = dist == minDist ? min : max;
     }
 
     private IEnumerator TrackSpeed()
