@@ -90,48 +90,47 @@ public class SplineWalker : MonoBehaviour
         float distMax;
         var tempPos = spline.GetPoint(0.5f);
         var curPos = transform.position;
-        var dist = Vector3.Distance(curPos, tempPos); 
+        //var dist = Vector3.Distance(curPos, tempPos); 
         var minDist = 100f;
         float minIndex = 0;
-        // float detailLevel = 20000;
-        // for (float i = 0; i < detailLevel; i++)
-        // {
-        //     tempPos = spline.GetPoint(i / detailLevel);
-        //     var dist = Vector3.Distance(curPos, tempPos); 
-        //     if (dist < minDist)
-        //     {
-        //         minDist = dist;
-        //         minIndex = i;
-        //     }
-        // }
-        // print(minIndex / detailLevel);
-        // Progress = minIndex / detailLevel;
-
-        var i = 1;
-        while (dist > 0.005f)
+        float detailLevel = 10000;
+        for (float i = 0; i < detailLevel; i++)
         {
-            print(i);
-            i += 1;
-            var posMin = spline.GetPoint(min);
-            var posMax = spline.GetPoint(max);
-            
-            distMin = Vector3.Distance(curPos, posMin); 
-            distMax = Vector3.Distance(curPos, posMax);
-
-            if (distMin < distMax)
+            tempPos = spline.GetPoint(i / detailLevel);
+            var dist = Vector3.Distance(curPos, tempPos);
+            if (dist < minDist)
             {
-                dist = distMin;
-                max = (max + min) / 2f;
-            }
-            else
-            {
-                dist = distMax;
-                min = (max + min) / 2f;
+                minDist = dist;
+                minIndex = i;
             }
         }
-        
-        print("AERT:  " + (dist == minDist ? min : max));
-        Progress = dist == minDist ? min : max;
+
+        Progress = minIndex / detailLevel;
+
+        // var i = 1;
+        // while (dist > 0.05f)
+        // {
+        //     print(i);
+        //     i += 1;
+        //     var posMin = spline.GetPoint(min);
+        //     var posMax = spline.GetPoint(max);
+        //     
+        //     distMin = Vector3.Distance(curPos, posMin); 
+        //     distMax = Vector3.Distance(curPos, posMax);
+        //
+        //     if (distMin < distMax)
+        //     {
+        //         dist = distMin;
+        //         max = (max + min) / 2f;
+        //     }
+        //     else
+        //     {
+        //         dist = distMax;
+        //         min = (max + min) / 2f;
+        //     }
+        // }
+        //
+        // Progress = dist == minDist ? min : max;
     }
 
     private IEnumerator TrackSpeed()
