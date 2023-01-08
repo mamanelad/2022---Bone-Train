@@ -41,16 +41,16 @@ public class TrackChange : MonoBehaviour
         var endPoint = splineMaster.points[^1];
         var newPointStart = splineNewBranch.points[0] + offset;
 
-        if (Vector3.Distance(endPoint, newPointStart) > 0.005)
-        {
-            var point = new Vector3[]
-            {
-                Vector3.Lerp(endPoint, newPointStart, 0.33f),
-                Vector3.Lerp(endPoint, newPointStart, 0.66f),
-                newPointStart
-            };
-            splineMaster.AddPoint(point);
-        }
+        // if (Vector3.Distance(endPoint, newPointStart) > 0.005)
+        // {
+        //     var point = new Vector3[]
+        //     {
+        //         Vector3.Lerp(endPoint, newPointStart, 0.33f),
+        //         Vector3.Lerp(endPoint, newPointStart, 0.66f),
+        //         newPointStart
+        //     };
+        //     splineMaster.AddPoint(point);
+        // }
             
         for (int i = 1; i < splineNewBranch.points.Length; i+=3)
         {
