@@ -6,6 +6,7 @@ using Unity.VisualScripting;
 using UnityEditor;
 using UnityEngine;
 using UnityEngine.EventSystems;
+using UnityEngine.UI;
 
 public class Drag : MonoBehaviour, IDragHandler, IBeginDragHandler, IEndDragHandler
 {
@@ -17,10 +18,15 @@ public class Drag : MonoBehaviour, IDragHandler, IBeginDragHandler, IEndDragHand
     private Vector3 _velocity = Vector3.zero;
     private Furnace _furnace;
 
-    private int i = 0;
+    [SerializeField] private Furnace.BurnObject myBurnObject;
+    [SerializeField] private float overLapFactor = 0.35f;
+
+    private int _fullALfa = 255;
+    private int _zeroALfa = 0;
     private void Awake()
     {
         _draggingObjectRectTransform = transform as RectTransform;
+        changeAlfa(_zeroALfa);
     }
 
     private void Update()
@@ -39,27 +45,28 @@ public class Drag : MonoBehaviour, IDragHandler, IBeginDragHandler, IEndDragHand
 
     private void TouchFurnace()
     {
-        
+        _furnace.AddSpeed(myBurnObject);
+        Destroy(gameObject);
     }
 
     private bool RectOverlap(RectTransform firstRect, RectTransform secondRect)
     {
-        if (firstRect.position.x + firstRect.rect.width * 0.5f < secondRect.position.x - secondRect.rect.width * 0.5f)
+        if (firstRect.position.x + firstRect.rect.width * overLapFactor < secondRect.position.x - secondRect.rect.width * overLapFactor)
         {
             return false;
         }
 
-        if (secondRect.position.x + secondRect.rect.width * 0.5f < firstRect.position.x - firstRect.rect.width * 0.5f)
+        if (secondRect.position.x + secondRect.rect.width * overLapFactor < firstRect.position.x - firstRect.rect.width * overLapFactor)
         {
             return false;
         }
 
-        if (firstRect.position.y + firstRect.rect.height * 0.5f < secondRect.position.y - secondRect.rect.height * 0.5f)
+        if (firstRect.position.y + firstRect.rect.height * overLapFactor < secondRect.position.y - secondRect.rect.height * overLapFactor)
         {
             return false;
         }
 
-        if (secondRect.position.y + secondRect.rect.height * 0.5f < firstRect.position.y - firstRect.rect.height * 0.5f)
+        if (secondRect.position.y + secondRect.rect.height * overLapFactor < firstRect.position.y - firstRect.rect.height * overLapFactor)
         {
             return false;
         }
@@ -80,6 +87,7 @@ public class Drag : MonoBehaviour, IDragHandler, IBeginDragHandler, IEndDragHand
 
     public void OnBeginDrag(PointerEventData eventData)
     {
+        changeAlfa(_fullALfa);
         var newFuelIcon = Instantiate(fuelIconPrefab, transform.position, Quaternion.identity);
         newFuelIcon.transform.SetParent(_canvas.transform);
         newFuelIcon.transform.localScale = transform.localScale;
@@ -88,6 +96,11 @@ public class Drag : MonoBehaviour, IDragHandler, IBeginDragHandler, IEndDragHand
     }
 
 
+    private void changeAlfa(float newAlfa)
+    {
+        var image = GetComponent<Image>();
+        image.color  = new Color(image.color[0], image.color[1], image.color[2], newAlfa);  
+    }
     public void OnEndDrag(PointerEventData eventData)
     {
         Destroy(gameObject);
