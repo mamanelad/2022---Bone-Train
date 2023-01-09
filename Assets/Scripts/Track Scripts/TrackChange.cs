@@ -8,9 +8,14 @@ public class TrackChange : MonoBehaviour
     private Collider collider;
     
     [SerializeField] private GameObject gameObjectNewBranch;
+    [SerializeField] private bool convergeTrack;
+    [Space(20)]
+    [Header("Second Track for Converging Tracks")]
+    [SerializeField] private GameObject gameObjectSecondBranch;
     private SplineWalker train;
     private BezierSpline splineMaster;
     private BezierSpline splineNewBranch;
+    private BezierSpline splineSecondBranch;
     private Vector3 offset;
     
     void Start()
@@ -23,12 +28,35 @@ public class TrackChange : MonoBehaviour
             splineNewBranch = gameObjectNewBranch.GetComponent<BezierSpline>();
             offset = -transform.position;
         }
+
+        if (convergeTrack)
+        {
+            if (gameObjectSecondBranch == null)
+                Debug.Log("ERROR: Converging track missing 2nd track");
+            else
+                splineSecondBranch = gameObjectSecondBranch.GetComponent<BezierSpline>();
+        }
+    }
+
+    private void DecideNextTrack()
+    {
+        var lastMasterPos = splineMaster.points[^1];
+        var startBranchA = splineNewBranch.points[0] + offset;
+        var startBranchB = splineSecondBranch.points[0] + offset;
+
+        if (Vector3.Distance(lastMasterPos, startBranchA) > Vector3.Distance(lastMasterPos, startBranchB))
+        {
+            gameObjectNewBranch = gameObjectSecondBranch;
+            splineNewBranch = splineSecondBranch;
+        }
     }
     
     private void OnTriggerEnter(Collider other)
     {
         if (other.CompareTag("Train"))
         {
+            if (convergeTrack)
+                DecideNextTrack();
             ConnectTracks();
             collider.enabled = false;
         }
