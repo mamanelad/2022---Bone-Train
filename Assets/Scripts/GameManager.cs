@@ -70,10 +70,14 @@ public class GameManager : MonoBehaviour
     }
 
 
+    [Space(20)] [Header("Check PointS")] private CheckPointData _CheckPointData;
+    
     private void Awake()
     {
         Shared = this;
         curSpeed = Mathf.Lerp(minSpeed, maxSpeed, 0.5f);
+        InitSouls();
+        InitiateCheckPointData();
 
         //
         // if (shared == null)
@@ -126,6 +130,12 @@ public class GameManager : MonoBehaviour
             ActivateNewEvent();
     }
 
+    private void InitSouls()
+    {
+        SoulStones = soulStonesInitializeValue;
+        GoodSouls = goodSoulsInitializeValue;
+        BadSouls = badSoulsInitializeValue;
+    }
 
     private void InitUiNumbers()
     {
@@ -338,6 +348,33 @@ public class GameManager : MonoBehaviour
                 curMouseOnArrow = arrow;
             }
         }
+    }
+
+    private void InitiateCheckPointData()
+    {
+        _CheckPointData = (CheckPointData) ScriptableObject.CreateInstance(typeof(CheckPointData));
+        SaveCheckPointData();
+        print(_CheckPointData.SoulStones);
+    }
+
+    public void SaveCheckPointData()
+    {
+        //Inventory
+        _CheckPointData.SoulStones = soulStonesInitializeValue;
+        _CheckPointData.GoodSouls = GoodSouls;
+        _CheckPointData.BadSouls = BadSouls;
+        
+        //TrainState
+    }
+
+    public void ReturnToLastCheckPoint()
+    {
+        //Inventory
+        soulStonesInitializeValue = _CheckPointData.SoulStones;
+        GoodSouls = _CheckPointData.GoodSouls;
+        BadSouls = _CheckPointData.BadSouls;
+        
+        //TrainState
     }
 }
 
