@@ -1164,6 +1164,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   gameObjectNewBranch: {fileID: 7616927820872602291}
+  convergeTrack: 0
+  gameObjectSecondBranch: {fileID: 0}
 --- !u!65 &7624173729447418402
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -1175,8 +1177,8 @@ BoxCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 22.444344, y: 3.5219116, z: 4.605025}
-  m_Center: {x: 10.722172, y: 1.2609558, z: 0.0456717}
+  m_Size: {x: 6.435911, y: 3.5219116, z: 4.605025}
+  m_Center: {x: 2.7179556, y: 1.2609558, z: 0.0456717}
 --- !u!1 &3541453836674391366
 GameObject:
   m_ObjectHideFlags: 0
