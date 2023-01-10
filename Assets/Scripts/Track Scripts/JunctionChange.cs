@@ -18,7 +18,7 @@ public class JunctionChange : MonoBehaviour
 
     private Vector3 offset;
 
-    [SerializeField] private MiniMapJunction miniMapJunction;
+    // [SerializeField] private MiniMapJunction miniMapJunction;
     [SerializeField] private JunctionChange nextJunction;
     [SerializeField] private int id;
 
@@ -139,13 +139,13 @@ public class JunctionChange : MonoBehaviour
         return nextJunction;
     }
 
-    public MiniMapJunction GetMiniMapJunction()
-    {
-        if (miniMapJunction == null)
-        {
-            print("Add the miniMap jUNCTION to his junction that is id is: " + id);
-        }
-
-        return miniMapJunction;
-    }
+    // public MiniMapJunction GetMiniMapJunction()
+    // {
+    //     if (miniMapJunction == null)
+    //     {
+    //         print("Add the miniMap jUNCTION to his junction that is id is: " + id);
+    //     }
+    //
+    //     return miniMapJunction;
+    // }
 }
