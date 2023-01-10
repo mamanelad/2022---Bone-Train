@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.14835882, g: 0.042655848, b: 0.04538798, a: 1}
+  m_IndirectSpecularColor: {r: 0.22157656, g: 0.06364847, b: 0.06759677, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -938,6 +938,9 @@ MonoBehaviour:
   curRoad: 0
   maxSpeed: 1100
   minSpeed: 100
+  addToSpeedFuel: 0
+  addToSpeedGoodSoul: 0
+  addToSpeedBadSoul: 0
   speedState: 2
   train: {fileID: 1056989853}
 --- !u!4 &75883390
@@ -2152,11 +2155,6 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f9b2141de3c32044593d64db8f3bd45d, type: 3}
---- !u!224 &236633885 stripped
-RectTransform:
-  m_CorrespondingSourceObject: {fileID: 3510639081412655596, guid: 4fea3e6ae6712c549ae2d1718e06903d, type: 3}
-  m_PrefabInstance: {fileID: 1792277909}
-  m_PrefabAsset: {fileID: 0}
 --- !u!224 &242042908 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 4333621674785910763, guid: 5aae4924b0e74d94fb69769bd0210c8c, type: 3}
@@ -5032,17 +5030,6 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 530881766}
   m_Mesh: {fileID: 10209, guid: 0000000000000000e000000000000000, type: 0}
---- !u!114 &544018852 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 3510639081450649390, guid: 4fea3e6ae6712c549ae2d1718e06903d, type: 3}
-  m_PrefabInstance: {fileID: 1792277909}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f4688fdb7df04437aeb418b961361dc5, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1001 &544782805
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -5100,17 +5087,6 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: ec4ee917df4f04e478d4a4f43a76c143, type: 3}
---- !u!114 &546146857 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 3510639081127365855, guid: 4fea3e6ae6712c549ae2d1718e06903d, type: 3}
-  m_PrefabInstance: {fileID: 1792277909}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f4688fdb7df04437aeb418b961361dc5, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1001 &547841865
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -6693,6 +6669,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: dc0862a97d3249d4aae6637234a8e918, type: 3}
+--- !u!224 &729858098 stripped
+RectTransform:
+  m_CorrespondingSourceObject: {fileID: 94769728735465876, guid: 4fea3e6ae6712c549ae2d1718e06903d, type: 3}
+  m_PrefabInstance: {fileID: 1792277909}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &737653524
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -10899,7 +10880,7 @@ RectTransform:
   m_LocalScale: {x: 0, y: 0, z: 0}
   m_ConstrainProportionsScale: 0
   m_Children:
-  - {fileID: 236633885}
+  - {fileID: 729858098}
   - {fileID: 242042908}
   - {fileID: 1805251468}
   - {fileID: 1087434137}
@@ -10923,9 +10904,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 893d5114e42578b47a21a8f62e9fa08d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  goodSoulsNumberText: {fileID: 546146857}
-  badSoulsNumberText: {fileID: 544018852}
-  soulStonesAmountNumberText: {fileID: 1143485197}
+  goodSoulsNumberText: {fileID: 0}
+  badSoulsNumberText: {fileID: 0}
+  soulStonesAmountNumberText: {fileID: 0}
 --- !u!1001 &1140916582
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -11009,17 +10990,6 @@ Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: f9b2141de3c32044593d64db8f3bd45d, type: 3}
   m_PrefabInstance: {fileID: 980642346}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &1143485197 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 3510639080697487641, guid: 4fea3e6ae6712c549ae2d1718e06903d, type: 3}
-  m_PrefabInstance: {fileID: 1792277909}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f4688fdb7df04437aeb418b961361dc5, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1001 &1156926693
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -19068,7 +19038,7 @@ Transform:
   - {fileID: 437131163}
   - {fileID: 194449152}
   m_Father: {fileID: 679871596}
-  m_RootOrder: 4
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &2117361386
 PrefabInstance:
@@ -20169,8 +20139,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fc3bd49a2b0114640820d9f5be9a38a9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  progress: 0.5
-  speed: 1
+  gameObjectNewBranch: {fileID: 0}
+  convergeTrack: 0
+  gameObjectSecondBranch: {fileID: 0}
 --- !u!33 &1281463913922672140
 MeshFilter:
   m_ObjectHideFlags: 0

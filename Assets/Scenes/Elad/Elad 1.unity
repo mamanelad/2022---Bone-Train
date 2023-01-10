@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.1482212, g: 0.042579785, b: 0.04522457, a: 1}
+  m_IndirectSpecularColor: {r: 0.22157656, g: 0.06364847, b: 0.06759677, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -1040,7 +1040,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 63824317}
-  m_RootOrder: 6
+  m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0.987, y: -90, z: -90}
 --- !u!108 &74603417
 Light:
@@ -2889,9 +2889,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 893d5114e42578b47a21a8f62e9fa08d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  goodSoulsNumberText: {fileID: 1807646781}
-  badSoulsNumberText: {fileID: 1807646780}
-  soulStonesAmountNumberText: {fileID: 1807646778}
+  goodSoulsNumberText: {fileID: 0}
+  badSoulsNumberText: {fileID: 0}
+  soulStonesAmountNumberText: {fileID: 0}
 --- !u!114 &188309596
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2965,7 +2965,7 @@ RectTransform:
   m_LocalScale: {x: 0, y: 0, z: 0}
   m_ConstrainProportionsScale: 0
   m_Children:
-  - {fileID: 1807646779}
+  - {fileID: 190832708}
   - {fileID: 230973605}
   - {fileID: 1315029746}
   m_Father: {fileID: 0}
@@ -2976,6 +2976,11 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0, y: 0}
+--- !u!224 &190832708 stripped
+RectTransform:
+  m_CorrespondingSourceObject: {fileID: 94769728735465876, guid: 4fea3e6ae6712c549ae2d1718e06903d, type: 3}
+  m_PrefabInstance: {fileID: 1807646777}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &196575653
 GameObject:
   m_ObjectHideFlags: 0
@@ -8237,6 +8242,9 @@ MonoBehaviour:
   curRoad: 0
   maxSpeed: 1100
   minSpeed: 100
+  addToSpeedFuel: 0
+  addToSpeedGoodSoul: 0
+  addToSpeedBadSoul: 0
   speedState: 2
   train: {fileID: 63824319}
 --- !u!4 &570967453
@@ -17895,7 +17903,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c3a1851cca598c84a8c8d2d569410b25, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  fuelIconPrefab: {fileID: 0}
   dampingSpeed: 0.05
+  myBurnObject: 0
+  overLapFactor: 0.35
 --- !u!114 &1544604583
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -21112,44 +21123,6 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 4fea3e6ae6712c549ae2d1718e06903d, type: 3}
---- !u!114 &1807646778 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 3510639080697487641, guid: 4fea3e6ae6712c549ae2d1718e06903d, type: 3}
-  m_PrefabInstance: {fileID: 1807646777}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f4688fdb7df04437aeb418b961361dc5, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
---- !u!224 &1807646779 stripped
-RectTransform:
-  m_CorrespondingSourceObject: {fileID: 3510639081412655596, guid: 4fea3e6ae6712c549ae2d1718e06903d, type: 3}
-  m_PrefabInstance: {fileID: 1807646777}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &1807646780 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 3510639081450649390, guid: 4fea3e6ae6712c549ae2d1718e06903d, type: 3}
-  m_PrefabInstance: {fileID: 1807646777}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f4688fdb7df04437aeb418b961361dc5, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
---- !u!114 &1807646781 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 3510639081127365855, guid: 4fea3e6ae6712c549ae2d1718e06903d, type: 3}
-  m_PrefabInstance: {fileID: 1807646777}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f4688fdb7df04437aeb418b961361dc5, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1001 &1811347380
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -23655,8 +23628,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fc3bd49a2b0114640820d9f5be9a38a9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  progress: 0.5
-  speed: 1
+  gameObjectNewBranch: {fileID: 0}
+  convergeTrack: 0
+  gameObjectSecondBranch: {fileID: 0}
 --- !u!4 &2050472727
 Transform:
   m_ObjectHideFlags: 0

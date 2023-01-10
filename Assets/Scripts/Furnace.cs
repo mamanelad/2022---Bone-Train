@@ -8,7 +8,7 @@ public class Furnace : MonoBehaviour
 {
     [Header("Speed")] private float maxSpeed;
     private float minSpeed;
-    private float curSpeed;
+    [SerializeField] private float curSpeed;
 
     [Space(10)] [Header("Change Speed Amounts")]
     private int addToSpeedFuel;
