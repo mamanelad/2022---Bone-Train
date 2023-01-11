@@ -13,8 +13,8 @@ MonoBehaviour:
   m_Name: Converge Left
   m_EditorClassIdentifier: 
   m_Cells:
-  - m_GameObject: {fileID: 3335605009474470089, guid: 5cefb36531363d14db4bd6f2fed6688e, type: 3}
-    m_Offset: {x: -1.2, y: 0, z: 0}
+  - m_GameObject: {fileID: 3335605009474470089, guid: 2bb703ab0e989634ca7a6a1a6cffbf54, type: 3}
+    m_Offset: {x: 0, y: 0, z: 0}
     m_Scale: {x: 1, y: 1, z: 1}
     m_Orientation: {x: 0, y: 0, z: 0, w: 1}
   m_Size: {x: 1, y: 1, z: 1}
