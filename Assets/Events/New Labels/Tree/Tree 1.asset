@@ -1,0 +1,26 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 922829907f378144b83664220b824bf1, type: 3}
+  m_Name: Tree 1
+  m_EditorClassIdentifier: 
+  background: {fileID: 21300000, guid: 294c2702d9a51d9479a40c7f2aaffde7, type: 3}
+  foreground: {fileID: 21300000, guid: 1701f5325e211814dbdee77be3843b87, type: 3}
+  character: {fileID: 21300000, guid: c29c54f962a6d504d83120f0a45887bb, type: 3}
+  singleButton: 0
+  textTitle: Tree of Souls
+  textBody: 
+  eventAudio: {fileID: 0}
+  environmentAudio: {fileID: 0}
+  action:
+    soulStones: 0
+    goodSouls: 100
+    badSouls: 80
