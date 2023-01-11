@@ -49,7 +49,11 @@ public class BreakChain : MonoBehaviour
         {
             _stopTrain = true;
             print("need to stop the train");
-            GameManager.Shared.StopTrain();
+            if (FindObjectOfType<GameManager>())
+            {
+                GameManager.Shared.StopTrain();    
+            }
+            
         }   
     }
 }
