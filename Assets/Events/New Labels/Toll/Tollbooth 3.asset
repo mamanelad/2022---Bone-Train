@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: Tollbooth 3
   m_EditorClassIdentifier: 
   background: {fileID: 21300000, guid: f7631454c5d6f4f4db8cc32eb25c795e, type: 3}
-  foreground: {fileID: 21300000, guid: 1701f5325e211814dbdee77be3843b87, type: 3}
+  foreground: {fileID: -1074249999, guid: 9c0e0072db3ee7343b7dc56857f25d08, type: 3}
   character: {fileID: 21300000, guid: 7c38e7edc02c7f143a41f37be7e95349, type: 3}
   singleButton: 1
   textTitle: Toll Booth

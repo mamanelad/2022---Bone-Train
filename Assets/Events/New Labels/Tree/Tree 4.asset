@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: Tree 4
   m_EditorClassIdentifier: 
   background: {fileID: 21300000, guid: 294c2702d9a51d9479a40c7f2aaffde7, type: 3}
-  foreground: {fileID: 21300000, guid: 1701f5325e211814dbdee77be3843b87, type: 3}
+  foreground: {fileID: -1074249999, guid: 9c0e0072db3ee7343b7dc56857f25d08, type: 3}
   character: {fileID: 21300000, guid: c29c54f962a6d504d83120f0a45887bb, type: 3}
   singleButton: 0
   textTitle: Tree of Souls
