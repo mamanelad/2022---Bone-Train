@@ -15,9 +15,18 @@ public class Item : MonoBehaviour
 
     private void Start()
     {
-        icon.sprite = data.icon;
-        description.text = data.description;
+        if (data)
+        {
+            icon.sprite = data.icon;
+            description.text = data.description;
+        }
         textBox.SetActive(false);
+    }
+
+    public void LoadItemData(ItemData newData)
+    {
+        icon.sprite = newData.icon;
+        description.text = newData.description;
     }
 
     public void ShowItemDescription()

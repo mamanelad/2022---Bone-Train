@@ -12,6 +12,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8eed3d123ee285c4ab631b43186d040f, type: 3}
   m_Name: Good Graces
   m_EditorClassIdentifier: 
-  name: 
-  icon: {fileID: 0}
-  description: 
+  name: Good Graces
+  icon: {fileID: 1991152841, guid: c164eb8e5a314f34ea020d435109a1ee, type: 3}
+  description: Bless the builder of the church
