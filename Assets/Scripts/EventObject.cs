@@ -14,11 +14,7 @@ public class EventObject : ScriptableObject
     [Header("Text")] 
     public string textTitle;
     [Space(20)] public string textBody;
-
-    // [Header("Audio")] 
-    // public AudioClip eventAudio;
-    // public AudioClip environmentAudio;
-
+    
     public InteractionAction action;
 }
 
@@ -28,4 +24,6 @@ public class InteractionAction
     public int soulStones;
     public int goodSouls;
     public int badSouls;
+    public bool receiveItem;
+    public ItemData item;
 }

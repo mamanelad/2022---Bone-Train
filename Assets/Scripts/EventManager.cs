@@ -23,17 +23,25 @@ public class EventManager : MonoBehaviour
     [SerializeField] private GameObject rSoulStone;
     [SerializeField] private GameObject rGoodSouls;
     [SerializeField] private GameObject rBadSouls;
-    
+
     [SerializeField] private GameObject fSoulStone;
     [SerializeField] private GameObject fGoodSouls;
     [SerializeField] private GameObject fBadSouls;
 
+    [SerializeField] private GameObject receiveItem;
+    [SerializeField] private GameObject receiveContent;
+    [SerializeField] private GameObject forfeitItem;
+    [SerializeField] private GameObject forfeitContent;
+
+    private UIManager uiManager;
+    
     private Sprite buttonAcceptSprite;
     private Sprite buttonRejectSprite;
     private Sprite buttonSingleSprite;
 
     private void Start()
     {
+        uiManager = FindObjectOfType<UIManager>();
         buttonAcceptSprite = buttonAccept.GetComponent<Image>().sprite;
         buttonRejectSprite = buttonReject.GetComponent<Image>().sprite;
         buttonSingleSprite = buttonSingle.GetComponent<Image>().sprite;
@@ -53,7 +61,7 @@ public class EventManager : MonoBehaviour
         background.sprite = data.background;
         foreground.sprite = data.foreground;
         character.sprite = data.character;
-        
+
         if (data.singleButton)
         {
             buttonSingle.SetActive(true);
@@ -69,9 +77,11 @@ public class EventManager : MonoBehaviour
 
         title.text = data.textTitle;
         body.text = data.textBody;
-        
+
         ConfigureContent();
+        ConfigureItem();
     }
+
 
     private void ConfigureContent()
     {
@@ -87,35 +97,55 @@ public class EventManager : MonoBehaviour
             rSoulStone.SetActive(true);
             rSoulStone.GetComponentInChildren<TextMeshProUGUI>().text = data.action.soulStones.ToString();
         }
-        
+
         if (data.action.soulStones < 0)
         {
             fSoulStone.SetActive(true);
             fSoulStone.GetComponentInChildren<TextMeshProUGUI>().text = data.action.soulStones.ToString();
         }
-        
+
         if (data.action.goodSouls > 0)
         {
             rGoodSouls.SetActive(true);
             rGoodSouls.GetComponentInChildren<TextMeshProUGUI>().text = data.action.goodSouls.ToString();
         }
-        
+
         if (data.action.goodSouls < 0)
         {
             fGoodSouls.SetActive(true);
             fGoodSouls.GetComponentInChildren<TextMeshProUGUI>().text = data.action.goodSouls.ToString();
         }
-        
+
         if (data.action.badSouls > 0)
         {
             rBadSouls.SetActive(true);
             rBadSouls.GetComponentInChildren<TextMeshProUGUI>().text = data.action.badSouls.ToString();
         }
-        
+
         if (data.action.badSouls < 0)
         {
             rBadSouls.SetActive(true);
             rBadSouls.GetComponentInChildren<TextMeshProUGUI>().text = data.action.badSouls.ToString();
+        }
+    }
+
+    private void ConfigureItem()
+    {
+        if (!data.action.item)
+            return;
+
+        if (data.action.receiveItem)
+        {
+            receiveItem.SetActive(true);
+            receiveContent.SetActive(false);
+            receiveItem.GetComponent<Item>().LoadItemData(data.action.item);
+        }
+
+        if (!data.action.receiveItem)
+        {
+            forfeitItem.SetActive(true);
+            forfeitContent.SetActive(false);
+            forfeitItem.GetComponent<Item>().LoadItemData(data.action.item);
         }
     }
 
@@ -125,11 +155,25 @@ public class EventManager : MonoBehaviour
         GameManager.Shared.ChangeByGoodSouls(data.action.goodSouls);
         GameManager.Shared.ChangeByBadSouls(data.action.badSouls);
         UIAudioManager.Instance.PlayUIClickEvent();
+        if (data.action.receiveItem)
+            uiManager.AddItem(data.action.item);
         StartCoroutine(EndEvent());
     }
 
     public void Reject()
     {
+        if (data.action.item && !data.action.receiveItem)
+        {
+            if (uiManager.CheckIfPlayerGotItem(data.action.item))
+                uiManager.RemoveItem(data.action.item);
+            else
+            {
+                print("Player does not have the item");
+                // play bad sound
+                return;
+            }
+        }
+        
         UIAudioManager.Instance.PlayUIClickEvent();
         StartCoroutine(EndEvent());
     }
@@ -143,7 +187,7 @@ public class EventManager : MonoBehaviour
         ConfigureEvent(newData);
         Time.timeScale = 0;
     }
-    
+
     public IEnumerator EndEvent()
     {
         yield return new WaitForSecondsRealtime(0.2f);
@@ -159,4 +203,3 @@ public class EventManager : MonoBehaviour
         UIAudioManager.Instance.PlayUIHoverEvent();
     }
 }
-
