@@ -87,6 +87,8 @@ public class Drag : MonoBehaviour, IDragHandler, IBeginDragHandler, IEndDragHand
 
     public void OnBeginDrag(PointerEventData eventData)
     {
+        
+        GameManager.Shared.ChangeInventoryFromDrag(myBurnObject);
         changeAlfa(_fullALfa);
         var newFuelIcon = Instantiate(fuelIconPrefab, transform.position, Quaternion.identity);
         newFuelIcon.transform.SetParent(_canvas.transform);

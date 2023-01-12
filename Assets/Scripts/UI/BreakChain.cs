@@ -31,7 +31,7 @@ public class BreakChain : MonoBehaviour
     {
         _slider.onValueChanged.AddListener((newVal => { _sliderValue = newVal; }));
         _maxSliderAmount = _slider.maxValue;
-        _minSliderAmount = _slider.minValue;
+        _minSliderAmount = _slider.value;
         GameManager.Shared.StopTrain();
     }
 
@@ -45,11 +45,23 @@ public class BreakChain : MonoBehaviour
 
     private void CalculatePercentage()
     {
-        float total = _maxSliderAmount - _minSliderAmount;
-        if (_sliderValue >= percentageToStartTrain * total)
+        if (wait)
         {
-            CallToStopOrStartTrain();
+            if (_slider.value <= _minSliderAmount + 5)
+            {
+                wait = false;
+            }
         }
+        else
+        {
+            float total = _maxSliderAmount - _minSliderAmount;
+            if (_sliderValue >= percentageToStartTrain * total)
+            {
+            
+                CallToStopOrStartTrain();
+            }    
+        }
+        
     }
 
     private void CallToStopOrStartTrain()
