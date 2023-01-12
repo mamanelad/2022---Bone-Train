@@ -7,7 +7,7 @@ using FMODUnity;
 public class UIAudioManager : MonoBehaviour
 {
     public static UIAudioManager Instance;
-    
+
     [SerializeField] private EventReference uiClick;
     [SerializeField] private EventReference uiHover;
     [SerializeField] private EventReference uiEventStart;
@@ -18,7 +18,7 @@ public class UIAudioManager : MonoBehaviour
     {
         RuntimeManager.PlayOneShot(uiClick);
     }
-    
+
     public void PlayUIHoverEvent()
     {
         RuntimeManager.PlayOneShot(uiHover);
@@ -43,8 +43,8 @@ public class UIAudioManager : MonoBehaviour
     {
         trainLoop.EventInstance.setPitch(speed);
     }
-    
-    
+
+
     private void Awake()
     {
         Instance = this;
