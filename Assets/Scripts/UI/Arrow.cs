@@ -7,15 +7,15 @@ using UnityEngine.EventSystems;
 
 public class Arrow : MonoBehaviour
 {
-    
     private Image _image;
     [SerializeField] private Sprite regularSprite;
     [SerializeField] private Sprite markSprite;
     [SerializeField] private Arrow otherArrow;
     [SerializeField] private Color mouseOverColor = Color.red;
-    private Color baseColor;
-    
+    private Color regularColor;
+
     private bool isMouseOn;
+    private bool isPressed;
 
     public enum ArrowSide
     {
@@ -25,17 +25,17 @@ public class Arrow : MonoBehaviour
     }
 
     [SerializeField] private ArrowSide _arrowSide;
-    
+
     void Start()
     {
         _image = GetComponent<Image>();
-        baseColor = _image.color;
+        regularColor = _image.color;
         gameObject.SetActive(false);
     }
 
     private void Update()
     {
-        ChangeColorToMouseOver(isMouseOn ? mouseOverColor : baseColor);
+        ChangeColorToOnColor(!isMouseOn);
     }
 
     public void ArrowHandler(ArrowSide sideToMark)
@@ -50,18 +50,33 @@ public class Arrow : MonoBehaviour
         }
     }
 
-    public void ChangeColorToMouseOver(Color newColor)
+    public void SetIsPressedOf()
     {
+        isPressed = false;
+    }
+
+    public void ChangeColorToOnColor(bool mood = true)
+    {
+        if (isPressed) return;
+        if (mood)
+            ChangeSpriteToRegular();
+        Color newColor = mood ? regularColor : mouseOverColor;
         _image.color = newColor;
     }
+
+
     private void ChangeSpriteToMark()
     {
+        isPressed = true;
         _image.sprite = markSprite;
+        ChangeColorToOnColor(true);
     }
-    
-    private void ChangeSpriteToRegular()
+
+    public void ChangeSpriteToRegular()
     {
+        isPressed = false;
         _image.sprite = regularSprite;
+        ChangeColorToOnColor(false);
     }
 
     public void ClickButton()
@@ -76,6 +91,4 @@ public class Arrow : MonoBehaviour
     {
         isMouseOn = mood;
     }
- 
-   
 }
