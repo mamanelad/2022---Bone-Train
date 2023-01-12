@@ -17,12 +17,22 @@ public class BreakChain : MonoBehaviour
     private bool _startTrain;
     private float _currentVelocity = 0;
     private float _sliderValue;
+    private bool wait;
+    
+    private enum StopOrStart
+    {
+        Stop,
+        Start
+    }
+
+    private StopOrStart _stopOrStart = StopOrStart.Start;
 
     private void Start()
     {
         _slider.onValueChanged.AddListener((newVal => { _sliderValue = newVal; }));
         _maxSliderAmount = _slider.maxValue;
         _minSliderAmount = _slider.minValue;
+        GameManager.Shared.StopTrain();
     }
 
 
@@ -31,36 +41,32 @@ public class BreakChain : MonoBehaviour
         float curScore = Mathf.SmoothDamp(_sliderValue, score, ref _currentVelocity, smoothFactor * Time.deltaTime);
         _slider.value = curScore;
         CalculatePercentage();
-        if (GameManager.Shared.GetSpeedState() != GameManager.SpeedState.Stop)
-        {
-            _startTrain = false;
-        }
     }
 
     private void CalculatePercentage()
     {
         float total = _maxSliderAmount - _minSliderAmount;
-        // print("slider value is: " + _sliderValue);
-        // print("auther thing is: " + percentageToStartTrain*total);
         if (_sliderValue >= percentageToStartTrain * total)
         {
-            CallToStopTrain();
+            CallToStopOrStartTrain();
         }
     }
 
-    private void CallToStopTrain()
+    private void CallToStopOrStartTrain()
     {
-        if (GameManager.Shared.GetSpeedState() == GameManager.SpeedState.Stop)
+        switch (_stopOrStart)
         {
-            if (!_startTrain)
-            {
-                _startTrain = true;
-                print("need to stop the train");
-                if (FindObjectOfType<GameManager>())
-                {
-                    GameManager.Shared.ContinueTrain();
-                }
-            }
+            case StopOrStart.Stop:
+                GameManager.Shared.StopTrain();
+                _stopOrStart = StopOrStart.Start;
+                wait = true;
+                break;
+                
+            case StopOrStart.Start:
+                GameManager.Shared.ContinueTrain();
+                _stopOrStart = StopOrStart.Stop;
+                wait = true;
+                break;
         }
     }
 }
