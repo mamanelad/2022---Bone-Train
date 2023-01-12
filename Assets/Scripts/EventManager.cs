@@ -155,13 +155,7 @@ public class EventManager : MonoBehaviour
         GameManager.Shared.ChangeByGoodSouls(data.action.goodSouls);
         GameManager.Shared.ChangeByBadSouls(data.action.badSouls);
         UIAudioManager.Instance.PlayUIClickEvent();
-        if (data.action.receiveItem)
-            uiManager.AddItem(data.action.item);
-        StartCoroutine(EndEvent());
-    }
-
-    public void Reject()
-    {
+        
         if (data.action.item && !data.action.receiveItem)
         {
             if (uiManager.CheckIfPlayerGotItem(data.action.item))
@@ -174,6 +168,14 @@ public class EventManager : MonoBehaviour
             }
         }
         
+        if (data.action.item && data.action.receiveItem)
+            uiManager.AddItem(data.action.item);
+        
+        StartCoroutine(EndEvent());
+    }
+
+    public void Reject()
+    {
         UIAudioManager.Instance.PlayUIClickEvent();
         StartCoroutine(EndEvent());
     }
