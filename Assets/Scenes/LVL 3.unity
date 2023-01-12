@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.22174233, g: 0.063763954, b: 0.06785676, a: 1}
+  m_IndirectSpecularColor: {r: 0.2217389, g: 0.063764416, b: 0.06785583, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -13284,6 +13284,7 @@ GameObject:
   - component: {fileID: 342794890}
   - component: {fileID: 342794892}
   - component: {fileID: 342794891}
+  - component: {fileID: 342794893}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -13468,6 +13469,19 @@ MonoBehaviour:
   m_BeforeTransparentBundles: []
   m_BeforeStackBundles: []
   m_AfterStackBundles: []
+--- !u!114 &342794893
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 342794886}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 86c6556701af9e04380698b89f691b6e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  attenuationObject: {fileID: 0}
 --- !u!1001 &345582720
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -35017,6 +35031,63 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 2146479430902760332, guid: 887dc3b6cc1bc594288041230d1daab4, type: 3}
   m_PrefabInstance: {fileID: 876321721}
   m_PrefabAsset: {fileID: 0}
+--- !u!1001 &877820163
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 208174597356078936, guid: 64367671715ebb5478fc1f79b3e42259, type: 3}
+      propertyPath: m_RootOrder
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 208174597356078936, guid: 64367671715ebb5478fc1f79b3e42259, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -125.394135
+      objectReference: {fileID: 0}
+    - target: {fileID: 208174597356078936, guid: 64367671715ebb5478fc1f79b3e42259, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -1.9949036
+      objectReference: {fileID: 0}
+    - target: {fileID: 208174597356078936, guid: 64367671715ebb5478fc1f79b3e42259, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -55.831326
+      objectReference: {fileID: 0}
+    - target: {fileID: 208174597356078936, guid: 64367671715ebb5478fc1f79b3e42259, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 208174597356078936, guid: 64367671715ebb5478fc1f79b3e42259, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 208174597356078936, guid: 64367671715ebb5478fc1f79b3e42259, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 208174597356078936, guid: 64367671715ebb5478fc1f79b3e42259, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 208174597356078936, guid: 64367671715ebb5478fc1f79b3e42259, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 208174597356078936, guid: 64367671715ebb5478fc1f79b3e42259, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 208174597356078936, guid: 64367671715ebb5478fc1f79b3e42259, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 208174597356078951, guid: 64367671715ebb5478fc1f79b3e42259, type: 3}
+      propertyPath: m_Name
+      value: Audio Manager
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 64367671715ebb5478fc1f79b3e42259, type: 3}
 --- !u!1 &878950341
 GameObject:
   m_ObjectHideFlags: 0
@@ -90558,6 +90629,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 893d5114e42578b47a21a8f62e9fa08d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  itemArray: {fileID: 0}
+  itemPrefab: {fileID: 0}
   goodSoulsNumberText: {fileID: 2241219025616850623}
   badSoulsNumberText: {fileID: 2241219024550487091}
   soulStonesAmountNumberText: {fileID: 2241219025834116189}
