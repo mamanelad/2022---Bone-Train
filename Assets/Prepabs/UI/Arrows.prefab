@@ -92,7 +92,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   regularSprite: {fileID: 588235758, guid: 9c0e0072db3ee7343b7dc56857f25d08, type: 3}
   markSprite: {fileID: -927105196, guid: 9c0e0072db3ee7343b7dc56857f25d08, type: 3}
-  otherArrow: {fileID: 0}
+  otherArrow: {fileID: 1335893660250551108}
   mouseOverColor: {r: 1, g: 0, b: 0, a: 1}
   _arrowSide: 2
 --- !u!1 &959109802904214253
@@ -245,7 +245,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &1335893660076229504
 RectTransform:
   m_ObjectHideFlags: 0
@@ -360,7 +360,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   regularSprite: {fileID: 588235758, guid: 9c0e0072db3ee7343b7dc56857f25d08, type: 3}
   markSprite: {fileID: -927105196, guid: 9c0e0072db3ee7343b7dc56857f25d08, type: 3}
-  otherArrow: {fileID: 0}
+  otherArrow: {fileID: 8910503882896974072}
   mouseOverColor: {r: 1, g: 0, b: 0, a: 1}
   _arrowSide: 1
 --- !u!1 &2364225863330879424

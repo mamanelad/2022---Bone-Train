@@ -26,11 +26,16 @@ public class Arrow : MonoBehaviour
 
     [SerializeField] private ArrowSide _arrowSide;
 
-    void Start()
+    private void Awake()
     {
         _image = GetComponent<Image>();
         regularColor = _image.color;
         gameObject.SetActive(false);
+    }
+
+    void Start()
+    {
+        
     }
 
     private void Update()
