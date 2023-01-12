@@ -88524,8 +88524,8 @@ MonoBehaviour:
   maxSpeed: 2000
   minSpeed: 1000
   curSpeed: 500
-  addToSpeedFuel: 100
-  addToSpeedGoodSoul: 200
+  addToSpeedFuel: 300
+  addToSpeedGoodSoul: 500
   addToSpeedBadSoul: -100
   speedState: 2
   train: {fileID: 1626112840}

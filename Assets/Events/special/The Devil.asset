@@ -20,5 +20,7 @@ MonoBehaviour:
   textBody: What choice do you have?
   action:
     soulStones: 100
-    goodSouls: -666
+    goodSouls: -30
     badSouls: 0
+    receiveItem: 0
+    item: {fileID: 0}
