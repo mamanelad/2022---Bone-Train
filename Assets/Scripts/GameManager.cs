@@ -52,6 +52,13 @@ public class GameManager : MonoBehaviour
     private GameObject train;
 
     [Space(20)] [Header("Fuel")] private FuelManager _fuelManager;
+    
+    [Space(20)] [Header("Take Down Amounts")]
+    [SerializeField] private int takeDownFuelContinueTrain;
+    [SerializeField] private int takeDownDragFuel;
+    [SerializeField] private int takeDownDragGoodSouls;
+    [SerializeField] private int takeDownDragBadSouls;
+    
 
     // [Header("Test")]
     // [SerializeField] private bool testArrows0;
@@ -189,6 +196,7 @@ public class GameManager : MonoBehaviour
 
     public void ContinueTrain()
     {
+        ChangeBySoulStones(takeDownFuelContinueTrain);
         speedState = SpeedState.Run;
     }
 
@@ -217,11 +225,6 @@ public class GameManager : MonoBehaviour
 
     public void ChangeByGoodSouls(int addNum)
     {
-        if (GoodSouls + addNum < 0)
-        {
-        }
-
-        ;
         GoodSouls += addNum;
         _uiManager.SetGoodSouls();
     }
@@ -430,6 +433,24 @@ public class GameManager : MonoBehaviour
     {
         var startSpeed = Mathf.Lerp(minSpeed, maxSpeed, 0.5f);
         return curSpeed / startSpeed;
+    }
+
+    public void ChangeInventoryFromDrag(Furnace.BurnObject objectToBurn)
+    {
+        switch (objectToBurn)
+        {
+            case Furnace.BurnObject.Fuel:
+            ChangeBySoulStones(takeDownDragFuel);
+            break;
+
+            case Furnace.BurnObject.GoodSoul:
+            ChangeByGoodSouls(takeDownDragGoodSouls);
+            break;
+
+            case Furnace.BurnObject.BadSoul:
+            ChangeByBadSouls(takeDownDragBadSouls);
+            break;
+        }
     }
 }
 

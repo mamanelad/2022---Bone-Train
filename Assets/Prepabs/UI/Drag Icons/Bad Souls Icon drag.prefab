@@ -91,5 +91,5 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   fuelIconPrefab: {fileID: 793581734795133738}
   dampingSpeed: 0.05
-  myBurnObject: 0
+  myBurnObject: 2
   overLapFactor: 0.35
