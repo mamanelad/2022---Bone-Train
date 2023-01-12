@@ -84,6 +84,7 @@ public class GameManager : MonoBehaviour
 
     private void Awake()
     {
+        
         Shared = this;
         speedState = SpeedState.Run;
 
@@ -101,6 +102,11 @@ public class GameManager : MonoBehaviour
         }
     }
 
+
+    private void Start()
+    {
+        ArrowsTurnOnAndOff(false);
+    }
 
     private void Update()
     {
@@ -337,17 +343,21 @@ public class GameManager : MonoBehaviour
 
     private void ArrowOverHandler()
     {
-        if (IsMouseOverUI())
+        if (_arrowsAreOn)
         {
-            ArrowsMouseOver();
-        }
-        else
-        {
-            if (curMouseOnArrow)
+            if (IsMouseOverUI())
             {
-                curMouseOnArrow.SetIsMouseIsOn(false);
+                ArrowsMouseOver();
             }
+            else
+            {
+                if (curMouseOnArrow)
+                {
+                    curMouseOnArrow.SetIsMouseIsOn(false);
+                }
+            } 
         }
+        
     }
 
     public GameObject GetTrain()
