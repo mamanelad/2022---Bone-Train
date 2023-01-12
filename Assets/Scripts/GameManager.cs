@@ -276,6 +276,7 @@ public class GameManager : MonoBehaviour
 
     public void SetSpeed(float newSpeed)
     {
+        UIAudioManager.Instance.SetTrainLoopSpeed(GetCurrSpeedPerspectiveToStartSpeed());
         if (speedState == SpeedState.Stop)
         {
             return;
@@ -429,7 +430,10 @@ public class GameManager : MonoBehaviour
     public float GetCurrSpeedPerspectiveToStartSpeed()
     {
         var startSpeed = Mathf.Lerp(minSpeed, maxSpeed, 0.5f);
-        return curSpeed / startSpeed;
+        var pitch = curSpeed / startSpeed; 
+        pitch = pitch <= 0.5f ? 0 : pitch;
+        pitch = pitch >= 1.7f ? 2 : pitch;
+        return pitch;
     }
 }
 
