@@ -56,7 +56,7 @@ public class Furnace : MonoBehaviour
 
     private void DecreesSpeedHandler()
     {
-        var newSpeed = curSpeed - decreesSpeed;
+        var newSpeed = GameManager.Shared.GetSpeed() - decreesSpeed;
         if (newSpeed <= minSpeed)
             return;
 
@@ -64,8 +64,8 @@ public class Furnace : MonoBehaviour
         if (_decreesTimer <= 0)
         {
             _decreesTimer = decreesTime;
-            curSpeed = newSpeed;
-            GameManager.Shared.SetSpeed(curSpeed);
+            
+            GameManager.Shared.SetSpeed(newSpeed);
         }
     }
 
@@ -89,12 +89,11 @@ public class Furnace : MonoBehaviour
 
     private void AddSpeedHelper(float addSpeed)
     {
-        var newSpeed = curSpeed + addSpeed;
+        var newSpeed = GameManager.Shared.GetSpeed() + addSpeed;
         if (newSpeed >= maxSpeed)
             return;
 
-        curSpeed = newSpeed;
-        GameManager.Shared.SetSpeed(curSpeed);
+        GameManager.Shared.SetSpeed(newSpeed);
     }
 
     private void ChangeSprite()
