@@ -12,6 +12,7 @@ public class UIAudioManager : MonoBehaviour
     [SerializeField] private EventReference uiHover;
     [SerializeField] private EventReference uiEventStart;
     [SerializeField] private EventReference trainHorn;
+    [SerializeField] private EventReference trainHalts;
     [SerializeField] private StudioEventEmitter trainLoop;
 
 
@@ -33,6 +34,11 @@ public class UIAudioManager : MonoBehaviour
     public void PlayTrainHorn()
     {
         RuntimeManager.PlayOneShot(trainHorn);
+    }
+
+    public void PlayTrainHalt()
+    {
+        RuntimeManager.PlayOneShot(trainHalts);
     }
 
     public void PauseTrainLoop()

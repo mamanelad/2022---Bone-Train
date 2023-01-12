@@ -110,6 +110,11 @@ public class GameManager : MonoBehaviour
 
     private void Update()
     {
+        if (Input.GetKeyDown(KeyCode.R))
+        {
+            SceneManager.LoadScene("Opening screen", LoadSceneMode.Single);
+        }
+        
         if (testArrows0)
         {
             testArrows0 = false;

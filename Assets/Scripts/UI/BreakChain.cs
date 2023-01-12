@@ -69,12 +69,14 @@ public class BreakChain : MonoBehaviour
         switch (_stopOrStart)
         {
             case StopOrStart.Stop:
+                UIAudioManager.Instance.PlayTrainHalt();
                 GameManager.Shared.StopTrain();
                 _stopOrStart = StopOrStart.Start;
                 wait = true;
                 break;
                 
             case StopOrStart.Start:
+                UIAudioManager.Instance.PlayTrainHorn();
                 GameManager.Shared.ContinueTrain();
                 _stopOrStart = StopOrStart.Stop;
                 wait = true;
