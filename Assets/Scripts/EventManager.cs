@@ -131,6 +131,9 @@ public class EventManager : MonoBehaviour
 
     private void ConfigureItem()
     {
+        receiveItem.SetActive(false);
+        forfeitItem.SetActive(false);
+        
         if (!data.action.item)
             return;
 
