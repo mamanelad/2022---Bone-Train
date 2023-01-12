@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.22174233, g: 0.063763954, b: 0.06785676, a: 1}
+  m_IndirectSpecularColor: {r: 0.22157656, g: 0.06364847, b: 0.06759677, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -1587,14 +1587,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1569477654}
     m_Modifications:
-    - target: {fileID: 2792918523048920639, guid: 53d55af94ec3820459a6aae2ea2b279e, type: 3}
-      propertyPath: eventData
-      value: 
-      objectReference: {fileID: 11400000, guid: a6c586feee9727b4297c67870cf1438a, type: 2}
-    - target: {fileID: 2792918523048920639, guid: 53d55af94ec3820459a6aae2ea2b279e, type: 3}
-      propertyPath: eventManager
-      value: 
-      objectReference: {fileID: 1043074028}
     - target: {fileID: 5744070942026841082, guid: 53d55af94ec3820459a6aae2ea2b279e, type: 3}
       propertyPath: m_Name
       value: Event Gate
@@ -22410,14 +22402,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1914411295}
     m_Modifications:
-    - target: {fileID: 2792918523048920639, guid: 53d55af94ec3820459a6aae2ea2b279e, type: 3}
-      propertyPath: eventData
-      value: 
-      objectReference: {fileID: 11400000, guid: 7d276151333597d4eb07dbeb5db30bb0, type: 2}
-    - target: {fileID: 2792918523048920639, guid: 53d55af94ec3820459a6aae2ea2b279e, type: 3}
-      propertyPath: eventManager
-      value: 
-      objectReference: {fileID: 1043074028}
     - target: {fileID: 5744070942026841082, guid: 53d55af94ec3820459a6aae2ea2b279e, type: 3}
       propertyPath: m_Name
       value: Event Gate
@@ -35098,6 +35082,26 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 208174597356078939, guid: 64367671715ebb5478fc1f79b3e42259, type: 3}
+      propertyPath: trainHorn.Path
+      value: event:/Train/Train Horn
+      objectReference: {fileID: 0}
+    - target: {fileID: 208174597356078939, guid: 64367671715ebb5478fc1f79b3e42259, type: 3}
+      propertyPath: trainHorn.Guid.Data1
+      value: 1566218138
+      objectReference: {fileID: 0}
+    - target: {fileID: 208174597356078939, guid: 64367671715ebb5478fc1f79b3e42259, type: 3}
+      propertyPath: trainHorn.Guid.Data2
+      value: 1230972742
+      objectReference: {fileID: 0}
+    - target: {fileID: 208174597356078939, guid: 64367671715ebb5478fc1f79b3e42259, type: 3}
+      propertyPath: trainHorn.Guid.Data3
+      value: 1993270692
+      objectReference: {fileID: 0}
+    - target: {fileID: 208174597356078939, guid: 64367671715ebb5478fc1f79b3e42259, type: 3}
+      propertyPath: trainHorn.Guid.Data4
+      value: 349680557
+      objectReference: {fileID: 0}
     - target: {fileID: 208174597356078951, guid: 64367671715ebb5478fc1f79b3e42259, type: 3}
       propertyPath: m_Name
       value: Audio Manager
@@ -42489,14 +42493,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1936842765}
     m_Modifications:
-    - target: {fileID: 2792918523048920639, guid: 53d55af94ec3820459a6aae2ea2b279e, type: 3}
-      propertyPath: eventData
-      value: 
-      objectReference: {fileID: 11400000, guid: 9f0ea6e54db7b604ab9b45ea113cc4da, type: 2}
-    - target: {fileID: 2792918523048920639, guid: 53d55af94ec3820459a6aae2ea2b279e, type: 3}
-      propertyPath: eventManager
-      value: 
-      objectReference: {fileID: 1043074028}
     - target: {fileID: 5744070942026841082, guid: 53d55af94ec3820459a6aae2ea2b279e, type: 3}
       propertyPath: m_Name
       value: Event Gate
@@ -45011,14 +45007,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1395264662}
     m_Modifications:
-    - target: {fileID: 2792918523048920639, guid: 53d55af94ec3820459a6aae2ea2b279e, type: 3}
-      propertyPath: eventData
-      value: 
-      objectReference: {fileID: 11400000, guid: 60de4412569d2184cbea01011bcd31d5, type: 2}
-    - target: {fileID: 2792918523048920639, guid: 53d55af94ec3820459a6aae2ea2b279e, type: 3}
-      propertyPath: eventManager
-      value: 
-      objectReference: {fileID: 1043074028}
     - target: {fileID: 5744070942026841082, guid: 53d55af94ec3820459a6aae2ea2b279e, type: 3}
       propertyPath: m_Name
       value: Event Gate
@@ -56372,14 +56360,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1143821247}
     m_Modifications:
-    - target: {fileID: 2792918523048920639, guid: 53d55af94ec3820459a6aae2ea2b279e, type: 3}
-      propertyPath: eventData
-      value: 
-      objectReference: {fileID: 11400000, guid: d7178f11d25b0b040b907ebb7d9acc2b, type: 2}
-    - target: {fileID: 2792918523048920639, guid: 53d55af94ec3820459a6aae2ea2b279e, type: 3}
-      propertyPath: eventManager
-      value: 
-      objectReference: {fileID: 1043074028}
     - target: {fileID: 5744070942026841082, guid: 53d55af94ec3820459a6aae2ea2b279e, type: 3}
       propertyPath: m_Name
       value: Event Gate
@@ -63912,14 +63892,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1307642027}
     m_Modifications:
-    - target: {fileID: 2792918523048920639, guid: 53d55af94ec3820459a6aae2ea2b279e, type: 3}
-      propertyPath: eventData
-      value: 
-      objectReference: {fileID: 11400000, guid: 1913dda2399dc0842839376cad10bc04, type: 2}
-    - target: {fileID: 2792918523048920639, guid: 53d55af94ec3820459a6aae2ea2b279e, type: 3}
-      propertyPath: eventManager
-      value: 
-      objectReference: {fileID: 1043074028}
     - target: {fileID: 5744070942026841082, guid: 53d55af94ec3820459a6aae2ea2b279e, type: 3}
       propertyPath: m_Name
       value: Event Gate
@@ -68546,14 +68518,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 830271242}
     m_Modifications:
-    - target: {fileID: 2792918523048920639, guid: 53d55af94ec3820459a6aae2ea2b279e, type: 3}
-      propertyPath: eventData
-      value: 
-      objectReference: {fileID: 11400000, guid: 0eb7dca570aca5b4cafb62f66913ecfa, type: 2}
-    - target: {fileID: 2792918523048920639, guid: 53d55af94ec3820459a6aae2ea2b279e, type: 3}
-      propertyPath: eventManager
-      value: 
-      objectReference: {fileID: 1043074028}
     - target: {fileID: 5744070942026841082, guid: 53d55af94ec3820459a6aae2ea2b279e, type: 3}
       propertyPath: m_Name
       value: Event Gate
@@ -79534,14 +79498,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1907864193}
     m_Modifications:
-    - target: {fileID: 2792918523048920639, guid: 53d55af94ec3820459a6aae2ea2b279e, type: 3}
-      propertyPath: eventData
-      value: 
-      objectReference: {fileID: 11400000, guid: 32dae349691967945b24e074e6dca3ff, type: 2}
-    - target: {fileID: 2792918523048920639, guid: 53d55af94ec3820459a6aae2ea2b279e, type: 3}
-      propertyPath: eventManager
-      value: 
-      objectReference: {fileID: 1043074028}
     - target: {fileID: 5744070942026841082, guid: 53d55af94ec3820459a6aae2ea2b279e, type: 3}
       propertyPath: m_Name
       value: Event Gate
@@ -84893,14 +84849,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 50884728}
     m_Modifications:
-    - target: {fileID: 2792918523048920639, guid: 53d55af94ec3820459a6aae2ea2b279e, type: 3}
-      propertyPath: eventData
-      value: 
-      objectReference: {fileID: 11400000, guid: 99411bcc90a735142b5e56f178fb8eca, type: 2}
-    - target: {fileID: 2792918523048920639, guid: 53d55af94ec3820459a6aae2ea2b279e, type: 3}
-      propertyPath: eventManager
-      value: 
-      objectReference: {fileID: 1043074028}
     - target: {fileID: 5744070942026841082, guid: 53d55af94ec3820459a6aae2ea2b279e, type: 3}
       propertyPath: m_Name
       value: Event Gate
@@ -88573,10 +88521,11 @@ MonoBehaviour:
   - {fileID: 3966100374004997620}
   morale: 2
   curRoad: 0
-  maxSpeed: 3000
-  minSpeed: 1900
-  addToSpeedFuel: 300
-  addToSpeedGoodSoul: 300
+  maxSpeed: 2000
+  minSpeed: 1000
+  curSpeed: 500
+  addToSpeedFuel: 100
+  addToSpeedGoodSoul: 200
   addToSpeedBadSoul: -100
   speedState: 2
   train: {fileID: 1626112840}
@@ -88584,6 +88533,8 @@ MonoBehaviour:
   takeDownDragFuel: -10
   takeDownDragGoodSouls: -10
   takeDownDragBadSouls: -10
+  testArrows0: 0
+  testArrows: 1
 --- !u!1 &1687338579764598107
 GameObject:
   m_ObjectHideFlags: 0
