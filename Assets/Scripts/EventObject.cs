@@ -15,9 +15,9 @@ public class EventObject : ScriptableObject
     public string textTitle;
     [Space(20)] public string textBody;
 
-    [Header("Audio")] 
-    public AudioClip eventAudio;
-    public AudioClip environmentAudio;
+    // [Header("Audio")] 
+    // public AudioClip eventAudio;
+    // public AudioClip environmentAudio;
 
     public InteractionAction action;
 }

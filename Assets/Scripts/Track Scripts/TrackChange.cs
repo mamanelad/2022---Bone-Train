@@ -18,7 +18,7 @@ public class TrackChange : MonoBehaviour
     private BezierSpline splineSecondBranch;
     private Vector3 offset;
     
-    void Start()
+    private void Start()
     {
         collider = GetComponent<Collider>();
         train = FindObjectOfType<SplineWalker>();

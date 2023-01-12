@@ -124,17 +124,20 @@ public class EventManager : MonoBehaviour
         GameManager.Shared.ChangeBySoulStones(data.action.soulStones);
         GameManager.Shared.ChangeByGoodSouls(data.action.goodSouls);
         GameManager.Shared.ChangeByBadSouls(data.action.badSouls);
+        UIAudioManager.Instance.PlayUIClickEvent();
         StartCoroutine(EndEvent());
     }
 
     public void Reject()
     {
+        UIAudioManager.Instance.PlayUIClickEvent();
         StartCoroutine(EndEvent());
     }
 
     public void StartEvent(EventObject newData)
     {
         gameObject.SetActive(true);
+        UIAudioManager.Instance.PlayUIEventStart();
         GameManager.Shared.StopTrain();
         ConfigureEvent(newData);
         Time.timeScale = 0;
@@ -147,6 +150,11 @@ public class EventManager : MonoBehaviour
         gameObject.SetActive(false);
         GameManager.Shared.ContinueTrain();
         Time.timeScale = 1;
+    }
+
+    public void OnButtonHover()
+    {
+        UIAudioManager.Instance.PlayUIHoverEvent();
     }
 }
 
