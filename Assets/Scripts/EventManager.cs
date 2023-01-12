@@ -138,6 +138,7 @@ public class EventManager : MonoBehaviour
     {
         gameObject.SetActive(true);
         UIAudioManager.Instance.PlayUIEventStart();
+        UIAudioManager.Instance.PauseTrainLoop();
         GameManager.Shared.StopTrain();
         ConfigureEvent(newData);
         Time.timeScale = 0;
@@ -147,6 +148,7 @@ public class EventManager : MonoBehaviour
     {
         yield return new WaitForSecondsRealtime(0.2f);
         ResetButtonsSprite();
+        UIAudioManager.Instance.ResumeTrainLoop();
         gameObject.SetActive(false);
         GameManager.Shared.ContinueTrain();
         Time.timeScale = 1;

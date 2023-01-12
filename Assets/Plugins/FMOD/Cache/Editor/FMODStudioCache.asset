@@ -1,5 +1,32 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
+--- !u!114 &-8760699680488317704
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Ambience/Ambience
+  m_EditorClassIdentifier: 
+  Path: event:/Ambience/Ambience
+  Guid:
+    Data1: -422245004
+    Data2: 1123672479
+    Data3: -1323216963
+    Data4: -665483064
+  Banks:
+  - {fileID: -4568019287853095528}
+  IsStream: 1
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 0
 --- !u!114 &-4568019287853095528
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -15,9 +42,36 @@ MonoBehaviour:
   Path: Assets/FMODBanks/Desktop/Master.bank
   Name: Master
   StudioPath: bank:/Master
-  lastModified: 638090868059981638
+  lastModified: 638090936638967862
   FileSizes: []
   Exists: 1
+--- !u!114 &-3547885634431294589
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Train/Train Movement
+  m_EditorClassIdentifier: 
+  Path: event:/Train/Train Movement
+  Guid:
+    Data1: -901240235
+    Data2: 1254019528
+    Data3: 616233653
+    Data4: 2093375
+  Banks:
+  - {fileID: -4568019287853095528}
+  IsStream: 1
+  Is3D: 0
+  IsOneShot: 0
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 10736
 --- !u!114 &-76507884848386613
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -64,12 +118,14 @@ MonoBehaviour:
   - {fileID: 135941720217236275}
   - {fileID: 3797879583866011546}
   - {fileID: -76507884848386613}
+  - {fileID: -8760699680488317704}
+  - {fileID: -3547885634431294589}
   EditorParameters: []
   MasterBanks:
   - {fileID: -4568019287853095528}
   StringsBanks:
   - {fileID: 3835431220802151202}
-  cacheTime: 638090868060011696
+  cacheTime: 638090936638984879
   cacheVersion: 131601
 --- !u!114 &135941720217236275
 MonoBehaviour:
@@ -140,8 +196,8 @@ MonoBehaviour:
   Path: Assets/FMODBanks/Desktop/Master.strings.bank
   Name: Master.strings
   StudioPath: bank:/Master.strings
-  lastModified: 638090868060011696
+  lastModified: 638090936638984879
   FileSizes:
   - Name: 
-    Value: 862
+    Value: 974
   Exists: 1
