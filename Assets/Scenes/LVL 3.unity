@@ -35082,6 +35082,26 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 208174597356078939, guid: 64367671715ebb5478fc1f79b3e42259, type: 3}
+      propertyPath: trainHorn.Path
+      value: event:/Train/Train Horn
+      objectReference: {fileID: 0}
+    - target: {fileID: 208174597356078939, guid: 64367671715ebb5478fc1f79b3e42259, type: 3}
+      propertyPath: trainHorn.Guid.Data1
+      value: 1566218138
+      objectReference: {fileID: 0}
+    - target: {fileID: 208174597356078939, guid: 64367671715ebb5478fc1f79b3e42259, type: 3}
+      propertyPath: trainHorn.Guid.Data2
+      value: 1230972742
+      objectReference: {fileID: 0}
+    - target: {fileID: 208174597356078939, guid: 64367671715ebb5478fc1f79b3e42259, type: 3}
+      propertyPath: trainHorn.Guid.Data3
+      value: 1993270692
+      objectReference: {fileID: 0}
+    - target: {fileID: 208174597356078939, guid: 64367671715ebb5478fc1f79b3e42259, type: 3}
+      propertyPath: trainHorn.Guid.Data4
+      value: 349680557
+      objectReference: {fileID: 0}
     - target: {fileID: 208174597356078951, guid: 64367671715ebb5478fc1f79b3e42259, type: 3}
       propertyPath: m_Name
       value: Audio Manager
