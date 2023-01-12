@@ -38,7 +38,7 @@ public class GameManager : MonoBehaviour
     public float maxSpeed = 1100;
 
     public float minSpeed = 100;
-    private float curSpeed = 500;
+    [SerializeField]private float curSpeed = 500;
 
     public int addToSpeedFuel;
     public int addToSpeedGoodSoul;
@@ -60,9 +60,9 @@ public class GameManager : MonoBehaviour
     [SerializeField] private int takeDownDragBadSouls;
     
 
-    // [Header("Test")]
-    // [SerializeField] private bool testArrows0;
-    // [SerializeField] private bool testArrows;
+    [Header("Test")]
+    [SerializeField] private bool testArrows0;
+    [SerializeField] private bool testArrows;
     public enum Road
     {
         Up,
@@ -110,11 +110,11 @@ public class GameManager : MonoBehaviour
 
     private void Update()
     {
-        // if (testArrows0)
-        // {
-        //     testArrows0 = false;
-        //     TestArrows();
-        // }
+        if (testArrows0)
+        {
+            testArrows0 = false;
+            TestArrows();
+        }
         if (speedState == SpeedState.Stop) curSpeed = 0;
         if (speedState == SpeedState.Run) InitSpeed();
 
@@ -327,19 +327,19 @@ public class GameManager : MonoBehaviour
         }
     }
 
-    // private void TestArrows()
-    // {
-    //     if (testArrows)
-    //     {
-    //         ArrowsTurnOnAndOff(true);
-    //     }
-    //
-    //     else
-    //     {
-    //         ArrowsTurnOnAndOff(false);
-    //         SetArrowSide(Arrow.ArrowSide.None);
-    //     }
-    // }
+    private void TestArrows()
+    {
+        if (testArrows)
+        {
+            ArrowsTurnOnAndOff(true);
+        }
+    
+        else
+        {
+            ArrowsTurnOnAndOff(false);
+            SetArrowSide(Arrow.ArrowSide.None);
+        }
+    }
 
     private void ArrowOverHandler()
     {
