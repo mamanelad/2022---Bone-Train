@@ -53,6 +53,9 @@ public class GameManager : MonoBehaviour
 
     [Space(20)] [Header("Fuel")] private FuelManager _fuelManager;
 
+    // [Header("Test")]
+    // [SerializeField] private bool testArrows0;
+    // [SerializeField] private bool testArrows;
     public enum Road
     {
         Up,
@@ -71,22 +74,15 @@ public class GameManager : MonoBehaviour
 
 
     [Space(20)] [Header("Check PointS")] private CheckPointData _CheckPointData;
-    
+
     private void Awake()
     {
         Shared = this;
-        curSpeed = Mathf.Lerp(minSpeed, maxSpeed, 0.5f);
+        speedState = SpeedState.Run;
+
         InitSouls();
         InitiateCheckPointData();
 
-        //
-        // if (shared == null)
-        // {
-        //     shared = this;
-        //     DontDestroyOnLoad(gameObject);
-        // }
-        // else
-        //     Destroy(gameObject);
         if (_arrows.Length != 2)
         {
             print("Drag Arrows to the arrow array");
@@ -101,6 +97,14 @@ public class GameManager : MonoBehaviour
 
     private void Update()
     {
+        // if (testArrows0)
+        // {
+        //     testArrows0 = false;
+        //     TestArrows();
+        // }
+        if (speedState == SpeedState.Stop) curSpeed = 0;
+        if (speedState == SpeedState.Run) InitSpeed();
+
         ArrowOverHandler();
         if ((Input.GetKeyDown(KeyCode.Escape)))
         {
@@ -128,6 +132,11 @@ public class GameManager : MonoBehaviour
 
         if (_gotToNewEvent)
             ActivateNewEvent();
+    }
+
+    private void InitSpeed()
+    {
+        curSpeed = Mathf.Lerp(minSpeed, maxSpeed, 0.5f);
     }
 
     private void InitSouls()
@@ -170,7 +179,12 @@ public class GameManager : MonoBehaviour
 
     public void StopTrain()
     {
-        speedState = SpeedState.Stop;
+        if (speedState != SpeedState.Stop)
+        {
+            print("stop train");
+            SetSpeed(0);
+            speedState = SpeedState.Stop;
+        }
     }
 
     public void ContinueTrain()
@@ -262,7 +276,18 @@ public class GameManager : MonoBehaviour
 
     public void SetSpeed(float newSpeed)
     {
-        curSpeed = newSpeed;
+        if (speedState == SpeedState.Stop)
+        {
+            return;
+        }
+
+        if (speedState != SpeedState.Stop)
+        {
+            if (newSpeed >= minSpeed && newSpeed <= maxSpeed)
+            {
+                curSpeed = newSpeed;
+            }
+        }
     }
 
     public void ArrowSpriteHandler(Arrow.ArrowSide sideToMark)
@@ -273,14 +298,38 @@ public class GameManager : MonoBehaviour
         }
     }
 
-    public void ArrowsTurnOnAndOff(bool on)
+    public void ArrowsTurnOnAndOff(bool mood)
     {
-        _arrowsAreOn = on;
+        _arrowsAreOn = mood;
         foreach (var arrow in _arrows)
         {
-            arrow.gameObject.SetActive(on);
+            if (mood)
+            {
+                arrow.gameObject.SetActive(mood);
+                arrow.ChangeColorToOnColor();
+            }
+            else
+            {
+                arrow.SetIsPressedOf();
+                arrow.ChangeColorToOnColor();
+                arrow.gameObject.SetActive(mood);
+            }
         }
     }
+
+    // private void TestArrows()
+    // {
+    //     if (testArrows)
+    //     {
+    //         ArrowsTurnOnAndOff(true);
+    //     }
+    //
+    //     else
+    //     {
+    //         ArrowsTurnOnAndOff(false);
+    //         SetArrowSide(Arrow.ArrowSide.None);
+    //     }
+    // }
 
     private void ArrowOverHandler()
     {
@@ -363,7 +412,7 @@ public class GameManager : MonoBehaviour
         _CheckPointData.SoulStones = soulStonesInitializeValue;
         _CheckPointData.GoodSouls = GoodSouls;
         _CheckPointData.BadSouls = BadSouls;
-        
+
         //TrainState
     }
 
@@ -373,8 +422,14 @@ public class GameManager : MonoBehaviour
         soulStonesInitializeValue = _CheckPointData.SoulStones;
         GoodSouls = _CheckPointData.GoodSouls;
         BadSouls = _CheckPointData.BadSouls;
-        
+
         //TrainState
+    }
+
+    public float GetCurrSpeedPerspectiveToStartSpeed()
+    {
+        var startSpeed = Mathf.Lerp(minSpeed, maxSpeed, 0.5f);
+        return curSpeed / startSpeed;
     }
 }
 

@@ -106,6 +106,8 @@ public class JunctionChange : MonoBehaviour
         }
     }
 
+    
+
     private void DecideTrack(Arrow.ArrowSide sideChosen)
     {
         if (sideChosen == Arrow.ArrowSide.Left)
