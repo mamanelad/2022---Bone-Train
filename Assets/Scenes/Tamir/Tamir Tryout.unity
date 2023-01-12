@@ -7825,6 +7825,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 893d5114e42578b47a21a8f62e9fa08d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  itemArray: {fileID: 342491036}
+  itemPrefab: {fileID: 2093998025553118544, guid: cd923bb650e70c947a4450b9f790d275, type: 3}
   goodSoulsNumberText: {fileID: 2241219025616850623}
   badSoulsNumberText: {fileID: 2241219024550487091}
   soulStonesAmountNumberText: {fileID: 2241219025834116189}
