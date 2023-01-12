@@ -27,6 +27,33 @@ MonoBehaviour:
   MinDistance: 1
   MaxDistance: 20
   Length: 0
+--- !u!114 &-4767472749445945759
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Train/Train Halt
+  m_EditorClassIdentifier: 
+  Path: event:/Train/Train Halt
+  Guid:
+    Data1: -789516437
+    Data2: 1183670239
+    Data3: 358100388
+    Data4: 916339100
+  Banks:
+  - {fileID: -4568019287853095528}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 0
 --- !u!114 &-4568019287853095528
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -42,7 +69,7 @@ MonoBehaviour:
   Path: Assets/FMODBanks/Desktop/Master.bank
   Name: Master
   StudioPath: bank:/Master
-  lastModified: 638091066309587680
+  lastModified: 638091072720301411
   FileSizes: []
   Exists: 1
 --- !u!114 &-3547885634431294589
@@ -121,12 +148,13 @@ MonoBehaviour:
   - {fileID: -8760699680488317704}
   - {fileID: -3547885634431294589}
   - {fileID: 8208643272066908682}
+  - {fileID: -4767472749445945759}
   EditorParameters: []
   MasterBanks:
   - {fileID: -4568019287853095528}
   StringsBanks:
   - {fileID: 3835431220802151202}
-  cacheTime: 638091066309597917
+  cacheTime: 638091072720311524
   cacheVersion: 131601
 --- !u!114 &135941720217236275
 MonoBehaviour:
@@ -197,10 +225,10 @@ MonoBehaviour:
   Path: Assets/FMODBanks/Desktop/Master.strings.bank
   Name: Master.strings
   StudioPath: bank:/Master.strings
-  lastModified: 638091066309597917
+  lastModified: 638091072720311524
   FileSizes:
   - Name: 
-    Value: 1020
+    Value: 1066
   Exists: 1
 --- !u!114 &8208643272066908682
 MonoBehaviour:
