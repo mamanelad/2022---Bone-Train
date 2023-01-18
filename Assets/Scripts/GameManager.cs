@@ -134,7 +134,9 @@ public class GameManager : MonoBehaviour
 
         if (_eventManager == null)
         {
+            print("The event manager needs to start turn on");
             _eventManager = FindObjectOfType<EventManager>();
+            _eventManager.gameObject.SetActive(false);
         }
 
         if (_fuelManager == null)
@@ -498,6 +500,12 @@ public class GameManager : MonoBehaviour
     {
         return train;
     }
+
+    public EventManager GetEventManager()
+    {
+        return _eventManager;
+    }
+    
 }
 
 public enum Morale : int
