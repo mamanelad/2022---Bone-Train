@@ -24,6 +24,8 @@ public class EnemyManager : MonoBehaviour
 
     [Space(10)] [Header("Tests")] [SerializeField]
     private bool creatEnemy;
+
+    [SerializeField] private bool creatCloseEnemy;
     // [Space(10)] [Header("Speed")] [SerializeField]
     // private float speedToCreatEnemy;
     
@@ -31,35 +33,41 @@ public class EnemyManager : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        _eventManager = FindObjectOfType<EventManager>();
     }
 
     // Update is called once per frame
     void Update()
     {
-        if (CanCreateNewEnemy() || creatEnemy)
-        {
-            CreateNewEnemy();
-        }
-
+        if (!_eventManager)
+            _eventManager = GameManager.Shared.GetEventManager();
         
+        if (CanCreateNewEnemy() || creatEnemy)
+            CreateNewEnemy();
+
+
     }
 
-    public void AttackTrain()
+    public void AttackTrain(Enemy curEnemy = null)
     {
         if (enemyEvent)
-        {
-            _eventManager.StartEvent(enemyEvent);    
+        {    _eventManager = GameManager.Shared.GetEventManager();
+            _eventManager.StartEvent(enemyEvent);
         }
 
         else
         {
             print("No enemy event Data");
         }
+
+        if (curEnemy)
+        {
+            Destroy(curEnemy.gameObject);
+            DecreesEnemiesAmount();
+        }
         
     }
 
-    public void DecreesEnemiesAmount()
+    private void DecreesEnemiesAmount()
     {
         _enemiesAmount = Mathf.Max(0, _enemiesAmount-1);
 
@@ -83,7 +91,14 @@ public class EnemyManager : MonoBehaviour
         var trainMovingDirection = GameManager.Shared.GetTrainDirection();
         var oppositeDirection = trainMovingDirection * (-1);
         var distanceToCreat = Random.Range(minDistanceToCreateNewEnemy, maxDistanceToCreateNewEnemy);
-        var directionAndLength = distanceToCreat * oppositeDirection;
+
+        var distant = distanceToCreat;
+        if (creatCloseEnemy)
+        {
+            distant = 100f;
+        }
+        
+        var directionAndLength = distant * oppositeDirection;
 
         var randomRotationAngle = Random.Range(-rotationAngle , rotationAngle );
         var newDirectionVector = Quaternion.AngleAxis(randomRotationAngle, Vector3.up) * directionAndLength;

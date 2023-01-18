@@ -45,7 +45,7 @@ public class Enemy : MonoBehaviour
             TowardsTrain();
             if (CheckIfCanAttack())
             {
-                _enemyManager.AttackTrain();
+                _enemyManager.AttackTrain(this);
             }
 
             if (CheckIfCanDestroy())

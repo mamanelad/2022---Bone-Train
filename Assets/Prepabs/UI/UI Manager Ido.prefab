@@ -2030,6 +2030,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 893d5114e42578b47a21a8f62e9fa08d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  itemArray: {fileID: 0}
+  itemPrefab: {fileID: 0}
   goodSoulsNumberText: {fileID: 4637150908800664045}
   badSoulsNumberText: {fileID: 4637150907767794529}
   soulStonesAmountNumberText: {fileID: 4637150908650375951}
