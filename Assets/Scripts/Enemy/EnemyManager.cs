@@ -6,6 +6,11 @@ public class EnemyManager : MonoBehaviour
 {
     private EventManager _eventManager;
     [SerializeField] private EventObject enemyEvent;
+
+    [Space(10)] [Header("Amounts")] private int _enemiesAmount;
+    [SerializeField] private int _enemiesAmountMax;
+    
+    // [Space(10)] [Header("Times")]
     // Start is called before the first frame update
     void Start()
     {
@@ -21,5 +26,11 @@ public class EnemyManager : MonoBehaviour
     public void AttackTrain()
     {
         _eventManager.StartEvent(enemyEvent);
+    }
+
+    public void DecreesEnemiesAmount()
+    {
+        _enemiesAmount = Mathf.Max(0, _enemiesAmount-1);
+
     }
 }

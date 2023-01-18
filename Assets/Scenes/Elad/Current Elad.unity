@@ -74632,6 +74632,7 @@ MonoBehaviour:
   _speedPercentageFromTrain: 25
   factorSpeed: 0.003
   distanceForAttack: 0
+  distanceForDestroy: 0
 --- !u!4 &1849021132
 Transform:
   m_ObjectHideFlags: 0

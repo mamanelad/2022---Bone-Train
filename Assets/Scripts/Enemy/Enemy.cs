@@ -17,6 +17,8 @@ public class Enemy : MonoBehaviour
 
     [Space(10)] [Header("Distance")] [SerializeField]
     private float distanceForAttack;
+    [SerializeField]
+    private float distanceForDestroy;
     private void Awake()
     {
         SetSpeed();
@@ -41,6 +43,11 @@ public class Enemy : MonoBehaviour
             if (CheckIfCanAttack())
             {
                 _enemyManager.AttackTrain();
+            }
+
+            if (CheckIfCanDestroy())
+            {
+                Destroy(gameObject);
             }
         }
     }
@@ -74,5 +81,13 @@ public class Enemy : MonoBehaviour
         Vector3 trainPosition = _train.transform.position;
         var distance = Vector3.Distance(myPosition, trainPosition);
         return distance <= distanceForAttack;
+    }
+    
+    private bool CheckIfCanDestroy()
+    {
+        Vector3 myPosition = transform.position;
+        Vector3 trainPosition = _train.transform.position;
+        var distance = Vector3.Distance(myPosition, trainPosition);
+        return distance >= distanceForDestroy;
     }
 }
