@@ -2,36 +2,39 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Serialization;
+using Random = UnityEngine.Random;
 
 public class Enemy : MonoBehaviour
 {
+    private bool _notInitialize = true;
     [Header("GameObjects")]
     private GameObject _train;
 
     private EnemyManager _enemyManager;
 
     [Space(10)] [Header("Speed")] [SerializeField]
-    private float _speedPercentageFromTrain;
+    private float _speedPercentageFromTrainMax;
+    [SerializeField] private float _speedPercentageFromTrainMin;
+    [SerializeField] private float _speedPercentageFromTrain;
     [SerializeField] private float factorSpeed = 0.1f;
     private float _speed;
 
     [Space(10)] [Header("Distance")] [SerializeField]
     private float distanceForAttack;
-    [SerializeField]
-    private float distanceForDestroy;
-    private void Awake()
-    {
-        SetSpeed();
-    }
-
+    [FormerlySerializedAs("distanceForDestroy")] [SerializeField]
+    private float distanceForSelfDestroy;
+    
     void Start()
     {
-        
+         
     }
 
     // Update is called once per frame
     void Update()
     {
+        if (_notInitialize) return;
+        
         if (!_train)
         {
             print("Needs to give the enemy the train game object");
@@ -54,12 +57,15 @@ public class Enemy : MonoBehaviour
 
     public void InitEnemy(EnemyManager enemyManager = null, GameObject train = null)
     {
+        _notInitialize = false;
         _train = !train ? FindObjectOfType<SplineWalker>().gameObject : train;
         _enemyManager = !enemyManager ? FindObjectOfType<EnemyManager>() : enemyManager;
+        SetSpeed();
     }
 
     private void SetSpeed()
     {
+        _speedPercentageFromTrain = Random.Range(_speedPercentageFromTrainMin, _speedPercentageFromTrainMax);
         var maxTrainSpeed = GameManager.Shared.GetMaxSpeed();
         _speed = maxTrainSpeed * (_speedPercentageFromTrain / 100);
     }
@@ -88,6 +94,6 @@ public class Enemy : MonoBehaviour
         Vector3 myPosition = transform.position;
         Vector3 trainPosition = _train.transform.position;
         var distance = Vector3.Distance(myPosition, trainPosition);
-        return distance >= distanceForDestroy;
+        return distance >= distanceForSelfDestroy;
     }
 }
