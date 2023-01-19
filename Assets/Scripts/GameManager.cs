@@ -58,7 +58,9 @@ public class GameManager : MonoBehaviour
     [SerializeField] private int takeDownDragFuel;
     [SerializeField] private int takeDownDragGoodSouls;
     [SerializeField] private int takeDownDragBadSouls;
-    
+
+    [Space(20)] [Header("Extra")] private Vector3 _moveDirection;
+    private Vector3 _trainPosition;
 
     [Header("Test")]
     [SerializeField] private bool testArrows0;
@@ -105,6 +107,7 @@ public class GameManager : MonoBehaviour
 
     private void Start()
     {
+        _trainPosition = train.transform.position;
         ArrowsTurnOnAndOff(false);
     }
 
@@ -131,7 +134,9 @@ public class GameManager : MonoBehaviour
 
         if (_eventManager == null)
         {
+            print("The event manager needs to start turn on");
             _eventManager = FindObjectOfType<EventManager>();
+            _eventManager.gameObject.SetActive(false);
         }
 
         if (_fuelManager == null)
@@ -150,6 +155,8 @@ public class GameManager : MonoBehaviour
 
         if (_gotToNewEvent)
             ActivateNewEvent();
+        
+        CalculateMovingDirection();
     }
 
     private void InitSpeed()
@@ -471,6 +478,34 @@ public class GameManager : MonoBehaviour
             break;
         }
     }
+
+    private void CalculateMovingDirection()
+    {
+        var newTrainPosition = train.transform.position;
+        _moveDirection = newTrainPosition - _trainPosition;
+        _trainPosition = newTrainPosition;
+    }
+
+    public Vector3 GetTrainDirection()
+    {
+        return _moveDirection.normalized;
+    }
+
+    public Vector3 GetTrainPosition()
+    {
+        return train.transform.position;
+    }
+
+    public GameObject GetTrainGameObject()
+    {
+        return train;
+    }
+
+    public EventManager GetEventManager()
+    {
+        return _eventManager;
+    }
+    
 }
 
 public enum Morale : int
