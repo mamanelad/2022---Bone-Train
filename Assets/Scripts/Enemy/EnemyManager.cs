@@ -1,7 +1,9 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Serialization;
+using Random = UnityEngine.Random;
 
 public class EnemyManager : MonoBehaviour
 {
@@ -22,6 +24,14 @@ public class EnemyManager : MonoBehaviour
     [Space(10)] [Header("Angle")] [SerializeField]
     private float rotationAngle = 30f;
 
+
+    [Space(10)] [Header("Times")] [SerializeField]
+    private float addEnemiesTime = 3f;
+
+    private bool _wait;
+
+    private float _addEnemiesTimer;
+    
     [Space(10)] [Header("Tests")] [SerializeField]
     private bool creatEnemy;
 
@@ -31,6 +41,12 @@ public class EnemyManager : MonoBehaviour
     
     // [Space(10)] [Header("Times")]
     // Start is called before the first frame update
+
+    private void Awake()
+    {
+        _addEnemiesTimer = addEnemiesTime;
+    }
+
     void Start()
     {
     }
@@ -40,11 +56,20 @@ public class EnemyManager : MonoBehaviour
     {
         if (!_eventManager)
             _eventManager = GameManager.Shared.GetEventManager();
+
+        if (_wait)
+        {
+            _addEnemiesTimer -= Time.deltaTime;
+            if (_addEnemiesTimer <= 0)
+            {
+                _wait = false;
+                _addEnemiesTimer = addEnemiesTime;
+            }
+        }
         
-        if (CanCreateNewEnemy() || creatEnemy)
+        if (!_wait && (CanCreateNewEnemy() || creatEnemy))
             CreateNewEnemy();
-
-
+        
     }
 
     public void AttackTrain(Enemy curEnemy = null)
@@ -86,6 +111,7 @@ public class EnemyManager : MonoBehaviour
 
     private void CreateNewEnemy()
     {
+        _wait = true;
         creatEnemy = false;
         _enemiesAmount += 1;
         var trainMovingDirection = GameManager.Shared.GetTrainDirection();

@@ -14,7 +14,13 @@ public class UIManager : MonoBehaviour
     [Header("Text")] [SerializeField] public TextMeshProUGUI goodSoulsNumberText;
     [SerializeField] public TextMeshProUGUI badSoulsNumberText;
     [SerializeField] public TextMeshProUGUI soulStonesAmountNumberText;
+    private BreakChain _breakChainSlider;
 
+
+    private void Start()
+    {
+        _breakChainSlider = GetComponentInChildren<BreakChain>();
+    }
 
     public void SetGoodSouls()
     {
@@ -55,4 +61,10 @@ public class UIManager : MonoBehaviour
 
         return false;
     }
+
+    public BreakChain GetBreakChain()
+    {
+        return _breakChainSlider;
+    }
+    
 }

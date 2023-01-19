@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.2217389, g: 0.063764416, b: 0.06785583, a: 1}
+  m_IndirectSpecularColor: {r: 0.22157656, g: 0.06364847, b: 0.06759677, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -90504,8 +90504,8 @@ MonoBehaviour:
   addToSpeedBadSoul: -100
   speedState: 2
   train: {fileID: 1626112840}
-  takeDownFuelContinueTrain: -2
-  takeDownDragFuel: -10
+  takeDownFuelContinueTrain: -10
+  takeDownDragFuel: -2
   takeDownDragGoodSouls: -10
   takeDownDragBadSouls: -10
   testArrows0: 0
@@ -90523,7 +90523,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   idleMouseTextureSmall: {fileID: 2800000, guid: 20ee321ff4ed33b43a4781ac16f5e68f, type: 3}
-  idleMouseTextureBig: {fileID: 2800000, guid: d1d7c530f30305c459843311aa57ed36, type: 3}
+  idleMouseTextureBig: {fileID: 2800000, guid: 79e47fd7eceb04940922ce86681dda36, type: 3}
   dragMouseTexture: {fileID: 2800000, guid: bb7535059e8e0ca4982943b6a6855d82, type: 3}
   isMouseCloseEveryWhere: 0
 --- !u!1 &1687338579764598107

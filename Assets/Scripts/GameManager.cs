@@ -251,6 +251,11 @@ public class GameManager : MonoBehaviour
 
     public void ChangeByGoodSouls(int addNum)
     {
+        if (GoodSouls + addNum < 0)
+        {
+            GoodSouls = 0;
+            return;
+        }
         GoodSouls += addNum;
         _uiManager.SetGoodSouls();
     }
@@ -263,7 +268,12 @@ public class GameManager : MonoBehaviour
 
     public void ChangeByBadSouls(int addNum)
     {
-        if (BadSouls + addNum < 0) return;
+        if (BadSouls + addNum < 0)
+        {
+            BadSouls = 0;
+            return;
+        }
+        
         BadSouls += addNum;
         _uiManager.SetBadSouls();
     }
@@ -523,6 +533,11 @@ public class GameManager : MonoBehaviour
     public Mouse GetMouse()
     {
         return _mouse;
+    }
+
+    public UIManager GetUIManager()
+    {
+        return _uiManager;
     }
     
 }
