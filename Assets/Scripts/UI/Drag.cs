@@ -45,6 +45,7 @@ public class Drag : MonoBehaviour, IDragHandler, IBeginDragHandler, IEndDragHand
 
     private void TouchFurnace()
     {
+        GameManager.Shared.GetMouse().ChangeToIdleMouse();
         _furnace.AddSpeed(myBurnObject);
         Destroy(gameObject);
     }
@@ -87,7 +88,7 @@ public class Drag : MonoBehaviour, IDragHandler, IBeginDragHandler, IEndDragHand
 
     public void OnBeginDrag(PointerEventData eventData)
     {
-        
+        GameManager.Shared.GetMouse().ChangeToDragMouse();
         GameManager.Shared.ChangeInventoryFromDrag(myBurnObject);
         changeAlfa(_fullALfa);
         var newFuelIcon = Instantiate(fuelIconPrefab, transform.position, Quaternion.identity);
@@ -105,6 +106,7 @@ public class Drag : MonoBehaviour, IDragHandler, IBeginDragHandler, IEndDragHand
     }
     public void OnEndDrag(PointerEventData eventData)
     {
+        GameManager.Shared.GetMouse().ChangeToIdleMouse();
         Destroy(gameObject);
     }
 
@@ -116,5 +118,15 @@ public class Drag : MonoBehaviour, IDragHandler, IBeginDragHandler, IEndDragHand
     public void SetFurnace(Furnace newFurnace)
     {
         _furnace = newFurnace;
+    }
+
+    public void PointerEnter()
+    {
+        GameManager.Shared.GetMouse().ChangeSizeBigger();
+    }
+
+    public void PointerExit()
+    {
+        GameManager.Shared.GetMouse().ChangeSizeSmaller();
     }
 }

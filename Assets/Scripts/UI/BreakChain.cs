@@ -30,6 +30,7 @@ public class BreakChain : MonoBehaviour
     private void Start()
     {
         _slider.onValueChanged.AddListener((newVal => { _sliderValue = newVal; }));
+        
         _maxSliderAmount = _slider.maxValue;
         _minSliderAmount = _slider.value;
         GameManager.Shared.StopTrain();
@@ -82,5 +83,15 @@ public class BreakChain : MonoBehaviour
                 wait = true;
                 break;
         }
+    }
+
+    public void StartDrag()
+    {
+        GameManager.Shared.GetMouse().ChangeToDragMouse();
+    }
+    
+    public void EndDrag()
+    {
+        GameManager.Shared.GetMouse().ChangeToIdleMouse();
     }
 }

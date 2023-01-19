@@ -31,6 +31,7 @@ public class GameManager : MonoBehaviour
 
     [Space(20)] [Header("Extra")] public static GameManager Shared;
     [HideInInspector] public Morale morale = Morale.Neutral;
+    private Mouse _mouse;
 
     [Space(20)] [Header("Road")] public Road curRoad;
 
@@ -101,6 +102,12 @@ public class GameManager : MonoBehaviour
         if (train == null)
         {
             print("Drag the train first to the game manager");
+        }
+
+        _mouse = GetComponent<Mouse>();
+        if (!_mouse)
+        {
+            print("Add the mouse script to the game manager object");
         }
     }
 
@@ -504,6 +511,11 @@ public class GameManager : MonoBehaviour
     public EventManager GetEventManager()
     {
         return _eventManager;
+    }
+
+    public Mouse GetMouse()
+    {
+        return _mouse;
     }
     
 }
