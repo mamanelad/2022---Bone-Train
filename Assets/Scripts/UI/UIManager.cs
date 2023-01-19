@@ -49,6 +49,7 @@ public class UIManager : MonoBehaviour
         if (CheckIfPlayerGotItem(data))
         {
             Destroy(itemDict[data.name]);
+            itemDict.Remove(data.name);
             return true;
         }
 
