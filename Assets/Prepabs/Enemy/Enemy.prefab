@@ -45,11 +45,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 74845a465a2ff9a46b04cec64394dab0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _speedPercentageFromTrainMax: 25
-  _speedPercentageFromTrainMin: 10
+  _speedPercentageFromTrainMax: 7
+  _speedPercentageFromTrainMin: 2
   _speedPercentageFromTrain: 0
   factorSpeed: 0.003
-  distanceForAttack: 200
+  distanceForAttack: 50
   distanceForSelfDestroy: 1000
 --- !u!1001 &5023691553041042409
 PrefabInstance:
