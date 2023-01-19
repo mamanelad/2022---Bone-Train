@@ -115,7 +115,8 @@ public class GameManager : MonoBehaviour
     private void Start()
     {
         _trainPosition = train.transform.position;
-        ArrowsTurnOnAndOff(false);
+        _uiManager = FindObjectOfType<UIManager>();
+        InitArrows();
     }
 
     private void Update()
@@ -327,6 +328,12 @@ public class GameManager : MonoBehaviour
         }
     }
 
+    private void InitArrows()
+    {
+        _arrows = FindObjectsOfType<Arrow>();
+        ArrowsTurnOnAndOff(false);
+    }
+    
     public void ArrowsTurnOnAndOff(bool mood)
     {
         _arrowsAreOn = mood;

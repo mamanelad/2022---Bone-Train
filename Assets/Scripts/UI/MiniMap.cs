@@ -12,11 +12,16 @@ public class MiniMap : MonoBehaviour
 
     private void Awake()
     {
+        miniMapCamara = FindObjectOfType<MiniMapCamara>().GetComponent<Camera>();
         camY = miniMapCamara.transform.position.y;
     }
 
     private void LateUpdate()
     {
+        if (!train)
+        {
+            train = GameManager.Shared.GetTrain().transform;
+        }
         var newPos = train.position - new Vector3(addToXpOS, 0 , 0);
         newPos.y = camY;
         newPos.x += 5;
