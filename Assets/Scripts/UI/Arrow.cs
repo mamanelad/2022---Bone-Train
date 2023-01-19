@@ -96,4 +96,12 @@ public class Arrow : MonoBehaviour
     {
         isMouseOn = mood;
     }
+
+    public void PointerDown()
+    {
+        GameManager.Shared.GetMouse().ChangeToDragMouse();
+    }
+    public void PointerUp()
+    {
+        GameManager.Shared.GetMouse().ChangeToIdleMouse();    }
 }
