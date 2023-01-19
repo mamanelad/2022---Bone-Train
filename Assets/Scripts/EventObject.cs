@@ -16,6 +16,8 @@ public class EventObject : ScriptableObject
     [Space(20)] public string textBody;
     
     public InteractionAction action;
+
+    [Range(0f, 1f)] public float dangerChance = 0.5f;
 }
 
 [System.Serializable]

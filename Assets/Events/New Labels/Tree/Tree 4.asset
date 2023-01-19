@@ -18,9 +18,10 @@ MonoBehaviour:
   singleButton: 0
   textTitle: Tree of Souls
   textBody: 
-  eventAudio: {fileID: 0}
-  environmentAudio: {fileID: 0}
   action:
     soulStones: 0
     goodSouls: 100
     badSouls: 80
+    receiveItem: 0
+    item: {fileID: 0}
+  dangerChance: 0

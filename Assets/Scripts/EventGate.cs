@@ -4,7 +4,8 @@ public class EventGate : MonoBehaviour
 {
     [SerializeField] private EventObject eventData;
     [SerializeField] private EventManager eventManager;
-
+    [SerializeField] private SpriteRenderer minimapIcon;
+    
     [SerializeField] private Collider sphereTrigger;
     [SerializeField] private Collider eventTrigger;
 
@@ -16,6 +17,9 @@ public class EventGate : MonoBehaviour
         eventManager = FindObjectOfType<EventManager>();
         sphereTrigger.enabled = true;
         eventTrigger.enabled = false;
+
+        minimapIcon.color = Color.Lerp(Color.green, Color.red, eventData.dangerChance);
+
     }
 
     private void OnTriggerEnter(Collider other)

@@ -18,9 +18,10 @@ MonoBehaviour:
   singleButton: 0
   textTitle: The Miser
   textBody: 
-  eventAudio: {fileID: 0}
-  environmentAudio: {fileID: 0}
   action:
     soulStones: 50
     goodSouls: -100
     badSouls: 0
+    receiveItem: 0
+    item: {fileID: 0}
+  dangerChance: 0.3

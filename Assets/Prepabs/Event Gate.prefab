@@ -247,6 +247,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   eventData: {fileID: 0}
   eventManager: {fileID: 0}
+  minimapIcon: {fileID: 2365000552027723769}
   sphereTrigger: {fileID: 2034123855983933217}
   eventTrigger: {fileID: 5744070942026841084}
 --- !u!114 &7460078215449785526
@@ -379,5 +380,10 @@ PrefabInstance:
 --- !u!4 &2264615566045421779 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 7375020728163088244, guid: f5b38ea38819a8b4d96d5987cd207921, type: 3}
+  m_PrefabInstance: {fileID: 8733836048674101159}
+  m_PrefabAsset: {fileID: 0}
+--- !u!212 &2365000552027723769 stripped
+SpriteRenderer:
+  m_CorrespondingSourceObject: {fileID: 6478140971221483614, guid: f5b38ea38819a8b4d96d5987cd207921, type: 3}
   m_PrefabInstance: {fileID: 8733836048674101159}
   m_PrefabAsset: {fileID: 0}
