@@ -1,6 +1,3 @@
-using System;
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public class EventGate : MonoBehaviour
@@ -11,8 +8,12 @@ public class EventGate : MonoBehaviour
     [SerializeField] private Collider sphereTrigger;
     [SerializeField] private Collider eventTrigger;
 
+    private EventAudioManager audioManager;
+
     private void Start()
     {
+        audioManager = GetComponent<EventAudioManager>();
+        eventManager = FindObjectOfType<EventManager>();
         sphereTrigger.enabled = true;
         eventTrigger.enabled = false;
     }
@@ -25,15 +26,14 @@ public class EventGate : MonoBehaviour
             {
                 sphereTrigger.enabled = false;
                 eventTrigger.enabled = true;
-                // if (eventData.environmentAudio)
-                //     other.gameObject.GetComponentInChildren<TrainAudio>().AddClip(eventData.environmentAudio);
+                audioManager.PlayEnter();
+                
             }
 
             else if (eventTrigger.enabled)
             {
-                // if (eventData.eventAudio)
-                //     other.gameObject.GetComponentInChildren<TrainAudio>().AddClip(eventData.eventAudio);
-                eventManager.StartEvent(eventData);
+                audioManager.PlayText();
+                eventManager.StartEvent(eventData, audioManager);
             }
         }
     }
