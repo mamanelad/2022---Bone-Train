@@ -112,4 +112,14 @@ public class Arrow : MonoBehaviour
     public void PointerUp()
     {
         GameManager.Shared.GetMouse().ChangeToIdleMouse();    }
+    
+    public void PointerEnter()
+    {
+        GameManager.Shared.GetMouse().ChangeSizeBigger();
+    }
+
+    public void PointerExit()
+    {
+        GameManager.Shared.GetMouse().ChangeSizeSmaller();
+    }
 }

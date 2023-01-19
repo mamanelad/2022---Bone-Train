@@ -21111,6 +21111,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: UI Manager
       objectReference: {fileID: 0}
+    - target: {fileID: 4637150909292486630, guid: 6268bb6c1ec36dc46a5b3549997a2aed, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4637150909360092321, guid: 6268bb6c1ec36dc46a5b3549997a2aed, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 5213471481294404170, guid: 6268bb6c1ec36dc46a5b3549997a2aed, type: 3}
       propertyPath: m_AnchorMax.x
       value: 0
@@ -67048,6 +67056,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 1354094593851623755, guid: d4e67d456f96e0c458bc586bbf208230, type: 3}
+      propertyPath: enemiesAmountMax
+      value: 5
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d4e67d456f96e0c458bc586bbf208230, type: 3}
 --- !u!1001 &1624967812
@@ -89281,14 +89293,14 @@ MonoBehaviour:
   morale: 2
   curRoad: 0
   maxSpeed: 2000
-  minSpeed: 1000
+  minSpeed: 0
   curSpeed: 500
   addToSpeedFuel: 300
   addToSpeedGoodSoul: 500
   addToSpeedBadSoul: -100
   speedState: 2
   train: {fileID: 1626112840}
-  takeDownFuelContinueTrain: -20
+  takeDownFuelContinueTrain: -2
   takeDownDragFuel: -10
   takeDownDragGoodSouls: -10
   takeDownDragBadSouls: -10

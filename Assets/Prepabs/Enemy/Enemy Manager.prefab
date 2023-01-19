@@ -45,9 +45,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   enemyEvent: {fileID: 11400000, guid: 1214537179f888f41974888c22dc0d0f, type: 2}
-  enemiesAmountMax: 0
+  enemiesAmountMax: 5
   enemyPrefab: {fileID: 5023691552373478361, guid: bbdbe51a88ee03a468de8a6b1077e8b2, type: 3}
-  maxDistanceToCreateNewEnemy: 600
+  maxDistanceToCreateNewEnemy: 700
   minDistanceToCreateNewEnemy: 400
   rotationAngle: 90
   creatEnemy: 0

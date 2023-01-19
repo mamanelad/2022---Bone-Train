@@ -47,9 +47,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _speedPercentageFromTrainMax: 25
   _speedPercentageFromTrainMin: 10
+  _speedPercentageFromTrain: 0
   factorSpeed: 0.003
   distanceForAttack: 200
-  distanceForSelfDestroy: 1200
+  distanceForSelfDestroy: 1000
 --- !u!1001 &5023691553041042409
 PrefabInstance:
   m_ObjectHideFlags: 0

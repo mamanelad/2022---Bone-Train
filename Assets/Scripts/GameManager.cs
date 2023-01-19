@@ -443,7 +443,7 @@ public class GameManager : MonoBehaviour
     {
         _CheckPointData = (CheckPointData) ScriptableObject.CreateInstance(typeof(CheckPointData));
         SaveCheckPointData();
-        print(_CheckPointData.SoulStones);
+        // print(_CheckPointData.SoulStones);
     }
 
     public void SaveCheckPointData()
