@@ -18,9 +18,10 @@ MonoBehaviour:
   singleButton: 1
   textTitle: Toll Booth
   textBody: 
-  eventAudio: {fileID: 0}
-  environmentAudio: {fileID: 0}
   action:
     soulStones: 0
     goodSouls: -50
     badSouls: 0
+    receiveItem: 0
+    item: {fileID: 0}
+  dangerChance: 1
