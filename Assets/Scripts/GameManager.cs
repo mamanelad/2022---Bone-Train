@@ -39,9 +39,9 @@ public class GameManager : MonoBehaviour
 
     [Space(20)] [Header("Speed")] [SerializeField]
     private bool The_Speed_Values_To_Decrees_And_Add_Are_In_The_Furnace_Script_You_Idiot;
-    [SerializeField]
-    private bool The_How_Much_Fuel_To_Decrees_Are_In_The_Fuel_Manager_Script_You_Ass;
-    
+
+    [SerializeField] private bool The_How_Much_Fuel_To_Decrees_Are_In_The_Fuel_Manager_Script_You_Ass;
+
     public float maxSpeed = 2000;
 
     [SerializeField] private float speedToStartBreaking = 1000;
@@ -70,18 +70,21 @@ public class GameManager : MonoBehaviour
 
     [Space(20)] [Header("Slow Motion")] [Range(0, 1)] [SerializeField]
     private float arrowsAreOnSlowMotionTimeScale = 0.7f;
+
     [SerializeField] private float regularTimeScale = 1f;
-    
+
     [Space(20)] [Header("Extra")] private Vector3 _moveDirection;
     private Vector3 _trainPosition;
 
-    [Header("Test")]
-    [SerializeField] private bool testArrows0;
+
+    [Space(20)] [Header("Tutorial")] [SerializeField]
+    private bool _tutorialIsOn;
+    private Tutorial _tutorial;
+
+    [Header("Test")] [SerializeField] private bool testArrows0;
     [SerializeField] private bool testArrows;
-    [SerializeField]
-    private bool openArrows;
-    [SerializeField]
-    private bool closeArrows;
+    [SerializeField] private bool openArrows;
+    [SerializeField] private bool closeArrows;
 
     public enum Road
     {
@@ -134,6 +137,21 @@ public class GameManager : MonoBehaviour
         _uiManager = FindObjectOfType<UIManager>();
         InitArrows();
         _soulsCircle = FindObjectOfType<SoulsCircle>();
+        
+        if (_tutorialIsOn)
+        {
+            if (!_tutorial)
+            {
+                _tutorial = FindObjectOfType<Tutorial>();
+                _eventManager.SetTutorialObject(_tutorial);
+                
+            }
+            
+            _tutorial.OpenNextTutorialObject();
+        }
+        
+
+            
     }
 
     private void Update()
@@ -154,8 +172,8 @@ public class GameManager : MonoBehaviour
             ArrowsTurnOnAndOff(closeArrows);
             closeArrows = false;
         }
-        
-        
+
+
         if (speedState == SpeedState.Stop) curSpeed = 0;
         if (speedState == SpeedState.Run) InitSpeed();
 
@@ -171,9 +189,8 @@ public class GameManager : MonoBehaviour
             _eventManager = FindObjectOfType<EventManager>();
             if (_eventManager)
             {
-                _eventManager.gameObject.SetActive(false);    
+                _eventManager.gameObject.SetActive(false);
             }
-            
         }
 
         if (_fuelManager == null)
@@ -354,7 +371,7 @@ public class GameManager : MonoBehaviour
         {
             return;
         }
-        
+
         if (newSpeed <= minSpeed)
         {
             curSpeed = minSpeed;
@@ -394,12 +411,12 @@ public class GameManager : MonoBehaviour
             case true:
                 SlowTheGame("ArrowsTurnOnAndOff in game manager");
                 break;
-            
+
             case false:
                 Time.timeScale = 1f;
                 break;
         }
-        
+
         foreach (var arrow in _arrows)
         {
             if (mood)
@@ -596,12 +613,21 @@ public class GameManager : MonoBehaviour
     {
         Time.timeScale = arrowsAreOnSlowMotionTimeScale;
     }
-    
+
     public void ReturnToRegularTime(string whatFunctionCalledTheFunction)
     {
         Time.timeScale = regularTimeScale;
     }
-    
+
+    public void SetTutorialIsOn(bool mood)
+    {
+        _tutorialIsOn = mood;
+    }
+
+    public bool GetTutorialIsOn()
+    {
+        return _tutorialIsOn;
+    }
 }
 
 public enum Morale : int

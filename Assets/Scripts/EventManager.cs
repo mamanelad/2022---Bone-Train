@@ -41,6 +41,8 @@ public class EventManager : MonoBehaviour
 
     private EventAudioManager currentEventAudioManager;
 
+    private Tutorial _tutorial;
+
     private void Start()
     {
         uiManager = FindObjectOfType<UIManager>();
@@ -187,6 +189,15 @@ public class EventManager : MonoBehaviour
 
     public void Reject()
     {
+        
+         if (GameManager.Shared.GetTutorialIsOn())
+         {
+             if (!_tutorial)
+                 _tutorial = FindObjectOfType<Tutorial>();
+             _tutorial.NextButtonFromEventObject();
+             
+         }
+        
         if (currentEventAudioManager)
             currentEventAudioManager.PlayReject();
         UIAudioManager.Instance.PlayUIClickEvent();
@@ -211,12 +222,17 @@ public class EventManager : MonoBehaviour
         ResetButtonsSprite();
         UIAudioManager.Instance.ResumeTrainLoop();
         gameObject.SetActive(false);
-        GameManager.Shared.ContinueTrain();
+        // GameManager.Shared.ContinueTrain();
         Time.timeScale = 1;
     }
 
     public void OnButtonHover()
     {
         UIAudioManager.Instance.PlayUIHoverEvent();
+    }
+
+    public void SetTutorialObject(Tutorial tutorial)
+    {
+        _tutorial = tutorial;
     }
 }
