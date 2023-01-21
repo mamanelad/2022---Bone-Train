@@ -11,13 +11,15 @@ public class Furnace : MonoBehaviour
     [SerializeField] private float curSpeed;
 
     [Space(10)] [Header("Change Speed Amounts")]
-    private int addToSpeedFuel;
-
-    private int addToSpeedGoodSoul;
-    private int addToSpeedBadSoul;
-
-    [SerializeField] private int decreesSpeed;
-
+    [Header("By Time")]
+    [SerializeField] private int decreesSpeedLow;
+    [SerializeField] private int decreesSpeedHigh;
+    [Header("By Player")]
+    [SerializeField] private int addToSpeedFuel;
+    [SerializeField] private int addToSpeedGoodSoul;
+    [SerializeField] private int addToSpeedBadSoul;
+    
+    
     [Space(10)] [Header("Times")] 
     [SerializeField] private float decreesTime = .5f;
     private float _decreesTimer;
@@ -41,9 +43,9 @@ public class Furnace : MonoBehaviour
         minSpeed = GameManager.Shared.minSpeed;
         curSpeed = GameManager.Shared.GetSpeed();
 
-        addToSpeedFuel = GameManager.Shared.addToSpeedFuel;
-        addToSpeedGoodSoul = GameManager.Shared.addToSpeedGoodSoul;
-        addToSpeedBadSoul = GameManager.Shared.addToSpeedBadSoul;
+        // addToSpeedFuel = GameManager.Shared.addToSpeedFuel;
+        // addToSpeedGoodSoul = GameManager.Shared.addToSpeedGoodSoul;
+        // addToSpeedBadSoul = GameManager.Shared.addToSpeedBadSoul;
 
         _decreesTimer = decreesTime;
     }
@@ -56,15 +58,27 @@ public class Furnace : MonoBehaviour
 
     private void DecreesSpeedHandler()
     {
-        var newSpeed = GameManager.Shared.GetSpeed() - decreesSpeed;
-        if (newSpeed <= minSpeed)
-            return;
-
+        
         _decreesTimer -= Time.deltaTime;
         if (_decreesTimer <= 0)
         {
-            _decreesTimer = decreesTime;
+            var speedState = GameManager.Shared.GetSpeedState();
+
+            var amountToDecrees = decreesSpeedLow;
+
+            switch (speedState)
+            {
+                case GameManager.SpeedState.Stop:
+                    return;
+
+                case GameManager.SpeedState.Low:
+                    amountToDecrees = decreesSpeedHigh; 
+                    break;
+            }
+
+            var newSpeed = GameManager.Shared.GetSpeed() - amountToDecrees;
             
+            _decreesTimer = decreesTime;
             GameManager.Shared.SetSpeed(newSpeed);
         }
     }

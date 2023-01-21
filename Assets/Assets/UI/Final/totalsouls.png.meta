@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 280e622e978695e4bb47872782b8b274
+guid: bd53fe4cbfa28374492654d6952c311b
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -67,10 +67,10 @@ TextureImporter:
   platformSettings:
   - serializedVersion: 3
     buildTarget: DefaultTexturePlatform
-    maxTextureSize: 16384
-    resizeAlgorithm: 1
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
     textureFormat: -1
-    textureCompression: 1
+    textureCompression: 0
     compressionQuality: 50
     crunchedCompression: 0
     allowsAlphaSplitting: 0
@@ -105,43 +105,22 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: handle split_0
+      name: totalsouls_0
       rect:
         serializedVersion: 2
-        x: 860
-        y: 184
-        width: 62
-        height: 815
-      alignment: 9
-      pivot: {x: 0.500001, y: 0.29571405}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: c50fc9109aa4b5f4f80c03e2d8bd1416
-      internalID: 352287867
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: handle split_1
-      rect:
-        serializedVersion: 2
-        x: 959
-        y: 184
-        width: 125
-        height: 128
+        x: 494
+        y: 268
+        width: 224
+        height: 220
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 5671e5b1c1c3a06469e151a6b2525e47
-      internalID: -1243370776
+      spriteID: c829c99ee538e6e45ac140ad625d5fbd
+      internalID: -1553487787
       vertices: []
       indices: 
       edges: []
@@ -149,7 +128,7 @@ TextureImporter:
     outline: []
     physicsShape: []
     bones: []
-    spriteID: 32682c13cc5e5614e8a4ac0f8389c823
+    spriteID: 80cbe7bbd2321c942b1b509283501185
     internalID: 0
     vertices: []
     indices: 
@@ -157,8 +136,7 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      handle split_0: 352287867
-      handle split_1: -1243370776
+      totalsouls_0: -1553487787
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0
