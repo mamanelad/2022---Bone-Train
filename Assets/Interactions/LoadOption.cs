@@ -55,7 +55,13 @@ public class LoadOption : MonoBehaviour
     private const int SHIELD = 4;
 
     private List<GameObject> currentItems;
+    private InteractionManager interactionManager;
     public Option option;
+
+    private void Start()
+    {
+        interactionManager = FindObjectOfType<InteractionManager>();
+    }
 
     public void Load(Option newOption)
     {
@@ -117,6 +123,11 @@ public class LoadOption : MonoBehaviour
         option.goodSouls = 0;
         option.badSouls = 0;
         option.soulsStones = 0;
+    }
+
+    public void ChooseOption()
+    {
+        interactionManager.ChooseOption(option);
     }
 
     public void PlayHoverSound()

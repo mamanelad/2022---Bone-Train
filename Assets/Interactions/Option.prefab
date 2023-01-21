@@ -323,7 +323,7 @@ MonoBehaviour:
     soulsStones: 0
     sword: 0
     shield: 0
-    action:
+    sound:
       Guid:
         Data1: 0
         Data2: 0
@@ -396,6 +396,18 @@ MonoBehaviour:
         - m_Target: {fileID: 8213696703892072361}
           m_TargetAssemblyTypeName: LoadOption, Assembly-CSharp
           m_MethodName: PlayClickSound
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+        - m_Target: {fileID: 8213696703892072361}
+          m_TargetAssemblyTypeName: LoadOption, Assembly-CSharp
+          m_MethodName: ChooseOption
           m_Mode: 1
           m_Arguments:
             m_ObjectArgument: {fileID: 0}

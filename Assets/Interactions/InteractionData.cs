@@ -8,6 +8,7 @@ public class InteractionData : ScriptableObject
     [Header("Artwork")]
     public Sprite character;
     public EventReference audio;
+    public EventReference enteredDistanceAudio;
     
     [Header("Interaction Type")]
     public LoadIcon.IconIndex iconIndex;

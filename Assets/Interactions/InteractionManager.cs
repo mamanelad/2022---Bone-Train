@@ -66,7 +66,7 @@ public class InteractionManager : MonoBehaviour
         }
     }
 
-    private void ChooseOption(LoadOption.Option option)
+    public void ChooseOption(LoadOption.Option option)
     {
         GameManager.Shared.ChangeByGoodSouls(option.badSouls);
         GameManager.Shared.ChangeByBadSouls(option.badSouls);
