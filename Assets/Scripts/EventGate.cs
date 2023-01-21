@@ -13,6 +13,10 @@ public class EventGate : MonoBehaviour
 
     private void Start()
     {
+        if (!eventData)
+        {
+            return;
+        }
         audioManager = GetComponent<EventAudioManager>();
         eventManager = FindObjectOfType<EventManager>();
         sphereTrigger.enabled = true;

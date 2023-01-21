@@ -4,6 +4,7 @@ using UnityEditor;
 using UnityEngine;
 using UnityEngine.EventSystems;
 using UnityEngine.SceneManagement;
+using UnityEngine.Serialization;
 
 [DefaultExecutionOrder(-999)]
 public class GameManager : MonoBehaviour
@@ -28,6 +29,7 @@ public class GameManager : MonoBehaviour
     private Arrow curMouseOnArrow;
     private bool _arrowsAreOn;
     private Arrow.ArrowSide _arrowSide = Arrow.ArrowSide.None;
+    private SoulsCircle _soulsCircle;
 
     [Space(20)] [Header("Extra")] public static GameManager Shared;
     [HideInInspector] public Morale morale = Morale.Neutral;
@@ -36,14 +38,19 @@ public class GameManager : MonoBehaviour
     [Space(20)] [Header("Road")] public Road curRoad;
 
     [Space(20)] [Header("Speed")] [SerializeField]
-    public float maxSpeed = 1100;
+    private bool The_Speed_Values_To_Decrees_And_Add_Are_In_The_Furnace_Script_You_Idiot;
+    [SerializeField]
+    private bool The_How_Much_Fuel_To_Decrees_Are_In_The_Fuel_Manager_Script_You_Ass;
+    
+    public float maxSpeed = 2000;
 
-    public float minSpeed = 100;
-    [SerializeField]private float curSpeed = 500;
+    [SerializeField] private float speedToStartBreaking = 1000;
+    public float minSpeed = 0;
+    [SerializeField] private float curSpeed = 500;
 
-    public int addToSpeedFuel;
-    public int addToSpeedGoodSoul;
-    public int addToSpeedBadSoul;
+    // public int addToSpeedFuel;
+    // public int addToSpeedGoodSoul;
+    // public int addToSpeedBadSoul;
 
     private GameObject speedHandle;
 
@@ -53,19 +60,29 @@ public class GameManager : MonoBehaviour
     private GameObject train;
 
     [Space(20)] [Header("Fuel")] private FuelManager _fuelManager;
-    
-    [Space(20)] [Header("Take Down Amounts")]
-    [SerializeField] private int takeDownFuelContinueTrain;
+
+    [Space(20)] [Header("Take Down Amounts")] [SerializeField]
+    private int takeDownFuelContinueTrain;
+
     [SerializeField] private int takeDownDragFuel;
     [SerializeField] private int takeDownDragGoodSouls;
     [SerializeField] private int takeDownDragBadSouls;
 
+    [Space(20)] [Header("Slow Motion")] [Range(0, 1)] [SerializeField]
+    private float arrowsAreOnSlowMotionTimeScale = 0.7f;
+    [SerializeField] private float regularTimeScale = 1f;
+    
     [Space(20)] [Header("Extra")] private Vector3 _moveDirection;
     private Vector3 _trainPosition;
 
     [Header("Test")]
     [SerializeField] private bool testArrows0;
     [SerializeField] private bool testArrows;
+    [SerializeField]
+    private bool openArrows;
+    [SerializeField]
+    private bool closeArrows;
+
     public enum Road
     {
         Up,
@@ -87,7 +104,6 @@ public class GameManager : MonoBehaviour
 
     private void Awake()
     {
-        
         Shared = this;
         speedState = SpeedState.Run;
 
@@ -117,6 +133,7 @@ public class GameManager : MonoBehaviour
         _trainPosition = train.transform.position;
         _uiManager = FindObjectOfType<UIManager>();
         InitArrows();
+        _soulsCircle = FindObjectOfType<SoulsCircle>();
     }
 
     private void Update()
@@ -125,12 +142,20 @@ public class GameManager : MonoBehaviour
         {
             SceneManager.LoadScene("Opening screen", LoadSceneMode.Single);
         }
-        
-        if (testArrows0)
+
+        if (openArrows)
         {
-            testArrows0 = false;
-            TestArrows();
+            ArrowsTurnOnAndOff(openArrows);
+            openArrows = false;
         }
+
+        if (closeArrows)
+        {
+            ArrowsTurnOnAndOff(closeArrows);
+            closeArrows = false;
+        }
+        
+        
         if (speedState == SpeedState.Stop) curSpeed = 0;
         if (speedState == SpeedState.Run) InitSpeed();
 
@@ -144,7 +169,11 @@ public class GameManager : MonoBehaviour
         {
             print("The event manager needs to start turn on");
             _eventManager = FindObjectOfType<EventManager>();
-            _eventManager.gameObject.SetActive(false);
+            if (_eventManager)
+            {
+                _eventManager.gameObject.SetActive(false);    
+            }
+            
         }
 
         if (_fuelManager == null)
@@ -163,13 +192,13 @@ public class GameManager : MonoBehaviour
 
         if (_gotToNewEvent)
             ActivateNewEvent();
-        
+
         CalculateMovingDirection();
     }
 
     private void InitSpeed()
     {
-        curSpeed = Mathf.Lerp(minSpeed, maxSpeed, 0.5f);
+        curSpeed = Mathf.Lerp(speedToStartBreaking, maxSpeed, 0.5f);
     }
 
     private void InitSouls()
@@ -196,11 +225,13 @@ public class GameManager : MonoBehaviour
     private void SpeedStateHandler()
     {
         if (speedState == SpeedState.Stop) return;
-        if (curSpeed <= maxSpeed / 3)
+
+        if (curSpeed <= speedToStartBreaking)
         {
             speedState = SpeedState.Low;
         }
-        else if (curSpeed <= maxSpeed / 2)
+
+        else if (curSpeed <= maxSpeed * 0.75f)
         {
             speedState = SpeedState.Mid;
         }
@@ -256,8 +287,10 @@ public class GameManager : MonoBehaviour
             GoodSouls = 0;
             return;
         }
+
         GoodSouls += addNum;
         _uiManager.SetGoodSouls();
+        _soulsCircle.ChangeSoulsAmount();
     }
 
     public int GetGoodSouls()
@@ -273,7 +306,7 @@ public class GameManager : MonoBehaviour
             BadSouls = 0;
             return;
         }
-        
+
         BadSouls += addNum;
         _uiManager.SetBadSouls();
     }
@@ -300,6 +333,7 @@ public class GameManager : MonoBehaviour
 
         SoulStones += addNum;
         _uiManager.SetSoulStones();
+        _soulsCircle.ChangeSoulsAmount();
     }
 
     public int GetSoulStones()
@@ -320,13 +354,20 @@ public class GameManager : MonoBehaviour
         {
             return;
         }
-
-        if (speedState != SpeedState.Stop)
+        
+        if (newSpeed <= minSpeed)
         {
-            if (newSpeed >= minSpeed && newSpeed <= maxSpeed)
-            {
-                curSpeed = newSpeed;
-            }
+            curSpeed = minSpeed;
+        }
+
+        else if (newSpeed >= maxSpeed)
+        {
+            curSpeed = maxSpeed;
+        }
+
+        else
+        {
+            curSpeed = newSpeed;
         }
     }
 
@@ -343,10 +384,22 @@ public class GameManager : MonoBehaviour
         _arrows = FindObjectsOfType<Arrow>();
         ArrowsTurnOnAndOff(false);
     }
-    
+
     public void ArrowsTurnOnAndOff(bool mood)
     {
         _arrowsAreOn = mood;
+
+        switch (_arrowsAreOn)
+        {
+            case true:
+                SlowTheGame("ArrowsTurnOnAndOff in game manager");
+                break;
+            
+            case false:
+                Time.timeScale = 1f;
+                break;
+        }
+        
         foreach (var arrow in _arrows)
         {
             if (mood)
@@ -369,7 +422,7 @@ public class GameManager : MonoBehaviour
         {
             ArrowsTurnOnAndOff(true);
         }
-    
+
         else
         {
             ArrowsTurnOnAndOff(false);
@@ -391,9 +444,8 @@ public class GameManager : MonoBehaviour
                 {
                     curMouseOnArrow.SetIsMouseIsOn(false);
                 }
-            } 
+            }
         }
-        
     }
 
     public GameObject GetTrain()
@@ -479,7 +531,7 @@ public class GameManager : MonoBehaviour
     public float GetCurrSpeedPerspectiveToStartSpeed()
     {
         var startSpeed = Mathf.Lerp(minSpeed, maxSpeed, 0.5f);
-        var pitch = curSpeed / startSpeed; 
+        var pitch = curSpeed / startSpeed;
         pitch = pitch <= 0.5f ? 0 : pitch;
         pitch = pitch >= 1.7f ? 2 : pitch;
         return pitch;
@@ -490,16 +542,16 @@ public class GameManager : MonoBehaviour
         switch (objectToBurn)
         {
             case Furnace.BurnObject.Fuel:
-            ChangeBySoulStones(takeDownDragFuel);
-            break;
+                ChangeBySoulStones(takeDownDragFuel);
+                break;
 
             case Furnace.BurnObject.GoodSoul:
-            ChangeByGoodSouls(takeDownDragGoodSouls);
-            break;
+                ChangeByGoodSouls(takeDownDragGoodSouls);
+                break;
 
             case Furnace.BurnObject.BadSoul:
-            ChangeByBadSouls(takeDownDragBadSouls);
-            break;
+                ChangeByBadSouls(takeDownDragBadSouls);
+                break;
         }
     }
 
@@ -538,6 +590,16 @@ public class GameManager : MonoBehaviour
     public UIManager GetUIManager()
     {
         return _uiManager;
+    }
+
+    public void SlowTheGame(string whatFunctionCalledTheFunction)
+    {
+        Time.timeScale = arrowsAreOnSlowMotionTimeScale;
+    }
+    
+    public void ReturnToRegularTime(string whatFunctionCalledTheFunction)
+    {
+        Time.timeScale = regularTimeScale;
     }
     
 }

@@ -22,6 +22,7 @@ public class JunctionChange : MonoBehaviour
     [SerializeField] private JunctionChange nextJunction;
     [SerializeField] private int id;
 
+    private bool _randomDecisionWasMade;
 
     private void Start()
     {
@@ -43,7 +44,7 @@ public class JunctionChange : MonoBehaviour
         if (GameManager.Shared.GetIsArrowsAreOn())
             DecideTrack(GameManager.Shared.GetArrowSide());
     }
-    
+
 
     private void ConnectTracks()
     {
@@ -62,21 +63,23 @@ public class JunctionChange : MonoBehaviour
             };
             splineMaster.AddPoint(point);
         }
-            
-        for (int i = 1; i < splineNewBranch.points.Length; i+=3)
+
+        for (int i = 1; i < splineNewBranch.points.Length; i += 3)
         {
             var point = new Vector3[]
             {
                 splineNewBranch.points[i] + offset,
-                splineNewBranch.points[i+1] + offset,
-                splineNewBranch.points[i+2] + offset,
+                splineNewBranch.points[i + 1] + offset,
+                splineNewBranch.points[i + 2] + offset,
             };
             splineMaster.AddPoint(point);
         }
+
         Destroy(splineNewBranch);
         newSplineLen = splineMaster.GetLength();
         print("old len: " + prevSplineLen + "  new len: " + newSplineLen);
-        print("old progress: " + train.Progress + "  new progress: " + (train.Progress * (prevSplineLen / newSplineLen)));
+        print("old progress: " + train.Progress + "  new progress: " +
+              (train.Progress * (prevSplineLen / newSplineLen)));
         //train.Progress *= prevSplineLen / newSplineLen;
         train.SplineLenght = newSplineLen;
         train.SetProgress();
@@ -106,7 +109,6 @@ public class JunctionChange : MonoBehaviour
         }
     }
 
-    
 
     private void DecideTrack(Arrow.ArrowSide sideChosen)
     {
@@ -124,10 +126,13 @@ public class JunctionChange : MonoBehaviour
 
         if (sideChosen == Arrow.ArrowSide.None)
         {
+            if (_randomDecisionWasMade) return;
+            _randomDecisionWasMade = true;
             splineNewBranch = Random.Range(1, 3) == 1 ? splineNewBranchLeft : splineNewBranchRight;
             Arrow.ArrowSide side = splineNewBranch == splineNewBranchLeft
                 ? Arrow.ArrowSide.Left
                 : Arrow.ArrowSide.Right;
+            // GameManager.Shared.ArrowSpriteHandler(side);
         }
     }
 

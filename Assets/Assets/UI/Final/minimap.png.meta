@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 280e622e978695e4bb47872782b8b274
+guid: a2a240575bf2d3843876447042e6d3da
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -36,9 +36,9 @@ TextureImporter:
     filterMode: 0
     aniso: 1
     mipBias: 0
-    wrapU: 0
-    wrapV: 0
-    wrapW: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
   nPOTScale: 0
   lightmap: 0
   compressionQuality: 50
@@ -67,10 +67,10 @@ TextureImporter:
   platformSettings:
   - serializedVersion: 3
     buildTarget: DefaultTexturePlatform
-    maxTextureSize: 16384
+    maxTextureSize: 4096
     resizeAlgorithm: 1
     textureFormat: -1
-    textureCompression: 1
+    textureCompression: 0
     compressionQuality: 50
     crunchedCompression: 0
     allowsAlphaSplitting: 0
@@ -105,43 +105,22 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: handle split_0
+      name: minimap_0
       rect:
         serializedVersion: 2
-        x: 860
-        y: 184
-        width: 62
-        height: 815
-      alignment: 9
-      pivot: {x: 0.500001, y: 0.29571405}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: c50fc9109aa4b5f4f80c03e2d8bd1416
-      internalID: 352287867
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: handle split_1
-      rect:
-        serializedVersion: 2
-        x: 959
-        y: 184
-        width: 125
-        height: 128
+        x: 0
+        y: 0
+        width: 1920
+        height: 1080
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 5671e5b1c1c3a06469e151a6b2525e47
-      internalID: -1243370776
+      spriteID: 20891a8fe5d7fb44ea479b2bea84dce8
+      internalID: -1233276484
       vertices: []
       indices: 
       edges: []
@@ -149,7 +128,7 @@ TextureImporter:
     outline: []
     physicsShape: []
     bones: []
-    spriteID: 32682c13cc5e5614e8a4ac0f8389c823
+    spriteID: 05b90f47284ff004386e813f9c5b7e3a
     internalID: 0
     vertices: []
     indices: 
@@ -157,8 +136,7 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      handle split_0: 352287867
-      handle split_1: -1243370776
+      minimap_0: -1233276484
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0

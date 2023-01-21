@@ -2,6 +2,7 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Serialization;
 
 public class FuelManager : MonoBehaviour
 {
@@ -13,7 +14,7 @@ public class FuelManager : MonoBehaviour
     [SerializeField] private float speedMult = 1.3f;
 
     [Space(10)] [Header("Extra")] [SerializeField] private bool _driving;
-    [SerializeField] private int tackDownFuelAmount = 1;
+    [FormerlySerializedAs("tackDownFuelAmount")] [SerializeField] private int tackDownFuelAmountInMaxSpeed = 1;
 
 
     private void Awake()
@@ -30,13 +31,16 @@ public class FuelManager : MonoBehaviour
 
         if (!_driving) return;
         
-        var speedDiff = _speed / _maxSpeed;
-        tackDownFuelTimer -= (Time.deltaTime * speedDiff * speedMult);
-        if (tackDownFuelTimer <= 0)
-        {
-            tackDownFuelTimer = tackDownFuelTime;
-            GameManager.Shared.ChangeBySoulStones(-tackDownFuelAmount);
-        }
+        
+        // tackDownFuelTimer -= Time.deltaTime * speedDiff * speedMult);
+        tackDownFuelTimer -= Time.deltaTime;
+        
+        // if (tackDownFuelTimer <= 0)
+        // {
+        //     var speedTakeDown = Mathf.FloorToInt((_speed / _maxSpeed) * tackDownFuelAmountInMaxSpeed);
+        //     tackDownFuelTimer = tackDownFuelTime;
+        //     GameManager.Shared.ChangeBySoulStones(-speedTakeDown);
+        // }
     }
 
     public void SetDriving(bool mode)

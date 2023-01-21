@@ -94,6 +94,7 @@ public class Arrow : MonoBehaviour
 
     public void ClickButton()
     {
+        GameManager.Shared.ReturnToRegularTime("ClickButton in arrows");
         GameManager.Shared.SetArrowSide(_arrowSide);
         ArrowHandler(_arrowSide);
         otherArrow.ArrowHandler(_arrowSide);

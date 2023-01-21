@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 280e622e978695e4bb47872782b8b274
+guid: b13d7c82a61518044b3643441fc7823e
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -33,7 +33,7 @@ TextureImporter:
   maxTextureSize: 2048
   textureSettings:
     serializedVersion: 2
-    filterMode: 0
+    filterMode: 1
     aniso: 1
     mipBias: 0
     wrapU: 0
@@ -67,8 +67,8 @@ TextureImporter:
   platformSettings:
   - serializedVersion: 3
     buildTarget: DefaultTexturePlatform
-    maxTextureSize: 16384
-    resizeAlgorithm: 1
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
     textureFormat: -1
     textureCompression: 1
     compressionQuality: 50
@@ -105,43 +105,64 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: handle split_0
+      name: extra for dashboard_0
       rect:
         serializedVersion: 2
-        x: 860
-        y: 184
-        width: 62
-        height: 815
-      alignment: 9
-      pivot: {x: 0.500001, y: 0.29571405}
+        x: 165
+        y: 25
+        width: 262
+        height: 396
+      alignment: 0
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: c50fc9109aa4b5f4f80c03e2d8bd1416
-      internalID: 352287867
+      spriteID: 95195a5915ffaf24ea5ce4d2f13eb2ed
+      internalID: -1062912259
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: handle split_1
+      name: extra for dashboard_1
       rect:
         serializedVersion: 2
-        x: 959
-        y: 184
-        width: 125
-        height: 128
+        x: 491
+        y: 341
+        width: 103
+        height: 64
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 5671e5b1c1c3a06469e151a6b2525e47
-      internalID: -1243370776
+      spriteID: 54acd37dd4281dd44b7214d73c0fdad6
+      internalID: -1594923893
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: extra for dashboard_2
+      rect:
+        serializedVersion: 2
+        x: 447
+        y: 31
+        width: 168
+        height: 185
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1ba0c20431b3a344a88506c607b0cc0f
+      internalID: 1607857948
       vertices: []
       indices: 
       edges: []
@@ -149,7 +170,7 @@ TextureImporter:
     outline: []
     physicsShape: []
     bones: []
-    spriteID: 32682c13cc5e5614e8a4ac0f8389c823
+    spriteID: 08c7c933e6e08044f839949e0fc757b8
     internalID: 0
     vertices: []
     indices: 
@@ -157,8 +178,9 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      handle split_0: 352287867
-      handle split_1: -1243370776
+      extra for dashboard_2: 1607857948
+      extra for dashboard_0: -1062912259
+      extra for dashboard_1: -1594923893
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0

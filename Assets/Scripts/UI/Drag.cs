@@ -16,9 +16,10 @@ public class Drag : MonoBehaviour, IDragHandler, IBeginDragHandler, IEndDragHand
     private Canvas _canvas;
     private RectTransform _draggingObjectRectTransform;
     private Vector3 _velocity = Vector3.zero;
-    private Furnace _furnace;
+    [SerializeField] private Furnace _furnace;
+    [SerializeField] private GameObject _furnaceTransform;
 
-    [SerializeField] private Furnace.BurnObject myBurnObject;
+    [SerializeField] private Furnace.BurnObject myBurnObject = Furnace.BurnObject.GoodSoul;
     [SerializeField] private float overLapFactor = 0.35f;
 
     private int _fullALfa = 255;
@@ -37,7 +38,7 @@ public class Drag : MonoBehaviour, IDragHandler, IBeginDragHandler, IEndDragHand
         if (!_furnace)
             _furnace = FindObjectOfType<Furnace>();
 
-        if (RectOverlap(transform.GetComponent<RectTransform>(), _furnace.GetComponent<RectTransform>()))
+        if (RectOverlap(transform.GetComponent<RectTransform>(), _furnaceTransform.GetComponent<RectTransform>()))
             TouchFurnace();
         
         
@@ -46,7 +47,8 @@ public class Drag : MonoBehaviour, IDragHandler, IBeginDragHandler, IEndDragHand
     private void TouchFurnace()
     {
         GameManager.Shared.GetMouse().ChangeToIdleMouse();
-        _furnace.AddSpeed(myBurnObject);
+        if (GameManager.Shared.GetSpeedState() != GameManager.SpeedState.Stop)
+            _furnace.AddSpeed(myBurnObject);
         Destroy(gameObject);
     }
 
@@ -88,6 +90,7 @@ public class Drag : MonoBehaviour, IDragHandler, IBeginDragHandler, IEndDragHand
 
     public void OnBeginDrag(PointerEventData eventData)
     {
+        
         GameManager.Shared.GetMouse().ChangeToDragMouse();
         GameManager.Shared.ChangeInventoryFromDrag(myBurnObject);
         changeAlfa(_fullALfa);
@@ -106,6 +109,7 @@ public class Drag : MonoBehaviour, IDragHandler, IBeginDragHandler, IEndDragHand
     }
     public void OnEndDrag(PointerEventData eventData)
     {
+        print("kaka");
         GameManager.Shared.GetMouse().ChangeToIdleMouse();
         Destroy(gameObject);
     }
