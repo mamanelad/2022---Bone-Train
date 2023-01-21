@@ -1,29 +1,34 @@
+using FMODUnity;
 using UnityEngine;
 
 public class EventGate : MonoBehaviour
 {
-    [SerializeField] private EventObject eventData;
-    [SerializeField] private EventManager eventManager;
+    [SerializeField] private InteractionData interactionData;
+    [SerializeField] private InteractionManager interactionManager;
     [SerializeField] private SpriteRenderer minimapIcon;
     
     [SerializeField] private Collider sphereTrigger;
     [SerializeField] private Collider eventTrigger;
-
-    private EventAudioManager audioManager;
-
+    
     private void Start()
     {
-        if (!eventData)
+        if (interactionData == null)
         {
+            Debug.Log("Event gate is missing interaction data");
             return;
         }
-        audioManager = GetComponent<EventAudioManager>();
-        eventManager = FindObjectOfType<EventManager>();
+        
+        interactionManager = FindObjectOfType<InteractionManager>();
+        
+        SetUpMinimapIcon();
+        
         sphereTrigger.enabled = true;
         eventTrigger.enabled = false;
+    }
 
-        minimapIcon.color = Color.Lerp(Color.green, Color.red, eventData.dangerChance);
-
+    private void SetUpMinimapIcon()
+    {
+        return;
     }
 
     private void OnTriggerEnter(Collider other)
@@ -34,14 +39,13 @@ public class EventGate : MonoBehaviour
             {
                 sphereTrigger.enabled = false;
                 eventTrigger.enabled = true;
-                audioManager.PlayEnter();
+                RuntimeManager.PlayOneShot(interactionData.enteredDistanceAudio);
                 
             }
 
             else if (eventTrigger.enabled)
             {
-                audioManager.PlayText();
-                eventManager.StartEvent(eventData, audioManager);
+                interactionManager.StartInteraction(interactionData);
             }
         }
     }
