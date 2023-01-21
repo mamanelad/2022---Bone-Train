@@ -76,8 +76,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1805a791aa9d34147ab9891a606e475d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  gameObjectNewBranchLeft: {fileID: 5205132945877824446}
-  gameObjectNewBranchRight: {fileID: 7105597859460083009}
+  gameObjectNewBranchLeft: {fileID: 7105597859460083009}
+  gameObjectNewBranchRight: {fileID: 5205132945877824446}
   colliderSphere: {fileID: 3902362542860545018}
   colliderBox: {fileID: 2608861690600659345}
   nextJunction: {fileID: 0}
