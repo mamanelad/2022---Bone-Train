@@ -8,6 +8,19 @@ using UnityEngine.UI;
 public class LoadIcon : MonoBehaviour
 {
     [Serializable]
+    public enum IconIndex
+    {
+        GOODSOULS,
+        BADSOULS,
+        SOULSTONES,
+        MAJOR_DECISION,
+        ENEMY,
+        REGULAR,
+        CHANCE,
+        ITEM
+    }
+    
+    [Serializable]
     public struct IconData
     {
         public Sprite icon;
@@ -16,22 +29,13 @@ public class LoadIcon : MonoBehaviour
 
     [SerializeField] private List<IconData> data;
     
-    private const int GOODSOULS = 0;
-    private const int BADSOULS = 1;
-    private const int SOULSTONES = 2;
-    private const int MAJOR_DECISION = 3;
-    private const int ENEMY = 4;
-    private const int REGULAR = 5;
-    private const int CHANCE = 6;
-    private const int ITEM = 7;
-
-    public void Load(int iconIndex)
+    public void Load(IconIndex iconIndex)
     {
         var image = GetComponentInChildren<Image>();
         var text = GetComponentInChildren<TextMeshProUGUI>();
 
-        image.sprite = data[iconIndex].icon;
-        text.text = data[iconIndex].description;
+        image.sprite = data[(int)iconIndex].icon;
+        text.text = data[(int)iconIndex].description;
     }
 
 }

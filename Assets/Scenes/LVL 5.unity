@@ -825,6 +825,11 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 3617767881384998247, guid: 5cefb36531363d14db4bd6f2fed6688e, type: 3}
   m_PrefabInstance: {fileID: 94054314}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &101473856 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 4784053493937270124, guid: cb4ab8519d12b2e4f8a7ef31ab1d1a0d, type: 3}
+  m_PrefabInstance: {fileID: 4784053493903438636}
+  m_PrefabAsset: {fileID: 0}
 --- !u!224 &101473857 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 4784053493937270125, guid: cb4ab8519d12b2e4f8a7ef31ab1d1a0d, type: 3}
@@ -2765,6 +2770,11 @@ PrefabInstance:
 Transform:
   m_CorrespondingSourceObject: {fileID: 2146479430902760332, guid: 887dc3b6cc1bc594288041230d1daab4, type: 3}
   m_PrefabInstance: {fileID: 301158281}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &303325397 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 4784053493937270124, guid: cb4ab8519d12b2e4f8a7ef31ab1d1a0d, type: 3}
+  m_PrefabInstance: {fileID: 1765883142}
   m_PrefabAsset: {fileID: 0}
 --- !u!1001 &318518932
 PrefabInstance:
@@ -23622,6 +23632,11 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 2146479430902760332, guid: 887dc3b6cc1bc594288041230d1daab4, type: 3}
   m_PrefabInstance: {fileID: 1873418534}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &1888834299 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 4784053493937270124, guid: cb4ab8519d12b2e4f8a7ef31ab1d1a0d, type: 3}
+  m_PrefabInstance: {fileID: 1260944412}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1890484697
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -24221,6 +24236,17 @@ RectTransform:
   m_CorrespondingSourceObject: {fileID: 5285741472557852270, guid: 3044741c5dd168144ace7e0aca5c0aef, type: 3}
   m_PrefabInstance: {fileID: 5285741472762629426}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &1959619424 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 7010970975498922258, guid: 3044741c5dd168144ace7e0aca5c0aef, type: 3}
+  m_PrefabInstance: {fileID: 5285741472762629426}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: aef86d101a236504b8d1a6d098edda5e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &1970504401
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -31932,7 +31958,7 @@ MonoBehaviour:
   tackDownFuelTimer: 0
   speedMult: 1.3
   _driving: 0
-  tackDownFuelAmount: 1
+  tackDownFuelAmountInMaxSpeed: 1
 --- !u!1 &1619814913223880243
 GameObject:
   m_ObjectHideFlags: 0
@@ -31988,20 +32014,24 @@ MonoBehaviour:
   - {fileID: 0}
   morale: 2
   curRoad: 0
+  The_Speed_Values_To_Decrees_And_Add_Are_In_The_Furnace_Script_You_Idiot: 0
+  The_How_Much_Fuel_To_Decrees_Are_In_The_Fuel_Manager_Script_You_Ass: 0
   maxSpeed: 2000
+  speedToStartBreaking: 1000
   minSpeed: 0
   curSpeed: 2100
-  addToSpeedFuel: 300
-  addToSpeedGoodSoul: 500
-  addToSpeedBadSoul: -100
   speedState: 2
   train: {fileID: 1626112840}
   takeDownFuelContinueTrain: -10
   takeDownDragFuel: -2
   takeDownDragGoodSouls: -10
   takeDownDragBadSouls: -10
+  arrowsAreOnSlowMotionTimeScale: 0.7
+  regularTimeScale: 1
   testArrows0: 0
   testArrows: 1
+  openArrows: 0
+  closeArrows: 0
 --- !u!114 &1619814913223880246
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -52196,6 +52226,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 6391474286217001590}
+  - component: {fileID: 6391474286217001591}
   m_Layer: 5
   m_Name: Interaction
   m_TagString: Untagged
@@ -52226,6 +52257,26 @@ RectTransform:
   m_AnchoredPosition: {x: -79, y: 31.7}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &6391474286217001591
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6391474286217001589}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 16131cc7adbc97743af0c5522d2a439e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  character: {fileID: 6391474286307323914}
+  title: {fileID: 1265875966}
+  textBox: {fileID: 1141493503}
+  icon: {fileID: 1959619424}
+  options:
+  - {fileID: 101473856}
+  - {fileID: 1888834299}
+  - {fileID: 303325397}
 --- !u!1 &6391474286307323912
 GameObject:
   m_ObjectHideFlags: 0
