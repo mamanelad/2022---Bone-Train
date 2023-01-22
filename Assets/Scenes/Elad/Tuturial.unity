@@ -93072,8 +93072,12 @@ PrefabInstance:
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 6501042930871915512, guid: 78442f88b92bfe24ba2b13a4da1d89c6, type: 3}
+      propertyPath: smoothFactor
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 6501042930871915512, guid: 78442f88b92bfe24ba2b13a4da1d89c6, type: 3}
       propertyPath: percentageToStartTrain
-      value: 1.3
+      value: 0.95
       objectReference: {fileID: 0}
     - target: {fileID: 6501042930871915514, guid: 78442f88b92bfe24ba2b13a4da1d89c6, type: 3}
       propertyPath: m_IsActive

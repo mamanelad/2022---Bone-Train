@@ -10,7 +10,7 @@ public class BreakChain : MonoBehaviour
     [SerializeField] private Slider _slider;
     [SerializeField] private float score;
     [SerializeField] private float smoothFactor;
-    [SerializeField] [Range(0,10f)] private float percentageToStartTrain = 0.95f;
+    [SerializeField] [Range(0,1.3f)] private float percentageToStartTrain = 0.95f;
 
     private float _maxSliderAmount;
     private float _minSliderAmount;
