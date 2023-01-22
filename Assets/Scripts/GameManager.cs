@@ -157,6 +157,9 @@ public class GameManager : MonoBehaviour
 
     private void Update()
     {
+        print("good souls:" + GoodSouls);
+        print("bad souls:" + BadSouls);
+
         if (Input.GetKeyDown(KeyCode.R))
         {
             SceneManager.LoadScene("Opening screen", LoadSceneMode.Single);

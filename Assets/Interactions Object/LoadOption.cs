@@ -54,7 +54,7 @@ public class LoadOption : MonoBehaviour
     private const int SWORD = 3;
     private const int SHIELD = 4;
 
-    private List<GameObject> currentItems;
+    private List<GameObject> currentItems = new List<GameObject>();
     private InteractionManager interactionManager;
     public Option option;
     private Tutorial _tutorial;

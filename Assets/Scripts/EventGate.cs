@@ -39,7 +39,8 @@ public class EventGate : MonoBehaviour
             {
                 sphereTrigger.enabled = false;
                 eventTrigger.enabled = true;
-                RuntimeManager.PlayOneShot(interactionData.enteredDistanceAudio);
+                if (!interactionData.enteredDistanceAudio.IsNull)
+                    RuntimeManager.PlayOneShot(interactionData.enteredDistanceAudio);
                 
             }
 

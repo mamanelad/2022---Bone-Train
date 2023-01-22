@@ -28,14 +28,13 @@ public class LoadIcon : MonoBehaviour
     }
 
     [SerializeField] private List<IconData> data;
+    [SerializeField] private Image iconBox;
+    [SerializeField] private TextMeshProUGUI textBox;
     
     public void Load(IconIndex iconIndex)
     {
-        var image = GetComponentInChildren<Image>();
-        var text = GetComponentInChildren<TextMeshProUGUI>();
-
-        image.sprite = data[(int)iconIndex].icon;
-        text.text = data[(int)iconIndex].description;
+        iconBox.sprite = data[(int)iconIndex].icon;
+        textBox.text = data[(int)iconIndex].description;
     }
 
 }
