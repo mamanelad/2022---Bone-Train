@@ -17,7 +17,7 @@ public class InteractionManager : MonoBehaviour
 
     [SerializeField] private LoadIcon icon;
     [SerializeField] private List<GameObject> options;
-    
+
     public void StartInteraction(InteractionData newInteractionData)
     {
         gameObject.SetActive(true);
@@ -77,5 +77,13 @@ public class InteractionManager : MonoBehaviour
             RuntimeManager.PlayOneShot(option.sound);
         
         EndInteraction();
+    }
+
+    public void SetTutorialObject(Tutorial tutorial)
+    {
+        foreach (var option in options)
+        {
+            option.GetComponent<LoadOption>().SetTutorialObject(tutorial);
+        }
     }
 }

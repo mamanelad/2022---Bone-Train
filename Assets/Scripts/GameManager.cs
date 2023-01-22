@@ -144,7 +144,7 @@ public class GameManager : MonoBehaviour
             if (!_tutorial)
             {
                 _tutorial = FindObjectOfType<Tutorial>();
-                //_eventManager.SetTutorialObject(_tutorial);
+                _interactionManager.SetTutorialObject(_tutorial);
                 
             }
             

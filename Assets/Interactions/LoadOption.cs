@@ -57,6 +57,7 @@ public class LoadOption : MonoBehaviour
     private List<GameObject> currentItems;
     private InteractionManager interactionManager;
     public Option option;
+    private Tutorial _tutorial;
 
     private void Start()
     {
@@ -128,6 +129,14 @@ public class LoadOption : MonoBehaviour
     public void ChooseOption()
     {
         interactionManager.ChooseOption(option);
+        
+        if (GameManager.Shared.GetTutorialIsOn())
+        {
+            if (!_tutorial)
+                _tutorial = FindObjectOfType<Tutorial>();
+            _tutorial.NextButtonFromEventObject();
+             
+        }
     }
 
     public void PlayHoverSound()
@@ -138,5 +147,10 @@ public class LoadOption : MonoBehaviour
     public void PlayClickSound()
     {
         RuntimeManager.PlayOneShot(clickSound);
+    }
+    
+    public void SetTutorialObject(Tutorial tutorial)
+    {
+        _tutorial = tutorial;
     }
 }
