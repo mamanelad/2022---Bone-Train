@@ -1249,6 +1249,14 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 7010970975498922258, guid: 3044741c5dd168144ace7e0aca5c0aef, type: 3}
+      propertyPath: iconBox
+      value: 
+      objectReference: {fileID: 4021086815737434476}
+    - target: {fileID: 7010970975498922258, guid: 3044741c5dd168144ace7e0aca5c0aef, type: 3}
+      propertyPath: textBox
+      value: 
+      objectReference: {fileID: 2900618383810037694}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 3044741c5dd168144ace7e0aca5c0aef, type: 3}
 --- !u!224 &108121819490725632 stripped
@@ -1256,6 +1264,17 @@ RectTransform:
   m_CorrespondingSourceObject: {fileID: 5285741472557852270, guid: 3044741c5dd168144ace7e0aca5c0aef, type: 3}
   m_PrefabInstance: {fileID: 5249677528463493486}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &2900618383810037694 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 6961308181840383696, guid: 3044741c5dd168144ace7e0aca5c0aef, type: 3}
+  m_PrefabInstance: {fileID: 5249677528463493486}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f4688fdb7df04437aeb418b961361dc5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!114 &2995281953630265468 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 7010970975498922258, guid: 3044741c5dd168144ace7e0aca5c0aef, type: 3}
@@ -1265,5 +1284,16 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: aef86d101a236504b8d1a6d098edda5e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &4021086815737434476 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 9157890358030604290, guid: 3044741c5dd168144ace7e0aca5c0aef, type: 3}
+  m_PrefabInstance: {fileID: 5249677528463493486}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
