@@ -67,6 +67,7 @@ public class BreakChain : MonoBehaviour
 
     private void CallToStopOrStartTrain()
     {
+        
         switch (_stopOrStart)
         {
             case StopOrStart.Stop:

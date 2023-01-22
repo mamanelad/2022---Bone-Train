@@ -1,6 +1,7 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using System.Linq;
 using TMPro;
 using UnityEngine;
 
@@ -16,10 +17,29 @@ public class UIManager : MonoBehaviour
     [SerializeField] public TextMeshProUGUI soulStonesAmountNumberText;
     private BreakChain _breakChainSlider;
 
+    public enum UiOption
+    {
+        Handle,
+        Fuel,
+        Interaction,
+        Tutorial,
+        Arrows
+    }
+
+    [SerializeField] private UiOption[] handleWorkWith;
+    [SerializeField] private UiOption[] fuelWorkWith;
+    [SerializeField] private UiOption[] InteractionWorkWith;
+    [SerializeField] private UiOption[] arrowsWorkWith;
+
+    private UiOption _curOption;
+
 
     private void Start()
     {
         _breakChainSlider = GetComponentInChildren<BreakChain>();
+        SetGoodSouls();
+        SetBadSouls();
+        SetSoulStones();
     }
 
     public void SetGoodSouls()
@@ -37,6 +57,41 @@ public class UIManager : MonoBehaviour
     {
         soulStonesAmountNumberText.text = Convert.ToString(GameManager.Shared.SoulStones);
     }
+
+    private void SetCurUIOption(UiOption uiOption)
+    {
+        _curOption = uiOption;
+    }
+
+    public bool CanUIElementWork(UiOption uiOption)
+    {
+        if (uiOption == _curOption) return true;
+        switch (_curOption)
+        {
+            case UiOption.Handle:
+                return handleWorkWith.Contains(uiOption);
+
+            case UiOption.Fuel:
+                return fuelWorkWith.Contains(uiOption);
+
+            case UiOption.Interaction:
+                return InteractionWorkWith.Contains(uiOption);
+
+            case UiOption.Tutorial:
+                return true;
+
+            case UiOption.Arrows:
+                return arrowsWorkWith.Contains(uiOption);
+        }
+
+        return false;
+    }
+
+    public BreakChain GetBreakChain()
+    {
+        return _breakChainSlider;
+    }
+
 
     public void AddItem(ItemData data)
     {
@@ -61,10 +116,4 @@ public class UIManager : MonoBehaviour
 
         return false;
     }
-
-    public BreakChain GetBreakChain()
-    {
-        return _breakChainSlider;
-    }
-    
 }
