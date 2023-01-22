@@ -9,11 +9,12 @@ using UnityEngine.Serialization;
 [DefaultExecutionOrder(-999)]
 public class GameManager : MonoBehaviour
 {
-    [Space(20)] [Header("Event")] private EventObject _currEventData;
+    [Space(20)] [Header("Event")] 
+    private InteractionData _currEventData;
     private bool _inEvent;
     private bool _gotToNewEvent;
-    private EventManager _eventManager;
-    [SerializeField] private EventObject devilEvent;
+    private InteractionManager _interactionManager;
+    [SerializeField] private InteractionData devilEvent;
 
 
     [Space(20)] [Header("UI")] private UIManager _uiManager;
@@ -143,7 +144,7 @@ public class GameManager : MonoBehaviour
             if (!_tutorial)
             {
                 _tutorial = FindObjectOfType<Tutorial>();
-                _eventManager.SetTutorialObject(_tutorial);
+                //_eventManager.SetTutorialObject(_tutorial);
                 
             }
             
@@ -183,13 +184,13 @@ public class GameManager : MonoBehaviour
             SceneManager.LoadScene("MainMenue");
         }
 
-        if (_eventManager == null)
+        if (_interactionManager == null)
         {
             print("The event manager needs to start turn on");
-            _eventManager = FindObjectOfType<EventManager>();
-            if (_eventManager)
+            _interactionManager = FindObjectOfType<InteractionManager>();
+            if (_interactionManager)
             {
-                _eventManager.gameObject.SetActive(false);
+                _interactionManager.gameObject.SetActive(false);
             }
         }
 
@@ -280,8 +281,8 @@ public class GameManager : MonoBehaviour
         _inEvent = true;
         Time.timeScale = 0;
         _gotToNewEvent = false;
-        _eventManager.gameObject.SetActive(true);
-        _eventManager.StartEvent(_currEventData);
+        _interactionManager.gameObject.SetActive(true);
+        _interactionManager.StartInteraction(_currEventData);
     }
 
     public void ReturnFromEvent()
@@ -344,7 +345,7 @@ public class GameManager : MonoBehaviour
             }
             else
             {
-                _eventManager.StartEvent(devilEvent);
+                _interactionManager.StartInteraction(devilEvent);
             }
         }
 
@@ -594,9 +595,9 @@ public class GameManager : MonoBehaviour
         return train;
     }
 
-    public EventManager GetEventManager()
+    public InteractionManager GetEventManager()
     {
-        return _eventManager;
+        return _interactionManager;
     }
 
     public Mouse GetMouse()

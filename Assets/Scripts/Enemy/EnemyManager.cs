@@ -7,8 +7,8 @@ using Random = UnityEngine.Random;
 
 public class EnemyManager : MonoBehaviour
 {
-    private EventManager _eventManager;
-    [SerializeField] private EventObject enemyEvent;
+    private InteractionManager _eventManager;
+    [SerializeField] private InteractionData enemyEvent;
 
     [Space(10)] [Header("Amounts")] private int _enemiesAmount;
     [SerializeField] private int enemiesAmountMax = 0;
@@ -76,7 +76,7 @@ public class EnemyManager : MonoBehaviour
     {
         if (enemyEvent)
         {    _eventManager = GameManager.Shared.GetEventManager();
-            _eventManager.StartEvent(enemyEvent);
+            _eventManager.StartInteraction(enemyEvent);
         }
 
         else
