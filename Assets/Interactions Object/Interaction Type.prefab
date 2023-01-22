@@ -148,6 +148,8 @@ MonoBehaviour:
     description: This Encounter Has an Elemnt of Luck To It
   - icon: {fileID: -631982821, guid: 00fe1cbe0beefb3438bf35fb7dc5de7a, type: 3}
     description: In This Encounter you can pick un an item
+  iconBox: {fileID: 9157890358030604290}
+  textBox: {fileID: 6961308181840383696}
 --- !u!222 &5285741472557852268
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -199,6 +201,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   data: []
+  iconBox: {fileID: 0}
+  textBox: {fileID: 0}
 --- !u!1 &6004553640686017535
 GameObject:
   m_ObjectHideFlags: 0
