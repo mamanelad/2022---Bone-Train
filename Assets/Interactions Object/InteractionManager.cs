@@ -68,7 +68,7 @@ public class InteractionManager : MonoBehaviour
 
     public void ChooseOption(LoadOption.Option option)
     {
-        GameManager.Shared.ChangeByGoodSouls(option.badSouls);
+        GameManager.Shared.ChangeByGoodSouls(option.goodSouls);
         GameManager.Shared.ChangeByBadSouls(option.badSouls);
         GameManager.Shared.ChangeBySoulStones(option.soulsStones);
         // add option.sword

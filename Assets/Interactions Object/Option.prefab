@@ -296,8 +296,8 @@ MonoBehaviour:
   - {fileID: 315357313, guid: 00fe1cbe0beefb3438bf35fb7dc5de7a, type: 3}
   - {fileID: -1479789207, guid: 00fe1cbe0beefb3438bf35fb7dc5de7a, type: 3}
   - {fileID: 1815240124, guid: 5c5708cce3cf440469b1066f50875144, type: 3}
-  - {fileID: 1412945177, guid: 88468806d67ba5543aa10af74222f54c, type: 3}
   - {fileID: 36459952, guid: 88468806d67ba5543aa10af74222f54c, type: 3}
+  - {fileID: 1412945177, guid: 88468806d67ba5543aa10af74222f54c, type: 3}
   title: {fileID: 4784053492966041417}
   textBox: {fileID: 1952566148745648888}
   dealsTab: {fileID: 149373574648909263}
