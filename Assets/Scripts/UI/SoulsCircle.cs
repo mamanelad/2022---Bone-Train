@@ -20,6 +20,9 @@ public class SoulsCircle : MonoBehaviour
     private float _goodSouls;
     private float _badSouls;
 
+    [Space(20)] [Header("Times")] [SerializeField]
+    private float changeBarTime = 0.1f;
+    private float _changeBarTimer;
 
     [Space(30)] [Header("Test")] [SerializeField]
     private bool test;
@@ -39,6 +42,7 @@ public class SoulsCircle : MonoBehaviour
     void Start()
     {
         ChangeSoulsAmount(WhenTheFunctionIsCalled.OnInit);
+        _changeBarTimer = changeBarTime;
     }
 
 
@@ -51,7 +55,13 @@ public class SoulsCircle : MonoBehaviour
 
         if (_initFinish)
         {
-            UpdateSoulsBar(WhenTheFunctionIsCalled.OnPlay);
+            _changeBarTimer -= Time.deltaTime;
+            if (_changeBarTimer <= 0)
+            {
+                _changeBarTimer = changeBarTime;
+                UpdateSoulsBar();
+            }
+            
         }
     }
 
