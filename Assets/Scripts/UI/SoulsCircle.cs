@@ -2,13 +2,15 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Serialization;
 using UnityEngine.UI;
 
 public class SoulsCircle : MonoBehaviour
 {
     [SerializeField] private Image badSoulsImage;
     [SerializeField] private Image blackMarkImage;
-    [SerializeField] [Range(0f, 0.25f)] private float _fillAmount;
+    [SerializeField] [Range(0f, 0.25f)] private float fillAmountOld;
+    [Range(0f, 0.25f)] private float _fillAmountNew;
 
     [SerializeField] private float minFillAmount = 0f;
     [SerializeField] private float maxFillAmount = 0.25f;
@@ -18,19 +20,31 @@ public class SoulsCircle : MonoBehaviour
     private float _goodSouls;
     private float _badSouls;
 
+    [Space(20)] [Header("Times")] [SerializeField]
+    private float changeBarTime = 0.1f;
+    private float _changeBarTimer;
 
     [Space(30)] [Header("Test")] [SerializeField]
     private bool test;
 
     [SerializeField] private float goodSoulsTest;
     [SerializeField] private float badSoulsTest;
-    private float fillAmountTest;
+    private float _fillAmountTest;
+    private bool _initFinish;
+
+    public enum WhenTheFunctionIsCalled
+    {
+        OnInit,
+        OnPlay
+    }
+
 
     void Start()
     {
-        ChangeSoulsAmount();
-        
+        ChangeSoulsAmount(WhenTheFunctionIsCalled.OnInit);
+        _changeBarTimer = changeBarTime;
     }
+
 
     private void Update()
     {
@@ -38,30 +52,53 @@ public class SoulsCircle : MonoBehaviour
         {
             TestFunction();
         }
+
+        if (_initFinish)
+        {
+            _changeBarTimer -= Time.deltaTime;
+            if (_changeBarTimer <= 0)
+            {
+                _changeBarTimer = changeBarTime;
+                UpdateSoulsBar();
+            }
+            
+        }
     }
 
 
-    public void ChangeSoulsAmount()
+    public void ChangeSoulsAmount(WhenTheFunctionIsCalled when = WhenTheFunctionIsCalled.OnPlay)
     {
         _goodSouls = GameManager.Shared.GetGoodSouls();
         _badSouls = GameManager.Shared.GetBadSouls();
-        CalculateFillAmount();
-        UpdateSoulsBar();
+        CalculateFillAmount(when);
+        UpdateSoulsBar(when);
     }
 
-    private void CalculateFillAmount()
+    private void CalculateFillAmount(WhenTheFunctionIsCalled when = WhenTheFunctionIsCalled.OnPlay)
     {
         float totalSoulsAmount = _goodSouls + _badSouls;
         float badSoulsPercentageFromTotal = _badSouls / totalSoulsAmount;
-        _fillAmount = Mathf.Lerp(minFillAmount, maxFillAmount, badSoulsPercentageFromTotal);
+
+        if (when == WhenTheFunctionIsCalled.OnInit)
+            fillAmountOld = Mathf.Lerp(minFillAmount, maxFillAmount, badSoulsPercentageFromTotal);
+        else
+            _fillAmountNew = Mathf.Lerp(minFillAmount, maxFillAmount, badSoulsPercentageFromTotal);
     }
 
 
-    private void UpdateSoulsBar()
+    private void UpdateSoulsBar(WhenTheFunctionIsCalled when = WhenTheFunctionIsCalled.OnPlay)
     {
         if (test) return;
-        badSoulsImage.fillAmount = _fillAmount;
-        blackMarkImage.fillAmount = _fillAmount + addToBlack;
+        if (when == WhenTheFunctionIsCalled.OnPlay)
+        {
+            if (fillAmountOld < _fillAmountNew)
+                fillAmountOld += 1;
+            else
+                fillAmountOld -= 1;
+        }
+        
+        badSoulsImage.fillAmount = fillAmountOld;
+        blackMarkImage.fillAmount = fillAmountOld + addToBlack;
     }
 
     private void TestFunction()
@@ -69,9 +106,9 @@ public class SoulsCircle : MonoBehaviour
         print("kaka");
         float totalSoulsAmount = goodSoulsTest + badSoulsTest;
         float badSoulsPercentageFromTotal = badSoulsTest / totalSoulsAmount;
-        fillAmountTest = Mathf.Lerp(minFillAmount, maxFillAmount, badSoulsPercentageFromTotal);
-        print(fillAmountTest);
-        badSoulsImage.fillAmount = fillAmountTest;
-        blackMarkImage.fillAmount = fillAmountTest + addToBlack;
+        _fillAmountTest = Mathf.Lerp(minFillAmount, maxFillAmount, badSoulsPercentageFromTotal);
+        print(_fillAmountTest);
+        badSoulsImage.fillAmount = _fillAmountTest;
+        blackMarkImage.fillAmount = _fillAmountTest + addToBlack;
     }
 }
