@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using FMODUnity;
@@ -9,21 +10,24 @@ using UnityEngine.UI;
 public class InteractionManager : MonoBehaviour
 {
     [SerializeField] private InteractionData interactionData;
-    
+    private List<LoadOption.Option> interactionOptions;
+
     [SerializeField] private Image character;
 
     [SerializeField] private TextMeshProUGUI title;
     [SerializeField] private TextMeshProUGUI textBox;
 
     [SerializeField] private LoadIcon icon;
-    [SerializeField] private List<GameObject> options;
+    [SerializeField] private LoadSpecialItem specialItem;
+    [SerializeField] private List<GameObject> optionsGameObjects;
 
     public void StartInteraction(InteractionData newInteractionData)
     {
         gameObject.SetActive(true);
         interactionData = newInteractionData;
+        interactionOptions = newInteractionData.options;
         LoadInteraction();
-        
+
         UIAudioManager.Instance.PlayUIEventStart();
         UIAudioManager.Instance.PauseTrainLoop();
         GameManager.Shared.StopTrain();
@@ -43,27 +47,47 @@ public class InteractionManager : MonoBehaviour
         gameObject.SetActive(false);
         Time.timeScale = 1;
     }
-    
+
     public void LoadInteraction()
     {
         character.sprite = interactionData.character;
         title.text = interactionData.title;
         textBox.text = interactionData.textBox;
-        
+
         if (!interactionData.audio.IsNull)
             RuntimeManager.PlayOneShot(interactionData.audio);
-        
+
         icon.Load(interactionData.iconIndex);
 
-        // loading the options
+        LoadOptions();
+        LoadSpecial();
+    }
+
+    private void LoadOptions()
+    {
         int optionCounter = 0;
-        foreach (var option in interactionData.options)
+        foreach (var option in interactionOptions)
         {
-            var currentOption = options[optionCounter];
+            var currentOption = optionsGameObjects[optionCounter];
             currentOption.SetActive(true);
             currentOption.GetComponent<LoadOption>().Load(option);
             optionCounter += 1;
         }
+    }
+
+    private void LoadSpecial()
+    {
+        if (interactionData.iconIndex == LoadIcon.IconIndex.ENEMY)
+            specialItem.Load(LoadSpecialItem.SpecialItemIndex.SHIELD);
+
+        if (interactionData.iconIndex == LoadIcon.IconIndex.REGULAR)
+            specialItem.Load(LoadSpecialItem.SpecialItemIndex.SWORD);
+
+        if (interactionData.iconIndex == LoadIcon.IconIndex.CHANCE)
+            specialItem.Load(LoadSpecialItem.SpecialItemIndex.SWORD);
+
+        if (interactionData.iconIndex == LoadIcon.IconIndex.ITEM)
+            specialItem.Load(LoadSpecialItem.SpecialItemIndex.SWORD);
     }
 
     public void ChooseOption(LoadOption.Option option)
@@ -77,13 +101,50 @@ public class InteractionManager : MonoBehaviour
             GameManager.Shared.ChangeByShields(1);
         if (!option.sound.IsNull)
             RuntimeManager.PlayOneShot(option.sound);
-        
+
         EndInteraction();
+    }
+
+    public void ActivateSpecialItem(LoadSpecialItem.SpecialItemIndex index)
+    {
+        if (index == LoadSpecialItem.SpecialItemIndex.SWORD)
+            ActivateSword();
+
+        if (index == LoadSpecialItem.SpecialItemIndex.SHIELD)
+            ActivateShield();
+    }
+
+    private void ActivateSword()
+    {
+        GameManager.Shared.ChangeBySwords(-1);
+        RemoveNegativeOptions();
+        LoadOptions();
+    }
+
+    private void ActivateShield()
+    {
+        GameManager.Shared.ChangeByShields(-1);
+        EndInteraction();
+    }
+
+    private void RemoveNegativeOptions()
+    {
+        List<LoadOption.Option> modifiedOptions = new List<LoadOption.Option>();
+        foreach (var option in interactionOptions)
+        {
+            LoadOption.Option modifiedOption = option;
+            modifiedOption.goodSouls = Math.Max(modifiedOption.goodSouls, -1);
+            modifiedOption.badSouls = Math.Min(modifiedOption.badSouls, 1);
+            modifiedOption.soulsStones = Math.Max(modifiedOption.soulsStones, -1);
+            modifiedOptions.Add(modifiedOption);
+        }
+
+        interactionOptions = modifiedOptions;
     }
 
     public void SetTutorialObject(Tutorial tutorial)
     {
-        foreach (var option in options)
+        foreach (var option in optionsGameObjects)
         {
             option.GetComponent<LoadOption>().SetTutorialObject(tutorial);
         }
