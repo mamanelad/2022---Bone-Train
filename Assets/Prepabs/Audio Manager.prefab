@@ -86,6 +86,20 @@ MonoBehaviour:
       Data3: -871205744
       Data4: -1790376566
     Path: event:/UI/Event Start
+  trainHorn:
+    Guid:
+      Data1: 1566218138
+      Data2: 1230972742
+      Data3: 1993270692
+      Data4: 349680557
+    Path: event:/Train/Train Horn
+  trainHalts:
+    Guid:
+      Data1: -789516437
+      Data2: 1183670239
+      Data3: 358100388
+      Data4: 916339100
+    Path: event:/Train/Train Halt
   trainLoop: {fileID: 208174597356078941}
 --- !u!114 &208174597356078938
 MonoBehaviour:

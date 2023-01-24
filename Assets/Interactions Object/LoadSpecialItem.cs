@@ -23,10 +23,17 @@ public class LoadSpecialItem : MonoBehaviour
 
     private SpecialItemIndex itemIndex;
 
+<<<<<<< HEAD
     [Space(20)] [Header("Sounds")] [SerializeField]
     private EventReference hoverSound;
 
     [SerializeField] private EventReference clickSound;
+=======
+    [Space(20)] [Header("Sounds")] 
+    [SerializeField] private EventReference hoverSound;
+    [SerializeField] private EventReference clickSwordSound;
+    [SerializeField] private EventReference clickShieldSound;
+>>>>>>> 39852ffa05725920d14df9f071758ecd1c3d3a10
 
     private void Start()
     {
@@ -71,6 +78,14 @@ public class LoadSpecialItem : MonoBehaviour
         if (itemIndex == SpecialItemIndex.SHIELD && GameManager.Shared.Shields <= 0)
             return;
 
+<<<<<<< HEAD
+=======
+        if (itemIndex == SpecialItemIndex.SWORD)
+            PlayClickSwordSound();
+        if (itemIndex == SpecialItemIndex.SHIELD)
+            PlayClickShieldSound();
+        
+>>>>>>> 39852ffa05725920d14df9f071758ecd1c3d3a10
         disableIcon.SetActive(true);
 
         interactionManager.ActivateSpecialItem(itemIndex);
@@ -80,9 +95,21 @@ public class LoadSpecialItem : MonoBehaviour
     {
         RuntimeManager.PlayOneShot(hoverSound);
     }
+<<<<<<< HEAD
 
     public void PlayClickSound()
     {
         RuntimeManager.PlayOneShot(clickSound);
+=======
+    
+    private void PlayClickSwordSound()
+    {
+        RuntimeManager.PlayOneShot(clickSwordSound);
+    }
+    
+    private void PlayClickShieldSound()
+    {
+        RuntimeManager.PlayOneShot(clickShieldSound);
+>>>>>>> 39852ffa05725920d14df9f071758ecd1c3d3a10
     }
 }

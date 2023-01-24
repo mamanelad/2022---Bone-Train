@@ -258,10 +258,14 @@ MonoBehaviour:
   Path: Assets/FMODBanks/Desktop/Master.strings.bank
   Name: Master.strings
   StudioPath: bank:/Master.strings
+<<<<<<< HEAD
   lastModified: 638101955505453717
+=======
+  lastModified: 638102003038320543
+>>>>>>> 39852ffa05725920d14df9f071758ecd1c3d3a10
   FileSizes:
   - Name: 
-    Value: 1778
+    Value: 1870
   Exists: 1
 --- !u!114 &-2509704263585177046
 MonoBehaviour:
@@ -409,12 +413,18 @@ MonoBehaviour:
   - {fileID: -6789923524386715063}
   - {fileID: 6021938559323583795}
   - {fileID: -6753132664751052103}
+  - {fileID: 5252843552672729446}
+  - {fileID: 5726455006486713992}
   EditorParameters: []
   MasterBanks:
   - {fileID: 7029627800661937997}
   StringsBanks:
   - {fileID: -2581290552187707430}
+<<<<<<< HEAD
   cacheTime: 638101955505453717
+=======
+  cacheTime: 638102003038320543
+>>>>>>> 39852ffa05725920d14df9f071758ecd1c3d3a10
   cacheVersion: 131601
 --- !u!114 &671523591007706617
 MonoBehaviour:
@@ -551,6 +561,60 @@ MonoBehaviour:
   MinDistance: 1
   MaxDistance: 20
   Length: 0
+--- !u!114 &5252843552672729446
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/UI/Shield Use
+  m_EditorClassIdentifier: 
+  Path: event:/UI/Shield Use
+  Guid:
+    Data1: 868232771
+    Data2: 1175260464
+    Data3: -1686061944
+    Data4: 1081420425
+  Banks:
+  - {fileID: 7029627800661937997}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 0
+--- !u!114 &5726455006486713992
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/UI/Sword Use
+  m_EditorClassIdentifier: 
+  Path: event:/UI/Sword Use
+  Guid:
+    Data1: 58403836
+    Data2: 1121172097
+    Data3: 1127183799
+    Data4: -1093766139
+  Banks:
+  - {fileID: 7029627800661937997}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 0
 --- !u!114 &6021938559323583795
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -593,7 +657,11 @@ MonoBehaviour:
   Path: Assets/FMODBanks/Desktop/Master.bank
   Name: Master
   StudioPath: bank:/Master
+<<<<<<< HEAD
   lastModified: 638101955505403933
+=======
+  lastModified: 638102003038290462
+>>>>>>> 39852ffa05725920d14df9f071758ecd1c3d3a10
   FileSizes: []
   Exists: 1
 --- !u!114 &7761155096278969309
