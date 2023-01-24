@@ -13,14 +13,11 @@ public class Mouse : MonoBehaviour
 
     void Start()
     {
-        Cursor.visible = false;
-        
         Cursor.SetCursor(idleMouseTextureSmall, Vector2.zero, CursorMode.ForceSoftware);
     }
 
     private void Update()
     {
-        // Vector2 curPos = Camera.main.ScreenToWorldPoint();
         
         if (isMouseCloseEveryWhere)
             MouseCloseEveryWhere();

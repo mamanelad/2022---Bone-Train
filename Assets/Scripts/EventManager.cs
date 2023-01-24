@@ -39,6 +39,8 @@ public class EventManager : MonoBehaviour
     private Sprite buttonRejectSprite;
     private Sprite buttonSingleSprite;
 
+    private EventAudioManager currentEventAudioManager;
+
     private void Start()
     {
         uiManager = FindObjectOfType<UIManager>();
@@ -156,11 +158,6 @@ public class EventManager : MonoBehaviour
 
     public void Accept()
     {
-        GameManager.Shared.ChangeBySoulStones(data.action.soulStones);
-        GameManager.Shared.ChangeByGoodSouls(data.action.goodSouls);
-        GameManager.Shared.ChangeByBadSouls(data.action.badSouls);
-        UIAudioManager.Instance.PlayUIClickEvent();
-        
         if (data.action.item && !data.action.receiveItem)
         {
             if (uiManager.CheckIfPlayerGotItem(data.action.item))
@@ -173,6 +170,15 @@ public class EventManager : MonoBehaviour
             }
         }
         
+        GameManager.Shared.ChangeBySoulStones(data.action.soulStones);
+        GameManager.Shared.ChangeByGoodSouls(data.action.goodSouls);
+        GameManager.Shared.ChangeByBadSouls(data.action.badSouls);
+        UIAudioManager.Instance.PlayUIClickEvent();
+        
+        if (currentEventAudioManager)
+            currentEventAudioManager.PlayAccept();
+        
+        
         if (data.action.item && data.action.receiveItem)
             uiManager.AddItem(data.action.item);
         
@@ -181,13 +187,16 @@ public class EventManager : MonoBehaviour
 
     public void Reject()
     {
+        if (currentEventAudioManager)
+            currentEventAudioManager.PlayReject();
         UIAudioManager.Instance.PlayUIClickEvent();
         StartCoroutine(EndEvent());
     }
 
-    public void StartEvent(EventObject newData)
+    public void StartEvent(EventObject newData, EventAudioManager audioManager = null)
     {
         gameObject.SetActive(true);
+        currentEventAudioManager = audioManager;
         UIAudioManager.Instance.PlayUIEventStart();
         UIAudioManager.Instance.PauseTrainLoop();
         GameManager.Shared.StopTrain();
@@ -198,6 +207,7 @@ public class EventManager : MonoBehaviour
     public IEnumerator EndEvent()
     {
         yield return new WaitForSecondsRealtime(0.2f);
+        currentEventAudioManager = null;
         ResetButtonsSprite();
         UIAudioManager.Instance.ResumeTrainLoop();
         gameObject.SetActive(false);

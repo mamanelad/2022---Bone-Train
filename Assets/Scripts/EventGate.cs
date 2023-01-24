@@ -1,20 +1,25 @@
-using System;
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public class EventGate : MonoBehaviour
 {
     [SerializeField] private EventObject eventData;
     [SerializeField] private EventManager eventManager;
-
+    [SerializeField] private SpriteRenderer minimapIcon;
+    
     [SerializeField] private Collider sphereTrigger;
     [SerializeField] private Collider eventTrigger;
 
+    private EventAudioManager audioManager;
+
     private void Start()
     {
+        audioManager = GetComponent<EventAudioManager>();
+        eventManager = FindObjectOfType<EventManager>();
         sphereTrigger.enabled = true;
         eventTrigger.enabled = false;
+
+        minimapIcon.color = Color.Lerp(Color.green, Color.red, eventData.dangerChance);
+
     }
 
     private void OnTriggerEnter(Collider other)
@@ -25,15 +30,14 @@ public class EventGate : MonoBehaviour
             {
                 sphereTrigger.enabled = false;
                 eventTrigger.enabled = true;
-                // if (eventData.environmentAudio)
-                //     other.gameObject.GetComponentInChildren<TrainAudio>().AddClip(eventData.environmentAudio);
+                audioManager.PlayEnter();
+                
             }
 
             else if (eventTrigger.enabled)
             {
-                // if (eventData.eventAudio)
-                //     other.gameObject.GetComponentInChildren<TrainAudio>().AddClip(eventData.eventAudio);
-                eventManager.StartEvent(eventData);
+                audioManager.PlayText();
+                eventManager.StartEvent(eventData, audioManager);
             }
         }
     }

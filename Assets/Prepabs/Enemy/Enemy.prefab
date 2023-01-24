@@ -45,11 +45,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 74845a465a2ff9a46b04cec64394dab0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _speedPercentageFromTrainMax: 25
-  _speedPercentageFromTrainMin: 10
+  _speedPercentageFromTrainMax: 7
+  _speedPercentageFromTrainMin: 2
+  _speedPercentageFromTrain: 0
   factorSpeed: 0.003
-  distanceForAttack: 200
-  distanceForSelfDestroy: 1200
+  distanceForAttack: 50
+  distanceForSelfDestroy: 1000
 --- !u!1001 &5023691553041042409
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -59,7 +60,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 6478140971221483614, guid: f5b38ea38819a8b4d96d5987cd207921, type: 3}
       propertyPath: m_Color.b
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 6478140971221483614, guid: f5b38ea38819a8b4d96d5987cd207921, type: 3}
       propertyPath: m_Color.g
@@ -67,7 +68,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6478140971221483614, guid: f5b38ea38819a8b4d96d5987cd207921, type: 3}
       propertyPath: m_Color.r
-      value: 1
+      value: 0.6762996
       objectReference: {fileID: 0}
     - target: {fileID: 7375020728163088244, guid: f5b38ea38819a8b4d96d5987cd207921, type: 3}
       propertyPath: m_RootOrder

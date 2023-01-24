@@ -7,7 +7,7 @@ using UnityEngine.EventSystems;
 
 public class Arrow : MonoBehaviour
 {
-    private Image _image;
+    [SerializeField] private Image _image;
     [SerializeField] private Sprite regularSprite;
     [SerializeField] private Sprite markSprite;
     [SerializeField] private Arrow otherArrow;
@@ -28,9 +28,9 @@ public class Arrow : MonoBehaviour
 
     private void Awake()
     {
-        _image = GetComponent<Image>();
+        // _image = GetComponent<Image>();
         regularColor = _image.color;
-        gameObject.SetActive(false);
+        // gameObject.SetActive(false);
     }
 
     void Start()
@@ -80,7 +80,15 @@ public class Arrow : MonoBehaviour
     public void ChangeSpriteToRegular()
     {
         isPressed = false;
-        _image.sprite = regularSprite;
+        if (!_image)
+        {
+            _image = GetComponent<Image>();
+        }
+
+        if (_image)
+        {
+            _image.sprite = regularSprite;
+        }
         ChangeColorToOnColor(false);
     }
 
@@ -104,4 +112,14 @@ public class Arrow : MonoBehaviour
     public void PointerUp()
     {
         GameManager.Shared.GetMouse().ChangeToIdleMouse();    }
+    
+    public void PointerEnter()
+    {
+        GameManager.Shared.GetMouse().ChangeSizeBigger();
+    }
+
+    public void PointerExit()
+    {
+        GameManager.Shared.GetMouse().ChangeSizeSmaller();
+    }
 }

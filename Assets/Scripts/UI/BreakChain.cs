@@ -94,4 +94,14 @@ public class BreakChain : MonoBehaviour
     {
         GameManager.Shared.GetMouse().ChangeToIdleMouse();
     }
+    
+    public void PointerEnter()
+    {
+        GameManager.Shared.GetMouse().ChangeSizeBigger();
+    }
+
+    public void PointerExit()
+    {
+        GameManager.Shared.GetMouse().ChangeSizeSmaller();
+    }
 }
