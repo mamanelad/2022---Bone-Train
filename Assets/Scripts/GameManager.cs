@@ -9,8 +9,7 @@ using UnityEngine.Serialization;
 [DefaultExecutionOrder(-999)]
 public class GameManager : MonoBehaviour
 {
-    [Space(20)] [Header("Event")] 
-    private InteractionData _currEventData;
+    [Space(20)] [Header("Event")] private InteractionData _currEventData;
     private bool _inEvent;
     private bool _gotToNewEvent;
     private InteractionManager _interactionManager;
@@ -21,10 +20,14 @@ public class GameManager : MonoBehaviour
     [SerializeField] public int soulStonesInitializeValue;
     [SerializeField] public int goodSoulsInitializeValue;
     [SerializeField] public int badSoulsInitializeValue;
+    [SerializeField] public int swordsInitializeValue;
+    [SerializeField] public int shieldsInitializeValue;
 
     [NonSerialized] public int SoulStones;
     [NonSerialized] public int GoodSouls;
     [NonSerialized] public int BadSouls;
+    [NonSerialized] public int Swords;
+    [NonSerialized] public int Shields;
 
     [SerializeField] private Arrow[] _arrows;
     private Arrow curMouseOnArrow;
@@ -80,6 +83,7 @@ public class GameManager : MonoBehaviour
 
     [Space(20)] [Header("Tutorial")] [SerializeField]
     private bool _tutorialIsOn;
+
     private Tutorial _tutorial;
 
     [Header("Test")] [SerializeField] private bool testArrows0;
@@ -138,28 +142,21 @@ public class GameManager : MonoBehaviour
         _uiManager = FindObjectOfType<UIManager>();
         InitArrows();
         _soulsCircle = FindObjectOfType<SoulsCircle>();
-        
+
         if (_tutorialIsOn)
         {
             if (!_tutorial)
             {
                 _tutorial = FindObjectOfType<Tutorial>();
                 _interactionManager.SetTutorialObject(_tutorial);
-                
             }
-            
+
             _tutorial.OpenNextTutorialObject();
         }
-        
-
-            
     }
 
     private void Update()
     {
-        print("good souls:" + GoodSouls);
-        print("bad souls:" + BadSouls);
-
         if (Input.GetKeyDown(KeyCode.R))
         {
             SceneManager.LoadScene("Opening screen", LoadSceneMode.Single);
@@ -227,6 +224,8 @@ public class GameManager : MonoBehaviour
         SoulStones = soulStonesInitializeValue;
         GoodSouls = goodSoulsInitializeValue;
         BadSouls = badSoulsInitializeValue;
+        Swords = swordsInitializeValue;
+        Shields = shieldsInitializeValue;
     }
 
     private void InitUiNumbers()
@@ -239,6 +238,8 @@ public class GameManager : MonoBehaviour
                 ChangeByBadSouls(badSoulsInitializeValue);
                 ChangeByGoodSouls(goodSoulsInitializeValue);
                 ChangeBySoulStones(soulStonesInitializeValue);
+                ChangeBySwords(swordsInitializeValue);
+                ChangeByShields(shieldsInitializeValue);
             }
         }
     }
@@ -360,6 +361,24 @@ public class GameManager : MonoBehaviour
     public int GetSoulStones()
     {
         return SoulStones;
+    }
+
+    public void ChangeBySwords(int addNum)
+    {
+        if (Swords + addNum < 0)
+            Swords = 0;
+
+        Swords += addNum;
+        _uiManager.SetSwords();
+    }
+
+    public void ChangeByShields(int addNum)
+    {
+        if (Shields + addNum < 0)
+            Shields = 0;
+
+        Shields += addNum;
+        _uiManager.SetShields();
     }
 
 

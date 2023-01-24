@@ -71,8 +71,10 @@ public class InteractionManager : MonoBehaviour
         GameManager.Shared.ChangeByGoodSouls(option.goodSouls);
         GameManager.Shared.ChangeByBadSouls(option.badSouls);
         GameManager.Shared.ChangeBySoulStones(option.soulsStones);
-        // add option.sword
-        // add option.shield
+        if (option.sword)
+            GameManager.Shared.ChangeBySwords(1);
+        if (option.shield)
+            GameManager.Shared.ChangeByShields(1);
         if (!option.sound.IsNull)
             RuntimeManager.PlayOneShot(option.sound);
         

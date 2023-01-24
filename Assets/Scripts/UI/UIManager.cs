@@ -15,6 +15,8 @@ public class UIManager : MonoBehaviour
     [Header("Text")] [SerializeField] public TextMeshProUGUI goodSoulsNumberText;
     [SerializeField] public TextMeshProUGUI badSoulsNumberText;
     [SerializeField] public TextMeshProUGUI soulStonesAmountNumberText;
+    [SerializeField] public TextMeshProUGUI swordsAmountNumberText;
+    [SerializeField] public TextMeshProUGUI shieldsAmountNumberText;
     private BreakChain _breakChainSlider;
 
     public enum UiOption
@@ -56,6 +58,16 @@ public class UIManager : MonoBehaviour
     public void SetSoulStones()
     {
         soulStonesAmountNumberText.text = Convert.ToString(GameManager.Shared.SoulStones);
+    }
+    
+    public void SetSwords()
+    {
+        swordsAmountNumberText.text = $"X {Convert.ToString(GameManager.Shared.Swords)}";
+    }
+    
+    public void SetShields()
+    {
+        shieldsAmountNumberText.text = $"X {Convert.ToString(GameManager.Shared.Shields)}";
     }
 
     private void SetCurUIOption(UiOption uiOption)
