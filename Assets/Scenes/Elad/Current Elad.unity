@@ -30816,9 +30816,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   devilEvent: {fileID: 0}
-  soulStonesInitializeValue: 100
+  soulStonesInitializeValue: 1000
   goodSoulsInitializeValue: 100
-  badSoulsInitializeValue: 100
+  badSoulsInitializeValue: 300
   swordsInitializeValue: 0
   shieldsInitializeValue: 0
   _arrows:
@@ -63024,6 +63024,34 @@ PrefabInstance:
     - target: {fileID: 3247719498111861037, guid: aee31cdef12a18f458802b1a45c019f4, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3742809224177403256, guid: aee31cdef12a18f458802b1a45c019f4, type: 3}
+      propertyPath: test
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3742809224177403256, guid: aee31cdef12a18f458802b1a45c019f4, type: 3}
+      propertyPath: fillOldTest
+      value: 100
+      objectReference: {fileID: 0}
+    - target: {fileID: 3742809224177403256, guid: aee31cdef12a18f458802b1a45c019f4, type: 3}
+      propertyPath: changeBarTime
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7389553615750490693, guid: aee31cdef12a18f458802b1a45c019f4, type: 3}
+      propertyPath: m_SizeDelta.x
+      value: 97.1595
+      objectReference: {fileID: 0}
+    - target: {fileID: 7389553615750490693, guid: aee31cdef12a18f458802b1a45c019f4, type: 3}
+      propertyPath: m_SizeDelta.y
+      value: 105.9273
+      objectReference: {fileID: 0}
+    - target: {fileID: 7389553615750490693, guid: aee31cdef12a18f458802b1a45c019f4, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 49.101868
+      objectReference: {fileID: 0}
+    - target: {fileID: 7389553615750490693, guid: aee31cdef12a18f458802b1a45c019f4, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: -156.34508
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: aee31cdef12a18f458802b1a45c019f4, type: 3}

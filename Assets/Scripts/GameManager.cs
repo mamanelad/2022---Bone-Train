@@ -38,6 +38,7 @@ public class GameManager : MonoBehaviour
     [Space(20)] [Header("Extra")] public static GameManager Shared;
     [HideInInspector] public Morale morale = Morale.Neutral;
     private Mouse _mouse;
+    private bool _initFinish;
 
     [Space(20)] [Header("Road")] public Road curRoad;
 
@@ -115,7 +116,8 @@ public class GameManager : MonoBehaviour
         Shared = this;
         speedState = SpeedState.Run;
 
-        InitSouls();
+        
+        // InitUiNumbers();
         InitiateCheckPointData();
 
         if (_arrows.Length != 2)
@@ -153,10 +155,18 @@ public class GameManager : MonoBehaviour
 
             _tutorial.OpenNextTutorialObject();
         }
+        
+        
     }
 
     private void Update()
     {
+        if (!_initFinish && _uiManager)
+        {
+            _initFinish = true;
+            InitSouls();
+        }
+        
         if (Input.GetKeyDown(KeyCode.R))
         {
             SceneManager.LoadScene("Opening screen", LoadSceneMode.Single);
@@ -199,7 +209,7 @@ public class GameManager : MonoBehaviour
             _fuelManager = FindObjectOfType<FuelManager>();
         }
 
-        InitUiNumbers();
+        
 
         SpeedStateHandler();
         bool drivingMode = speedState != SpeedState.Stop;
@@ -226,23 +236,35 @@ public class GameManager : MonoBehaviour
         BadSouls = badSoulsInitializeValue;
         Swords = swordsInitializeValue;
         Shields = shieldsInitializeValue;
+        
+        _uiManager.SetBadSouls();
+        _uiManager.SetGoodSouls();
+        _uiManager.SetSoulStones();
+        _uiManager.SetSwords();
+        _uiManager.SetShields();
+       
+        _soulsCircle.ChangeSoulsAmount(SoulsCircle.WhenTheFunctionIsCalled.OnInit);
+        
+        
     }
 
-    private void InitUiNumbers()
-    {
-        if (_uiManager == null)
-        {
-            _uiManager = FindObjectOfType<UIManager>();
-            if (_uiManager != null)
-            {
-                ChangeByBadSouls(badSoulsInitializeValue);
-                ChangeByGoodSouls(goodSoulsInitializeValue);
-                ChangeBySoulStones(soulStonesInitializeValue);
-                ChangeBySwords(swordsInitializeValue);
-                ChangeByShields(shieldsInitializeValue);
-            }
-        }
-    }
+    // private void InitUiNumbers()
+    // {
+    //     if (_uiManager == null)
+    //     {
+    //         _uiManager = FindObjectOfType<UIManager>();
+    //     }
+    //
+    //     if (_uiManager)
+    //     {
+    //         print("kakakkakak");
+    //         ChangeByBadSouls(badSoulsInitializeValue);
+    //         ChangeByGoodSouls(goodSoulsInitializeValue);
+    //         ChangeBySoulStones(soulStonesInitializeValue);
+    //         ChangeBySwords(swordsInitializeValue);
+    //         ChangeByShields(shieldsInitializeValue);
+    //     }
+    // }
 
     private void SpeedStateHandler()
     {
@@ -267,7 +289,7 @@ public class GameManager : MonoBehaviour
     {
         if (speedState != SpeedState.Stop)
         {
-            print("stop train");
+            // print("stop train");
             SetSpeed(0);
             speedState = SpeedState.Stop;
         }
@@ -330,7 +352,9 @@ public class GameManager : MonoBehaviour
         }
 
         BadSouls += addNum;
+        
         _uiManager.SetBadSouls();
+        _soulsCircle.ChangeSoulsAmount();
     }
 
     public int GetBadSouls()

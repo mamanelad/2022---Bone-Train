@@ -39,9 +39,9 @@ public class UIManager : MonoBehaviour
     private void Start()
     {
         _breakChainSlider = GetComponentInChildren<BreakChain>();
-        SetGoodSouls();
-        SetBadSouls();
-        SetSoulStones();
+        // SetGoodSouls();
+        // SetBadSouls();
+        // SetSoulStones();
     }
 
     public void SetGoodSouls()
@@ -52,6 +52,7 @@ public class UIManager : MonoBehaviour
 
     public void SetBadSouls()
     {
+        print("got to change the bed souls number sould be " + GameManager.Shared.BadSouls);
         badSoulsNumberText.text = Convert.ToString(GameManager.Shared.BadSouls);
     }
 
