@@ -41,8 +41,12 @@ public class JunctionChange : MonoBehaviour
 
     private void Update()
     {
-        if (GameManager.Shared.GetIsArrowsAreOn())
-            DecideTrack(GameManager.Shared.GetArrowSide());
+        if (GameManager.Shared)
+        {
+            if (GameManager.Shared.GetIsArrowsAreOn())
+                DecideTrack(GameManager.Shared.GetArrowSide());    
+        }
+        
     }
 
 
