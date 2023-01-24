@@ -716,7 +716,7 @@ MonoBehaviour:
   textBox: {fileID: 108121819771439779}
   icon: {fileID: 2995281953630265468}
   specialItem: {fileID: 4579938347533408596}
-  options:
+  optionsGameObjects:
   - {fileID: 108121818664507932}
   - {fileID: 4892175242837579052}
   - {fileID: 4892175242331558966}

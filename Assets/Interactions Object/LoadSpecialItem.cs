@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using FMODUnity;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -21,6 +22,11 @@ public class LoadSpecialItem : MonoBehaviour
     private InteractionManager interactionManager;
 
     private SpecialItemIndex itemIndex;
+
+    [Space(20)] [Header("Sounds")] [SerializeField]
+    private EventReference hoverSound;
+
+    [SerializeField] private EventReference clickSound;
 
     private void Start()
     {
@@ -68,5 +74,15 @@ public class LoadSpecialItem : MonoBehaviour
         disableIcon.SetActive(true);
 
         interactionManager.ActivateSpecialItem(itemIndex);
+    }
+
+    public void PlayHoverSound()
+    {
+        RuntimeManager.PlayOneShot(hoverSound);
+    }
+
+    public void PlayClickSound()
+    {
+        RuntimeManager.PlayOneShot(clickSound);
     }
 }
