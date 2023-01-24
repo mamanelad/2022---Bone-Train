@@ -24,6 +24,12 @@ public class SoulsCircle : MonoBehaviour
     [Space(20)] [Header("Times")] [SerializeField]
     private float changeBarTime = 0.1f;
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+
+    [SerializeField] [Range(0, 1)] private float addFillBy = 0.1f;
+
+>>>>>>> 39852ffa05725920d14df9f071758ecd1c3d3a10
 =======
 
     [SerializeField] [Range(0, 1)] private float addFillBy = 0.1f;
@@ -39,7 +45,11 @@ public class SoulsCircle : MonoBehaviour
     private float _fillAmountTest;
     private bool _initFinish;
 <<<<<<< HEAD
+<<<<<<< HEAD
 
+=======
+    
+>>>>>>> 39852ffa05725920d14df9f071758ecd1c3d3a10
 =======
     
 >>>>>>> 39852ffa05725920d14df9f071758ecd1c3d3a10
@@ -53,7 +63,10 @@ public class SoulsCircle : MonoBehaviour
     void Start()
     {
 <<<<<<< HEAD
+<<<<<<< HEAD
         ChangeSoulsAmount(WhenTheFunctionIsCalled.OnInit);
+=======
+>>>>>>> 39852ffa05725920d14df9f071758ecd1c3d3a10
 =======
 >>>>>>> 39852ffa05725920d14df9f071758ecd1c3d3a10
         _changeBarTimer = changeBarTime;
@@ -62,6 +75,7 @@ public class SoulsCircle : MonoBehaviour
 
     private void Update()
     {
+<<<<<<< HEAD
 <<<<<<< HEAD
         if (test)
         {
@@ -73,6 +87,9 @@ public class SoulsCircle : MonoBehaviour
 =======
         
 >>>>>>> 39852ffa05725920d14df9f071758ecd1c3d3a10
+=======
+        
+>>>>>>> 39852ffa05725920d14df9f071758ecd1c3d3a10
             _changeBarTimer -= Time.deltaTime;
             if (_changeBarTimer <= 0)
             {
@@ -80,8 +97,12 @@ public class SoulsCircle : MonoBehaviour
                 UpdateSoulsBar();
             }
 <<<<<<< HEAD
+<<<<<<< HEAD
             
         }
+=======
+        
+>>>>>>> 39852ffa05725920d14df9f071758ecd1c3d3a10
 =======
         
 >>>>>>> 39852ffa05725920d14df9f071758ecd1c3d3a10
@@ -101,11 +122,16 @@ public class SoulsCircle : MonoBehaviour
         float totalSoulsAmount = _goodSouls + _badSouls;
         float badSoulsPercentageFromTotal = _badSouls / totalSoulsAmount;
 <<<<<<< HEAD
+<<<<<<< HEAD
 
         if (when == WhenTheFunctionIsCalled.OnInit)
             fillAmountOld = Mathf.Lerp(minFillAmount, maxFillAmount, badSoulsPercentageFromTotal);
         else
             _fillAmountNew = Mathf.Lerp(minFillAmount, maxFillAmount, badSoulsPercentageFromTotal);
+=======
+        
+        _fillAmountNew = Mathf.Lerp(minFillAmount, maxFillAmount, badSoulsPercentageFromTotal);
+>>>>>>> 39852ffa05725920d14df9f071758ecd1c3d3a10
 =======
         
         _fillAmountNew = Mathf.Lerp(minFillAmount, maxFillAmount, badSoulsPercentageFromTotal);
@@ -116,6 +142,7 @@ public class SoulsCircle : MonoBehaviour
     private void UpdateSoulsBar(WhenTheFunctionIsCalled when = WhenTheFunctionIsCalled.OnPlay)
     {
 <<<<<<< HEAD
+<<<<<<< HEAD
         if (test) return;
         if (when == WhenTheFunctionIsCalled.OnPlay)
         {
@@ -124,6 +151,10 @@ public class SoulsCircle : MonoBehaviour
             else
                 fillAmountOld -= 1;
         }
+=======
+        if (when == WhenTheFunctionIsCalled.OnPlay)
+            fillAmountOld = Mathf.Lerp(fillAmountOld, _fillAmountNew, addFillBy);
+>>>>>>> 39852ffa05725920d14df9f071758ecd1c3d3a10
 =======
         if (when == WhenTheFunctionIsCalled.OnPlay)
             fillAmountOld = Mathf.Lerp(fillAmountOld, _fillAmountNew, addFillBy);
@@ -139,7 +170,12 @@ public class SoulsCircle : MonoBehaviour
         float badSoulsPercentageFromTotal = badSoulsTest / totalSoulsAmount;
         _fillAmountTest = Mathf.Lerp(minFillAmount, maxFillAmount, badSoulsPercentageFromTotal);
 <<<<<<< HEAD
+<<<<<<< HEAD
         print(_fillAmountTest);
+=======
+
+        
+>>>>>>> 39852ffa05725920d14df9f071758ecd1c3d3a10
 =======
 
         
