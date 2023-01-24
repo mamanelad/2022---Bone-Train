@@ -30819,6 +30819,8 @@ MonoBehaviour:
   soulStonesInitializeValue: 100
   goodSoulsInitializeValue: 100
   badSoulsInitializeValue: 100
+  swordsInitializeValue: 0
+  shieldsInitializeValue: 0
   _arrows:
   - {fileID: 0}
   - {fileID: 0}
