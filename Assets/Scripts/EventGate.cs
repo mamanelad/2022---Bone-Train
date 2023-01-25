@@ -1,3 +1,4 @@
+using System.Collections.Generic;
 using FMODUnity;
 using UnityEngine;
 
@@ -9,7 +10,9 @@ public class EventGate : MonoBehaviour
     
     [SerializeField] private Collider sphereTrigger;
     [SerializeField] private Collider eventTrigger;
-    
+
+    [SerializeField] private List<Sprite> minimapIcons;
+
     private void Start()
     {
         if (interactionData == null)
@@ -28,7 +31,7 @@ public class EventGate : MonoBehaviour
 
     private void SetUpMinimapIcon()
     {
-        return;
+        minimapIcon.sprite = minimapIcons[(int)interactionData.iconIndex];
     }
 
     private void OnTriggerEnter(Collider other)
