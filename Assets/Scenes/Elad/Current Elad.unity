@@ -30818,15 +30818,7 @@ MonoBehaviour:
   devilEvent: {fileID: 0}
   soulStonesInitializeValue: 1000
   goodSoulsInitializeValue: 100
-<<<<<<< HEAD
-<<<<<<< HEAD
-  badSoulsInitializeValue: 100
-=======
   badSoulsInitializeValue: 300
->>>>>>> 39852ffa05725920d14df9f071758ecd1c3d3a10
-=======
-  badSoulsInitializeValue: 300
->>>>>>> 39852ffa05725920d14df9f071758ecd1c3d3a10
   swordsInitializeValue: 0
   shieldsInitializeValue: 0
   _arrows:
