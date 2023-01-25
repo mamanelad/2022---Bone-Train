@@ -964,8 +964,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 35.055096, y: -161.28273}
-  m_SizeDelta: {x: 39.8257, y: 66.3149}
+  m_AnchoredPosition: {x: 49.51652, y: -157.0091}
+  m_SizeDelta: {x: 118.6806, y: 115.9796}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &4483603874112974669
 CanvasRenderer:
@@ -988,7 +988,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 1, g: 1, b: 1, a: 0}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -1021,8 +1021,10 @@ MonoBehaviour:
   dampingSpeed: 0.05
   _furnace: {fileID: 8477522198785107216}
   _furnaceTransform: {fileID: 3094866059897712165}
-  myBurnObject: 1
+  myBurnObject: 0
   overLapFactor: 0.35
+  wantedScaleX: 0.3
+  wantedScaleY: 0.5
 --- !u!114 &6644435731297514195
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -8164,6 +8166,7 @@ MonoBehaviour:
   maxFillAmount: 0.25
   addToBlack: 0.017
   changeBarTime: 0.1
+  addFillBy: 0.1
   test: 0
   goodSoulsTest: 100
   badSoulsTest: 100

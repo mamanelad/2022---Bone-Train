@@ -4,6 +4,7 @@ using System.Collections.Generic;
 using System.Linq;
 using TMPro;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class UIManager : MonoBehaviour
 {
@@ -18,6 +19,9 @@ public class UIManager : MonoBehaviour
     [SerializeField] public TextMeshProUGUI swordsAmountNumberText;
     [SerializeField] public TextMeshProUGUI shieldsAmountNumberText;
     private BreakChain _breakChainSlider;
+
+
+    
 
     public enum UiOption
     {
@@ -35,6 +39,9 @@ public class UIManager : MonoBehaviour
 
     private UiOption _curOption;
 
+    [Space(10)] [Header("Speed Bar")] [SerializeField]
+    private Image speedBar;
+    [SerializeField][Range(0,1)] private float speedBarAdd = 0.5f;
 
     private void Start()
     {
@@ -44,6 +51,18 @@ public class UIManager : MonoBehaviour
         // SetSoulStones();
     }
 
+    private void FixedUpdate()
+    {
+        SpeedBar();
+    }
+
+    private void SpeedBar()
+    {
+        var wantedFill = Mathf.InverseLerp(0, GameManager.Shared.GetMaxSpeed(), GameManager.Shared.GetSpeed());
+        var newFill = Mathf.Lerp(speedBar.fillAmount, wantedFill, speedBarAdd);
+        speedBar.fillAmount = newFill;
+
+    }
     public void SetGoodSouls()
     {
         goodSoulsNumberText.text = Convert.ToString(GameManager.Shared.GoodSouls);
