@@ -95920,6 +95920,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: UI Manager New
       objectReference: {fileID: 0}
+    - target: {fileID: 5783272691839571712, guid: f8a337fa67b5c5049bc9d0cff64a23c4, type: 3}
+      propertyPath: m_FillAmount
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f8a337fa67b5c5049bc9d0cff64a23c4, type: 3}
 --- !u!23 &5176508106405020473
