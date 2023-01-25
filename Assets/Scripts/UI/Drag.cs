@@ -50,6 +50,8 @@ public class Drag : MonoBehaviour, IDragHandler, IBeginDragHandler, IEndDragHand
     {
         GameManager.Shared.ChangeInventoryFromDrag(myBurnObject);
         GameManager.Shared.GetMouse().ChangeToIdleMouse();
+        if (UIAudioManager.Instance)
+            UIAudioManager.Instance.PlayBurnCoal();
         if (GameManager.Shared.GetSpeedState() != GameManager.SpeedState.Stop)
             _furnace.AddSpeed(myBurnObject);
         Destroy(gameObject);
@@ -97,6 +99,8 @@ public class Drag : MonoBehaviour, IDragHandler, IBeginDragHandler, IEndDragHand
         
         GameManager.Shared.GetMouse().ChangeToDragMouse();
         changeAlfa(_fullALfa);
+        if (UIAudioManager.Instance)
+            UIAudioManager.Instance.PlayGrabCoal();
         var newFuelIcon = Instantiate(fuelIconPrefab, transform.position, Quaternion.identity);
         newFuelIcon.transform.SetParent(_canvas.transform);
         newFuelIcon.transform.localScale = transform.localScale ;
