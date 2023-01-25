@@ -46,11 +46,6 @@ public class JunctionChange : MonoBehaviour
         {
             DecideTrack(GameManager.Shared.GetArrowSide());
         }
-        // if (GameManager.Shared)
-        // {
-        //     if (GameManager.Shared.GetIsArrowsAreOn())
-        //         DecideTrack(GameManager.Shared.GetArrowSide());    
-        // }
     }
 
 
@@ -97,6 +92,7 @@ public class JunctionChange : MonoBehaviour
     {
         if (other.CompareTag("Train"))
         {
+            _needToDecideSide = true;
             if (colliderSphere.enabled)
             {
                 GameManager.Shared.ArrowsTurnOnAndOff(true);
@@ -106,7 +102,7 @@ public class JunctionChange : MonoBehaviour
 
             else if (colliderBox.enabled)
             {
-                _needToDecideSide = true;
+                _needToDecideSide = false;
                 GameManager.Shared.SetArrowSide(Arrow.ArrowSide.None);
                 if (GameManager.Shared.GetArrowSide() == Arrow.ArrowSide.None)
                     DecideTrack(Arrow.ArrowSide.None);

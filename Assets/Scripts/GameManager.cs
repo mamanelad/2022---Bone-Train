@@ -513,6 +513,7 @@ public class GameManager : MonoBehaviour
     {
         return _arrowSide;
     }
+    
 
     public void SetArrowSide(Arrow.ArrowSide sideChosen)
     {
