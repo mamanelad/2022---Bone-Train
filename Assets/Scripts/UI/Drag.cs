@@ -90,7 +90,6 @@ public class Drag : MonoBehaviour, IDragHandler, IBeginDragHandler, IEndDragHand
 
     public void OnBeginDrag(PointerEventData eventData)
     {
-        
         GameManager.Shared.GetMouse().ChangeToDragMouse();
         GameManager.Shared.ChangeInventoryFromDrag(myBurnObject);
         changeAlfa(_fullALfa);

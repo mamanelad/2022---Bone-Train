@@ -81,6 +81,33 @@ MonoBehaviour:
   MinDistance: 1
   MaxDistance: 20
   Length: 0
+--- !u!114 &-6861298725812771737
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Train/Burn Coal
+  m_EditorClassIdentifier: 
+  Path: event:/Train/Burn Coal
+  Guid:
+    Data1: 2144144017
+    Data2: 1221100302
+    Data3: 1068286861
+    Data4: -2001106598
+  Banks:
+  - {fileID: 7029627800661937997}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 0
 --- !u!114 &-6789923524386715063
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -243,6 +270,33 @@ MonoBehaviour:
   MinDistance: 1
   MaxDistance: 20
   Length: 0
+--- !u!114 &-4716198579091876976
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Train/Grab Coal
+  m_EditorClassIdentifier: 
+  Path: event:/Train/Grab Coal
+  Guid:
+    Data1: -1437902712
+    Data2: 1308199773
+    Data3: -1855402583
+    Data4: 1116156184
+  Banks:
+  - {fileID: 7029627800661937997}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 0
 --- !u!114 &-4709105039661454968
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -366,10 +420,10 @@ MonoBehaviour:
   Path: Assets/FMODBanks/Desktop/Master.strings.bank
   Name: Master.strings
   StudioPath: bank:/Master.strings
-  lastModified: 638102783602216082
+  lastModified: 638102804808959821
   FileSizes:
   - Name: 
-    Value: 2174
+    Value: 2266
   Exists: 1
 --- !u!114 &-2509704263585177046
 MonoBehaviour:
@@ -526,12 +580,14 @@ MonoBehaviour:
   - {fileID: 8293897333745128983}
   - {fileID: -7035235131573423972}
   - {fileID: 3212543675110056473}
+  - {fileID: -4716198579091876976}
+  - {fileID: -6861298725812771737}
   EditorParameters: []
   MasterBanks:
   - {fileID: 7029627800661937997}
   StringsBanks:
   - {fileID: -2581290552187707430}
-  cacheTime: 638102783602216082
+  cacheTime: 638102804808959821
   cacheVersion: 131601
 --- !u!114 &671523591007706617
 MonoBehaviour:
@@ -818,7 +874,7 @@ MonoBehaviour:
   Path: Assets/FMODBanks/Desktop/Master.bank
   Name: Master
   StudioPath: bank:/Master
-  lastModified: 638102783602196080
+  lastModified: 638102804808939430
   FileSizes: []
   Exists: 1
 --- !u!114 &7761155096278969309
