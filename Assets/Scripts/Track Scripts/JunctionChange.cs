@@ -23,6 +23,7 @@ public class JunctionChange : MonoBehaviour
     [SerializeField] private int id;
 
     private bool _randomDecisionWasMade;
+    private bool _needToDecideSide = true;
 
     private void Start()
     {
@@ -41,12 +42,15 @@ public class JunctionChange : MonoBehaviour
 
     private void Update()
     {
+        if (GameManager.Shared.GetArrowSide() != Arrow.ArrowSide.None)
+        {
+            DecideTrack(GameManager.Shared.GetArrowSide());
+        }
         // if (GameManager.Shared)
         // {
         //     if (GameManager.Shared.GetIsArrowsAreOn())
         //         DecideTrack(GameManager.Shared.GetArrowSide());    
         // }
-        
     }
 
 
@@ -102,6 +106,8 @@ public class JunctionChange : MonoBehaviour
 
             else if (colliderBox.enabled)
             {
+                _needToDecideSide = true;
+                GameManager.Shared.SetArrowSide(Arrow.ArrowSide.None);
                 if (GameManager.Shared.GetArrowSide() == Arrow.ArrowSide.None)
                     DecideTrack(Arrow.ArrowSide.None);
 
@@ -116,6 +122,8 @@ public class JunctionChange : MonoBehaviour
 
     private void DecideTrack(Arrow.ArrowSide sideChosen)
     {
+        if (!_needToDecideSide) return;
+        _needToDecideSide = false;
         if (sideChosen == Arrow.ArrowSide.Left)
         {
             splineNewBranch = splineNewBranchLeft;

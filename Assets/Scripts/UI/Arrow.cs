@@ -123,6 +123,7 @@ public class Arrow : MonoBehaviour
         GameManager.Shared.GetMouse().ChangeToDragMouse();
         _image.color = arrowSelectedColor;
         otherArrow._image.color = regularColor;
+        GameManager.Shared.SetArrowSide(_arrowSide);
     }
 
     public void PointerUp()

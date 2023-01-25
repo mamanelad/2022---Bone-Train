@@ -458,6 +458,7 @@ public class GameManager : MonoBehaviour
                     break;
 
                 case false:
+                    _arrowSide = Arrow.ArrowSide.None;
                     _arrowsAreOn = false;
                     Time.timeScale = 1f;
                     arrow.CloseObject();
@@ -518,6 +519,7 @@ public class GameManager : MonoBehaviour
         _arrowSide = sideChosen;
     }
 
+    
     public float GetMaxSpeed()
     {
         return maxSpeed;
