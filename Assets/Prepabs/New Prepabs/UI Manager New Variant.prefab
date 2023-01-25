@@ -7,6 +7,34 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1711490449320883408, guid: 832cb521db0a2594da2f3b5854b90c86, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 989480923, guid: 35d4ad0e4ed8ad94f8dee27ba1048b5f, type: 3}
+    - target: {fileID: 1711490449320883408, guid: 832cb521db0a2594da2f3b5854b90c86, type: 3}
+      propertyPath: m_Color.a
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1711490449320883408, guid: 832cb521db0a2594da2f3b5854b90c86, type: 3}
+      propertyPath: m_FillAmount
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1711490449320883414, guid: 832cb521db0a2594da2f3b5854b90c86, type: 3}
+      propertyPath: m_SizeDelta.x
+      value: 295.5504
+      objectReference: {fileID: 0}
+    - target: {fileID: 1711490449320883414, guid: 832cb521db0a2594da2f3b5854b90c86, type: 3}
+      propertyPath: m_SizeDelta.y
+      value: 31.0574
+      objectReference: {fileID: 0}
+    - target: {fileID: 1711490449320883414, guid: 832cb521db0a2594da2f3b5854b90c86, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 296.6856
+      objectReference: {fileID: 0}
+    - target: {fileID: 1711490449320883414, guid: 832cb521db0a2594da2f3b5854b90c86, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: -209.27293
+      objectReference: {fileID: 0}
     - target: {fileID: 2849674158098315312, guid: 832cb521db0a2594da2f3b5854b90c86, type: 3}
       propertyPath: m_IsActive
       value: 0
@@ -153,7 +181,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8477522200000332861, guid: 832cb521db0a2594da2f3b5854b90c86, type: 3}
       propertyPath: m_Name
-      value: UI Manager New
+      value: UI Manager New Variant
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 832cb521db0a2594da2f3b5854b90c86, type: 3}
