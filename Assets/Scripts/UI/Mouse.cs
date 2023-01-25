@@ -49,6 +49,8 @@ public class Mouse : MonoBehaviour
 
     public void ChangeSizeBigger()
     {
+        if (UIAudioManager.Instance)
+            UIAudioManager.Instance.PlayUIHoverEvent();
         Cursor.SetCursor(idleMouseTextureBig, Vector2.zero, CursorMode.ForceSoftware);
 
     }

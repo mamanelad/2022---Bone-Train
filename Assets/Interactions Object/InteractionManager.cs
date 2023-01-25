@@ -1,11 +1,13 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using FMOD.Studio;
 using FMODUnity;
 using TMPro;
 using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.UI;
+using STOP_MODE = FMOD.Studio.STOP_MODE;
 
 public class InteractionManager : MonoBehaviour
 {
@@ -21,6 +23,8 @@ public class InteractionManager : MonoBehaviour
     [SerializeField] private LoadSpecialItem specialItem;
     [SerializeField] private List<GameObject> optionsGameObjects;
 
+    private EventInstance interactionAudio;
+    
     public void StartInteraction(InteractionData newInteractionData)
     {
         gameObject.SetActive(true);
@@ -28,6 +32,7 @@ public class InteractionManager : MonoBehaviour
         interactionOptions = newInteractionData.options;
         LoadInteraction();
 
+        interactionAudio.start();
         UIAudioManager.Instance.PlayUIEventStart();
         UIAudioManager.Instance.PauseTrainLoop();
         GameManager.Shared.StopTrain();
@@ -42,6 +47,8 @@ public class InteractionManager : MonoBehaviour
     public IEnumerator EndInteractionRoutine()
     {
         yield return new WaitForSecondsRealtime(0.2f);
+        interactionAudio.stop(STOP_MODE.ALLOWFADEOUT);
+        DisableOptions();
         UIAudioManager.Instance.ResumeTrainLoop();
         GameManager.Shared.ContinueTrain();
         gameObject.SetActive(false);
@@ -55,7 +62,7 @@ public class InteractionManager : MonoBehaviour
         textBox.text = interactionData.textBox;
 
         if (!interactionData.audio.IsNull)
-            RuntimeManager.PlayOneShot(interactionData.audio);
+            interactionAudio = RuntimeManager.CreateInstance(interactionData.audio);
 
         icon.Load(interactionData.iconIndex);
 
@@ -140,6 +147,12 @@ public class InteractionManager : MonoBehaviour
         }
 
         interactionOptions = modifiedOptions;
+    }
+
+    private void DisableOptions()
+    {
+        foreach (var optionGameObject in optionsGameObjects)
+            optionGameObject.SetActive(false);
     }
 
     public void SetTutorialObject(Tutorial tutorial)

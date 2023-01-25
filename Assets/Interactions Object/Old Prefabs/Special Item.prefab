@@ -303,13 +303,20 @@ MonoBehaviour:
       Data3: 524111021
       Data4: -2064325702
     Path: event:/UI/UI Hover
-  clickSound:
+  clickSwordSound:
     Guid:
-      Data1: -480796150
-      Data2: 1077374948
-      Data3: -412135233
-      Data4: 1825227364
-    Path: event:/UI/UI Click
+      Data1: 58403836
+      Data2: 1121172097
+      Data3: 1127183799
+      Data4: -1093766139
+    Path: event:/UI/Sword Use
+  clickShieldSound:
+    Guid:
+      Data1: 868232771
+      Data2: 1175260464
+      Data3: -1686061944
+      Data4: 1081420425
+    Path: event:/UI/Shield Use
 --- !u!1 &3094932298623579438
 GameObject:
   m_ObjectHideFlags: 0

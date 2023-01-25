@@ -1,0 +1,65 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c86e91921e9ba5e419d15579e50b8591, type: 3}
+  m_Name: 2.2
+  m_EditorClassIdentifier: 
+  character: {fileID: 21300000, guid: 3554d67bf403107458569582931a4bf7, type: 3}
+  audio:
+    Guid:
+      Data1: 1774979051
+      Data2: 1201707316
+      Data3: 228662947
+      Data4: -1920904646
+    Path: event:/Interactions/Part 1/2.2
+  enteredDistanceAudio:
+    Guid:
+      Data1: 0
+      Data2: 0
+      Data3: 0
+      Data4: 0
+    Path: 
+  iconIndex: 5
+  title: Fallen from Grace
+  textBox: A fallen angel in Hell offers you good souls in exchange for either taking
+    bad souls or giving him some of your fuel. The angel is jealous of the other
+    angels in Heaven and wants to escape the eternal torment of Hell.
+  options:
+  - title: Give Fuel
+    goodSouls: 100
+    badSouls: 0
+    soulsStones: -200
+    sword: 0
+    shield: 0
+    sound:
+      Guid:
+        Data1: 0
+        Data2: 0
+        Data3: 0
+        Data4: 0
+      Path: 
+    text: 
+    odds: 0
+  - title: Take Bad Souls
+    goodSouls: 100
+    badSouls: 50
+    soulsStones: 0
+    sword: 0
+    shield: 0
+    sound:
+      Guid:
+        Data1: 0
+        Data2: 0
+        Data3: 0
+        Data4: 0
+      Path: 
+    text: 
+    odds: 0

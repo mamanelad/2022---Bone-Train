@@ -70,7 +70,7 @@ public class LoadOption : MonoBehaviour
         
         option = newOption;
         
-        if (option.odds != 100)
+        if (option.odds != 0)
             ChangeOptionByOdds();
 
         title.text = option.title != "" ? option.title : "Option";
@@ -118,7 +118,7 @@ public class LoadOption : MonoBehaviour
 
     private void ChangeOptionByOdds()
     {
-        if (Random.Range(0,100) < option.odds)
+        if (Random.Range(0,100) < 100 - option.odds)
             return;
 
         option.goodSouls = 0;
