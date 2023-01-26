@@ -12,14 +12,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c86e91921e9ba5e419d15579e50b8591, type: 3}
   m_Name: 4.2
   m_EditorClassIdentifier: 
-  character: {fileID: 0}
+  character: {fileID: 21300000, guid: d0b0c86dd489ba24bb327679c623fc92, type: 3}
   audio:
     Guid:
-      Data1: 0
-      Data2: 0
-      Data3: 0
-      Data4: 0
-    Path: 
+      Data1: -1046830397
+      Data2: 1255096401
+      Data3: -1958207326
+      Data4: 206788810
+    Path: event:/Interactions/Part 2/4.2
   enteredDistanceAudio:
     Guid:
       Data1: 0

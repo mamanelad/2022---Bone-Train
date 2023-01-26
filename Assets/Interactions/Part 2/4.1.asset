@@ -15,11 +15,11 @@ MonoBehaviour:
   character: {fileID: 21300000, guid: f8dc32c56b75be14da39e7520e79cee1, type: 3}
   audio:
     Guid:
-      Data1: 0
-      Data2: 0
-      Data3: 0
-      Data4: 0
-    Path: 
+      Data1: -805902094
+      Data2: 1164809296
+      Data3: -1657803078
+      Data4: -2035053425
+    Path: event:/Interactions/Part 2/4.1
   enteredDistanceAudio:
     Guid:
       Data1: 0
