@@ -1,195 +1,6 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!114 &-9102316133341179167
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
-  m_Name: event:/Narration/Level Intro
-  m_EditorClassIdentifier: 
-  Path: event:/Narration/Level Intro
-  Guid:
-    Data1: -169757048
-    Data2: 1184210307
-    Data3: -185925465
-    Data4: 1994531423
-  Banks:
-  - {fileID: 7029627800661937997}
-  IsStream: 1
-  Is3D: 0
-  IsOneShot: 1
-  Parameters: []
-  MinDistance: 1
-  MaxDistance: 20
-  Length: 0
---- !u!114 &-8746175396216114054
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
-  m_Name: event:/Interactions/Part 1/1.2
-  m_EditorClassIdentifier: 
-  Path: event:/Interactions/Part 1/1.2
-  Guid:
-    Data1: 1227064975
-    Data2: 1334995069
-    Data3: -848483397
-    Data4: -1820417497
-  Banks:
-  - {fileID: 7029627800661937997}
-  IsStream: 1
-  Is3D: 0
-  IsOneShot: 1
-  Parameters: []
-  MinDistance: 1
-  MaxDistance: 20
-  Length: 0
---- !u!114 &-8608088279641075373
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
-  m_Name: event:/Events/Miser/Miser1_Enter
-  m_EditorClassIdentifier: 
-  Path: event:/Events/Miser/Miser1_Enter
-  Guid:
-    Data1: 1950678822
-    Data2: 1257656094
-    Data3: 1922056849
-    Data4: -852207506
-  Banks:
-  - {fileID: 7029627800661937997}
-  IsStream: 0
-  Is3D: 0
-  IsOneShot: 1
-  Parameters: []
-  MinDistance: 1
-  MaxDistance: 20
-  Length: 0
---- !u!114 &-8598675175270477509
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
-  m_Name: event:/Interactions/Part 1/2.1
-  m_EditorClassIdentifier: 
-  Path: event:/Interactions/Part 1/2.1
-  Guid:
-    Data1: -105223997
-    Data2: 1331322648
-    Data3: -1830310232
-    Data4: -1600246377
-  Banks:
-  - {fileID: 7029627800661937997}
-  IsStream: 1
-  Is3D: 0
-  IsOneShot: 1
-  Parameters: []
-  MinDistance: 1
-  MaxDistance: 20
-  Length: 0
---- !u!114 &-6718074678288713920
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
-  m_Name: event:/Interactions/Part 1/1.3
-  m_EditorClassIdentifier: 
-  Path: event:/Interactions/Part 1/1.3
-  Guid:
-    Data1: -476637928
-    Data2: 1340657635
-    Data3: 1120826022
-    Data4: -1745082711
-  Banks:
-  - {fileID: 7029627800661937997}
-  IsStream: 1
-  Is3D: 0
-  IsOneShot: 1
-  Parameters: []
-  MinDistance: 1
-  MaxDistance: 20
-  Length: 0
---- !u!114 &-6040434881771187632
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
-  m_Name: event:/Interactions/Part 1/1.1
-  m_EditorClassIdentifier: 
-  Path: event:/Interactions/Part 1/1.1
-  Guid:
-    Data1: 1769832423
-    Data2: 1185094614
-    Data3: 542584486
-    Data4: -776544617
-  Banks:
-  - {fileID: 7029627800661937997}
-  IsStream: 0
-  Is3D: 0
-  IsOneShot: 1
-  Parameters: []
-  MinDistance: 1
-  MaxDistance: 20
-  Length: 0
---- !u!114 &-5493230189966967817
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
-  m_Name: event:/Events/Tree/Tree1_Enter
-  m_EditorClassIdentifier: 
-  Path: event:/Events/Tree/Tree1_Enter
-  Guid:
-    Data1: 829972880
-    Data2: 1195793665
-    Data3: 189351076
-    Data4: -744660477
-  Banks:
-  - {fileID: 7029627800661937997}
-  IsStream: 0
-  Is3D: 0
-  IsOneShot: 1
-  Parameters: []
-  MinDistance: 1
-  MaxDistance: 20
-  Length: 0
---- !u!114 &-5326610813152112051
+--- !u!114 &-8459407705956751353
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -208,7 +19,7 @@ MonoBehaviour:
     Data3: 1068286861
     Data4: -2001106598
   Banks:
-  - {fileID: 7029627800661937997}
+  - {fileID: 8919054928785874934}
   IsStream: 0
   Is3D: 0
   IsOneShot: 1
@@ -216,7 +27,7 @@ MonoBehaviour:
   MinDistance: 1
   MaxDistance: 20
   Length: 0
---- !u!114 &-4215888882404115120
+--- !u!114 &-7918073933958432687
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -226,24 +37,24 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
-  m_Name: event:/Ambience/Ambience
+  m_Name: event:/UI/Shield Use
   m_EditorClassIdentifier: 
-  Path: event:/Ambience/Ambience
+  Path: event:/UI/Shield Use
   Guid:
-    Data1: -422245004
-    Data2: 1123672479
-    Data3: -1323216963
-    Data4: -665483064
+    Data1: 868232771
+    Data2: 1175260464
+    Data3: -1686061944
+    Data4: 1081420425
   Banks:
-  - {fileID: 7029627800661937997}
-  IsStream: 1
+  - {fileID: 8919054928785874934}
+  IsStream: 0
   Is3D: 0
   IsOneShot: 1
   Parameters: []
   MinDistance: 1
   MaxDistance: 20
   Length: 0
---- !u!114 &-3767091503126669352
+--- !u!114 &-7752513734569083833
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -262,7 +73,7 @@ MonoBehaviour:
     Data3: 675773340
     Data4: 1924209560
   Banks:
-  - {fileID: 7029627800661937997}
+  - {fileID: 8919054928785874934}
   IsStream: 0
   Is3D: 0
   IsOneShot: 1
@@ -270,88 +81,7 @@ MonoBehaviour:
   MinDistance: 1
   MaxDistance: 20
   Length: 0
---- !u!114 &-3219523105517480319
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
-  m_Name: event:/Interactions/Part 1/2.3
-  m_EditorClassIdentifier: 
-  Path: event:/Interactions/Part 1/2.3
-  Guid:
-    Data1: 177586221
-    Data2: 1132739104
-    Data3: -862389576
-    Data4: -467085699
-  Banks:
-  - {fileID: 7029627800661937997}
-  IsStream: 1
-  Is3D: 0
-  IsOneShot: 1
-  Parameters: []
-  MinDistance: 1
-  MaxDistance: 20
-  Length: 0
---- !u!114 &-3143560012443426727
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
-  m_Name: event:/UI/UI Click
-  m_EditorClassIdentifier: 
-  Path: event:/UI/UI Click
-  Guid:
-    Data1: -480796150
-    Data2: 1077374948
-    Data3: -412135233
-    Data4: 1825227364
-  Banks:
-  - {fileID: 7029627800661937997}
-  IsStream: 0
-  Is3D: 0
-  IsOneShot: 1
-  Parameters: []
-  MinDistance: 1
-  MaxDistance: 20
-  Length: 0
---- !u!114 &-2669373727058408406
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
-  m_Name: event:/Interactions/Part 1/2.2
-  m_EditorClassIdentifier: 
-  Path: event:/Interactions/Part 1/2.2
-  Guid:
-    Data1: 1774979051
-    Data2: 1201707316
-    Data3: 228662947
-    Data4: -1920904646
-  Banks:
-  - {fileID: 7029627800661937997}
-  IsStream: 1
-  Is3D: 0
-  IsOneShot: 1
-  Parameters: []
-  MinDistance: 1
-  MaxDistance: 20
-  Length: 0
---- !u!114 &-2581290552187707430
+--- !u!114 &-7534693090845982905
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -366,12 +96,12 @@ MonoBehaviour:
   Path: Assets/FMODBanks/Desktop/Master.strings.bank
   Name: Master.strings
   StudioPath: bank:/Master.strings
-  lastModified: 638102905793978645
+  lastModified: 638102958245419329
   FileSizes:
   - Name: 
     Value: 2266
   Exists: 1
---- !u!114 &-2533531585506346762
+--- !u!114 &-5088342380091438882
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -381,16 +111,16 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
-  m_Name: event:/Events/Roadblock/Roadblock1_Accept
+  m_Name: event:/Events/Miser/Miser1_Text
   m_EditorClassIdentifier: 
-  Path: event:/Events/Roadblock/Roadblock1_Accept
+  Path: event:/Events/Miser/Miser1_Text
   Guid:
-    Data1: -2140442053
-    Data2: 1201538596
-    Data3: 820972956
-    Data4: -1582880551
+    Data1: -1844915286
+    Data2: 1230660707
+    Data3: 414572208
+    Data4: -464641845
   Banks:
-  - {fileID: 7029627800661937997}
+  - {fileID: 8919054928785874934}
   IsStream: 0
   Is3D: 0
   IsOneShot: 1
@@ -398,61 +128,7 @@ MonoBehaviour:
   MinDistance: 1
   MaxDistance: 20
   Length: 0
---- !u!114 &-2371694228553848878
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
-  m_Name: event:/UI/Sword Use
-  m_EditorClassIdentifier: 
-  Path: event:/UI/Sword Use
-  Guid:
-    Data1: 58403836
-    Data2: 1121172097
-    Data3: 1127183799
-    Data4: -1093766139
-  Banks:
-  - {fileID: 7029627800661937997}
-  IsStream: 0
-  Is3D: 0
-  IsOneShot: 1
-  Parameters: []
-  MinDistance: 1
-  MaxDistance: 20
-  Length: 0
---- !u!114 &-2123700171755194151
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
-  m_Name: event:/Events/Tollgate/Tollgate1_Accept
-  m_EditorClassIdentifier: 
-  Path: event:/Events/Tollgate/Tollgate1_Accept
-  Guid:
-    Data1: -670571357
-    Data2: 1235193274
-    Data3: -356085632
-    Data4: -1313608997
-  Banks:
-  - {fileID: 7029627800661937997}
-  IsStream: 0
-  Is3D: 0
-  IsOneShot: 1
-  Parameters: []
-  MinDistance: 1
-  MaxDistance: 20
-  Length: 0
---- !u!114 &-1829670524051261166
+--- !u!114 &-5018325400811132122
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -471,7 +147,7 @@ MonoBehaviour:
     Data3: 358100388
     Data4: 916339100
   Banks:
-  - {fileID: 7029627800661937997}
+  - {fileID: 8919054928785874934}
   IsStream: 0
   Is3D: 0
   IsOneShot: 1
@@ -479,7 +155,7 @@ MonoBehaviour:
   MinDistance: 1
   MaxDistance: 20
   Length: 0
---- !u!114 &-1741556906658956896
+--- !u!114 &-4877527507750315845
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -489,16 +165,16 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
-  m_Name: event:/Events/Tree/Tree1_Accept
+  m_Name: event:/UI/Event Start
   m_EditorClassIdentifier: 
-  Path: event:/Events/Tree/Tree1_Accept
+  Path: event:/UI/Event Start
   Guid:
-    Data1: -252444347
-    Data2: 1341377894
-    Data3: 1509442195
-    Data4: 1889375876
+    Data1: -1883182190
+    Data2: 1208950864
+    Data3: -871205744
+    Data4: -1790376566
   Banks:
-  - {fileID: 7029627800661937997}
+  - {fileID: 8919054928785874934}
   IsStream: 0
   Is3D: 0
   IsOneShot: 1
@@ -506,7 +182,7 @@ MonoBehaviour:
   MinDistance: 1
   MaxDistance: 20
   Length: 0
---- !u!114 &-1321832758636432035
+--- !u!114 &-4073248033216382226
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -516,16 +192,16 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
-  m_Name: event:/Events/Tollgate/Tollgate1_Enter
+  m_Name: event:/Events/Roadblock/Roadblockl1_Text
   m_EditorClassIdentifier: 
-  Path: event:/Events/Tollgate/Tollgate1_Enter
+  Path: event:/Events/Roadblock/Roadblockl1_Text
   Guid:
-    Data1: -1414343621
-    Data2: 1161655818
-    Data3: 1991747508
-    Data4: 163859964
+    Data1: -2091376125
+    Data2: 1211017818
+    Data3: -1563952485
+    Data4: -855338480
   Banks:
-  - {fileID: 7029627800661937997}
+  - {fileID: 8919054928785874934}
   IsStream: 0
   Is3D: 0
   IsOneShot: 1
@@ -533,7 +209,7 @@ MonoBehaviour:
   MinDistance: 1
   MaxDistance: 20
   Length: 0
---- !u!114 &-1262461719684291248
+--- !u!114 &-3749216909579596719
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -543,16 +219,43 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
-  m_Name: event:/Ambience/Fireplace
+  m_Name: event:/UI/Sword Use
   m_EditorClassIdentifier: 
-  Path: event:/Ambience/Fireplace
+  Path: event:/UI/Sword Use
   Guid:
-    Data1: -488347195
-    Data2: 1110492121
-    Data3: 603170984
-    Data4: -1695164205
+    Data1: 58403836
+    Data2: 1121172097
+    Data3: 1127183799
+    Data4: -1093766139
   Banks:
-  - {fileID: 7029627800661937997}
+  - {fileID: 8919054928785874934}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 0
+--- !u!114 &-1947070790678707944
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Interactions/Part 1/2.2
+  m_EditorClassIdentifier: 
+  Path: event:/Interactions/Part 1/2.2
+  Guid:
+    Data1: 1774979051
+    Data2: 1201707316
+    Data3: 228662947
+    Data4: -1920904646
+  Banks:
+  - {fileID: 8919054928785874934}
   IsStream: 1
   Is3D: 0
   IsOneShot: 1
@@ -560,7 +263,88 @@ MonoBehaviour:
   MinDistance: 1
   MaxDistance: 20
   Length: 0
---- !u!114 &-1024892526388883601
+--- !u!114 &-1842774887483534893
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Events/Roadblock/Roadblock1_Enter
+  m_EditorClassIdentifier: 
+  Path: event:/Events/Roadblock/Roadblock1_Enter
+  Guid:
+    Data1: -1971733364
+    Data2: 1331125158
+    Data3: -247522910
+    Data4: 1100621107
+  Banks:
+  - {fileID: 8919054928785874934}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 0
+--- !u!114 &-1374069198197472991
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Interactions/Part 1/2.3
+  m_EditorClassIdentifier: 
+  Path: event:/Interactions/Part 1/2.3
+  Guid:
+    Data1: 177586221
+    Data2: 1132739104
+    Data3: -862389576
+    Data4: -467085699
+  Banks:
+  - {fileID: 8919054928785874934}
+  IsStream: 1
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 0
+--- !u!114 &-1042904435855429223
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/UI/UI Click
+  m_EditorClassIdentifier: 
+  Path: event:/UI/UI Click
+  Guid:
+    Data1: -480796150
+    Data2: 1077374948
+    Data3: -412135233
+    Data4: 1825227364
+  Banks:
+  - {fileID: 8919054928785874934}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 0
+--- !u!114 &-943978444824251427
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -579,7 +363,61 @@ MonoBehaviour:
     Data3: 934490031
     Data4: -952211480
   Banks:
-  - {fileID: 7029627800661937997}
+  - {fileID: 8919054928785874934}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 0
+--- !u!114 &-615767739485266255
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Events/Tree/Tree1_Deny
+  m_EditorClassIdentifier: 
+  Path: event:/Events/Tree/Tree1_Deny
+  Guid:
+    Data1: 798135811
+    Data2: 1099067120
+    Data3: 800564122
+    Data4: -1194553750
+  Banks:
+  - {fileID: 8919054928785874934}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 0
+--- !u!114 &-550651161851972991
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Interactions/Part 1/1.1
+  m_EditorClassIdentifier: 
+  Path: event:/Interactions/Part 1/1.1
+  Guid:
+    Data1: 1769832423
+    Data2: 1185094614
+    Data3: 542584486
+    Data4: -776544617
+  Banks:
+  - {fileID: 8919054928785874934}
   IsStream: 0
   Is3D: 0
   IsOneShot: 1
@@ -600,50 +438,50 @@ MonoBehaviour:
   m_Name: FMODStudioCache
   m_EditorClassIdentifier: 
   EditorBanks:
-  - {fileID: -2581290552187707430}
-  - {fileID: 7029627800661937997}
+  - {fileID: -7534693090845982905}
+  - {fileID: 8919054928785874934}
   EditorEvents:
-  - {fileID: 8446399740073746951}
-  - {fileID: 55168572217848894}
-  - {fileID: -3143560012443426727}
-  - {fileID: -6718074678288713920}
-  - {fileID: 7331359327324646984}
-  - {fileID: -8608088279641075373}
-  - {fileID: -3219523105517480319}
-  - {fileID: -2533531585506346762}
-  - {fileID: -1321832758636432035}
-  - {fileID: 1297716423854526507}
-  - {fileID: -1741556906658956896}
-  - {fileID: 4230939054298737905}
-  - {fileID: -3767091503126669352}
-  - {fileID: -1829670524051261166}
-  - {fileID: -4215888882404115120}
-  - {fileID: 4351363513581072092}
-  - {fileID: -9102316133341179167}
-  - {fileID: 5453038466860212496}
-  - {fileID: -8746175396216114054}
-  - {fileID: -5493230189966967817}
-  - {fileID: -5326610813152112051}
-  - {fileID: 6536050121322401867}
-  - {fileID: 1002087459838010075}
-  - {fileID: -2123700171755194151}
-  - {fileID: -1024892526388883601}
-  - {fileID: 2815340424766149090}
-  - {fileID: 2547642989606685965}
-  - {fileID: -8598675175270477509}
-  - {fileID: -1262461719684291248}
-  - {fileID: 4561008773585075994}
-  - {fileID: -6040434881771187632}
-  - {fileID: -2669373727058408406}
-  - {fileID: -2371694228553848878}
+  - {fileID: -4073248033216382226}
+  - {fileID: -615767739485266255}
+  - {fileID: -1042904435855429223}
+  - {fileID: 465322375607683590}
+  - {fileID: 4871553302735226070}
+  - {fileID: 9141220428104020205}
+  - {fileID: -1374069198197472991}
+  - {fileID: 8042955503390785450}
+  - {fileID: 5811826218722190093}
+  - {fileID: -7918073933958432687}
+  - {fileID: 8765953584750206237}
+  - {fileID: 8656165618041639199}
+  - {fileID: -7752513734569083833}
+  - {fileID: -5018325400811132122}
+  - {fileID: 2756390610647528301}
+  - {fileID: 8904610288382735320}
+  - {fileID: 4415576671392354129}
+  - {fileID: -1842774887483534893}
+  - {fileID: 815635387048351713}
+  - {fileID: 1157285598106993290}
+  - {fileID: -8459407705956751353}
+  - {fileID: -4877527507750315845}
+  - {fileID: 4004270324474323156}
+  - {fileID: 8020650816609623201}
+  - {fileID: -943978444824251427}
+  - {fileID: -5088342380091438882}
+  - {fileID: 5110596770520093637}
+  - {fileID: 5131101918063847052}
+  - {fileID: 2934082228517232577}
+  - {fileID: 1505052105147981831}
+  - {fileID: -550651161851972991}
+  - {fileID: -1947070790678707944}
+  - {fileID: -3749216909579596719}
   EditorParameters: []
   MasterBanks:
-  - {fileID: 7029627800661937997}
+  - {fileID: 8919054928785874934}
   StringsBanks:
-  - {fileID: -2581290552187707430}
-  cacheTime: 638102905793978645
+  - {fileID: -7534693090845982905}
+  cacheTime: 638102958245419329
   cacheVersion: 131601
---- !u!114 &55168572217848894
+--- !u!114 &465322375607683590
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -653,159 +491,24 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
-  m_Name: event:/Events/Tree/Tree1_Deny
+  m_Name: event:/Interactions/Part 1/1.3
   m_EditorClassIdentifier: 
-  Path: event:/Events/Tree/Tree1_Deny
+  Path: event:/Interactions/Part 1/1.3
   Guid:
-    Data1: 798135811
-    Data2: 1099067120
-    Data3: 800564122
-    Data4: -1194553750
+    Data1: -476637928
+    Data2: 1340657635
+    Data3: 1120826022
+    Data4: -1745082711
   Banks:
-  - {fileID: 7029627800661937997}
-  IsStream: 0
-  Is3D: 0
-  IsOneShot: 1
-  Parameters: []
-  MinDistance: 1
-  MaxDistance: 20
-  Length: 0
---- !u!114 &1002087459838010075
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
-  m_Name: event:/Train/Train Horn
-  m_EditorClassIdentifier: 
-  Path: event:/Train/Train Horn
-  Guid:
-    Data1: 1566218138
-    Data2: 1230972742
-    Data3: 1993270692
-    Data4: 349680557
-  Banks:
-  - {fileID: 7029627800661937997}
-  IsStream: 0
-  Is3D: 0
-  IsOneShot: 1
-  Parameters: []
-  MinDistance: 1
-  MaxDistance: 20
-  Length: 0
---- !u!114 &1297716423854526507
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
-  m_Name: event:/UI/Shield Use
-  m_EditorClassIdentifier: 
-  Path: event:/UI/Shield Use
-  Guid:
-    Data1: 868232771
-    Data2: 1175260464
-    Data3: -1686061944
-    Data4: 1081420425
-  Banks:
-  - {fileID: 7029627800661937997}
-  IsStream: 0
-  Is3D: 0
-  IsOneShot: 1
-  Parameters: []
-  MinDistance: 1
-  MaxDistance: 20
-  Length: 0
---- !u!114 &2547642989606685965
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
-  m_Name: event:/Events/Tree/Tree1_Text
-  m_EditorClassIdentifier: 
-  Path: event:/Events/Tree/Tree1_Text
-  Guid:
-    Data1: 1935642302
-    Data2: 1312066977
-    Data3: -1618779201
-    Data4: 1349612937
-  Banks:
-  - {fileID: 7029627800661937997}
-  IsStream: 0
-  Is3D: 0
-  IsOneShot: 1
-  Parameters: []
-  MinDistance: 1
-  MaxDistance: 20
-  Length: 0
---- !u!114 &2815340424766149090
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
-  m_Name: event:/Events/Miser/Miser1_Text
-  m_EditorClassIdentifier: 
-  Path: event:/Events/Miser/Miser1_Text
-  Guid:
-    Data1: -1844915286
-    Data2: 1230660707
-    Data3: 414572208
-    Data4: -464641845
-  Banks:
-  - {fileID: 7029627800661937997}
-  IsStream: 0
-  Is3D: 0
-  IsOneShot: 1
-  Parameters: []
-  MinDistance: 1
-  MaxDistance: 20
-  Length: 0
---- !u!114 &4230939054298737905
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
-  m_Name: event:/Train/Train Movement
-  m_EditorClassIdentifier: 
-  Path: event:/Train/Train Movement
-  Guid:
-    Data1: -901240235
-    Data2: 1254019528
-    Data3: 616233653
-    Data4: 2093375
-  Banks:
-  - {fileID: 7029627800661937997}
+  - {fileID: 8919054928785874934}
   IsStream: 1
   Is3D: 0
-  IsOneShot: 0
+  IsOneShot: 1
   Parameters: []
   MinDistance: 1
   MaxDistance: 20
-  Length: 10736
---- !u!114 &4351363513581072092
+  Length: 0
+--- !u!114 &815635387048351713
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -815,16 +518,43 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
-  m_Name: event:/Train/Grab Coal
+  m_Name: event:/Interactions/Part 1/1.2
   m_EditorClassIdentifier: 
-  Path: event:/Train/Grab Coal
+  Path: event:/Interactions/Part 1/1.2
   Guid:
-    Data1: -1437902712
-    Data2: 1308199773
-    Data3: -1855402583
-    Data4: 1116156184
+    Data1: 1227064975
+    Data2: 1334995069
+    Data3: -848483397
+    Data4: -1820417497
   Banks:
-  - {fileID: 7029627800661937997}
+  - {fileID: 8919054928785874934}
+  IsStream: 1
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 0
+--- !u!114 &1157285598106993290
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Events/Tree/Tree1_Enter
+  m_EditorClassIdentifier: 
+  Path: event:/Events/Tree/Tree1_Enter
+  Guid:
+    Data1: 829972880
+    Data2: 1195793665
+    Data3: 189351076
+    Data4: -744660477
+  Banks:
+  - {fileID: 8919054928785874934}
   IsStream: 0
   Is3D: 0
   IsOneShot: 1
@@ -832,7 +562,7 @@ MonoBehaviour:
   MinDistance: 1
   MaxDistance: 20
   Length: 0
---- !u!114 &4561008773585075994
+--- !u!114 &1505052105147981831
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -851,7 +581,7 @@ MonoBehaviour:
     Data3: 524111021
     Data4: -2064325702
   Banks:
-  - {fileID: 7029627800661937997}
+  - {fileID: 8919054928785874934}
   IsStream: 0
   Is3D: 0
   IsOneShot: 1
@@ -859,7 +589,7 @@ MonoBehaviour:
   MinDistance: 1
   MaxDistance: 20
   Length: 0
---- !u!114 &5453038466860212496
+--- !u!114 &2756390610647528301
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -869,24 +599,24 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
-  m_Name: event:/Events/Roadblock/Roadblock1_Enter
+  m_Name: event:/Ambience/Ambience
   m_EditorClassIdentifier: 
-  Path: event:/Events/Roadblock/Roadblock1_Enter
+  Path: event:/Ambience/Ambience
   Guid:
-    Data1: -1971733364
-    Data2: 1331125158
-    Data3: -247522910
-    Data4: 1100621107
+    Data1: -422245004
+    Data2: 1123672479
+    Data3: -1323216963
+    Data4: -665483064
   Banks:
-  - {fileID: 7029627800661937997}
-  IsStream: 0
+  - {fileID: 8919054928785874934}
+  IsStream: 1
   Is3D: 0
   IsOneShot: 1
   Parameters: []
   MinDistance: 1
   MaxDistance: 20
   Length: 0
---- !u!114 &6536050121322401867
+--- !u!114 &2934082228517232577
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -896,24 +626,24 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
-  m_Name: event:/UI/Event Start
+  m_Name: event:/Ambience/Fireplace
   m_EditorClassIdentifier: 
-  Path: event:/UI/Event Start
+  Path: event:/Ambience/Fireplace
   Guid:
-    Data1: -1883182190
-    Data2: 1208950864
-    Data3: -871205744
-    Data4: -1790376566
+    Data1: -488347195
+    Data2: 1110492121
+    Data3: 603170984
+    Data4: -1695164205
   Banks:
-  - {fileID: 7029627800661937997}
-  IsStream: 0
+  - {fileID: 8919054928785874934}
+  IsStream: 1
   Is3D: 0
   IsOneShot: 1
   Parameters: []
   MinDistance: 1
   MaxDistance: 20
   Length: 0
---- !u!114 &7029627800661937997
+--- !u!114 &4004270324474323156
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -922,16 +652,52 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
-  m_Name: bank:/Master.bank
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Train/Train Horn
   m_EditorClassIdentifier: 
-  Path: Assets/FMODBanks/Desktop/Master.bank
-  Name: Master
-  StudioPath: bank:/Master
-  lastModified: 638102905793958643
-  FileSizes: []
-  Exists: 1
---- !u!114 &7331359327324646984
+  Path: event:/Train/Train Horn
+  Guid:
+    Data1: 1566218138
+    Data2: 1230972742
+    Data3: 1993270692
+    Data4: 349680557
+  Banks:
+  - {fileID: 8919054928785874934}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 0
+--- !u!114 &4415576671392354129
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Narration/Level Intro
+  m_EditorClassIdentifier: 
+  Path: event:/Narration/Level Intro
+  Guid:
+    Data1: -169757048
+    Data2: 1184210307
+    Data3: -185925465
+    Data4: 1994531423
+  Banks:
+  - {fileID: 8919054928785874934}
+  IsStream: 1
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 0
+--- !u!114 &4871553302735226070
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -950,7 +716,7 @@ MonoBehaviour:
     Data3: 1933599362
     Data4: -785462424
   Banks:
-  - {fileID: 7029627800661937997}
+  - {fileID: 8919054928785874934}
   IsStream: 0
   Is3D: 0
   IsOneShot: 1
@@ -958,7 +724,7 @@ MonoBehaviour:
   MinDistance: 1
   MaxDistance: 20
   Length: 0
---- !u!114 &8446399740073746951
+--- !u!114 &5110596770520093637
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -968,16 +734,250 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
-  m_Name: event:/Events/Roadblock/Roadblockl1_Text
+  m_Name: event:/Events/Tree/Tree1_Text
   m_EditorClassIdentifier: 
-  Path: event:/Events/Roadblock/Roadblockl1_Text
+  Path: event:/Events/Tree/Tree1_Text
   Guid:
-    Data1: -2091376125
-    Data2: 1211017818
-    Data3: -1563952485
-    Data4: -855338480
+    Data1: 1935642302
+    Data2: 1312066977
+    Data3: -1618779201
+    Data4: 1349612937
   Banks:
-  - {fileID: 7029627800661937997}
+  - {fileID: 8919054928785874934}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 0
+--- !u!114 &5131101918063847052
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Interactions/Part 1/2.1
+  m_EditorClassIdentifier: 
+  Path: event:/Interactions/Part 1/2.1
+  Guid:
+    Data1: -105223997
+    Data2: 1331322648
+    Data3: -1830310232
+    Data4: -1600246377
+  Banks:
+  - {fileID: 8919054928785874934}
+  IsStream: 1
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 0
+--- !u!114 &5811826218722190093
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Events/Tollgate/Tollgate1_Enter
+  m_EditorClassIdentifier: 
+  Path: event:/Events/Tollgate/Tollgate1_Enter
+  Guid:
+    Data1: -1414343621
+    Data2: 1161655818
+    Data3: 1991747508
+    Data4: 163859964
+  Banks:
+  - {fileID: 8919054928785874934}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 0
+--- !u!114 &8020650816609623201
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Events/Tollgate/Tollgate1_Accept
+  m_EditorClassIdentifier: 
+  Path: event:/Events/Tollgate/Tollgate1_Accept
+  Guid:
+    Data1: -670571357
+    Data2: 1235193274
+    Data3: -356085632
+    Data4: -1313608997
+  Banks:
+  - {fileID: 8919054928785874934}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 0
+--- !u!114 &8042955503390785450
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Events/Roadblock/Roadblock1_Accept
+  m_EditorClassIdentifier: 
+  Path: event:/Events/Roadblock/Roadblock1_Accept
+  Guid:
+    Data1: -2140442053
+    Data2: 1201538596
+    Data3: 820972956
+    Data4: -1582880551
+  Banks:
+  - {fileID: 8919054928785874934}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 0
+--- !u!114 &8656165618041639199
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Train/Train Movement
+  m_EditorClassIdentifier: 
+  Path: event:/Train/Train Movement
+  Guid:
+    Data1: -901240235
+    Data2: 1254019528
+    Data3: 616233653
+    Data4: 2093375
+  Banks:
+  - {fileID: 8919054928785874934}
+  IsStream: 1
+  Is3D: 0
+  IsOneShot: 0
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 10736
+--- !u!114 &8765953584750206237
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Events/Tree/Tree1_Accept
+  m_EditorClassIdentifier: 
+  Path: event:/Events/Tree/Tree1_Accept
+  Guid:
+    Data1: -252444347
+    Data2: 1341377894
+    Data3: 1509442195
+    Data4: 1889375876
+  Banks:
+  - {fileID: 8919054928785874934}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 0
+--- !u!114 &8904610288382735320
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Train/Grab Coal
+  m_EditorClassIdentifier: 
+  Path: event:/Train/Grab Coal
+  Guid:
+    Data1: -1437902712
+    Data2: 1308199773
+    Data3: -1855402583
+    Data4: 1116156184
+  Banks:
+  - {fileID: 8919054928785874934}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 0
+--- !u!114 &8919054928785874934
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
+  m_Name: bank:/Master.bank
+  m_EditorClassIdentifier: 
+  Path: Assets/FMODBanks/Desktop/Master.bank
+  Name: Master
+  StudioPath: bank:/Master
+  lastModified: 638102958245409364
+  FileSizes: []
+  Exists: 1
+--- !u!114 &9141220428104020205
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Events/Miser/Miser1_Enter
+  m_EditorClassIdentifier: 
+  Path: event:/Events/Miser/Miser1_Enter
+  Guid:
+    Data1: 1950678822
+    Data2: 1257656094
+    Data3: 1922056849
+    Data4: -852207506
+  Banks:
+  - {fileID: 8919054928785874934}
   IsStream: 0
   Is3D: 0
   IsOneShot: 1
