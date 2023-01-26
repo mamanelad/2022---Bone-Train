@@ -1,0 +1,81 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c86e91921e9ba5e419d15579e50b8591, type: 3}
+  m_Name: 8.1
+  m_EditorClassIdentifier: 
+  character: {fileID: 21300000, guid: 52eef1149ae84a04e9692b0164ce2061, type: 3}
+  audio:
+    Guid:
+      Data1: -1165800927
+      Data2: 1242718487
+      Data3: -2061005127
+      Data4: -1812788208
+    Path: event:/Interactions/Part 3/8.1
+  enteredDistanceAudio:
+    Guid:
+      Data1: 0
+      Data2: 0
+      Data3: 0
+      Data4: 0
+    Path: 
+  iconIndex: 6
+  title: The Unescapable Fiend
+  textBox: In the depths of hell, a terrifying creature with razor-sharp claws and
+    eyes that glow with intelligence, demands a steep price for safe passage. Running
+    or fighting is not an option, leaving only the cost of one's own soul as a means
+    of survival.
+  options:
+  - title: Pay his asking price
+    goodSouls: -200
+    badSouls: 0
+    soulsStones: -200
+    sword: 0
+    shield: 0
+    sound:
+      Guid:
+        Data1: 0
+        Data2: 0
+        Data3: 0
+        Data4: 0
+      Path: 
+    text: 
+    odds: 0
+  - title: 'pay half the price '
+    goodSouls: -250
+    badSouls: 0
+    soulsStones: -200
+    sword: 0
+    shield: 0
+    sound:
+      Guid:
+        Data1: 0
+        Data2: 0
+        Data3: 0
+        Data4: 0
+      Path: 
+    text: Try paying half the first option
+    odds: 0
+  - title: 'Try to ecsacpe '
+    goodSouls: -300
+    badSouls: 0
+    soulsStones: -300
+    sword: 0
+    shield: 0
+    sound:
+      Guid:
+        Data1: 0
+        Data2: 0
+        Data3: 0
+        Data4: 0
+      Path: 
+    text: Try to run away from the fiend
+    odds: 70

@@ -1,0 +1,66 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c86e91921e9ba5e419d15579e50b8591, type: 3}
+  m_Name: 6.2
+  m_EditorClassIdentifier: 
+  character: {fileID: 21300000, guid: d2229caead6e54d40b860f2616b39e31, type: 3}
+  audio:
+    Guid:
+      Data1: 550825571
+      Data2: 1181939345
+      Data3: 1953126534
+      Data4: 1100431741
+    Path: event:/Interactions/Part 3/6.2
+  enteredDistanceAudio:
+    Guid:
+      Data1: 0
+      Data2: 0
+      Data3: 0
+      Data4: 0
+    Path: 
+  iconIndex: 5
+  title: The Unstable Beast of the Inferno
+  textBox: Deep in hell, a crazed and evil creature with red eyes blocks the road,
+    seeking pure souls to fuel its twisted desires. Its unpredictable and unstable
+    nature makes it a formidable opponent, but it may offer a trade for passage.
+    Beware, the cost may be too high.
+  options:
+  - title: Pure deal
+    goodSouls: -200
+    badSouls: 0
+    soulsStones: 300
+    sword: 0
+    shield: 0
+    sound:
+      Guid:
+        Data1: 0
+        Data2: 0
+        Data3: 0
+        Data4: 0
+      Path: 
+    text: 
+    odds: 0
+  - title: Mixed Deal
+    goodSouls: -100
+    badSouls: 50
+    soulsStones: 300
+    sword: 0
+    shield: 0
+    sound:
+      Guid:
+        Data1: 0
+        Data2: 0
+        Data3: 0
+        Data4: 0
+      Path: 
+    text: 
+    odds: 0

@@ -1,0 +1,51 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c86e91921e9ba5e419d15579e50b8591, type: 3}
+  m_Name: Fuel Station w' Audio
+  m_EditorClassIdentifier: 
+  character: {fileID: 21300000, guid: d570aec63857bf64bb705dcf46ac6a4e, type: 3}
+  audio:
+    Guid:
+      Data1: 1562402846
+      Data2: 1320389887
+      Data3: 344281766
+      Data4: -305611977
+    Path: event:/Interactions/Part 0/Fuel
+  enteredDistanceAudio:
+    Guid:
+      Data1: 0
+      Data2: 0
+      Data3: 0
+      Data4: 0
+    Path: 
+  iconIndex: 2
+  title: Fuel station
+  textBox: The devilish fuel station stood before you. A group of demons greeted
+    you with a sly grin and offered to fuel your train to the max. They also explained
+    that green dots on your map symbolize fuel stations and that you can always count
+    on them to have the best fuel.
+  options:
+  - title: Fuel up!
+    goodSouls: 0
+    badSouls: 0
+    soulsStones: 10000
+    sword: 0
+    shield: 0
+    sound:
+      Guid:
+        Data1: 0
+        Data2: 0
+        Data3: 0
+        Data4: 0
+      Path: 
+    text: Fill up the tank
+    odds: 0

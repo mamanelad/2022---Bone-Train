@@ -1,0 +1,65 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c86e91921e9ba5e419d15579e50b8591, type: 3}
+  m_Name: 8.3
+  m_EditorClassIdentifier: 
+  character: {fileID: 21300000, guid: 8f7d126cfceb2af4680f3b6e0c93e862, type: 3}
+  audio:
+    Guid:
+      Data1: -97924579
+      Data2: 1097946281
+      Data3: 796229281
+      Data4: -1858296930
+    Path: event:/Interactions/Part 3/8.3
+  enteredDistanceAudio:
+    Guid:
+      Data1: 0
+      Data2: 0
+      Data3: 0
+      Data4: 0
+    Path: 
+  iconIndex: 6
+  title: The Malevolent Talking Tree
+  textBox: You come across a talking tree that offers to trade bad souls for the
+    fuel it needs to grow. It reveals that it is a devilish tree that feeds on darkness
+    and bad souls to satisfy its never-ending hunger.
+  options:
+  - title: Oak
+    goodSouls: 0
+    badSouls: -100
+    soulsStones: -200
+    sword: 0
+    shield: 0
+    sound:
+      Guid:
+        Data1: 0
+        Data2: 0
+        Data3: 0
+        Data4: 0
+      Path: 
+    text: 
+    odds: 0
+  - title: Willow
+    goodSouls: 0
+    badSouls: -500
+    soulsStones: -300
+    sword: 0
+    shield: 0
+    sound:
+      Guid:
+        Data1: 0
+        Data2: 0
+        Data3: 0
+        Data4: 0
+      Path: 
+    text: Feed him until he is stratified.
+    odds: 0
