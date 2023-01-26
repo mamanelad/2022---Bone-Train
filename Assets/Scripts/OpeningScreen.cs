@@ -7,7 +7,6 @@ public class OpeningScreen : MonoBehaviour
 {
     public void StartGame()
     {
-        print("AAAAA");
-        SceneManager.LoadScene("LVL 3", LoadSceneMode.Single);
+        SceneManager.LoadScene("LVL 5", LoadSceneMode.Single);
     }
 }

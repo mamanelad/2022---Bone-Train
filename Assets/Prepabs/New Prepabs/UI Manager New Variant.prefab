@@ -10,7 +10,7 @@ PrefabInstance:
     - target: {fileID: 1711490449320883408, guid: 832cb521db0a2594da2f3b5854b90c86, type: 3}
       propertyPath: m_Sprite
       value: 
-      objectReference: {fileID: 989480923, guid: 35d4ad0e4ed8ad94f8dee27ba1048b5f, type: 3}
+      objectReference: {fileID: -105823960, guid: c50fb3e7789a31448a7ea8f3de8fe2ba, type: 3}
     - target: {fileID: 1711490449320883408, guid: 832cb521db0a2594da2f3b5854b90c86, type: 3}
       propertyPath: m_Color.a
       value: 1
@@ -29,7 +29,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1711490449320883414, guid: 832cb521db0a2594da2f3b5854b90c86, type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: 296.6856
+      value: 298
       objectReference: {fileID: 0}
     - target: {fileID: 1711490449320883414, guid: 832cb521db0a2594da2f3b5854b90c86, type: 3}
       propertyPath: m_AnchoredPosition.y
@@ -38,6 +38,30 @@ PrefabInstance:
     - target: {fileID: 2849674158098315312, guid: 832cb521db0a2594da2f3b5854b90c86, type: 3}
       propertyPath: m_IsActive
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4431861655446008432, guid: 832cb521db0a2594da2f3b5854b90c86, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: -1516503608, guid: 10f792d01b04b7646ab0710b36efc3dd, type: 3}
+    - target: {fileID: 4483603874112974675, guid: 832cb521db0a2594da2f3b5854b90c86, type: 3}
+      propertyPath: _furnace
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 4483603874112974675, guid: 832cb521db0a2594da2f3b5854b90c86, type: 3}
+      propertyPath: wantedScaleX
+      value: 0.2
+      objectReference: {fileID: 0}
+    - target: {fileID: 4483603874112974675, guid: 832cb521db0a2594da2f3b5854b90c86, type: 3}
+      propertyPath: wantedScaleY
+      value: 0.32
+      objectReference: {fileID: 0}
+    - target: {fileID: 4483603874112974675, guid: 832cb521db0a2594da2f3b5854b90c86, type: 3}
+      propertyPath: fuelIconPrefab
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 4483603874112974675, guid: 832cb521db0a2594da2f3b5854b90c86, type: 3}
+      propertyPath: _furnaceTransform
+      value: 
       objectReference: {fileID: 0}
     - target: {fileID: 4592040525470580117, guid: 832cb521db0a2594da2f3b5854b90c86, type: 3}
       propertyPath: mouseOverColor.a

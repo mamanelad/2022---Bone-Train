@@ -13,7 +13,7 @@ public class Drag : MonoBehaviour, IDragHandler, IBeginDragHandler, IEndDragHand
 {
     [SerializeField] private GameObject fuelIconPrefab;
     [SerializeField] private float dampingSpeed = .05f;
-    
+
     private Canvas _canvas;
     private RectTransform _draggingObjectRectTransform;
     private Vector3 _velocity = Vector3.zero;
@@ -29,6 +29,7 @@ public class Drag : MonoBehaviour, IDragHandler, IBeginDragHandler, IEndDragHand
 
     [SerializeField] private float wantedScaleX = 0.5f;
     [SerializeField] private float wantedScaleY = 0.5f;
+
     private void Awake()
     {
         _draggingObjectRectTransform = transform as RectTransform;
@@ -42,12 +43,12 @@ public class Drag : MonoBehaviour, IDragHandler, IBeginDragHandler, IEndDragHand
 
         if (!_furnace)
             _furnace = FindObjectOfType<Furnace>();
-
-
     }
 
     private void TouchFurnace()
     {
+        if (GameManager.Shared.GetSpeedState() == GameManager.SpeedState.Stop)
+            return;
         GameManager.Shared.ChangeInventoryFromDrag(myBurnObject);
         GameManager.Shared.GetMouse().ChangeToIdleMouse();
         if (UIAudioManager.Instance)
@@ -59,22 +60,26 @@ public class Drag : MonoBehaviour, IDragHandler, IBeginDragHandler, IEndDragHand
 
     private bool RectOverlap(RectTransform firstRect, RectTransform secondRect)
     {
-        if (firstRect.position.x + firstRect.rect.width * overLapFactor < secondRect.position.x - secondRect.rect.width * overLapFactor)
+        if (firstRect.position.x + firstRect.rect.width * overLapFactor <
+            secondRect.position.x - secondRect.rect.width * overLapFactor)
         {
             return false;
         }
 
-        if (secondRect.position.x + secondRect.rect.width * overLapFactor < firstRect.position.x - firstRect.rect.width * overLapFactor)
+        if (secondRect.position.x + secondRect.rect.width * overLapFactor <
+            firstRect.position.x - firstRect.rect.width * overLapFactor)
         {
             return false;
         }
 
-        if (firstRect.position.y + firstRect.rect.height * overLapFactor < secondRect.position.y - secondRect.rect.height * overLapFactor)
+        if (firstRect.position.y + firstRect.rect.height * overLapFactor <
+            secondRect.position.y - secondRect.rect.height * overLapFactor)
         {
             return false;
         }
 
-        if (secondRect.position.y + secondRect.rect.height * overLapFactor < firstRect.position.y - firstRect.rect.height * overLapFactor)
+        if (secondRect.position.y + secondRect.rect.height * overLapFactor <
+            firstRect.position.y - firstRect.rect.height * overLapFactor)
         {
             return false;
         }
@@ -95,31 +100,30 @@ public class Drag : MonoBehaviour, IDragHandler, IBeginDragHandler, IEndDragHand
 
     public void OnBeginDrag(PointerEventData eventData)
     {
-        
-        
         GameManager.Shared.GetMouse().ChangeToDragMouse();
         changeAlfa(_fullALfa);
         if (UIAudioManager.Instance)
             UIAudioManager.Instance.PlayGrabCoal();
         var newFuelIcon = Instantiate(fuelIconPrefab, transform.position, Quaternion.identity);
         newFuelIcon.transform.SetParent(_canvas.transform);
-        newFuelIcon.transform.localScale = transform.localScale ;
+        newFuelIcon.transform.localScale = transform.localScale;
         newFuelIcon.GetComponent<Drag>().SetCanvas(_canvas);
         newFuelIcon.GetComponent<Drag>().SetFurnace(_furnace);
-        transform.localScale = new Vector3(wantedScaleX, wantedScaleX, wantedScaleX);
+        transform.localScale = new Vector3(wantedScaleX, wantedScaleY, wantedScaleX);
     }
 
 
     private void changeAlfa(float newAlfa)
     {
         var image = GetComponent<Image>();
-        image.color  = new Color(image.color[0], image.color[1], image.color[2], newAlfa);  
+        image.color = new Color(image.color[0], image.color[1], image.color[2], newAlfa);
     }
+
     public void OnEndDrag(PointerEventData eventData)
     {
         if (RectOverlap(transform.GetComponent<RectTransform>(), _furnaceTransform.GetComponent<RectTransform>()))
             TouchFurnace();
-        
+
         GameManager.Shared.GetMouse().ChangeToIdleMouse();
         Destroy(gameObject);
     }
@@ -128,7 +132,7 @@ public class Drag : MonoBehaviour, IDragHandler, IBeginDragHandler, IEndDragHand
     {
         _canvas = newCanvas;
     }
-    
+
     public void SetFurnace(Furnace newFurnace)
     {
         _furnace = newFurnace;
