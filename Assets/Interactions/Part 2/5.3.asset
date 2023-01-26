@@ -1,0 +1,68 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c86e91921e9ba5e419d15579e50b8591, type: 3}
+  m_Name: 5.3
+  m_EditorClassIdentifier: 
+  character: {fileID: 21300000, guid: 343978b5a05cd944d802bad383390fbe, type: 3}
+  audio:
+    Guid:
+      Data1: 0
+      Data2: 0
+      Data3: 0
+      Data4: 0
+    Path: 
+  enteredDistanceAudio:
+    Guid:
+      Data1: 0
+      Data2: 0
+      Data3: 0
+      Data4: 0
+    Path: 
+  iconIndex: 6
+  title: 'The Pitiful Creature''s Plea '
+  textBox: As you continue your journey, you come across a pitiful creature cowering
+    on the side of the tracks. It's small and weak, with a look of despair on its
+    face. The creature pleads with you, explaining that it needs fuel to bring to
+    its master, otherwise it will be punished. It claims to have nothing to give
+    in return but you have a gut feeling that it might have something of value to
+    offer.
+  options:
+  - title: Give him fuel
+    goodSouls: 0
+    badSouls: 0
+    soulsStones: -50
+    sword: 0
+    shield: 1
+    sound:
+      Guid:
+        Data1: 0
+        Data2: 0
+        Data3: 0
+        Data4: 0
+      Path: 
+    text: Give him fifty fuel
+    odds: 0
+  - title: Keep driving
+    goodSouls: 0
+    badSouls: 0
+    soulsStones: 0
+    sword: 0
+    shield: 0
+    sound:
+      Guid:
+        Data1: 0
+        Data2: 0
+        Data3: 0
+        Data4: 0
+      Path: 
+    text: Send him back to his master empty-handed.
+    odds: 0
