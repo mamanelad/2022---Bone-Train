@@ -87,6 +87,11 @@ public class GameManager : MonoBehaviour
     private bool _tutorialIsOn;
 
     private Tutorial _tutorial;
+    private bool _firstTimeUsingStartHandle = true;
+    private bool _firstTimeAddingGoodSouls = true;
+    private bool _firstTimeAddingBadSouls = true;
+    private bool _firstTimeArrows = true;
+    private bool _firstTimeSpecialItem = true;
 
     [Header("Test")] [SerializeField] private bool testArrows0;
     [SerializeField] private bool testArrows;
@@ -154,7 +159,7 @@ public class GameManager : MonoBehaviour
                 _interactionManager.SetTutorialObject(_tutorial);
             }
 
-            _tutorial.OpenNextTutorialObject();
+            // _tutorial.OpenNextTutorialObject();
         }
     }
 
@@ -293,6 +298,12 @@ public class GameManager : MonoBehaviour
 
     public void ContinueTrain()
     {
+        if (_firstTimeUsingStartHandle)
+        {
+            _firstTimeUsingStartHandle = false;
+            _tutorial.FirstTimeHandle();
+        }
+        
         ChangeBySoulStones(takeDownFuelContinueTrain);
         speedState = SpeedState.Run;
     }
@@ -322,6 +333,13 @@ public class GameManager : MonoBehaviour
 
     public void ChangeByGoodSouls(int addNum)
     {
+        if (_firstTimeAddingGoodSouls)
+        {
+            _firstTimeAddingGoodSouls = false;
+            _tutorial.OpenTutorialObject(TutorialObject.TutorialKind.GoodSouls);
+        }
+        
+        
         if (GoodSouls + addNum < 0)
         {
             GoodSouls = 0;
@@ -341,6 +359,12 @@ public class GameManager : MonoBehaviour
 
     public void ChangeByBadSouls(int addNum)
     {
+        if (_firstTimeAddingBadSouls)
+        {
+            _firstTimeAddingBadSouls = false;
+            _tutorial.OpenTutorialObject(TutorialObject.TutorialKind.BadSouls);
+        }
+        
         if (BadSouls + addNum < 0)
         {
             BadSouls = 0;
@@ -388,6 +412,12 @@ public class GameManager : MonoBehaviour
 
     public void ChangeBySwords(int addNum)
     {
+        if (!_firstTimeSpecialItem)
+        {
+            _firstTimeSpecialItem = true;
+            _tutorial.OpenTutorialObject(TutorialObject.TutorialKind.SpecialItem);
+        }
+        
         if (Swords + addNum < 0)
             Swords = 0;
 
@@ -397,6 +427,12 @@ public class GameManager : MonoBehaviour
 
     public void ChangeByShields(int addNum)
     {
+        if (!_firstTimeSpecialItem)
+        {
+            _firstTimeSpecialItem = true;
+            _tutorial.OpenTutorialObject(TutorialObject.TutorialKind.SpecialItem);
+        }
+        
         if (Shields + addNum < 0)
             Shields = 0;
 
@@ -450,6 +486,16 @@ public class GameManager : MonoBehaviour
 
     public void ArrowsTurnOnAndOff(bool mood)
     {
+        if (_firstTimeArrows)
+        {
+            if (mood)
+            {
+                _firstTimeArrows = false;
+                _tutorial.OpenTutorialObject(TutorialObject.TutorialKind.MiniMap);
+            }
+        }
+        
+        
         foreach (var arrow in _arrows)
         {
             switch (mood)
