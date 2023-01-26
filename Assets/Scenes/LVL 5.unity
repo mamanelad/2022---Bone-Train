@@ -21402,8 +21402,12 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 1354094593851623755, guid: d4e67d456f96e0c458bc586bbf208230, type: 3}
+      propertyPath: enemyEvent
+      value: 
+      objectReference: {fileID: 11400000, guid: 9ce7d36e7d369d24f8aa186881b28a4c, type: 2}
+    - target: {fileID: 1354094593851623755, guid: d4e67d456f96e0c458bc586bbf208230, type: 3}
       propertyPath: enemiesAmountMax
-      value: 0
+      value: 5
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d4e67d456f96e0c458bc586bbf208230, type: 3}

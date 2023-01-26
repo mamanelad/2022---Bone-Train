@@ -108,6 +108,33 @@ MonoBehaviour:
   MinDistance: 1
   MaxDistance: 20
   Length: 0
+--- !u!114 &-7749237522931520426
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Interactions/Part 0/Raiders 1
+  m_EditorClassIdentifier: 
+  Path: event:/Interactions/Part 0/Raiders 1
+  Guid:
+    Data1: -77259358
+    Data2: 1293111217
+    Data3: -1259968364
+    Data4: 726533862
+  Banks:
+  - {fileID: 8919054928785874934}
+  IsStream: 1
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 0
 --- !u!114 &-7534693090845982905
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -123,10 +150,10 @@ MonoBehaviour:
   Path: Assets/FMODBanks/Desktop/Master.strings.bank
   Name: Master.strings
   StudioPath: bank:/Master.strings
-  lastModified: 638103177188550701
+  lastModified: 638103188879374258
   FileSizes:
   - Name: 
-    Value: 3002
+    Value: 3042
   Exists: 1
 --- !u!114 &-6976742701315780904
 MonoBehaviour:
@@ -708,12 +735,13 @@ MonoBehaviour:
   - {fileID: -4020767772494720418}
   - {fileID: 2249765872294912979}
   - {fileID: 7625990440417008774}
+  - {fileID: -7749237522931520426}
   EditorParameters: []
   MasterBanks:
   - {fileID: 8919054928785874934}
   StringsBanks:
   - {fileID: -7534693090845982905}
-  cacheTime: 638103177188550701
+  cacheTime: 638103188879374258
   cacheVersion: 131601
 --- !u!114 &465322375607683590
 MonoBehaviour:
@@ -1459,7 +1487,7 @@ MonoBehaviour:
   Path: Assets/FMODBanks/Desktop/Master.bank
   Name: Master
   StudioPath: bank:/Master
-  lastModified: 638103177188530991
+  lastModified: 638103188879354250
   FileSizes: []
   Exists: 1
 --- !u!114 &9141220428104020205
