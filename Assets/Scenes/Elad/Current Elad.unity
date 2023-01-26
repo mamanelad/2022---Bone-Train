@@ -31350,6 +31350,7 @@ MonoBehaviour:
   badSoulsInitializeValue: 100
   swordsInitializeValue: 0
   shieldsInitializeValue: 0
+  maxSoulStones: 1000
   _arrows:
   - {fileID: 0}
   - {fileID: 0}
