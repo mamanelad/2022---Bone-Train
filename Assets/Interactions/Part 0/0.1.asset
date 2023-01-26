@@ -10,16 +10,16 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: c86e91921e9ba5e419d15579e50b8591, type: 3}
-  m_Name: 1.1
+  m_Name: 0.1
   m_EditorClassIdentifier: 
-  character: {fileID: 21300000, guid: f8b7b2f7a1d7565499de4ee8631a9a31, type: 3}
+  character: {fileID: 21300000, guid: 576947f242fb6594dacd6611a6bf5691, type: 3}
   audio:
     Guid:
-      Data1: 1769832423
-      Data2: 1185094614
-      Data3: 542584486
-      Data4: -776544617
-    Path: event:/Interactions/Part 1/1.1
+      Data1: 0
+      Data2: 0
+      Data3: 0
+      Data4: 0
+    Path: 
   enteredDistanceAudio:
     Guid:
       Data1: 0
@@ -27,45 +27,16 @@ MonoBehaviour:
       Data3: 0
       Data4: 0
     Path: 
-  iconIndex: 7
-  title: 'Well of the Torment '
-  textBox: Deep within the earth, a well whispers secrets of tormented souls, offering
-    a powerful item to those brave enough to pay the price.
+  iconIndex: 5
+  title: The Well of Souls
+  textBox: You stumbled upon a well of good souls that pulsed with ominous energy.
+    A voice from within offered you good souls in exchange for some of your own fuel.
+    You weighed your options carefully before deciding.
   options:
-  - title: Pay with souls
-    goodSouls: -50
+  - title: Go big
+    goodSouls: 50
     badSouls: 0
-    soulsStones: 0
-    sword: 1
-    shield: 0
-    sound:
-      Guid:
-        Data1: 0
-        Data2: 0
-        Data3: 0
-        Data4: 0
-      Path: 
-    text: 
-    odds: 0
-  - title: Pay with fuel
-    goodSouls: 0
-    badSouls: 50
-    soulsStones: 0
-    sword: 1
-    shield: 0
-    sound:
-      Guid:
-        Data1: 0
-        Data2: 0
-        Data3: 0
-        Data4: 0
-      Path: 
-    text: 
-    odds: 0
-  - title: Walk away
-    goodSouls: 0
-    badSouls: 0
-    soulsStones: 0
+    soulsStones: -100
     sword: 0
     shield: 0
     sound:
@@ -75,5 +46,20 @@ MonoBehaviour:
         Data3: 0
         Data4: 0
       Path: 
-    text: Get nothing
+    text: 
+    odds: 0
+  - title: go bigger
+    goodSouls: 100
+    badSouls: 0
+    soulsStones: -175
+    sword: 0
+    shield: 0
+    sound:
+      Guid:
+        Data1: 0
+        Data2: 0
+        Data3: 0
+        Data4: 0
+      Path: 
+    text: 
     odds: 0
