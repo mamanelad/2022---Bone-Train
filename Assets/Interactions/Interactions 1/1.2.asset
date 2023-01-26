@@ -10,16 +10,16 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: c86e91921e9ba5e419d15579e50b8591, type: 3}
-  m_Name: Sword
+  m_Name: 1.2
   m_EditorClassIdentifier: 
-  character: {fileID: 21300000, guid: e760e6c8f5401164bb7ce0d48dd4a4c8, type: 3}
+  character: {fileID: 21300000, guid: bfa3eac6feb6f934cbafb49ad70d023b, type: 3}
   audio:
     Guid:
-      Data1: 0
-      Data2: 0
-      Data3: 0
-      Data4: 0
-    Path: 
+      Data1: 1227064975
+      Data2: 1334995069
+      Data3: -848483397
+      Data4: -1820417497
+    Path: event:/Interactions/Part 1/1.2
   enteredDistanceAudio:
     Guid:
       Data1: 0
@@ -27,42 +27,14 @@ MonoBehaviour:
       Data3: 0
       Data4: 0
     Path: 
-  iconIndex: 7
-  title: Holy Weapon
-  textBox: This item will grant you stength...  for a price.
+  iconIndex: 6
+  title: Sinister Intents
+  textBox: A mysterious figure blocks the train's path, demanding payment. He seems
+    dangerous and holds secrets, making the decision of paying or finding another
+    route difficult. Be cautious.
   options:
-  - title: Pay with souls
-    goodSouls: -50
-    badSouls: 0
-    soulsStones: 0
-    sword: 1
-    shield: 0
-    sound:
-      Guid:
-        Data1: 0
-        Data2: 0
-        Data3: 0
-        Data4: 0
-      Path: 
-    text: 
-    odds: 100
-  - title: Pay with fuel
-    goodSouls: 0
-    badSouls: 0
-    soulsStones: -50
-    sword: 1
-    shield: 0
-    sound:
-      Guid:
-        Data1: 0
-        Data2: 0
-        Data3: 0
-        Data4: 0
-      Path: 
-    text: 
-    odds: 100
-  - title: Walk away
-    goodSouls: 0
+  - title: Choose to pay
+    goodSouls: -100
     badSouls: 0
     soulsStones: 0
     sword: 0
@@ -74,5 +46,20 @@ MonoBehaviour:
         Data3: 0
         Data4: 0
       Path: 
-    text: Get Noting
-    odds: 100
+    text: 
+    odds: 0
+  - title: Choose not to pay
+    goodSouls: -50
+    badSouls: 0
+    soulsStones: 0
+    sword: 0
+    shield: 0
+    sound:
+      Guid:
+        Data1: 0
+        Data2: 0
+        Data3: 0
+        Data4: 0
+      Path: 
+    text: Take your chance.
+    odds: 80

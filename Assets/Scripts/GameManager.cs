@@ -116,7 +116,7 @@ public class GameManager : MonoBehaviour
         Shared = this;
         speedState = SpeedState.Run;
 
-        
+
         // InitUiNumbers();
         InitiateCheckPointData();
 
@@ -155,8 +155,6 @@ public class GameManager : MonoBehaviour
 
             _tutorial.OpenNextTutorialObject();
         }
-        
-        
     }
 
     private void Update()
@@ -166,7 +164,7 @@ public class GameManager : MonoBehaviour
             _initFinish = true;
             InitSouls();
         }
-        
+
         if (Input.GetKeyDown(KeyCode.R))
         {
             SceneManager.LoadScene("Opening screen", LoadSceneMode.Single);
@@ -180,7 +178,7 @@ public class GameManager : MonoBehaviour
 
         if (closeArrows)
         {
-            ArrowsTurnOnAndOff(closeArrows);
+            ArrowsTurnOnAndOff(false);
             closeArrows = false;
         }
 
@@ -209,7 +207,6 @@ public class GameManager : MonoBehaviour
             _fuelManager = FindObjectOfType<FuelManager>();
         }
 
-        
 
         SpeedStateHandler();
         bool drivingMode = speedState != SpeedState.Stop;
@@ -236,16 +233,14 @@ public class GameManager : MonoBehaviour
         BadSouls = badSoulsInitializeValue;
         Swords = swordsInitializeValue;
         Shields = shieldsInitializeValue;
-        
+
         _uiManager.SetBadSouls();
         _uiManager.SetGoodSouls();
         _uiManager.SetSoulStones();
         _uiManager.SetSwords();
         _uiManager.SetShields();
-       
+
         _soulsCircle.ChangeSoulsAmount(SoulsCircle.WhenTheFunctionIsCalled.OnInit);
-        
-        
     }
 
     // private void InitUiNumbers()
@@ -352,7 +347,7 @@ public class GameManager : MonoBehaviour
         }
 
         BadSouls += addNum;
-        
+
         _uiManager.SetBadSouls();
         _soulsCircle.ChangeSoulsAmount();
     }
@@ -439,7 +434,7 @@ public class GameManager : MonoBehaviour
     {
         foreach (var arrow in _arrows)
         {
-            arrow.ArrowHandler(sideToMark);
+            arrow.ArrowHandler(sideToMark, "ArrowSpriteHandler");
         }
     }
 
@@ -451,31 +446,23 @@ public class GameManager : MonoBehaviour
 
     public void ArrowsTurnOnAndOff(bool mood)
     {
-        _arrowsAreOn = mood;
-
-        switch (_arrowsAreOn)
-        {
-            case true:
-                SlowTheGame("ArrowsTurnOnAndOff in game manager");
-                break;
-
-            case false:
-                Time.timeScale = 1f;
-                break;
-        }
-
         foreach (var arrow in _arrows)
         {
-            if (mood)
+            switch (mood)
             {
-                arrow.gameObject.SetActive(mood);
-                arrow.ChangeColorToOnColor();
-            }
-            else
-            {
-                arrow.SetIsPressedOf();
-                arrow.ChangeColorToOnColor();
-                arrow.gameObject.SetActive(mood);
+                case true:
+                    _arrowsAreOn = true;
+                    SlowTheGame("ArrowsTurnOnAndOff in game manager");
+                    arrow.gameObject.SetActive(true);
+                    arrow.OpenObject();
+                    break;
+
+                case false:
+                    _arrowSide = Arrow.ArrowSide.None;
+                    _arrowsAreOn = false;
+                    Time.timeScale = 1f;
+                    arrow.CloseObject();
+                    break;
             }
         }
     }
@@ -526,12 +513,14 @@ public class GameManager : MonoBehaviour
     {
         return _arrowSide;
     }
+    
 
     public void SetArrowSide(Arrow.ArrowSide sideChosen)
     {
         _arrowSide = sideChosen;
     }
 
+    
     public float GetMaxSpeed()
     {
         return maxSpeed;
@@ -663,6 +652,7 @@ public class GameManager : MonoBehaviour
 
     public void ReturnToRegularTime(string whatFunctionCalledTheFunction)
     {
+        print("return to regular time");
         Time.timeScale = regularTimeScale;
     }
 

@@ -6,6 +6,7 @@ using Unity.VisualScripting;
 using UnityEditor;
 using UnityEngine;
 using UnityEngine.EventSystems;
+using UnityEngine.Serialization;
 using UnityEngine.UI;
 
 public class Drag : MonoBehaviour, IDragHandler, IBeginDragHandler, IEndDragHandler
@@ -24,6 +25,10 @@ public class Drag : MonoBehaviour, IDragHandler, IBeginDragHandler, IEndDragHand
 
     private int _fullALfa = 255;
     private int _zeroALfa = 0;
+
+
+    [SerializeField] private float wantedScaleX = 0.5f;
+    [SerializeField] private float wantedScaleY = 0.5f;
     private void Awake()
     {
         _draggingObjectRectTransform = transform as RectTransform;
@@ -38,15 +43,15 @@ public class Drag : MonoBehaviour, IDragHandler, IBeginDragHandler, IEndDragHand
         if (!_furnace)
             _furnace = FindObjectOfType<Furnace>();
 
-        if (RectOverlap(transform.GetComponent<RectTransform>(), _furnaceTransform.GetComponent<RectTransform>()))
-            TouchFurnace();
-        
-        
+
     }
 
     private void TouchFurnace()
     {
+        GameManager.Shared.ChangeInventoryFromDrag(myBurnObject);
         GameManager.Shared.GetMouse().ChangeToIdleMouse();
+        if (UIAudioManager.Instance)
+            UIAudioManager.Instance.PlayBurnCoal();
         if (GameManager.Shared.GetSpeedState() != GameManager.SpeedState.Stop)
             _furnace.AddSpeed(myBurnObject);
         Destroy(gameObject);
@@ -91,14 +96,17 @@ public class Drag : MonoBehaviour, IDragHandler, IBeginDragHandler, IEndDragHand
     public void OnBeginDrag(PointerEventData eventData)
     {
         
+        
         GameManager.Shared.GetMouse().ChangeToDragMouse();
-        GameManager.Shared.ChangeInventoryFromDrag(myBurnObject);
         changeAlfa(_fullALfa);
+        if (UIAudioManager.Instance)
+            UIAudioManager.Instance.PlayGrabCoal();
         var newFuelIcon = Instantiate(fuelIconPrefab, transform.position, Quaternion.identity);
         newFuelIcon.transform.SetParent(_canvas.transform);
-        newFuelIcon.transform.localScale = transform.localScale;
+        newFuelIcon.transform.localScale = transform.localScale ;
         newFuelIcon.GetComponent<Drag>().SetCanvas(_canvas);
         newFuelIcon.GetComponent<Drag>().SetFurnace(_furnace);
+        transform.localScale = new Vector3(wantedScaleX, wantedScaleX, wantedScaleX);
     }
 
 
@@ -109,7 +117,9 @@ public class Drag : MonoBehaviour, IDragHandler, IBeginDragHandler, IEndDragHand
     }
     public void OnEndDrag(PointerEventData eventData)
     {
-        print("kaka");
+        if (RectOverlap(transform.GetComponent<RectTransform>(), _furnaceTransform.GetComponent<RectTransform>()))
+            TouchFurnace();
+        
         GameManager.Shared.GetMouse().ChangeToIdleMouse();
         Destroy(gameObject);
     }
