@@ -9,20 +9,21 @@ using UnityEngine.Serialization;
 [DefaultExecutionOrder(-999)]
 public class GameManager : MonoBehaviour
 {
-    [Space(20)] [Header("Event")] private InteractionData _currEventData;
+    [Header("Event")] private InteractionData _currEventData;
     private bool _inEvent;
     private bool _gotToNewEvent;
     private InteractionManager _interactionManager;
     [SerializeField] private InteractionData devilEvent;
 
 
-    [Space(20)] [Header("UI")] private UIManager _uiManager;
+    [Space(10)] [Header("UI")] private UIManager _uiManager;
     [SerializeField] public int soulStonesInitializeValue;
     [SerializeField] public int goodSoulsInitializeValue;
     [SerializeField] public int badSoulsInitializeValue;
     [SerializeField] public int swordsInitializeValue;
     [SerializeField] public int shieldsInitializeValue;
-
+    
+    [SerializeField] private int maxSoulStones;
     [NonSerialized] public int SoulStones;
     [NonSerialized] public int GoodSouls;
     [NonSerialized] public int BadSouls;
@@ -371,6 +372,9 @@ public class GameManager : MonoBehaviour
                 _interactionManager.StartInteraction(devilEvent);
             }
         }
+
+        if (SoulStones + addNum > maxSoulStones)
+            addNum = maxSoulStones - SoulStones;
 
         SoulStones += addNum;
         _uiManager.SetSoulStones();

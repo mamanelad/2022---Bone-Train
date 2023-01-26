@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 35d4ad0e4ed8ad94f8dee27ba1048b5f
+guid: 10f792d01b04b7646ab0710b36efc3dd
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -105,13 +105,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: speed bar (1)_0
+      name: MAP_0
       rect:
         serializedVersion: 2
         x: 0
         y: 0
-        width: 489
-        height: 77
+        width: 1920
+        height: 1080
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -119,8 +119,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 58c4afdf2f761b44fb26c1543dd6f7fc
-      internalID: 989480923
+      spriteID: 5b594faacc95a934c9643e189cb43e60
+      internalID: -1516503608
       vertices: []
       indices: 
       edges: []
@@ -128,7 +128,7 @@ TextureImporter:
     outline: []
     physicsShape: []
     bones: []
-    spriteID: e388855611fbda74eafcfa8e20d8d99b
+    spriteID: 85aa98de513b35a4a8f3d85d14e552bc
     internalID: 0
     vertices: []
     indices: 
@@ -136,7 +136,7 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      speed bar (1)_0: 989480923
+      MAP_0: -1516503608
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0
