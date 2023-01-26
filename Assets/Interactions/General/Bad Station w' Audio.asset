@@ -1,0 +1,52 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c86e91921e9ba5e419d15579e50b8591, type: 3}
+  m_Name: Bad Station w' Audio
+  m_EditorClassIdentifier: 
+  character: {fileID: 21300000, guid: 0485d5477b6a43f4f971315263369f01, type: 3}
+  audio:
+    Guid:
+      Data1: 969578191
+      Data2: 1086372764
+      Data3: 402467203
+      Data4: -2069578030
+    Path: event:/Interactions/Part 0/Bad Souls
+  enteredDistanceAudio:
+    Guid:
+      Data1: 0
+      Data2: 0
+      Data3: 0
+      Data4: 0
+    Path: 
+  iconIndex: 1
+  title: drop off station
+  textBox: The drop station for bad souls stood before you, with a dark and ominous
+    structure. A group of demons greeted you with a sly grin and offered to help
+    you drop off all your bad souls. They also explained that red dots on your map
+    symbolize bad souls drop stations and that you can always count on them to provide
+    a safe and efficient way to drop off your bad souls.
+  options:
+  - title: Drop off
+    goodSouls: 0
+    badSouls: -5000
+    soulsStones: 0
+    sword: 0
+    shield: 0
+    sound:
+      Guid:
+        Data1: 0
+        Data2: 0
+        Data3: 0
+        Data4: 0
+      Path: 
+    text: Drop off all the bad souls
+    odds: 0

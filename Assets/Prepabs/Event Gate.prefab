@@ -392,6 +392,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Minimap Icon
       objectReference: {fileID: 0}
+    - target: {fileID: 8876479636390619754, guid: f5b38ea38819a8b4d96d5987cd207921, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f5b38ea38819a8b4d96d5987cd207921, type: 3}
 --- !u!4 &2264615566045421779 stripped
