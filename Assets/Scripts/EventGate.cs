@@ -7,7 +7,7 @@ public class EventGate : MonoBehaviour
     [SerializeField] private InteractionData interactionData;
     [SerializeField] private InteractionManager interactionManager;
     [SerializeField] private SpriteRenderer minimapIcon;
-    
+
     [SerializeField] private Collider sphereTrigger;
     [SerializeField] private Collider eventTrigger;
 
@@ -20,22 +20,28 @@ public class EventGate : MonoBehaviour
             Debug.Log("Event gate is missing interaction data");
             return;
         }
-        
+
         interactionManager = FindObjectOfType<InteractionManager>();
-        
+
         SetUpMinimapIcon();
-        
+
         sphereTrigger.enabled = true;
         eventTrigger.enabled = false;
     }
 
     private void SetUpMinimapIcon()
     {
-        minimapIcon.sprite = minimapIcons[(int)interactionData.iconIndex];
+        if (minimapIcon == null)
+            return;
+        
+        minimapIcon.sprite = minimapIcons[(int) interactionData.iconIndex];
     }
 
     private void OnTriggerEnter(Collider other)
     {
+        if (interactionData == null)
+            return;
+
         if (other.CompareTag("Train"))
         {
             if (sphereTrigger.enabled)
@@ -44,7 +50,6 @@ public class EventGate : MonoBehaviour
                 eventTrigger.enabled = true;
                 if (!interactionData.enteredDistanceAudio.IsNull)
                     RuntimeManager.PlayOneShot(interactionData.enteredDistanceAudio);
-                
             }
 
             else if (eventTrigger.enabled)
