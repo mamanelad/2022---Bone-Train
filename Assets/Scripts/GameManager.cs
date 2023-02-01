@@ -86,7 +86,7 @@ public class GameManager : MonoBehaviour
     [Space(20)] [Header("Tutorial")] [SerializeField]
     private bool _tutorialIsOn;
 
-    [SerializeField] private Tutorial _tutorial;
+    private Tutorial _tutorial;
     private bool _firstTimeUsingStartHandle = true;
     private bool _firstTimeAddingGoodSouls = true;
     private bool _firstTimeAddingBadSouls = true;
@@ -162,6 +162,11 @@ public class GameManager : MonoBehaviour
             }
 
             // _tutorial.OpenNextTutorialObject();
+        }
+
+        else
+        {
+            CloseTutorial();
         }
     }
 
@@ -757,6 +762,18 @@ public class GameManager : MonoBehaviour
         {
             _firstTimeArrowsTuturial = false;
             _tutorial.FirstTimeArrows();
+        }
+    }
+    
+    private void CloseTutorial()
+    {
+        if (!_tutorial)
+            _tutorial = FindObjectOfType<Tutorial>();
+        
+        if (_tutorial)
+        {
+            _tutorial.CloseTutorial();
+            _tutorial.gameObject.SetActive(false);
         }
     }
 }
