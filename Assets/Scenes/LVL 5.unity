@@ -14,7 +14,7 @@ OcclusionCullingSettings:
 RenderSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 9
-  m_Fog: 0
+  m_Fog: 1
   m_FogColor: {r: 0.122641504, g: 0.122641504, b: 0.122641504, a: 1}
   m_FogMode: 2
   m_FogDensity: 0.016
@@ -16512,6 +16512,17 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 52770447584282322, guid: 63c220246fd4b54478ee834892b14d03, type: 3}
   m_PrefabInstance: {fileID: 1334174107}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &1337493861 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 7135523843903143886, guid: f8a337fa67b5c5049bc9d0cff64a23c4, type: 3}
+  m_PrefabInstance: {fileID: 1493355842}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 05b9893517ed14447bf3284cbe94a337, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &1337584477
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -19421,6 +19432,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 299786535430323896, guid: f8a337fa67b5c5049bc9d0cff64a23c4, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 1929325537142751215, guid: f8a337fa67b5c5049bc9d0cff64a23c4, type: 3}
       propertyPath: m_AnchorMax.x
       value: 0
@@ -19440,6 +19455,14 @@ PrefabInstance:
     - target: {fileID: 1929325537723231004, guid: f8a337fa67b5c5049bc9d0cff64a23c4, type: 3}
       propertyPath: m_AnchorMin.y
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1949457821329321707, guid: f8a337fa67b5c5049bc9d0cff64a23c4, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3226551653844591549, guid: f8a337fa67b5c5049bc9d0cff64a23c4, type: 3}
+      propertyPath: eatGoodSoulsPercentage
+      value: 0.05
       objectReference: {fileID: 0}
     - target: {fileID: 3613036061576144872, guid: f8a337fa67b5c5049bc9d0cff64a23c4, type: 3}
       propertyPath: m_Pivot.x
@@ -19529,6 +19552,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: UI Manager
       objectReference: {fileID: 0}
+    - target: {fileID: 7457643688509664045, guid: f8a337fa67b5c5049bc9d0cff64a23c4, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 36459952, guid: 88468806d67ba5543aa10af74222f54c, type: 3}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f8a337fa67b5c5049bc9d0cff64a23c4, type: 3}
 --- !u!1001 &1497422081
@@ -34346,7 +34373,7 @@ MonoBehaviour:
   devilEvent: {fileID: 0}
   soulStonesInitializeValue: 100
   goodSoulsInitializeValue: 100
-  badSoulsInitializeValue: 100
+  badSoulsInitializeValue: 0
   swordsInitializeValue: 0
   shieldsInitializeValue: 0
   maxSoulStones: 1000
@@ -34367,9 +34394,10 @@ MonoBehaviour:
   takeDownDragFuel: -2
   takeDownDragGoodSouls: -10
   takeDownDragBadSouls: -10
-  arrowsAreOnSlowMotionTimeScale: 0.281
+  arrowsAreOnSlowMotionTimeScale: 0.173
   regularTimeScale: 1
   _tutorialIsOn: 0
+  _tutorial: {fileID: 1337493861}
   testArrows0: 0
   testArrows: 1
   openArrows: 0

@@ -86,7 +86,7 @@ public class GameManager : MonoBehaviour
     [Space(20)] [Header("Tutorial")] [SerializeField]
     private bool _tutorialIsOn;
 
-    private Tutorial _tutorial;
+    [SerializeField]private Tutorial _tutorial;
     private bool _firstTimeUsingStartHandle = true;
     private bool _firstTimeAddingGoodSouls = true;
     private bool _firstTimeAddingBadSouls = true;
@@ -301,7 +301,11 @@ public class GameManager : MonoBehaviour
         if (_firstTimeUsingStartHandle)
         {
             _firstTimeUsingStartHandle = false;
-            _tutorial.FirstTimeHandle();
+            if (_tutorialIsOn)
+            {
+                _tutorial.FirstTimeHandle();
+            }
+            
         }
         
         ChangeBySoulStones(takeDownFuelContinueTrain);
@@ -336,7 +340,8 @@ public class GameManager : MonoBehaviour
         if (_firstTimeAddingGoodSouls)
         {
             _firstTimeAddingGoodSouls = false;
-            _tutorial.OpenTutorialObject(TutorialObject.TutorialKind.GoodSouls);
+            if (_tutorialIsOn)
+                _tutorial.OpenTutorialObject(TutorialObject.TutorialKind.GoodSouls);
         }
         
         
@@ -362,7 +367,8 @@ public class GameManager : MonoBehaviour
         if (_firstTimeAddingBadSouls)
         {
             _firstTimeAddingBadSouls = false;
-            _tutorial.OpenTutorialObject(TutorialObject.TutorialKind.BadSouls);
+            if (_tutorialIsOn)
+                _tutorial.OpenTutorialObject(TutorialObject.TutorialKind.BadSouls);
         }
         
         if (BadSouls + addNum < 0)
@@ -415,7 +421,8 @@ public class GameManager : MonoBehaviour
         if (!_firstTimeSpecialItem)
         {
             _firstTimeSpecialItem = true;
-            _tutorial.OpenTutorialObject(TutorialObject.TutorialKind.SpecialItem);
+            if (_tutorialIsOn)
+                _tutorial.OpenTutorialObject(TutorialObject.TutorialKind.SpecialItem);
         }
         
         if (Swords + addNum < 0)
@@ -430,7 +437,8 @@ public class GameManager : MonoBehaviour
         if (!_firstTimeSpecialItem)
         {
             _firstTimeSpecialItem = true;
-            _tutorial.OpenTutorialObject(TutorialObject.TutorialKind.SpecialItem);
+            if (_tutorialIsOn)
+                _tutorial.OpenTutorialObject(TutorialObject.TutorialKind.SpecialItem);
         }
         
         if (Shields + addNum < 0)
@@ -491,7 +499,8 @@ public class GameManager : MonoBehaviour
             if (mood)
             {
                 _firstTimeArrows = false;
-                _tutorial.OpenTutorialObject(TutorialObject.TutorialKind.MiniMap);
+                if (_tutorialIsOn)
+                    _tutorial.OpenTutorialObject(TutorialObject.TutorialKind.MiniMap);
             }
         }
         

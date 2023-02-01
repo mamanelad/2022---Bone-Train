@@ -46,7 +46,7 @@ PrefabInstance:
     - target: {fileID: 4483603874112974675, guid: 832cb521db0a2594da2f3b5854b90c86, type: 3}
       propertyPath: _furnace
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 3613036060629337792}
     - target: {fileID: 4483603874112974675, guid: 832cb521db0a2594da2f3b5854b90c86, type: 3}
       propertyPath: wantedScaleX
       value: 0.2
@@ -58,11 +58,11 @@ PrefabInstance:
     - target: {fileID: 4483603874112974675, guid: 832cb521db0a2594da2f3b5854b90c86, type: 3}
       propertyPath: fuelIconPrefab
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 8771557790918347905}
     - target: {fileID: 4483603874112974675, guid: 832cb521db0a2594da2f3b5854b90c86, type: 3}
       propertyPath: _furnaceTransform
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 3613036060629337798}
     - target: {fileID: 4592040525470580117, guid: 832cb521db0a2594da2f3b5854b90c86, type: 3}
       propertyPath: mouseOverColor.a
       value: 1
@@ -118,6 +118,10 @@ PrefabInstance:
     - target: {fileID: 7343203590258013952, guid: 832cb521db0a2594da2f3b5854b90c86, type: 3}
       propertyPath: m_IsActive
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7729622835281592429, guid: 832cb521db0a2594da2f3b5854b90c86, type: 3}
+      propertyPath: eatGoodSoulsPercentage
+      value: 0.1
       objectReference: {fileID: 0}
     - target: {fileID: 8477522200000332856, guid: 832cb521db0a2594da2f3b5854b90c86, type: 3}
       propertyPath: m_Pivot.x
@@ -209,3 +213,24 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 832cb521db0a2594da2f3b5854b90c86, type: 3}
+--- !u!114 &3613036060629337792 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 8477522198785107216, guid: 832cb521db0a2594da2f3b5854b90c86, type: 3}
+  m_PrefabInstance: {fileID: 5152716802352882640}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3613036060629337798}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d25a9d16ff687b44e9d4ba5476e83158, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!1 &3613036060629337798 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 8477522198785107222, guid: 832cb521db0a2594da2f3b5854b90c86, type: 3}
+  m_PrefabInstance: {fileID: 5152716802352882640}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &8771557790918347905 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 4483603874112974673, guid: 832cb521db0a2594da2f3b5854b90c86, type: 3}
+  m_PrefabInstance: {fileID: 5152716802352882640}
+  m_PrefabAsset: {fileID: 0}
