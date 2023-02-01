@@ -47,6 +47,7 @@ public class Drag : MonoBehaviour, IDragHandler, IBeginDragHandler, IEndDragHand
 
     private void TouchFurnace()
     {
+        
         if (GameManager.Shared.GetSpeedState() == GameManager.SpeedState.Stop)
             return;
         GameManager.Shared.ChangeInventoryFromDrag(myBurnObject);
@@ -121,11 +122,12 @@ public class Drag : MonoBehaviour, IDragHandler, IBeginDragHandler, IEndDragHand
 
     public void OnEndDrag(PointerEventData eventData)
     {
+        Destroy(gameObject);
         if (RectOverlap(transform.GetComponent<RectTransform>(), _furnaceTransform.GetComponent<RectTransform>()))
             TouchFurnace();
 
         GameManager.Shared.GetMouse().ChangeToIdleMouse();
-        Destroy(gameObject);
+        
     }
 
     public void SetCanvas(Canvas newCanvas)

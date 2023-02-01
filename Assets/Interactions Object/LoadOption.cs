@@ -130,13 +130,13 @@ public class LoadOption : MonoBehaviour
     {
         interactionManager.ChooseOption(option);
         
-        if (GameManager.Shared.GetTutorialIsOn())
-        {
-            if (!_tutorial)
-                _tutorial = FindObjectOfType<Tutorial>();
-            _tutorial.NextButtonFromEventObject();
-             
-        }
+        // if (GameManager.Shared.GetTutorialIsOn())
+        // {
+        //     if (!_tutorial)
+        //         _tutorial = FindObjectOfType<Tutorial>();
+        //     _tutorial.NextButtonFromEventObject();
+        //      
+        // }
     }
 
     public void PlayHoverSound()
