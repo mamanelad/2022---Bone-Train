@@ -108,10 +108,10 @@ TextureImporter:
       name: goodsouls_0
       rect:
         serializedVersion: 2
-        x: 0
-        y: 0
-        width: 1920
-        height: 1080
+        x: 349
+        y: 129
+        width: 560
+        height: 560
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -121,6 +121,174 @@ TextureImporter:
       bones: []
       spriteID: 367f144d0ebfc0e4bbf2315bd048d4d6
       internalID: 1750809869
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: goodsouls_1
+      rect:
+        serializedVersion: 2
+        x: 698
+        y: 673
+        width: 6
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 583a3ef6351611c4b95805d8aa8f7ff7
+      internalID: 1448384919
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: goodsouls_2
+      rect:
+        serializedVersion: 2
+        x: 752
+        y: 676
+        width: 5
+        height: 5
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5e91993508aacde4088c427e422bf603
+      internalID: -1266952467
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: goodsouls_3
+      rect:
+        serializedVersion: 2
+        x: 895
+        y: 532
+        width: 12
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 035bed65341984d4b8310ccda14c12dd
+      internalID: -1321734154
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: goodsouls_4
+      rect:
+        serializedVersion: 2
+        x: 893
+        y: 478
+        width: 6
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9339137009bde5e4fa15a1f753e860b1
+      internalID: 162785779
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: goodsouls_5
+      rect:
+        serializedVersion: 2
+        x: 359
+        y: 334
+        width: 7
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c80c7187624b7584180d9d65099ff665
+      internalID: -827128377
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: goodsouls_6
+      rect:
+        serializedVersion: 2
+        x: 358
+        y: 281
+        width: 4
+        height: 5
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 801ef42a31a9bfe48a5402e882cd4904
+      internalID: -580714621
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: goodsouls_7
+      rect:
+        serializedVersion: 2
+        x: 501
+        y: 131
+        width: 5
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bca694cebd5353d40a34f9c3d8537ea0
+      internalID: 1032895705
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: goodsouls_8
+      rect:
+        serializedVersion: 2
+        x: 554
+        y: 139
+        width: 6
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c8a601327f9124e45a26d77a946721ac
+      internalID: -383460597
       vertices: []
       indices: 
       edges: []
@@ -136,7 +304,15 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
+      goodsouls_1: 1448384919
       goodsouls_0: 1750809869
+      goodsouls_6: -580714621
+      goodsouls_7: 1032895705
+      goodsouls_5: -827128377
+      goodsouls_4: 162785779
+      goodsouls_3: -1321734154
+      goodsouls_2: -1266952467
+      goodsouls_8: -383460597
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0

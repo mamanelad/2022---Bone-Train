@@ -108,10 +108,10 @@ TextureImporter:
       name: badsouls_0
       rect:
         serializedVersion: 2
-        x: 0
-        y: 0
-        width: 1920
-        height: 1080
+        x: 349
+        y: 129
+        width: 560
+        height: 560
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -121,6 +121,174 @@ TextureImporter:
       bones: []
       spriteID: 13df48ffe4fba3f4db37c8ddd11e44c1
       internalID: 1769045311
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: badsouls_1
+      rect:
+        serializedVersion: 2
+        x: 698
+        y: 673
+        width: 6
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b0444f2dc64775847acd481019b8a322
+      internalID: 1678293041
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: badsouls_2
+      rect:
+        serializedVersion: 2
+        x: 752
+        y: 676
+        width: 5
+        height: 5
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4df99bfba92a8dd469ea99dc2606499a
+      internalID: -833268622
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: badsouls_3
+      rect:
+        serializedVersion: 2
+        x: 895
+        y: 532
+        width: 12
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ba29a26546ac53745b4bd0cd5e19336a
+      internalID: -80175785
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: badsouls_4
+      rect:
+        serializedVersion: 2
+        x: 893
+        y: 478
+        width: 6
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 56a4416626410b642b5d472a612988b0
+      internalID: 1625569607
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: badsouls_5
+      rect:
+        serializedVersion: 2
+        x: 359
+        y: 334
+        width: 7
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 73ae1c9d834c4b6448c0fa22d8bbcb90
+      internalID: -1275251782
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: badsouls_6
+      rect:
+        serializedVersion: 2
+        x: 358
+        y: 281
+        width: 4
+        height: 5
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 36c67398a7b67254d9e556d4f482107e
+      internalID: -627427397
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: badsouls_7
+      rect:
+        serializedVersion: 2
+        x: 501
+        y: 131
+        width: 5
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4a214f7a72891674194a7e46b399d56c
+      internalID: 786290741
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: badsouls_8
+      rect:
+        serializedVersion: 2
+        x: 554
+        y: 139
+        width: 6
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 14eccd6be2f05314ba30bdc046151d76
+      internalID: 1703298520
       vertices: []
       indices: 
       edges: []
@@ -136,7 +304,15 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
+      badsouls_7: 786290741
+      badsouls_4: 1625569607
+      badsouls_6: -627427397
+      badsouls_1: 1678293041
+      badsouls_2: -833268622
+      badsouls_8: 1703298520
+      badsouls_3: -80175785
       badsouls_0: 1769045311
+      badsouls_5: -1275251782
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0

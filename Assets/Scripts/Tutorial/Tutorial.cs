@@ -260,4 +260,12 @@ public class Tutorial : MonoBehaviour
         _currTutorialObject.gameObject.SetActive(true);
         _tutorialIndex += 1;
     }
+
+    public void CloseTutorial()
+    {
+        foreach (var tutorialObject in tutorialObjects)
+        {
+            tutorialObject.gameObject.SetActive(false);
+        } 
+    }
 }
