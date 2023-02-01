@@ -152,6 +152,7 @@ public class Arrow : MonoBehaviour
 
     public void ClickButton()
     {
+        GameManager.Shared.ArrowsTutorial();
         GameManager.Shared.ReturnToRegularTime("ClickButton in arrows");
         GameManager.Shared.SetArrowSide(_arrowSide);
         ArrowHandler(_arrowSide, "ClickButton");

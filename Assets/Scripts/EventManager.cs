@@ -190,13 +190,13 @@ public class EventManager : MonoBehaviour
     public void Reject()
     {
         
-         if (GameManager.Shared.GetTutorialIsOn())
-         {
-             if (!_tutorial)
-                 _tutorial = FindObjectOfType<Tutorial>();
-             _tutorial.NextButtonFromEventObject();
-             
-         }
+         // if (GameManager.Shared.GetTutorialIsOn())
+         // {
+         //     if (!_tutorial)
+         //         _tutorial = FindObjectOfType<Tutorial>();
+         //     _tutorial.NextButtonFromEventObject();
+         //     
+         // }
         
         if (currentEventAudioManager)
             currentEventAudioManager.PlayReject();

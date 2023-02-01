@@ -25997,11 +25997,15 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 299786535430323896, guid: f8a337fa67b5c5049bc9d0cff64a23c4, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 327103842463385016, guid: f8a337fa67b5c5049bc9d0cff64a23c4, type: 3}
       propertyPath: icon
       value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 893183050517959951, guid: f8a337fa67b5c5049bc9d0cff64a23c4, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 1929325537142751215, guid: f8a337fa67b5c5049bc9d0cff64a23c4, type: 3}
       propertyPath: m_AnchorMax.x
@@ -26118,6 +26122,10 @@ PrefabInstance:
     - target: {fileID: 3613036061576144877, guid: f8a337fa67b5c5049bc9d0cff64a23c4, type: 3}
       propertyPath: m_Name
       value: UI Manager
+      objectReference: {fileID: 0}
+    - target: {fileID: 5284306571700769047, guid: f8a337fa67b5c5049bc9d0cff64a23c4, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7457643688509664045, guid: f8a337fa67b5c5049bc9d0cff64a23c4, type: 3}
       propertyPath: m_Sprite

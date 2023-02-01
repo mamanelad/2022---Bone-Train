@@ -107,7 +107,7 @@ public class Furnace : MonoBehaviour
         if (newSpeed >= maxSpeed)
             return;
 
-        GameManager.Shared.SetSpeed(newSpeed);
+        GameManager.Shared.SetSpeed(newSpeed, true);
     }
 
     private void ChangeSprite()
