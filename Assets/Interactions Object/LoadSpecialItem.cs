@@ -78,7 +78,7 @@ public class LoadSpecialItem : MonoBehaviour
         
         disableIcon.SetActive(true);
 
-        interactionManager.ActivateSpecialItem(itemIndex);
+        // interactionManager.ActivateSpecialItem(itemIndex);
     }
 
     public void PlayHoverSound()
