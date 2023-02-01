@@ -1,7 +1,11 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
 <<<<<<< HEAD
+<<<<<<< HEAD
 --- !u!114 &-9104427705325459149
+=======
+--- !u!114 &-9184663012727842134
+>>>>>>> eeea736755c241259858b844a34b0f76f4b062a0
 =======
 --- !u!114 &-9184663012727842134
 >>>>>>> eeea736755c241259858b844a34b0f76f4b062a0
@@ -15,6 +19,7 @@ MonoBehaviour:
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
 <<<<<<< HEAD
+<<<<<<< HEAD
   m_Name: event:/Events/Roadblock/Roadblockl1_Text
   m_EditorClassIdentifier: 
   Path: event:/Events/Roadblock/Roadblockl1_Text
@@ -26,6 +31,8 @@ MonoBehaviour:
   Banks:
   - {fileID: -3525495584678947843}
 =======
+=======
+>>>>>>> eeea736755c241259858b844a34b0f76f4b062a0
   m_Name: event:/UI/Shield Use
   m_EditorClassIdentifier: 
   Path: event:/UI/Shield Use
@@ -36,6 +43,9 @@ MonoBehaviour:
     Data4: 1081420425
   Banks:
   - {fileID: -5488719159883586051}
+<<<<<<< HEAD
+>>>>>>> eeea736755c241259858b844a34b0f76f4b062a0
+=======
 >>>>>>> eeea736755c241259858b844a34b0f76f4b062a0
   IsStream: 0
   Is3D: 0
@@ -45,8 +55,11 @@ MonoBehaviour:
   MaxDistance: 20
   Length: 0
 <<<<<<< HEAD
+<<<<<<< HEAD
 --- !u!114 &-8666903188726601337
 =======
+=======
+>>>>>>> eeea736755c241259858b844a34b0f76f4b062a0
 --- !u!114 &-8350374532209493143
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -75,6 +88,9 @@ MonoBehaviour:
   MaxDistance: 20
   Length: 0
 --- !u!114 &-7767481658347123639
+<<<<<<< HEAD
+>>>>>>> eeea736755c241259858b844a34b0f76f4b062a0
+=======
 >>>>>>> eeea736755c241259858b844a34b0f76f4b062a0
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -95,7 +111,11 @@ MonoBehaviour:
     Data4: -2064325702
   Banks:
 <<<<<<< HEAD
+<<<<<<< HEAD
   - {fileID: -3525495584678947843}
+=======
+  - {fileID: -5488719159883586051}
+>>>>>>> eeea736755c241259858b844a34b0f76f4b062a0
 =======
   - {fileID: -5488719159883586051}
 >>>>>>> eeea736755c241259858b844a34b0f76f4b062a0
@@ -107,7 +127,11 @@ MonoBehaviour:
   MaxDistance: 20
   Length: 0
 <<<<<<< HEAD
+<<<<<<< HEAD
 --- !u!114 &-8476823256012618606
+=======
+--- !u!114 &-7557318175499817877
+>>>>>>> eeea736755c241259858b844a34b0f76f4b062a0
 =======
 --- !u!114 &-7557318175499817877
 >>>>>>> eeea736755c241259858b844a34b0f76f4b062a0
@@ -121,6 +145,7 @@ MonoBehaviour:
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
 <<<<<<< HEAD
+<<<<<<< HEAD
   m_Name: event:/Events/Roadblock/Roadblock1_Enter
   m_EditorClassIdentifier: 
   Path: event:/Events/Roadblock/Roadblock1_Enter
@@ -132,6 +157,8 @@ MonoBehaviour:
   Banks:
   - {fileID: -3525495584678947843}
 =======
+=======
+>>>>>>> eeea736755c241259858b844a34b0f76f4b062a0
   m_Name: event:/Interactions/Part 2/4.2
   m_EditorClassIdentifier: 
   Path: event:/Interactions/Part 2/4.2
@@ -142,6 +169,7 @@ MonoBehaviour:
     Data4: 206788810
   Banks:
   - {fileID: -5488719159883586051}
+<<<<<<< HEAD
   IsStream: 1
   Is3D: 0
   IsOneShot: 1
@@ -376,6 +404,8 @@ MonoBehaviour:
     Data4: -33221537
   Banks:
   - {fileID: -3525495584678947843}
+=======
+>>>>>>> eeea736755c241259858b844a34b0f76f4b062a0
   IsStream: 1
   Is3D: 0
   IsOneShot: 1
@@ -383,7 +413,11 @@ MonoBehaviour:
   MinDistance: 1
   MaxDistance: 20
   Length: 0
+<<<<<<< HEAD
 --- !u!114 &-6614783392297294167
+=======
+--- !u!114 &-6572484748802639442
+>>>>>>> eeea736755c241259858b844a34b0f76f4b062a0
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -393,6 +427,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+<<<<<<< HEAD
   m_Name: event:/Interactions/Part 3/6.3
   m_EditorClassIdentifier: 
   Path: event:/Interactions/Part 3/6.3
@@ -403,6 +438,18 @@ MonoBehaviour:
     Data4: 2106194265
   Banks:
   - {fileID: -3525495584678947843}
+=======
+  m_Name: event:/Ambience/Fireplace
+  m_EditorClassIdentifier: 
+  Path: event:/Ambience/Fireplace
+  Guid:
+    Data1: -488347195
+    Data2: 1110492121
+    Data3: 603170984
+    Data4: -1695164205
+  Banks:
+  - {fileID: -5488719159883586051}
+>>>>>>> eeea736755c241259858b844a34b0f76f4b062a0
   IsStream: 1
   Is3D: 0
   IsOneShot: 1
@@ -410,7 +457,11 @@ MonoBehaviour:
   MinDistance: 1
   MaxDistance: 20
   Length: 0
+<<<<<<< HEAD
 --- !u!114 &-6350485978729329323
+=======
+--- !u!114 &-5636746789780055572
+>>>>>>> eeea736755c241259858b844a34b0f76f4b062a0
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -420,6 +471,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+<<<<<<< HEAD
   m_Name: event:/Ambience/Ambience
   m_EditorClassIdentifier: 
   Path: event:/Ambience/Ambience
@@ -431,14 +483,103 @@ MonoBehaviour:
   Banks:
   - {fileID: -3525495584678947843}
   IsStream: 1
+=======
+  m_Name: event:/UI/Sword Use
+  m_EditorClassIdentifier: 
+  Path: event:/UI/Sword Use
+  Guid:
+    Data1: 58403836
+    Data2: 1121172097
+    Data3: 1127183799
+    Data4: -1093766139
+  Banks:
+  - {fileID: -5488719159883586051}
+  IsStream: 0
+>>>>>>> eeea736755c241259858b844a34b0f76f4b062a0
   Is3D: 0
   IsOneShot: 1
   Parameters: []
   MinDistance: 1
   MaxDistance: 20
   Length: 0
+<<<<<<< HEAD
 --- !u!114 &-6338039234446182849
 =======
+--- !u!114 &-4685352291308025628
+>>>>>>> eeea736755c241259858b844a34b0f76f4b062a0
+=======
+--- !u!114 &-5488719159883586051
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
+  m_Name: bank:/Master.bank
+  m_EditorClassIdentifier: 
+  Path: Assets/FMODBanks/Desktop/Master.bank
+  Name: Master
+  StudioPath: bank:/Master
+  lastModified: 638108949034360848
+  FileSizes: []
+  Exists: 1
+--- !u!114 &-5341209909528151264
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Events/Miser/Miser1_Text
+  m_EditorClassIdentifier: 
+  Path: event:/Events/Miser/Miser1_Text
+  Guid:
+    Data1: -1844915286
+    Data2: 1230660707
+    Data3: 414572208
+    Data4: -464641845
+  Banks:
+  - {fileID: -5488719159883586051}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 0
+--- !u!114 &-5088431899547145947
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Events/Miser/Miser1_Deny
+  m_EditorClassIdentifier: 
+  Path: event:/Events/Miser/Miser1_Deny
+  Guid:
+    Data1: 2095312230
+    Data2: 1234380876
+    Data3: 675773340
+    Data4: 1924209560
+  Banks:
+  - {fileID: -5488719159883586051}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 0
 --- !u!114 &-4685352291308025628
 >>>>>>> eeea736755c241259858b844a34b0f76f4b062a0
 MonoBehaviour:
@@ -460,8 +601,463 @@ MonoBehaviour:
     Data4: 1889375876
   Banks:
 <<<<<<< HEAD
+<<<<<<< HEAD
   - {fileID: -3525495584678947843}
 =======
+=======
+  - {fileID: -5488719159883586051}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 0
+--- !u!114 &-4600154151654947568
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Events/Miser/Miser1_Accept
+  m_EditorClassIdentifier: 
+  Path: event:/Events/Miser/Miser1_Accept
+  Guid:
+    Data1: -1108919783
+    Data2: 1156638429
+    Data3: 1933599362
+    Data4: -785462424
+  Banks:
+  - {fileID: -5488719159883586051}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 0
+--- !u!114 &-4464819819321714500
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Events/Tree/Tree1_Deny
+  m_EditorClassIdentifier: 
+  Path: event:/Events/Tree/Tree1_Deny
+  Guid:
+    Data1: 798135811
+    Data2: 1099067120
+    Data3: 800564122
+    Data4: -1194553750
+  Banks:
+  - {fileID: -5488719159883586051}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 0
+--- !u!114 &-4249396480081357882
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Interactions/Special/Special Mom
+  m_EditorClassIdentifier: 
+  Path: event:/Interactions/Special/Special Mom
+  Guid:
+    Data1: -1552607613
+    Data2: 1253196072
+    Data3: -1630844256
+    Data4: -1168212406
+  Banks:
+  - {fileID: -5488719159883586051}
+  IsStream: 1
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 0
+--- !u!114 &-4239519597906920254
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Interactions/Part 2/5.2
+  m_EditorClassIdentifier: 
+  Path: event:/Interactions/Part 2/5.2
+  Guid:
+    Data1: -42841085
+    Data2: 1266977332
+    Data3: 277633444
+    Data4: 1684108936
+  Banks:
+  - {fileID: -5488719159883586051}
+  IsStream: 1
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 0
+--- !u!114 &-4190802948528424821
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
+  m_Name: bank:/Master.strings.bank
+  m_EditorClassIdentifier: 
+  Path: Assets/FMODBanks/Desktop/Master.strings.bank
+  Name: Master.strings
+  StudioPath: bank:/Master.strings
+  lastModified: 638108949034470627
+  FileSizes:
+  - Name: 
+    Value: 3150
+  Exists: 1
+--- !u!114 &-3852218985997310831
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Events/Miser/Miser1_Enter
+  m_EditorClassIdentifier: 
+  Path: event:/Events/Miser/Miser1_Enter
+  Guid:
+    Data1: 1950678822
+    Data2: 1257656094
+    Data3: 1922056849
+    Data4: -852207506
+  Banks:
+  - {fileID: -5488719159883586051}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 0
+--- !u!114 &-3242638493450646848
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Interactions/Part 2/4.1
+  m_EditorClassIdentifier: 
+  Path: event:/Interactions/Part 2/4.1
+  Guid:
+    Data1: -805902094
+    Data2: 1164809296
+    Data3: -1657803078
+    Data4: -2035053425
+  Banks:
+  - {fileID: -5488719159883586051}
+  IsStream: 1
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 0
+--- !u!114 &-2991490860429591590
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Interactions/Part 1/2.2
+  m_EditorClassIdentifier: 
+  Path: event:/Interactions/Part 1/2.2
+  Guid:
+    Data1: 1774979051
+    Data2: 1201707316
+    Data3: 228662947
+    Data4: -1920904646
+  Banks:
+  - {fileID: -5488719159883586051}
+  IsStream: 1
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 0
+--- !u!114 &-2366524602557802135
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Interactions/Part 3/6.1
+  m_EditorClassIdentifier: 
+  Path: event:/Interactions/Part 3/6.1
+  Guid:
+    Data1: 171824314
+    Data2: 1268987343
+    Data3: -319472708
+    Data4: -1845938347
+  Banks:
+  - {fileID: -5488719159883586051}
+  IsStream: 1
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 0
+--- !u!114 &-2220958548970458263
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Interactions/Part 1/2.3
+  m_EditorClassIdentifier: 
+  Path: event:/Interactions/Part 1/2.3
+  Guid:
+    Data1: 177586221
+    Data2: 1132739104
+    Data3: -862389576
+    Data4: -467085699
+  Banks:
+  - {fileID: -5488719159883586051}
+  IsStream: 1
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 0
+--- !u!114 &-1956807525132810128
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Interactions/Part 3/6.3
+  m_EditorClassIdentifier: 
+  Path: event:/Interactions/Part 3/6.3
+  Guid:
+    Data1: -1808250720
+    Data2: 1266149278
+    Data3: 1445952701
+    Data4: 2106194265
+  Banks:
+  - {fileID: -5488719159883586051}
+  IsStream: 1
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 0
+--- !u!114 &-1541166855199866026
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Interactions/Part 1/1.1
+  m_EditorClassIdentifier: 
+  Path: event:/Interactions/Part 1/1.1
+  Guid:
+    Data1: 1769832423
+    Data2: 1185094614
+    Data3: 542584486
+    Data4: -776544617
+  Banks:
+  - {fileID: -5488719159883586051}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 0
+--- !u!114 &-1394868973651340814
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Train/Train Movement
+  m_EditorClassIdentifier: 
+  Path: event:/Train/Train Movement
+  Guid:
+    Data1: -901240235
+    Data2: 1254019528
+    Data3: 616233653
+    Data4: 2093375
+  Banks:
+  - {fileID: -5488719159883586051}
+  IsStream: 1
+  Is3D: 0
+  IsOneShot: 0
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 10736
+--- !u!114 &-1356762664192021940
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Train/Train Horn
+  m_EditorClassIdentifier: 
+  Path: event:/Train/Train Horn
+  Guid:
+    Data1: 1566218138
+    Data2: 1230972742
+    Data3: 1993270692
+    Data4: 349680557
+  Banks:
+  - {fileID: -5488719159883586051}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 0
+--- !u!114 &-1307304921363170906
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Interactions/Part 0/Raiders 1
+  m_EditorClassIdentifier: 
+  Path: event:/Interactions/Part 0/Raiders 1
+  Guid:
+    Data1: -77259358
+    Data2: 1293111217
+    Data3: -1259968364
+    Data4: 726533862
+  Banks:
+  - {fileID: -5488719159883586051}
+  IsStream: 1
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 0
+--- !u!114 &-145760419760925257
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Interactions/Part 0/Good Souls
+  m_EditorClassIdentifier: 
+  Path: event:/Interactions/Part 0/Good Souls
+  Guid:
+    Data1: 349823547
+    Data2: 1341002058
+    Data3: 1635706500
+    Data4: 1370806773
+  Banks:
+  - {fileID: -5488719159883586051}
+  IsStream: 1
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 0
+--- !u!114 &-14599625704794477
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Events/Tollgate/Tollgate1_Accept
+  m_EditorClassIdentifier: 
+  Path: event:/Events/Tollgate/Tollgate1_Accept
+  Guid:
+    Data1: -670571357
+    Data2: 1235193274
+    Data3: -356085632
+    Data4: -1313608997
+  Banks:
+>>>>>>> eeea736755c241259858b844a34b0f76f4b062a0
   - {fileID: -5488719159883586051}
   IsStream: 0
   Is3D: 0
@@ -1414,6 +2010,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   EditorBanks:
 <<<<<<< HEAD
+<<<<<<< HEAD
   - {fileID: 1866203660572515946}
   - {fileID: -3525495584678947843}
   EditorEvents:
@@ -1546,6 +2143,73 @@ MonoBehaviour:
   cacheVersion: 131601
 --- !u!114 &509536431181496212
 >>>>>>> eeea736755c241259858b844a34b0f76f4b062a0
+=======
+  - {fileID: -4190802948528424821}
+  - {fileID: -5488719159883586051}
+  EditorEvents:
+  - {fileID: 7609565432271160931}
+  - {fileID: -4239519597906920254}
+  - {fileID: -4464819819321714500}
+  - {fileID: 1194635123261420792}
+  - {fileID: 3217867470367138877}
+  - {fileID: -4600154151654947568}
+  - {fileID: 895601451318865130}
+  - {fileID: 1363345090638486448}
+  - {fileID: 867911912711720935}
+  - {fileID: -3852218985997310831}
+  - {fileID: -2220958548970458263}
+  - {fileID: 7836619117860366885}
+  - {fileID: 4886776858172551294}
+  - {fileID: 849623630972933614}
+  - {fileID: -145760419760925257}
+  - {fileID: 6855519271359859206}
+  - {fileID: -9184663012727842134}
+  - {fileID: -4685352291308025628}
+  - {fileID: -1394868973651340814}
+  - {fileID: 8710801044958843330}
+  - {fileID: 5700141577592536761}
+  - {fileID: -5088431899547145947}
+  - {fileID: 1407329502510662211}
+  - {fileID: 5466210494620603680}
+  - {fileID: -4249396480081357882}
+  - {fileID: 5447854048078423033}
+  - {fileID: 7952653431260712008}
+  - {fileID: 2450257109968589847}
+  - {fileID: 2365948466940334397}
+  - {fileID: 7602208766628452609}
+  - {fileID: 517955760073765647}
+  - {fileID: 6403169028006784834}
+  - {fileID: 1572561880225896038}
+  - {fileID: -1356762664192021940}
+  - {fileID: 5544813534392440116}
+  - {fileID: -1956807525132810128}
+  - {fileID: -1307304921363170906}
+  - {fileID: -14599625704794477}
+  - {fileID: 1901723983859405288}
+  - {fileID: -5341209909528151264}
+  - {fileID: -8350374532209493143}
+  - {fileID: -2366524602557802135}
+  - {fileID: 6573424506383562219}
+  - {fileID: 2064548397631396986}
+  - {fileID: -7557318175499817877}
+  - {fileID: -6572484748802639442}
+  - {fileID: 3786697165226180939}
+  - {fileID: -7767481658347123639}
+  - {fileID: -1541166855199866026}
+  - {fileID: -2991490860429591590}
+  - {fileID: -3242638493450646848}
+  - {fileID: 509536431181496212}
+  - {fileID: 4261911436339660907}
+  - {fileID: -5636746789780055572}
+  EditorParameters: []
+  MasterBanks:
+  - {fileID: -5488719159883586051}
+  StringsBanks:
+  - {fileID: -4190802948528424821}
+  cacheTime: 638108949034470627
+  cacheVersion: 131601
+--- !u!114 &509536431181496212
+>>>>>>> eeea736755c241259858b844a34b0f76f4b062a0
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -1577,6 +2241,9 @@ MonoBehaviour:
     Data4: -575921900
   Banks:
   - {fileID: -5488719159883586051}
+<<<<<<< HEAD
+>>>>>>> eeea736755c241259858b844a34b0f76f4b062a0
+=======
 >>>>>>> eeea736755c241259858b844a34b0f76f4b062a0
   IsStream: 1
   Is3D: 0
@@ -1586,7 +2253,11 @@ MonoBehaviour:
   MaxDistance: 20
   Length: 0
 <<<<<<< HEAD
+<<<<<<< HEAD
 --- !u!114 &1207943454012529683
+=======
+--- !u!114 &517955760073765647
+>>>>>>> eeea736755c241259858b844a34b0f76f4b062a0
 =======
 --- !u!114 &517955760073765647
 >>>>>>> eeea736755c241259858b844a34b0f76f4b062a0
@@ -1599,6 +2270,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+<<<<<<< HEAD
 <<<<<<< HEAD
   m_Name: event:/UI/UI Click
   m_EditorClassIdentifier: 
@@ -1622,6 +2294,18 @@ MonoBehaviour:
   Banks:
   - {fileID: -5488719159883586051}
 >>>>>>> eeea736755c241259858b844a34b0f76f4b062a0
+=======
+  m_Name: event:/Events/Tree/Tree1_Enter
+  m_EditorClassIdentifier: 
+  Path: event:/Events/Tree/Tree1_Enter
+  Guid:
+    Data1: 829972880
+    Data2: 1195793665
+    Data3: 189351076
+    Data4: -744660477
+  Banks:
+  - {fileID: -5488719159883586051}
+>>>>>>> eeea736755c241259858b844a34b0f76f4b062a0
   IsStream: 0
   Is3D: 0
   IsOneShot: 1
@@ -1630,7 +2314,11 @@ MonoBehaviour:
   MaxDistance: 20
   Length: 0
 <<<<<<< HEAD
+<<<<<<< HEAD
 --- !u!114 &1251393807764830336
+=======
+--- !u!114 &849623630972933614
+>>>>>>> eeea736755c241259858b844a34b0f76f4b062a0
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -1640,6 +2328,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+<<<<<<< HEAD
   m_Name: event:/Events/Miser/Miser1_Accept
   m_EditorClassIdentifier: 
   Path: event:/Events/Miser/Miser1_Accept
@@ -1650,6 +2339,18 @@ MonoBehaviour:
     Data4: -785462424
   Banks:
   - {fileID: -3525495584678947843}
+=======
+  m_Name: event:/Events/Tollgate/Tollgate1_Enter
+  m_EditorClassIdentifier: 
+  Path: event:/Events/Tollgate/Tollgate1_Enter
+  Guid:
+    Data1: -1414343621
+    Data2: 1161655818
+    Data3: 1991747508
+    Data4: 163859964
+  Banks:
+  - {fileID: -5488719159883586051}
+>>>>>>> eeea736755c241259858b844a34b0f76f4b062a0
   IsStream: 0
   Is3D: 0
   IsOneShot: 1
@@ -1657,6 +2358,7 @@ MonoBehaviour:
   MinDistance: 1
   MaxDistance: 20
   Length: 0
+<<<<<<< HEAD
 --- !u!114 &1866203660572515946
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1986,6 +2688,9 @@ MonoBehaviour:
 =======
 --- !u!114 &867911912711720935
 >>>>>>> eeea736755c241259858b844a34b0f76f4b062a0
+=======
+--- !u!114 &867911912711720935
+>>>>>>> eeea736755c241259858b844a34b0f76f4b062a0
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -2005,7 +2710,11 @@ MonoBehaviour:
     Data4: -1812788208
   Banks:
 <<<<<<< HEAD
+<<<<<<< HEAD
   - {fileID: -3525495584678947843}
+=======
+  - {fileID: -5488719159883586051}
+>>>>>>> eeea736755c241259858b844a34b0f76f4b062a0
 =======
   - {fileID: -5488719159883586051}
 >>>>>>> eeea736755c241259858b844a34b0f76f4b062a0
@@ -2017,7 +2726,11 @@ MonoBehaviour:
   MaxDistance: 20
   Length: 0
 <<<<<<< HEAD
+<<<<<<< HEAD
 --- !u!114 &5476297587480232044
+=======
+--- !u!114 &895601451318865130
+>>>>>>> eeea736755c241259858b844a34b0f76f4b062a0
 =======
 --- !u!114 &895601451318865130
 >>>>>>> eeea736755c241259858b844a34b0f76f4b062a0
@@ -2030,6 +2743,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+<<<<<<< HEAD
 <<<<<<< HEAD
   m_Name: event:/UI/Event Start
   m_EditorClassIdentifier: 
@@ -2069,6 +2783,8 @@ MonoBehaviour:
   Banks:
   - {fileID: -3525495584678947843}
 =======
+=======
+>>>>>>> eeea736755c241259858b844a34b0f76f4b062a0
   m_Name: event:/Interactions/Part 3/8.3
   m_EditorClassIdentifier: 
   Path: event:/Interactions/Part 3/8.3
@@ -2079,6 +2795,9 @@ MonoBehaviour:
     Data4: -1858296930
   Banks:
   - {fileID: -5488719159883586051}
+<<<<<<< HEAD
+>>>>>>> eeea736755c241259858b844a34b0f76f4b062a0
+=======
 >>>>>>> eeea736755c241259858b844a34b0f76f4b062a0
   IsStream: 1
   Is3D: 0
@@ -2088,7 +2807,11 @@ MonoBehaviour:
   MaxDistance: 20
   Length: 0
 <<<<<<< HEAD
+<<<<<<< HEAD
 --- !u!114 &6063793051099964924
+=======
+--- !u!114 &1194635123261420792
+>>>>>>> eeea736755c241259858b844a34b0f76f4b062a0
 =======
 --- !u!114 &1194635123261420792
 >>>>>>> eeea736755c241259858b844a34b0f76f4b062a0
@@ -2102,6 +2825,7 @@ MonoBehaviour:
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
 <<<<<<< HEAD
+<<<<<<< HEAD
   m_Name: event:/Interactions/Part 2/5.1
   m_EditorClassIdentifier: 
   Path: event:/Interactions/Part 2/5.1
@@ -2113,6 +2837,8 @@ MonoBehaviour:
   Banks:
   - {fileID: -3525495584678947843}
 =======
+=======
+>>>>>>> eeea736755c241259858b844a34b0f76f4b062a0
   m_Name: event:/UI/UI Click
   m_EditorClassIdentifier: 
   Path: event:/UI/UI Click
@@ -2150,6 +2876,9 @@ MonoBehaviour:
     Data4: -305611977
   Banks:
   - {fileID: -5488719159883586051}
+<<<<<<< HEAD
+>>>>>>> eeea736755c241259858b844a34b0f76f4b062a0
+=======
 >>>>>>> eeea736755c241259858b844a34b0f76f4b062a0
   IsStream: 1
   Is3D: 0
@@ -2158,6 +2887,7 @@ MonoBehaviour:
   MinDistance: 1
   MaxDistance: 20
   Length: 0
+<<<<<<< HEAD
 <<<<<<< HEAD
 --- !u!114 &6564345278194934093
 MonoBehaviour:
@@ -2244,6 +2974,9 @@ MonoBehaviour:
 =======
 --- !u!114 &1407329502510662211
 >>>>>>> eeea736755c241259858b844a34b0f76f4b062a0
+=======
+--- !u!114 &1407329502510662211
+>>>>>>> eeea736755c241259858b844a34b0f76f4b062a0
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -2263,7 +2996,11 @@ MonoBehaviour:
     Data4: 916339100
   Banks:
 <<<<<<< HEAD
+<<<<<<< HEAD
   - {fileID: -3525495584678947843}
+=======
+  - {fileID: -5488719159883586051}
+>>>>>>> eeea736755c241259858b844a34b0f76f4b062a0
 =======
   - {fileID: -5488719159883586051}
 >>>>>>> eeea736755c241259858b844a34b0f76f4b062a0
@@ -2275,7 +3012,11 @@ MonoBehaviour:
   MaxDistance: 20
   Length: 0
 <<<<<<< HEAD
+<<<<<<< HEAD
 --- !u!114 &8253094465751693857
+=======
+--- !u!114 &1572561880225896038
+>>>>>>> eeea736755c241259858b844a34b0f76f4b062a0
 =======
 --- !u!114 &1572561880225896038
 >>>>>>> eeea736755c241259858b844a34b0f76f4b062a0
@@ -2289,6 +3030,7 @@ MonoBehaviour:
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
 <<<<<<< HEAD
+<<<<<<< HEAD
   m_Name: event:/Interactions/Part 0/Bad Souls
   m_EditorClassIdentifier: 
   Path: event:/Interactions/Part 0/Bad Souls
@@ -2301,6 +3043,8 @@ MonoBehaviour:
   - {fileID: -3525495584678947843}
   IsStream: 1
 =======
+=======
+>>>>>>> eeea736755c241259858b844a34b0f76f4b062a0
   m_Name: event:/UI/Event Start
   m_EditorClassIdentifier: 
   Path: event:/UI/Event Start
@@ -2312,6 +3056,9 @@ MonoBehaviour:
   Banks:
   - {fileID: -5488719159883586051}
   IsStream: 0
+<<<<<<< HEAD
+>>>>>>> eeea736755c241259858b844a34b0f76f4b062a0
+=======
 >>>>>>> eeea736755c241259858b844a34b0f76f4b062a0
   Is3D: 0
   IsOneShot: 1
@@ -2320,8 +3067,11 @@ MonoBehaviour:
   MaxDistance: 20
   Length: 0
 <<<<<<< HEAD
+<<<<<<< HEAD
 --- !u!114 &8286010202097223338
 =======
+=======
+>>>>>>> eeea736755c241259858b844a34b0f76f4b062a0
 --- !u!114 &1901723983859405288
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2350,6 +3100,9 @@ MonoBehaviour:
   MaxDistance: 20
   Length: 0
 --- !u!114 &2064548397631396986
+<<<<<<< HEAD
+>>>>>>> eeea736755c241259858b844a34b0f76f4b062a0
+=======
 >>>>>>> eeea736755c241259858b844a34b0f76f4b062a0
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2370,7 +3123,11 @@ MonoBehaviour:
     Data4: -1600246377
   Banks:
 <<<<<<< HEAD
+<<<<<<< HEAD
   - {fileID: -3525495584678947843}
+=======
+  - {fileID: -5488719159883586051}
+>>>>>>> eeea736755c241259858b844a34b0f76f4b062a0
 =======
   - {fileID: -5488719159883586051}
 >>>>>>> eeea736755c241259858b844a34b0f76f4b062a0
@@ -2382,7 +3139,11 @@ MonoBehaviour:
   MaxDistance: 20
   Length: 0
 <<<<<<< HEAD
+<<<<<<< HEAD
 --- !u!114 &8684068933695618896
+=======
+--- !u!114 &2365948466940334397
+>>>>>>> eeea736755c241259858b844a34b0f76f4b062a0
 =======
 --- !u!114 &2365948466940334397
 >>>>>>> eeea736755c241259858b844a34b0f76f4b062a0
@@ -2396,6 +3157,7 @@ MonoBehaviour:
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
 <<<<<<< HEAD
+<<<<<<< HEAD
   m_Name: event:/Interactions/Part 1/1.2
   m_EditorClassIdentifier: 
   Path: event:/Interactions/Part 1/1.2
@@ -2408,6 +3170,8 @@ MonoBehaviour:
   - {fileID: -3525495584678947843}
   IsStream: 1
 =======
+=======
+>>>>>>> eeea736755c241259858b844a34b0f76f4b062a0
   m_Name: event:/Events/Roadblock/Roadblock1_Enter
   m_EditorClassIdentifier: 
   Path: event:/Events/Roadblock/Roadblock1_Enter
@@ -2419,6 +3183,9 @@ MonoBehaviour:
   Banks:
   - {fileID: -5488719159883586051}
   IsStream: 0
+<<<<<<< HEAD
+>>>>>>> eeea736755c241259858b844a34b0f76f4b062a0
+=======
 >>>>>>> eeea736755c241259858b844a34b0f76f4b062a0
   Is3D: 0
   IsOneShot: 1
@@ -2427,7 +3194,11 @@ MonoBehaviour:
   MaxDistance: 20
   Length: 0
 <<<<<<< HEAD
+<<<<<<< HEAD
 --- !u!114 &8700872775790068950
+=======
+--- !u!114 &2450257109968589847
+>>>>>>> eeea736755c241259858b844a34b0f76f4b062a0
 =======
 --- !u!114 &2450257109968589847
 >>>>>>> eeea736755c241259858b844a34b0f76f4b062a0
@@ -2450,8 +3221,11 @@ MonoBehaviour:
     Data4: 1994531423
   Banks:
 <<<<<<< HEAD
+<<<<<<< HEAD
   - {fileID: -3525495584678947843}
 =======
+=======
+>>>>>>> eeea736755c241259858b844a34b0f76f4b062a0
   - {fileID: -5488719159883586051}
   IsStream: 1
   Is3D: 0
@@ -2885,6 +3659,9 @@ MonoBehaviour:
     Data4: 318381963
   Banks:
   - {fileID: -5488719159883586051}
+<<<<<<< HEAD
+>>>>>>> eeea736755c241259858b844a34b0f76f4b062a0
+=======
 >>>>>>> eeea736755c241259858b844a34b0f76f4b062a0
   IsStream: 1
   Is3D: 0

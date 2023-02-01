@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c86e91921e9ba5e419d15579e50b8591, type: 3}
   m_Name: 2.1
   m_EditorClassIdentifier: 
-  character: {fileID: 21300000, guid: 3ad9de3d88610784d8a432fb018f9632, type: 3}
+  character: {fileID: 21300000, guid: 5c55a583632bb67469471f22eb63edaa, type: 3}
   audio:
     Guid:
       Data1: -105223997
