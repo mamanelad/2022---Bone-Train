@@ -211,6 +211,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: UI Manager New Variant
       objectReference: {fileID: 0}
+    - target: {fileID: 8477522200181223052, guid: 832cb521db0a2594da2f3b5854b90c86, type: 3}
+      propertyPath: addToPositionX
+      value: -250
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 832cb521db0a2594da2f3b5854b90c86, type: 3}
 --- !u!114 &3613036060629337792 stripped
