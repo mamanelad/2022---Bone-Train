@@ -27,6 +27,33 @@ MonoBehaviour:
   MinDistance: 1
   MaxDistance: 20
   Length: 0
+--- !u!114 &-8879013216345162302
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Interactions/Special/Special Dog
+  m_EditorClassIdentifier: 
+  Path: event:/Interactions/Special/Special Dog
+  Guid:
+    Data1: 2103483233
+    Data2: 1110291614
+    Data3: -1997651533
+    Data4: 318381963
+  Banks:
+  - {fileID: -5442832634211810556}
+  IsStream: 1
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 0
 --- !u!114 &-8783110455982644213
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -258,7 +285,7 @@ MonoBehaviour:
   Path: Assets/FMODBanks/Desktop/Master.bank
   Name: Master
   StudioPath: bank:/Master
-  lastModified: 638108629458791801
+  lastModified: 638108822840331678
   FileSizes: []
   Exists: 1
 --- !u!114 &-4472065046976650497
@@ -896,12 +923,14 @@ MonoBehaviour:
   - {fileID: 987858817309920309}
   - {fileID: 4639698282665932164}
   - {fileID: -8960712817471799467}
+  - {fileID: -8879013216345162302}
+  - {fileID: 1855816652026841239}
   EditorParameters: []
   MasterBanks:
   - {fileID: -5442832634211810556}
   StringsBanks:
   - {fileID: 6339837790673286793}
-  cacheTime: 638108629458812042
+  cacheTime: 638108822840357109
   cacheVersion: 131601
 --- !u!114 &987858817309920309
 MonoBehaviour:
@@ -1005,6 +1034,33 @@ MonoBehaviour:
   Banks:
   - {fileID: -5442832634211810556}
   IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 0
+--- !u!114 &1855816652026841239
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Interactions/Special/Special Mom
+  m_EditorClassIdentifier: 
+  Path: event:/Interactions/Special/Special Mom
+  Guid:
+    Data1: -1552607613
+    Data2: 1253196072
+    Data3: -1630844256
+    Data4: -1168212406
+  Banks:
+  - {fileID: -5442832634211810556}
+  IsStream: 1
   Is3D: 0
   IsOneShot: 1
   Parameters: []
@@ -1215,10 +1271,10 @@ MonoBehaviour:
   Path: Assets/FMODBanks/Desktop/Master.strings.bank
   Name: Master.strings
   StudioPath: bank:/Master.strings
-  lastModified: 638108629458812042
+  lastModified: 638108822840357109
   FileSizes:
   - Name: 
-    Value: 3042
+    Value: 3150
   Exists: 1
 --- !u!114 &6387568047063674609
 MonoBehaviour:
