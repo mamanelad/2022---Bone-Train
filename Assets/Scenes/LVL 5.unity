@@ -34376,7 +34376,7 @@ MonoBehaviour:
   badSoulsInitializeValue: 0
   swordsInitializeValue: 0
   shieldsInitializeValue: 0
-  maxSoulStones: 1000
+  maxSoulStones: 500
   _arrows:
   - {fileID: 0}
   - {fileID: 0}

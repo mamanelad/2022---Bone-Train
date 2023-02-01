@@ -29,10 +29,7 @@ MonoBehaviour:
     Path: 
   iconIndex: 2
   title: Fuel station
-  textBox: The devilish fuel station stood before you. A group of demons greeted
-    you with a sly grin and offered to fuel your train to the max. They also explained
-    that green dots on your map symbolize fuel stations and that you can always count
-    on them to have the best fuel.
+  textBox: The devilish fuel station stood before you.
   options:
   - title: Fuel up!
     goodSouls: 0

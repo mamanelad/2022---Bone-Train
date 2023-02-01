@@ -32,7 +32,9 @@ public class InteractionManager : MonoBehaviour
         interactionOptions = newInteractionData.options;
         LoadInteraction();
 
-        interactionAudio.start();
+        if (!interactionData.audio.IsNull)
+            interactionAudio.start();
+        
         UIAudioManager.Instance.PlayUIEventStart();
         UIAudioManager.Instance.PauseTrainLoop();
         GameManager.Shared.StopTrain();
