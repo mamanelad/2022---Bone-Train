@@ -30,10 +30,7 @@ MonoBehaviour:
   iconIndex: 0
   title: pickup station
   textBox: The pickup station for good souls loomed before you, with a dark and foreboding
-    structure. A group of demons greeted you with a sly grin and offered to help
-    you pick up more good souls. They also explained that blue dots on your map symbolize
-    good souls pickup stations and that you can always count on them to have the
-    best souls to pick up.
+    structure.
   options:
   - title: Pick'em Up!
     goodSouls: 200

@@ -20,7 +20,7 @@ public class InteractionManager : MonoBehaviour
     [SerializeField] private TextMeshProUGUI textBox;
 
     [SerializeField] private LoadIcon icon;
-    [SerializeField] private LoadSpecialItem specialItem;
+    // [SerializeField] private LoadSpecialItem specialItem;
     [SerializeField] private List<GameObject> optionsGameObjects;
 
     private EventInstance interactionAudio;
@@ -32,7 +32,9 @@ public class InteractionManager : MonoBehaviour
         interactionOptions = newInteractionData.options;
         LoadInteraction();
 
-        interactionAudio.start();
+        if (!interactionData.audio.IsNull)
+            interactionAudio.start();
+        
         UIAudioManager.Instance.PlayUIEventStart();
         UIAudioManager.Instance.PauseTrainLoop();
         GameManager.Shared.StopTrain();
@@ -67,7 +69,7 @@ public class InteractionManager : MonoBehaviour
         icon.Load(interactionData.iconIndex);
 
         LoadOptions();
-        LoadSpecial();
+        // LoadSpecial();
     }
 
     private void LoadOptions()
@@ -82,20 +84,20 @@ public class InteractionManager : MonoBehaviour
         }
     }
 
-    private void LoadSpecial()
-    {
-        if (interactionData.iconIndex == LoadIcon.IconIndex.ENEMY)
-            specialItem.Load(LoadSpecialItem.SpecialItemIndex.SHIELD);
-
-        if (interactionData.iconIndex == LoadIcon.IconIndex.REGULAR)
-            specialItem.Load(LoadSpecialItem.SpecialItemIndex.SWORD);
-
-        if (interactionData.iconIndex == LoadIcon.IconIndex.CHANCE)
-            specialItem.Load(LoadSpecialItem.SpecialItemIndex.SWORD);
-
-        if (interactionData.iconIndex == LoadIcon.IconIndex.ITEM)
-            specialItem.Load(LoadSpecialItem.SpecialItemIndex.SWORD);
-    }
+    // private void LoadSpecial()
+    // {
+    //     if (interactionData.iconIndex == LoadIcon.IconIndex.ENEMY)
+    //         specialItem.Load(LoadSpecialItem.SpecialItemIndex.SHIELD);
+    //
+    //     if (interactionData.iconIndex == LoadIcon.IconIndex.REGULAR)
+    //         specialItem.Load(LoadSpecialItem.SpecialItemIndex.SWORD);
+    //
+    //     if (interactionData.iconIndex == LoadIcon.IconIndex.CHANCE)
+    //         specialItem.Load(LoadSpecialItem.SpecialItemIndex.SWORD);
+    //
+    //     if (interactionData.iconIndex == LoadIcon.IconIndex.ITEM)
+    //         specialItem.Load(LoadSpecialItem.SpecialItemIndex.SWORD);
+    // }
 
     public void ChooseOption(LoadOption.Option option)
     {
@@ -112,14 +114,14 @@ public class InteractionManager : MonoBehaviour
         EndInteraction();
     }
 
-    public void ActivateSpecialItem(LoadSpecialItem.SpecialItemIndex index)
-    {
-        if (index == LoadSpecialItem.SpecialItemIndex.SWORD)
-            ActivateSword();
-
-        if (index == LoadSpecialItem.SpecialItemIndex.SHIELD)
-            ActivateShield();
-    }
+    // public void ActivateSpecialItem(LoadSpecialItem.SpecialItemIndex index)
+    // {
+    //     if (index == LoadSpecialItem.SpecialItemIndex.SWORD)
+    //         ActivateSword();
+    //
+    //     if (index == LoadSpecialItem.SpecialItemIndex.SHIELD)
+    //         ActivateShield();
+    // }
 
     private void ActivateSword()
     {

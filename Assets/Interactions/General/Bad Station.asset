@@ -30,10 +30,7 @@ MonoBehaviour:
   iconIndex: 1
   title: drop off station
   textBox: The drop station for bad souls stood before you, with a dark and ominous
-    structure. A group of demons greeted you with a sly grin and offered to help
-    you drop off all your bad souls. They also explained that red dots on your map
-    symbolize bad souls drop stations and that you can always count on them to provide
-    a safe and efficient way to drop off your bad souls.
+    structure.
   options:
   - title: Drop off
     goodSouls: 0

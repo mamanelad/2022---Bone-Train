@@ -37,7 +37,7 @@ MonoBehaviour:
   options:
   - title: Drop off
     goodSouls: 0
-    badSouls: -5000
+    badSouls: -200
     soulsStones: 0
     sword: 0
     shield: 0
@@ -48,5 +48,5 @@ MonoBehaviour:
         Data3: 0
         Data4: 0
       Path: 
-    text: Drop off all the bad souls
+    text: 
     odds: 0
