@@ -7,6 +7,14 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 51372731812193339, guid: 832cb521db0a2594da2f3b5854b90c86, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 51372731812193339, guid: 832cb521db0a2594da2f3b5854b90c86, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 75
+      objectReference: {fileID: 0}
     - target: {fileID: 1711490449320883408, guid: 832cb521db0a2594da2f3b5854b90c86, type: 3}
       propertyPath: m_Sprite
       value: 
@@ -35,9 +43,25 @@ PrefabInstance:
       propertyPath: m_AnchoredPosition.y
       value: -209.27293
       objectReference: {fileID: 0}
+    - target: {fileID: 2535666530027246694, guid: 832cb521db0a2594da2f3b5854b90c86, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2535666530027246694, guid: 832cb521db0a2594da2f3b5854b90c86, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 75
+      objectReference: {fileID: 0}
     - target: {fileID: 2849674158098315312, guid: 832cb521db0a2594da2f3b5854b90c86, type: 3}
       propertyPath: m_IsActive
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3138689356627355419, guid: 832cb521db0a2594da2f3b5854b90c86, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3138689356627355419, guid: 832cb521db0a2594da2f3b5854b90c86, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 75
       objectReference: {fileID: 0}
     - target: {fileID: 4431861655446008432, guid: 832cb521db0a2594da2f3b5854b90c86, type: 3}
       propertyPath: m_Sprite
@@ -79,6 +103,10 @@ PrefabInstance:
       propertyPath: mouseOverColor.r
       value: 0.49019608
       objectReference: {fileID: 0}
+    - target: {fileID: 6204973101719732498, guid: 832cb521db0a2594da2f3b5854b90c86, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 6239808346839395881, guid: 832cb521db0a2594da2f3b5854b90c86, type: 3}
       propertyPath: mouseOverColor.a
       value: 1
@@ -115,13 +143,45 @@ PrefabInstance:
       propertyPath: m_AnchorMin.y
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 6896343888883892750, guid: 832cb521db0a2594da2f3b5854b90c86, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 7343203590258013952, guid: 832cb521db0a2594da2f3b5854b90c86, type: 3}
       propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 7345270998107430344, guid: 832cb521db0a2594da2f3b5854b90c86, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7686474392751645942, guid: 832cb521db0a2594da2f3b5854b90c86, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7686474392751645942, guid: 832cb521db0a2594da2f3b5854b90c86, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 75
+      objectReference: {fileID: 0}
     - target: {fileID: 7729622835281592429, guid: 832cb521db0a2594da2f3b5854b90c86, type: 3}
       propertyPath: eatGoodSoulsPercentage
       value: 0.1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8128807457174154500, guid: 832cb521db0a2594da2f3b5854b90c86, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8128807457174154500, guid: 832cb521db0a2594da2f3b5854b90c86, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 75
+      objectReference: {fileID: 0}
+    - target: {fileID: 8138494702965070739, guid: 832cb521db0a2594da2f3b5854b90c86, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8138494702965070739, guid: 832cb521db0a2594da2f3b5854b90c86, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 75
       objectReference: {fileID: 0}
     - target: {fileID: 8477522200000332856, guid: 832cb521db0a2594da2f3b5854b90c86, type: 3}
       propertyPath: m_Pivot.x

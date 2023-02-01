@@ -492,7 +492,7 @@ public class GameManager : MonoBehaviour
         ArrowsTurnOnAndOff(false);
     }
 
-    public void ArrowsTurnOnAndOff(bool mood)
+    public void ArrowsTurnOnAndOff(bool mood, LoadIcon.IconIndex[][] itemIndexes = null)
     {
         if (_firstTimeArrows)
         {
@@ -510,6 +510,7 @@ public class GameManager : MonoBehaviour
             switch (mood)
             {
                 case true:
+                    arrow.SetIcons(itemIndexes);
                     _arrowsAreOn = true;
                     SlowTheGame("ArrowsTurnOnAndOff in game manager");
                     arrow.gameObject.SetActive(true);
@@ -724,6 +725,7 @@ public class GameManager : MonoBehaviour
     {
         return _tutorialIsOn;
     }
+    
 }
 
 public enum Morale : int

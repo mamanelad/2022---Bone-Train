@@ -17,7 +17,13 @@ public class Arrow : MonoBehaviour
     [SerializeField] private Color regularColor = Color.white;
     private Color _lastColor;
 
+    [Space(10)] [Header("Icons")] private JunctionChange _currJunction;
+    [SerializeField] private GameObject fuelIcon;
+    [SerializeField] private GameObject goodSoulsIcon;
+    [SerializeField] private GameObject badSoulsIcon;
+
     private bool isMouseOn;
+
     private bool isPressed;
 
     public enum ArrowSide
@@ -29,6 +35,49 @@ public class Arrow : MonoBehaviour
 
     [SerializeField] private ArrowSide _arrowSide;
 
+
+    public void SetIcons(LoadIcon.IconIndex[][] itemIndexes)
+    {
+        bool closeGoodSouls = true;
+        bool closeFuel = true;
+        bool closeBadSouls = true;
+        if (itemIndexes.Length >= 2)
+        {
+            LoadIcon.IconIndex[] indexes = itemIndexes[1];
+            if (_arrowSide == ArrowSide.Left)
+                indexes = itemIndexes[0];
+
+
+            foreach (var iconIndex in indexes)
+            {
+                switch (iconIndex)
+                {
+                    case LoadIcon.IconIndex.GOODSOULS:
+                        goodSoulsIcon.SetActive(true);
+                        closeGoodSouls = false;
+                        break;
+
+                    case LoadIcon.IconIndex.BADSOULS:
+                        badSoulsIcon.SetActive(true);
+                        closeBadSouls = false;
+                        break;
+
+                    case LoadIcon.IconIndex.SOULSTONES:
+                        fuelIcon.SetActive(true);
+                        closeFuel = false;
+                        break;
+                }
+            }
+        }
+
+
+        if (closeFuel)
+            fuelIcon.SetActive(false);
+        if (closeBadSouls)
+            badSoulsIcon.SetActive(false);
+        if (closeGoodSouls)
+            goodSoulsIcon.SetActive(false);
+    }
 
     public void ArrowHandler(ArrowSide sideToMark, string funcName = "dont know")
     {

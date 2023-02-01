@@ -1,6 +1,7 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using Unity.VisualScripting;
 using UnityEngine;
 using Random = UnityEngine.Random;
 
@@ -25,6 +26,12 @@ public class JunctionChange : MonoBehaviour
     private bool _randomDecisionWasMade;
     private bool _needToDecideSide = true;
 
+    [Space(10)] [Header("Icons")] [SerializeField]
+    private LoadIcon.IconIndex[] itemIndexesArrowLeft;
+
+    [SerializeField] private LoadIcon.IconIndex[] itemIndexesArrowRight;
+    private LoadIcon.IconIndex[][] _iconIndexArray; 
+
     private void Start()
     {
         colliderSphere.enabled = true;
@@ -38,6 +45,8 @@ public class JunctionChange : MonoBehaviour
             splineNewBranch = gameObjectNewBranchLeft.GetComponent<BezierSpline>();
             offset = -transform.position;
         }
+
+        _iconIndexArray = new[] {itemIndexesArrowLeft, itemIndexesArrowRight };
     }
 
     private void Update()
@@ -95,7 +104,8 @@ public class JunctionChange : MonoBehaviour
             _needToDecideSide = true;
             if (colliderSphere.enabled)
             {
-                GameManager.Shared.ArrowsTurnOnAndOff(true);
+                
+                GameManager.Shared.ArrowsTurnOnAndOff(true, _iconIndexArray);
                 colliderSphere.enabled = false;
                 colliderBox.enabled = true;
             }

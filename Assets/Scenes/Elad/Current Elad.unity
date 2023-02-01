@@ -5356,6 +5356,18 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1868841201}
     m_Modifications:
+    - target: {fileID: 452506151058238077, guid: 9d6357a43f598ab4d8a185bf9256b030, type: 3}
+      propertyPath: itemIndexesArrowLeft.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 452506151058238077, guid: 9d6357a43f598ab4d8a185bf9256b030, type: 3}
+      propertyPath: itemIndexesArrowRight.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 452506151058238077, guid: 9d6357a43f598ab4d8a185bf9256b030, type: 3}
+      propertyPath: itemIndexesArrowRight.Array.data[0]
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 3335605009474470089, guid: 9d6357a43f598ab4d8a185bf9256b030, type: 3}
       propertyPath: m_Name
       value: Track Junction New
@@ -5403,6 +5415,14 @@ PrefabInstance:
     - target: {fileID: 3617767881384998247, guid: 9d6357a43f598ab4d8a185bf9256b030, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4477983687139509637, guid: 9d6357a43f598ab4d8a185bf9256b030, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -14
+      objectReference: {fileID: 0}
+    - target: {fileID: 4477983687139509637, guid: 9d6357a43f598ab4d8a185bf9256b030, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -46
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 9d6357a43f598ab4d8a185bf9256b030, type: 3}
