@@ -7,7 +7,7 @@
 [LOG] OutputWASAPI::init                       : Output buffer size: 4096 samples, latency: 0.00ms, period: 10.00ms, DSP buffer: 1024 * 4
 [LOG] Thread::initThread                       : Init FMOD stream thread. Affinity: 0x4000000000000003, Priority: 0xFFFF7FFB, Stack Size: 98304, Semaphore: No, Sleep Time: 10, Looping: Yes.
 [LOG] Thread::initThread                       : Init FMOD mixer thread. Affinity: 0x4000000000000001, Priority: 0xFFFF7FFA, Stack Size: 81920, Semaphore: No, Sleep Time: 0, Looping: Yes.
-[LOG] AsyncManager::init                       : manager 0000022B46C37738 isAsync 0 updatePeriod 0.02
+[LOG] AsyncManager::init                       : manager 000002ADF8D28688 isAsync 0 updatePeriod 0.02
 [LOG] AsyncManager::init                       : done
 [LOG] PlaybackSystem::init                     : 
 [LOG] Thread::initThread                       : Init FMOD Studio sample load thread. Affinity: 0x4000000000000003, Priority: 0xFFFF7FFD, Stack Size: 98304, Semaphore: No, Sleep Time: 1, Looping: No.
@@ -18,129 +18,10 @@
 [LOG] Manager::readBank                        : fileversion = 142, compatVersion = 140 (oldest = 44, newest = 142)
 [LOG] Manager::readBank                        : fileversion = 142, compatVersion = 140 (oldest = 44, newest = 142)
 [LOG] PlaybackSystem::acquireMasterBus         : Setting master channel group format to 6
-[LOG] SystemI::createSoundInternal             : Create name='', mode=0x02000202
-[LOG] SystemI::createSoundInternal             : exinfo->cbsize             = 224
-[LOG] SystemI::createSoundInternal             : exinfo->length             = 11450400
-[LOG] SystemI::createSoundInternal             : exinfo->fileoffset         = 53568
-[LOG] SystemI::createSoundInternal             : exinfo->numsubsounds       = 1
-[LOG] SystemI::createSoundInternal             : exinfo->inclusionlist      = 000000463C9FEFE8
-[LOG] SystemI::createSoundInternal             : exinfo->inclusionlistnum   = 1
-[LOG] SystemI::createSoundInternal             : exinfo->suggestedsoundtype = 5
-[LOG] SystemI::createSoundInternal             : exinfo->useropen           = 00007FF83B723490
-[LOG] SystemI::createSoundInternal             : exinfo->userclose          = 00007FF83B723450
-[LOG] SystemI::createSoundInternal             : exinfo->userread           = 00007FF83B723570
-[LOG] SystemI::createSoundInternal             : exinfo->userseek           = 00007FF83B723630
-[LOG] SystemI::createSoundInternal             : exinfo->fileuserdata       = 0000022B2432C088
-[LOG] SystemI::createSoundInternal             : exinfo->initialseekpostype = 1
-[LOG] SystemI::DSPCodecPoolRegister            : register codec pool for pool type 5
-[LOG] SystemI::createSoundInternal             : Sample 0/1: name='Hover', format=5, channels=2, frequency=48000, lengthbytes=928, lengthpcm=2188, pcmblocksize=0, loopstart=0, loopend=0, mode=0x00000000, channelmask=0x00000000, channelorder=0, peakvolume=0.192902.
-[LOG] SystemI::createSoundInternal             : Create name='', mode=0x02000202
-[LOG] SystemI::createSoundInternal             : exinfo->cbsize             = 224
-[LOG] SystemI::createSoundInternal             : exinfo->length             = 11450400
-[LOG] SystemI::createSoundInternal             : exinfo->fileoffset         = 53568
-[LOG] SystemI::createSoundInternal             : exinfo->numsubsounds       = 1
-[LOG] SystemI::createSoundInternal             : exinfo->inclusionlist      = 000000463C9FEFE8
-[LOG] SystemI::createSoundInternal             : exinfo->inclusionlistnum   = 1
-[LOG] SystemI::createSoundInternal             : exinfo->suggestedsoundtype = 5
-[LOG] SystemI::createSoundInternal             : exinfo->useropen           = 00007FF83B723490
-[LOG] SystemI::createSoundInternal             : exinfo->userclose          = 00007FF83B723450
-[LOG] SystemI::createSoundInternal             : exinfo->userread           = 00007FF83B723570
-[LOG] SystemI::createSoundInternal             : exinfo->userseek           = 00007FF83B723630
-[LOG] SystemI::createSoundInternal             : exinfo->fileuserdata       = 0000022B2360D908
-[LOG] SystemI::createSoundInternal             : exinfo->initialseekpostype = 1
-[LOG] SystemI::DSPCodecPoolRegister            : register codec pool for pool type 5
-[LOG] SystemI::createSoundInternal             : Sample 0/1: name='Train Horn', format=5, channels=2, frequency=48000, lengthbytes=35456, lengthpcm=184320, pcmblocksize=0, loopstart=0, loopend=0, mode=0x00000000, channelmask=0x00000000, channelorder=0, peakvolume=0.108459.
-[LOG] SystemI::createSoundInternal             : Create name='', mode=0x02000202
-[LOG] SystemI::createSoundInternal             : exinfo->cbsize             = 224
-[LOG] SystemI::createSoundInternal             : exinfo->length             = 11450400
-[LOG] SystemI::createSoundInternal             : exinfo->fileoffset         = 53568
-[LOG] SystemI::createSoundInternal             : exinfo->numsubsounds       = 1
-[LOG] SystemI::createSoundInternal             : exinfo->inclusionlist      = 000000463C9FEFE8
-[LOG] SystemI::createSoundInternal             : exinfo->inclusionlistnum   = 1
-[LOG] SystemI::createSoundInternal             : exinfo->suggestedsoundtype = 5
-[LOG] SystemI::createSoundInternal             : exinfo->useropen           = 00007FF83B723490
-[LOG] SystemI::createSoundInternal             : exinfo->userclose          = 00007FF83B723450
-[LOG] SystemI::createSoundInternal             : exinfo->userread           = 00007FF83B723570
-[LOG] SystemI::createSoundInternal             : exinfo->userseek           = 00007FF83B723630
-[LOG] SystemI::createSoundInternal             : exinfo->fileuserdata       = 0000022C243DC8B8
-[LOG] SystemI::createSoundInternal             : exinfo->initialseekpostype = 1
-[LOG] SystemI::DSPCodecPoolRegister            : register codec pool for pool type 5
-[LOG] SystemI::createSoundInternal             : Sample 0/1: name='Grab Coal', format=5, channels=2, frequency=48000, lengthbytes=11840, lengthpcm=94040, pcmblocksize=0, loopstart=0, loopend=0, mode=0x00000000, channelmask=0x00000000, channelorder=0, peakvolume=0.912506.
-[LOG] SystemI::createSoundInternal             : Create name='', mode=0x02000202
-[LOG] SystemI::createSoundInternal             : exinfo->cbsize             = 224
-[LOG] SystemI::createSoundInternal             : exinfo->length             = 11450400
-[LOG] SystemI::createSoundInternal             : exinfo->fileoffset         = 53568
-[LOG] SystemI::createSoundInternal             : exinfo->numsubsounds       = 1
-[LOG] SystemI::createSoundInternal             : exinfo->inclusionlist      = 000000463C9FEFE8
-[LOG] SystemI::createSoundInternal             : exinfo->inclusionlistnum   = 1
-[LOG] SystemI::createSoundInternal             : exinfo->suggestedsoundtype = 5
-[LOG] SystemI::createSoundInternal             : exinfo->useropen           = 00007FF83B723490
-[LOG] SystemI::createSoundInternal             : exinfo->userclose          = 00007FF83B723450
-[LOG] SystemI::createSoundInternal             : exinfo->userread           = 00007FF83B723570
-[LOG] SystemI::createSoundInternal             : exinfo->userseek           = 00007FF83B723630
-[LOG] SystemI::createSoundInternal             : exinfo->fileuserdata       = 0000022B2425FD18
-[LOG] SystemI::createSoundInternal             : exinfo->initialseekpostype = 1
-[LOG] SystemI::DSPCodecPoolRegister            : register codec pool for pool type 5
-[LOG] SystemI::createSoundInternal             : Sample 0/1: name='Burn Coal', format=5, channels=2, frequency=48000, lengthbytes=38400, lengthpcm=154368, pcmblocksize=0, loopstart=0, loopend=0, mode=0x00000000, channelmask=0x00000000, channelorder=0, peakvolume=0.799835.
-[LOG] SystemI::createSound                     : filename = Assets/FMODBanks/Desktop/Master.bank : mode 02010082
-[LOG] SystemI::createSound                     : FMOD_NONBLOCKING specified.  Putting into queue to be opened asynchronously!
-[LOG] AsyncThread::add                         : add sound to async queue : soundi = 0000022B46D22668, queue head = 0000022B69E952B8, queue count = 0
-[LOG] AsyncThread::threadFunc                  : Starting Asynchronous operation on sound 0000022B46D22668
-[LOG] SystemI::createSoundInternal             :     Create name='Assets/FMODBanks/Desktop/Master.bank', mode=0x02010082
-[LOG] SystemI::createSoundInternal             :     exinfo->cbsize             = 224
-[LOG] SystemI::createSoundInternal             :     exinfo->length             = 11450400
-[LOG] SystemI::createSoundInternal             :     exinfo->fileoffset         = 53568
-[LOG] SystemI::createSoundInternal             :     exinfo->numsubsounds       = 1
-[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlist      = 0000022B1CE5CF40
-[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlistnum   = 1
-[LOG] SystemI::createSoundInternal             :     exinfo->suggestedsoundtype = 5
-[LOG] SystemI::createSoundInternal             :     exinfo->initialseekposition = 4800
-[LOG] SystemI::createSoundInternal             :     exinfo->initialseekpostype = 1
-[LOG] SystemI::createSoundInternal             :     Stream 0/1: name='Train Movement Loop', format=5, channels=2, frequency=48000, lengthbytes=132416, lengthpcm=515343, pcmblocksize=0, loopstart=0, loopend=0, mode=0x00000000, channelmask=0x00000000, channelorder=0, peakvolume=0.779694.
-[LOG] AsyncThread::threadFunc                  : Finished Asynchronous operation on sound 0000022B46D22668
-[LOG] SoundI::release                          : Train Movement Loop (0000022C34E82B88)
-[LOG] SoundI::release                          :     Train Movement Loop (0000022C5FD5FAB8)
-[LOG] SoundI::release                          :     Train Movement Loop (0000022B1C789688)
-[LOG] SystemI::createSound                     : filename = Assets/FMODBanks/Desktop/Master.bank : mode 02010082
-[LOG] SystemI::createSound                     : FMOD_NONBLOCKING specified.  Putting into queue to be opened asynchronously!
-[LOG] AsyncThread::add                         : add sound to async queue : soundi = 0000022B1C789688, queue head = 0000022B69E952B8, queue count = 0
-[LOG] AsyncThread::threadFunc                  : Starting Asynchronous operation on sound 0000022B1C789688
-[LOG] SystemI::createSoundInternal             :     Create name='Assets/FMODBanks/Desktop/Master.bank', mode=0x02010082
-[LOG] SystemI::createSoundInternal             :     exinfo->cbsize             = 224
-[LOG] SystemI::createSoundInternal             :     exinfo->length             = 11450400
-[LOG] SystemI::createSoundInternal             :     exinfo->fileoffset         = 53568
-[LOG] SystemI::createSoundInternal             :     exinfo->numsubsounds       = 1
-[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlist      = 0000022B1C4A9A90
-[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlistnum   = 1
-[LOG] SystemI::createSoundInternal             :     exinfo->suggestedsoundtype = 5
-[LOG] SystemI::createSoundInternal             :     exinfo->initialseekposition = 4800
-[LOG] SystemI::createSoundInternal             :     exinfo->initialseekpostype = 1
-[LOG] SystemI::createSoundInternal             :     Stream 0/1: name='Train Movement Loop', format=5, channels=2, frequency=48000, lengthbytes=132416, lengthpcm=515343, pcmblocksize=0, loopstart=0, loopend=0, mode=0x00000000, channelmask=0x00000000, channelorder=0, peakvolume=0.779694.
-[LOG] AsyncThread::threadFunc                  : Finished Asynchronous operation on sound 0000022B1C789688
-[LOG] SoundI::release                          : Train Movement Loop (0000022B46D22668)
-[LOG] SoundI::release                          :     Train Movement Loop (0000022B1DB94CD8)
-[LOG] SoundI::release                          :     Train Movement Loop (0000022C5F6153D8)
-[LOG] SoundI::release                          : Train Movement Loop (0000022B1C789688)
-[LOG] SoundI::release                          :     Train Movement Loop (0000022B473B8B28)
-[LOG] SoundI::release                          :     Train Movement Loop (0000022B692AA098)
-[LOG] SoundI::release                          : music 5 Escape the haunted mineshaft (0000022C34E81AA8)
-[LOG] SoundI::release                          :     music 5 Escape the haunted mineshaft (0000022C5FD5E598)
-[LOG] SoundI::release                          :     music 5 Escape the haunted mineshaft (0000022B1C789EF8)
-[LOG] SoundI::release                          :  (0000022B24770E88)
-[LOG] SoundI::release                          :     Hover (0000022C5FD5F0F8)
-[LOG] SoundI::release                          :  (0000022C554BB818)
-[LOG] SoundI::release                          :     Train Horn (0000022B1DB94998)
-[LOG] SoundI::release                          :  (0000022B23F0C638)
-[LOG] SoundI::release                          :     Grab Coal (0000022B2646A898)
-[LOG] SoundI::release                          :  (0000022B46EEE6E8)
-[LOG] SoundI::release                          :     Burn Coal (0000022B69655BC8)
-[LOG] Thread::callback                         : FMOD Studio update thread finished.
 [LOG] Thread::callback                         : FMOD Studio bank load thread finished.
-[LOG] Profile::disconnectAll                   : Profiler disconnecting all clients
 [LOG] Thread::callback                         : FMOD Studio sample load thread finished.
 [LOG] LiveUpdate::release                      : 
 [LOG] LiveUpdate::reset                        : Reset connection (reason Disconnected)
 [LOG] Thread::callback                         : FMOD stream thread finished.
 [LOG] Thread::callback                         : FMOD mixer thread finished.
-[LOG] Profile::disconnectAll                   : Profiler disconnecting all clients
 [LOG] SystemI::close                           : Closed.
