@@ -49,6 +49,7 @@ MonoBehaviour:
       Path: 
     text: 
     odds: 0
+    tag: 
   - title: Continue
     goodSouls: 0
     badSouls: 0
@@ -64,3 +65,4 @@ MonoBehaviour:
       Path: 
     text: Turn down the offer
     odds: 0
+    tag: GOOD DEMON

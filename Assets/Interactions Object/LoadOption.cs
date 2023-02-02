@@ -35,6 +35,7 @@ public class LoadOption : MonoBehaviour
         [Header("Optional")]
         [TextArea] public string text;
         [Range(0, 100)] public int odds;
+        public string tag;
     }
 
     [SerializeField] private List<Sprite> icons;

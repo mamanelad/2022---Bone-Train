@@ -52,6 +52,7 @@ MonoBehaviour:
       Path: 
     text: 
     odds: 0
+    tag: GOOD DOG
   - title: Continue
     goodSouls: 0
     badSouls: 0
@@ -67,3 +68,4 @@ MonoBehaviour:
       Path: 
     text: Leave the dog
     odds: 0
+    tag: 

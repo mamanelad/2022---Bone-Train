@@ -58,4 +58,9 @@ public class EventGate : MonoBehaviour
             }
         }
     }
+
+    public void SetInteractionData(InteractionData newData)
+    {
+        interactionData = newData;
+    }
 }
