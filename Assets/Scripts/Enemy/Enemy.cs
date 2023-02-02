@@ -16,7 +16,7 @@ public class Enemy : MonoBehaviour
     [Space(10)] [Header("Speed")] [SerializeField]
     private float _speedPercentageFromTrainMax;
     [SerializeField] private float _speedPercentageFromTrainMin;
-    [SerializeField] private float _speedPercentageFromTrain;
+    private float _speedPercentageFromTrain;
     [SerializeField] private float factorSpeed = 0.1f;
     private float _speed;
 
@@ -47,7 +47,7 @@ public class Enemy : MonoBehaviour
             {
                 _enemyManager.AttackTrain(this);
             }
-
+            
             if (CheckIfCanDestroy())
             {
                 Destroy(gameObject);
@@ -72,13 +72,14 @@ public class Enemy : MonoBehaviour
 
     private void TowardsTrain()
     {
-        if (GameManager.Shared.GetSpeedState() != GameManager.SpeedState.Stop)
-        {
-            Vector3 myPosition = transform.position;
-            Vector3 trainPosition = _train.transform.position;
-            Vector3 newPosition = Vector3.MoveTowards(myPosition, trainPosition, _speed * factorSpeed);
-            transform.position = newPosition;
-        }
+        var curSpeed = _speed;
+        if (GameManager.Shared.GetSpeedState() == GameManager.SpeedState.Stop)
+            curSpeed = _speed / 2;
+
+        Vector3 myPosition = transform.position;
+        Vector3 trainPosition = _train.transform.position;
+        Vector3 newPosition = Vector3.MoveTowards(myPosition, trainPosition, curSpeed * factorSpeed);
+        transform.position = newPosition;
     }
 
     private bool CheckIfCanAttack()
