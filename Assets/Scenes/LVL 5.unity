@@ -4741,17 +4741,6 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 302018337}
   m_Mesh: {fileID: -6940246184706110475, guid: ea593facc8051344d8235e3c15c15002, type: 3}
---- !u!114 &305483107 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 4630044781313961318, guid: f8a337fa67b5c5049bc9d0cff64a23c4, type: 3}
-  m_PrefabInstance: {fileID: 1493355842}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 05b9893517ed14447bf3284cbe94a337, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &310148290
 GameObject:
   m_ObjectHideFlags: 0
@@ -44336,7 +44325,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1087cd3f00155da418aaacf6cfc76723, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  devilEvent: {fileID: 0}
+  devilEvent: {fileID: 11400000, guid: 1c0ec76c96cd9fc42bc13e18adf461e2, type: 2}
   soulStonesInitializeValue: 100
   goodSoulsInitializeValue: 100
   badSoulsInitializeValue: 0
@@ -44363,7 +44352,6 @@ MonoBehaviour:
   arrowsAreOnSlowMotionTimeScale: 0.173
   regularTimeScale: 1
   _tutorialIsOn: 1
-  _tutorial: {fileID: 305483107}
   testArrows0: 0
   testArrows: 1
   openArrows: 0
