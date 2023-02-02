@@ -41,13 +41,14 @@ MonoBehaviour:
     shield: 0
     sound:
       Guid:
-        Data1: 0
-        Data2: 0
-        Data3: 0
-        Data4: 0
-      Path: 
+        Data1: -503712852
+        Data2: 1102393450
+        Data3: -2059897944
+        Data4: -1863235680
+      Path: event:/UI/Good Souls Cry
     text: 
     odds: 0
+    tag: 
   - title: Dismiss him
     goodSouls: 0
     badSouls: 0
@@ -63,6 +64,7 @@ MonoBehaviour:
       Path: 
     text: choose to ignore the creature
     odds: 0
+    tag: 
   - title: Use and Betray
     goodSouls: 0
     badSouls: 0
@@ -78,3 +80,4 @@ MonoBehaviour:
       Path: 
     text: Let him fix without paying the price
     odds: 0
+    tag: 

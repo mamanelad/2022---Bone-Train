@@ -717,10 +717,10 @@ MonoBehaviour:
   Path: Assets/FMODBanks/Desktop/Master.strings.bank
   Name: Master.strings
   StudioPath: bank:/Master.strings
-  lastModified: 638109257294014131
+  lastModified: 638109273319641063
   FileSizes:
   - Name: 
-    Value: 3780
+    Value: 3872
   Exists: 1
 --- !u!114 &-1859038420037488280
 MonoBehaviour:
@@ -1103,12 +1103,14 @@ MonoBehaviour:
   - {fileID: -1115840608099453413}
   - {fileID: -6349439686192734413}
   - {fileID: -8204158192456425630}
+  - {fileID: 2659207642188327386}
+  - {fileID: 2473277083600048373}
   EditorParameters: []
   MasterBanks:
   - {fileID: 3004629194860046456}
   StringsBanks:
   - {fileID: -2880105610649985714}
-  cacheTime: 638109257294014131
+  cacheTime: 638109273319641063
   cacheVersion: 131601
 --- !u!114 &365939171475958441
 MonoBehaviour:
@@ -1299,6 +1301,33 @@ MonoBehaviour:
   MinDistance: 1
   MaxDistance: 20
   Length: 0
+--- !u!114 &2473277083600048373
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/UI/Good Souls Cry
+  m_EditorClassIdentifier: 
+  Path: event:/UI/Good Souls Cry
+  Guid:
+    Data1: -503712852
+    Data2: 1102393450
+    Data3: -2059897944
+    Data4: -1863235680
+  Banks:
+  - {fileID: 3004629194860046456}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 0
 --- !u!114 &2479376538400534212
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1320,6 +1349,33 @@ MonoBehaviour:
   Banks:
   - {fileID: 3004629194860046456}
   IsStream: 1
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 0
+--- !u!114 &2659207642188327386
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/UI/Bad Souls Cry
+  m_EditorClassIdentifier: 
+  Path: event:/UI/Bad Souls Cry
+  Guid:
+    Data1: 1514812810
+    Data2: 1203625938
+    Data3: 528866969
+    Data4: 2048397998
+  Banks:
+  - {fileID: 3004629194860046456}
+  IsStream: 0
   Is3D: 0
   IsOneShot: 1
   Parameters: []
@@ -1368,7 +1424,7 @@ MonoBehaviour:
   Path: Assets/FMODBanks/Desktop/Master.bank
   Name: Master
   StudioPath: bank:/Master
-  lastModified: 638109257293980996
+  lastModified: 638109273319601046
   FileSizes: []
   Exists: 1
 --- !u!114 &3286631091616812251

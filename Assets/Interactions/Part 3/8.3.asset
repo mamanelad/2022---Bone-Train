@@ -41,11 +41,11 @@ MonoBehaviour:
     shield: 0
     sound:
       Guid:
-        Data1: 0
-        Data2: 0
-        Data3: 0
-        Data4: 0
-      Path: 
+        Data1: 1514812810
+        Data2: 1203625938
+        Data3: 528866969
+        Data4: 2048397998
+      Path: event:/UI/Bad Souls Cry
     text: 
     odds: 0
     tag: 
@@ -57,11 +57,11 @@ MonoBehaviour:
     shield: 0
     sound:
       Guid:
-        Data1: 0
-        Data2: 0
-        Data3: 0
-        Data4: 0
-      Path: 
+        Data1: 1514812810
+        Data2: 1203625938
+        Data3: 528866969
+        Data4: 2048397998
+      Path: event:/UI/Bad Souls Cry
     text: Feed him until he is stratified.
     odds: 0
     tag: 
