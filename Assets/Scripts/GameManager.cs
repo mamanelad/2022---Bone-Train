@@ -35,7 +35,8 @@ public class GameManager : MonoBehaviour
     private bool _arrowsAreOn;
     private Arrow.ArrowSide _arrowSide = Arrow.ArrowSide.None;
     private SoulsCircle _soulsCircle;
-
+    public bool badSoulsCanEatGoodSouls = true;
+    
     [Space(20)] [Header("Extra")] public static GameManager Shared;
     [HideInInspector] public Morale morale = Morale.Neutral;
     private Mouse _mouse;

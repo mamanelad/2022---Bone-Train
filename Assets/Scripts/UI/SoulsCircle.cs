@@ -8,7 +8,6 @@ using UnityEngine.UI;
 
 public class SoulsCircle : MonoBehaviour
 {
-    
     [SerializeField] private Image badSoulsImage;
     [SerializeField] private Image blackMarkImage;
     [SerializeField] [Range(0f, 0.25f)] private float fillAmountOld;
@@ -35,6 +34,8 @@ public class SoulsCircle : MonoBehaviour
     [SerializeField] private float eatGoodSoulsTime = 1f;
     private float _eatGoodSoulsTimer;
 
+    [Space(30)] [Header("Finish")] private bool _lock;
+
     [Space(30)] [Header("Test")] [SerializeField]
     private bool test;
 
@@ -42,6 +43,7 @@ public class SoulsCircle : MonoBehaviour
     [SerializeField] private float badSoulsTest;
     private float _fillAmountTest;
     private bool _initFinish;
+
 
     public enum WhenTheFunctionIsCalled
     {
@@ -59,16 +61,22 @@ public class SoulsCircle : MonoBehaviour
 
     private void Update()
     {
-        _changeBarTimer -= Time.deltaTime;
-        if (_changeBarTimer <= 0)
+        if (!_lock)
         {
-            _changeBarTimer = changeBarTime;
-            UpdateSoulsBar();
+            _lock = GameManager.Shared.badSoulsCanEatGoodSouls;
+
+            _changeBarTimer -= Time.deltaTime;
+            if (_changeBarTimer <= 0)
+            {
+                _changeBarTimer = changeBarTime;
+                UpdateSoulsBar();
+            }
         }
     }
 
     private void FixedUpdate()
     {
+        if (_lock) return;
         _eatGoodSoulsTimer -= Time.deltaTime;
         if (_eatGoodSoulsTimer <= 0)
         {
@@ -79,6 +87,7 @@ public class SoulsCircle : MonoBehaviour
 
     private void GoodSoulsEater()
     {
+        if (_lock) return;
         var goodSoulsAmount = GameManager.Shared.GetGoodSouls();
         if (goodSoulsAmount > 0)
         {
@@ -96,6 +105,7 @@ public class SoulsCircle : MonoBehaviour
 
     public void ChangeSoulsAmount(WhenTheFunctionIsCalled when = WhenTheFunctionIsCalled.OnPlay)
     {
+        if (_lock) return;
         _goodSouls = GameManager.Shared.GetGoodSouls();
         _badSouls = GameManager.Shared.GetBadSouls();
         CalculateFillAmount(when);
@@ -104,6 +114,7 @@ public class SoulsCircle : MonoBehaviour
 
     private void CalculateFillAmount(WhenTheFunctionIsCalled when = WhenTheFunctionIsCalled.OnPlay)
     {
+        if (_lock) return;
         float totalSoulsAmount = _goodSouls + _badSouls;
         float badSoulsPercentageFromTotal = _badSouls / totalSoulsAmount;
 
@@ -113,6 +124,7 @@ public class SoulsCircle : MonoBehaviour
 
     private void UpdateSoulsBar(WhenTheFunctionIsCalled when = WhenTheFunctionIsCalled.OnPlay)
     {
+        if (_lock) return;
         if (when == WhenTheFunctionIsCalled.OnPlay)
             fillAmountOld = Mathf.Lerp(fillAmountOld, _fillAmountNew, addFillBy);
 
@@ -122,6 +134,7 @@ public class SoulsCircle : MonoBehaviour
 
     private void TestFunction()
     {
+        if (_lock) return;
         float totalSoulsAmount = goodSoulsTest + badSoulsTest;
         float badSoulsPercentageFromTotal = badSoulsTest / totalSoulsAmount;
         _fillAmountTest = Mathf.Lerp(minFillAmount, maxFillAmount, badSoulsPercentageFromTotal);
