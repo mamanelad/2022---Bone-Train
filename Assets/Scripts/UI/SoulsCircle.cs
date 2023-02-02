@@ -34,7 +34,7 @@ public class SoulsCircle : MonoBehaviour
     [SerializeField] private float eatGoodSoulsTime = 1f;
     private float _eatGoodSoulsTimer;
 
-    [Space(30)] [Header("Finish")] private bool _lock;
+    [Space(30)] [Header("Finish")] [SerializeField] private bool _lock;
 
     [Space(30)] [Header("Test")] [SerializeField]
     private bool test;
@@ -61,9 +61,15 @@ public class SoulsCircle : MonoBehaviour
 
     private void Update()
     {
+        // if (test)
+        // {
+        //     TestFunction();
+        //     return;
+        // }
+        
         if (!_lock)
         {
-            _lock = GameManager.Shared.badSoulsCanEatGoodSouls;
+            _lock = !GameManager.Shared.badSoulsCanEatGoodSouls;
 
             _changeBarTimer -= Time.deltaTime;
             if (_changeBarTimer <= 0)
@@ -71,18 +77,19 @@ public class SoulsCircle : MonoBehaviour
                 _changeBarTimer = changeBarTime;
                 UpdateSoulsBar();
             }
+            
+            _eatGoodSoulsTimer -= Time.deltaTime;
+            if (_eatGoodSoulsTimer <= 0)
+            {
+                _eatGoodSoulsTimer = eatGoodSoulsTime;
+                GoodSoulsEater();
+            }
         }
     }
 
     private void FixedUpdate()
     {
-        if (_lock) return;
-        _eatGoodSoulsTimer -= Time.deltaTime;
-        if (_eatGoodSoulsTimer <= 0)
-        {
-            _eatGoodSoulsTimer = eatGoodSoulsTime;
-            GoodSoulsEater();
-        }
+
     }
 
     private void GoodSoulsEater()
@@ -91,9 +98,10 @@ public class SoulsCircle : MonoBehaviour
         var goodSoulsAmount = GameManager.Shared.GetGoodSouls();
         if (goodSoulsAmount > 0)
         {
+            print("kaka");
             var percentage = eatGoodSoulsPercentage;
             if (GameManager.Shared.GetSpeedState() == GameManager.SpeedState.Stop)
-                percentage /= 2;
+                percentage /= 3;
 
             var badSoulsAmount = GameManager.Shared.GetBadSouls();
             int badSoulsToAdd = (int) Mathf.Floor(badSoulsAmount * percentage);
@@ -134,7 +142,6 @@ public class SoulsCircle : MonoBehaviour
 
     private void TestFunction()
     {
-        if (_lock) return;
         float totalSoulsAmount = goodSoulsTest + badSoulsTest;
         float badSoulsPercentageFromTotal = badSoulsTest / totalSoulsAmount;
         _fillAmountTest = Mathf.Lerp(minFillAmount, maxFillAmount, badSoulsPercentageFromTotal);
