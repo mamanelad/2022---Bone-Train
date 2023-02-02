@@ -24,7 +24,9 @@ public class Enemy : MonoBehaviour
     private float distanceForAttack;
     [FormerlySerializedAs("distanceForDestroy")] [SerializeField]
     private float distanceForSelfDestroy;
-    
+
+
+    [SerializeField] private float raiderSpeed = 2000;
     void Start()
     {
          
@@ -80,7 +82,7 @@ public class Enemy : MonoBehaviour
 
         Vector3 myPosition = transform.position;
         Vector3 trainPosition = _train.transform.position;
-        Vector3 newPosition = Vector3.MoveTowards(myPosition, trainPosition, curSpeed * factorSpeed);
+        Vector3 newPosition = Vector3.MoveTowards(myPosition, trainPosition, raiderSpeed);
         transform.position = newPosition;
     }
 
