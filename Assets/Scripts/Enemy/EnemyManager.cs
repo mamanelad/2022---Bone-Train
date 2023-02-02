@@ -29,11 +29,14 @@ public class EnemyManager : MonoBehaviour
     [Space(10)] [Header("Times")] [SerializeField]
     private float addEnemiesTime = 3f;
 
+    [SerializeField] private float maxTimeToCreatEnemy = 8f;
+    [SerializeField] private float creatEnemyTimer;
+
     private bool _wait;
 
     private float _addEnemiesTimer;
 
-    [Space(10)] [Header("Close Enemies")] public bool lockEnemies;
+    [Space(10)] [Header("Close Enemies")] public bool lockEnemies = true;
     public bool closeEnemies;
 
     [Space(10)] [Header("Tests")] [SerializeField]
@@ -44,6 +47,7 @@ public class EnemyManager : MonoBehaviour
 
     private void Awake()
     {
+        creatEnemyTimer = maxTimeToCreatEnemy;
         _addEnemiesTimer = addEnemiesTime;
     }
 
@@ -121,7 +125,13 @@ public class EnemyManager : MonoBehaviour
         
         if (_enemiesAmount >= enemiesAmountMax) return false;
         var curTrainState = GameManager.Shared.GetSpeedState();
-        return curTrainState == GameManager.SpeedState.Low;
+        creatEnemyTimer -= Time.deltaTime;
+        bool ret = creatEnemyTimer <= 0 || curTrainState == GameManager.SpeedState.Low;
+
+        if (ret)
+            creatEnemyTimer = maxTimeToCreatEnemy;
+
+        return ret;
     }
 
     private void CreateNewEnemy()
