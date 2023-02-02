@@ -50,7 +50,7 @@ public class InteractionManager : MonoBehaviour
         itemAnimator.SetTrigger(Up);
         UIAudioManager.Instance.PlayUIEventStart();
         UIAudioManager.Instance.PauseTrainLoop();
-        GameManager.Shared.StopTrain();
+        //GameManager.Shared.StopTrain();
         Time.timeScale = 0;
     }
 
@@ -69,7 +69,7 @@ public class InteractionManager : MonoBehaviour
         interactionAudio.stop(STOP_MODE.ALLOWFADEOUT);
         DisableOptions();
         UIAudioManager.Instance.ResumeTrainLoop();
-        GameManager.Shared.ContinueTrain();
+        //GameManager.Shared.ContinueTrain();
         gameObject.SetActive(false);
         Time.timeScale = currentTimeScale;
 
