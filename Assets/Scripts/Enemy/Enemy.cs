@@ -72,6 +72,8 @@ public class Enemy : MonoBehaviour
 
     private void TowardsTrain()
     {
+        if (Time.timeScale == 0)
+            return;
         var curSpeed = _speed;
         if (GameManager.Shared.GetSpeedState() == GameManager.SpeedState.Stop)
             curSpeed = _speed / 2;

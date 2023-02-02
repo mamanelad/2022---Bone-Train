@@ -444,8 +444,8 @@ public class GameManager : MonoBehaviour
         yield return new WaitForSeconds(0.5f);
         if (SoulStones <= 0)
         {
-            _interactionManager.StartInteraction(devilEvent);
             Time.timeScale = 1;
+            _interactionManager.StartInteraction(devilEvent);
         }
     }
 
