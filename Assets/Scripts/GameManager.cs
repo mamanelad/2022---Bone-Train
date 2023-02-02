@@ -431,7 +431,11 @@ public class GameManager : MonoBehaviour
     private IEnumerator StartDevilEvent()
     {
         yield return new WaitForSeconds(0.5f);
-        _interactionManager.StartInteraction(devilEvent);
+        if (SoulStones <= 0)
+        {
+            _interactionManager.StartInteraction(devilEvent);
+            Time.timeScale = 1;
+        }
     }
 
     public int GetSoulStones()

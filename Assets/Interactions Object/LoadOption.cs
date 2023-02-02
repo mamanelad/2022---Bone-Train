@@ -125,6 +125,7 @@ public class LoadOption : MonoBehaviour
         option.goodSouls = 0;
         option.badSouls = 0;
         option.soulsStones = 0;
+        // remove option sound 
     }
 
     public void ChooseOption()
