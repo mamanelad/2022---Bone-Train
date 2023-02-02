@@ -1,5 +1,9 @@
 fileFormatVersion: 2
+<<<<<<<< HEAD:Assets/FinishGameGate.cs.meta
 guid: 873a38058dff7644b95fd9e52a24e4a0
+========
+guid: 2067addcd12444b4e8e268d727c402d5
+>>>>>>>> 87b2cef72f6086f4f9b115f1901af6634e4afde4:Assets/Scripts/SpecialInteractionHandler.cs.meta
 MonoImporter:
   externalObjects: {}
   serializedVersion: 2
