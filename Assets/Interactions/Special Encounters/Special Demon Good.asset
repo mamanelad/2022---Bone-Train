@@ -1,0 +1,54 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c86e91921e9ba5e419d15579e50b8591, type: 3}
+  m_Name: Special Demon Good
+  m_EditorClassIdentifier: 
+  character: {fileID: 21300000, guid: 153c90eda42c09149a11e1a8683bbed0, type: 3}
+  audio:
+    Guid:
+      Data1: 1967648562
+      Data2: 1244922935
+      Data3: 1785958588
+      Data4: -1719341730
+    Path: event:/Interactions/Special/Special Demon Good
+  enteredDistanceAudio:
+    Guid:
+      Data1: 0
+      Data2: 0
+      Data3: 0
+      Data4: 0
+    Path: 
+  iconIndex: 3
+  title: The Tricks of Hell
+  textBox: 'As you stand at the gates of Hell, ready to leave with the rescued souls
+    in tow, you witness a fierce battle between Mamanos, Lord of the Underworld and
+    Beelzebub, Lord of the Flies. It seems that Mamanos is furious with Beelzebub
+    for its failed attempt to trick you with the "gift" of free fuel. You recall
+    your suspicion of their kindness and the decision to refuse their offer. Now,
+    it appears that your caution has paid off, as you watch Mamanos pummel Beelzebub
+    with a wrathful fury. '
+  options:
+  - title: Exit hell
+    goodSouls: 0
+    badSouls: 0
+    soulsStones: 0
+    sword: 0
+    shield: 0
+    sound:
+      Guid:
+        Data1: 0
+        Data2: 0
+        Data3: 0
+        Data4: 0
+      Path: 
+    text: Keep driving
+    odds: 0

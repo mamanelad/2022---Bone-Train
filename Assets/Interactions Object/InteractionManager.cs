@@ -20,11 +20,15 @@ public class InteractionManager : MonoBehaviour
     [SerializeField] private TextMeshProUGUI textBox;
 
     [SerializeField] private LoadIcon icon;
+
     // [SerializeField] private LoadSpecialItem specialItem;
     [SerializeField] private List<GameObject> optionsGameObjects;
 
     private EventInstance interactionAudio;
-    
+
+    private bool goodSoulsAdded;
+    private bool badSoulsAdded;
+
     public void StartInteraction(InteractionData newInteractionData)
     {
         gameObject.SetActive(true);
@@ -34,7 +38,7 @@ public class InteractionManager : MonoBehaviour
 
         if (!interactionData.audio.IsNull)
             interactionAudio.start();
-        
+
         UIAudioManager.Instance.PlayUIEventStart();
         UIAudioManager.Instance.PauseTrainLoop();
         GameManager.Shared.StopTrain();
@@ -55,6 +59,12 @@ public class InteractionManager : MonoBehaviour
         GameManager.Shared.ContinueTrain();
         gameObject.SetActive(false);
         Time.timeScale = 1;
+
+        if (goodSoulsAdded)
+            GameManager.Shared.OpenGoodSoulTuturial();
+        if (badSoulsAdded)
+            GameManager.Shared.OpenGoodSoulTuturial();
+
     }
 
     public void LoadInteraction()
@@ -104,6 +114,10 @@ public class InteractionManager : MonoBehaviour
         GameManager.Shared.ChangeByGoodSouls(option.goodSouls);
         GameManager.Shared.ChangeByBadSouls(option.badSouls);
         GameManager.Shared.ChangeBySoulStones(option.soulsStones);
+        
+        goodSoulsAdded = option.goodSouls > 0;
+        badSoulsAdded = option.badSouls > 0;
+        
         if (option.sword)
             GameManager.Shared.ChangeBySwords(1);
         if (option.shield)

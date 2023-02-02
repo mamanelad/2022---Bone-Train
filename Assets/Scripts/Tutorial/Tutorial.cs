@@ -102,11 +102,11 @@ public class Tutorial : MonoBehaviour
         if (_currTutorialObject.stopTime)
             Time.timeScale = _currTutorialObject.slowMotionTime;
 
-        if (_currTutorialObject.closeWithTime)
+        if (_currTutorialObject.closeTheObjectWithTimer)
             _currTutorialObject.StartCloseRoutine();
 
         _currTutorialObject.gameObject.SetActive(true);
-        _tutorialIndex += 1;
+        
     }
 
     public void CloseTutorialObject(TutorialObject.TutorialKind tutorialKindToClose)
@@ -126,6 +126,12 @@ public class Tutorial : MonoBehaviour
         // print("got to where it needed to delete the game object");
         if (_currTutorialObject.openWithTime)
             Time.timeScale = 1;
+        
+        _tutorialIndex += 1;
+        if (_tutorialIndex == tutorialObjects.Length)
+        {
+           GameManager.Shared.SetTutorialIsOn(false); 
+        }
     }
 
 
