@@ -56,7 +56,6 @@ public class Drag : MonoBehaviour, IDragHandler, IBeginDragHandler, IEndDragHand
             UIAudioManager.Instance.PlayBurnCoal();
         if (GameManager.Shared.GetSpeedState() != GameManager.SpeedState.Stop)
             _furnace.AddSpeed(myBurnObject);
-        Destroy(gameObject);
     }
 
     private bool RectOverlap(RectTransform firstRect, RectTransform secondRect)
@@ -122,11 +121,15 @@ public class Drag : MonoBehaviour, IDragHandler, IBeginDragHandler, IEndDragHand
 
     public void OnEndDrag(PointerEventData eventData)
     {
-        Destroy(gameObject);
-        if (RectOverlap(transform.GetComponent<RectTransform>(), _furnaceTransform.GetComponent<RectTransform>()))
-            TouchFurnace();
 
+        // if (RectOverlap(transform.GetComponent<RectTransform>(), _furnaceTransform.GetComponent<RectTransform>()))
+        // {
+        //     TouchFurnace();
+        // }
+            
+        TouchFurnace();
         GameManager.Shared.GetMouse().ChangeToIdleMouse();
+        Destroy(gameObject);
         
     }
 
@@ -140,6 +143,8 @@ public class Drag : MonoBehaviour, IDragHandler, IBeginDragHandler, IEndDragHand
         _furnace = newFurnace;
     }
 
+    
+    
     public void PointerEnter()
     {
         GameManager.Shared.GetMouse().ChangeSizeBigger();

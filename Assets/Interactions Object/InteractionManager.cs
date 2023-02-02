@@ -29,8 +29,12 @@ public class InteractionManager : MonoBehaviour
     private bool goodSoulsAdded;
     private bool badSoulsAdded;
 
+    [Space(20)] [Header("Tests")] [SerializeField]
+    private bool isOn = true;
+
     public void StartInteraction(InteractionData newInteractionData)
     {
+        if (!isOn) return;
         gameObject.SetActive(true);
         interactionData = newInteractionData;
         interactionOptions = newInteractionData.options;
@@ -64,7 +68,6 @@ public class InteractionManager : MonoBehaviour
             GameManager.Shared.OpenGoodSoulTuturial();
         if (badSoulsAdded)
             GameManager.Shared.OpenGoodSoulTuturial();
-
     }
 
     public void LoadInteraction()
@@ -114,10 +117,10 @@ public class InteractionManager : MonoBehaviour
         GameManager.Shared.ChangeByGoodSouls(option.goodSouls);
         GameManager.Shared.ChangeByBadSouls(option.badSouls);
         GameManager.Shared.ChangeBySoulStones(option.soulsStones);
-        
+
         goodSoulsAdded = option.goodSouls > 0;
         badSoulsAdded = option.badSouls > 0;
-        
+
         if (option.sword)
             GameManager.Shared.ChangeBySwords(1);
         if (option.shield)

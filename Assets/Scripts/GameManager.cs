@@ -99,6 +99,7 @@ public class GameManager : MonoBehaviour
     [SerializeField] private bool testArrows;
     [SerializeField] private bool openArrows;
     [SerializeField] private bool closeArrows;
+    private int counter = 0;
 
     public enum Road
     {
@@ -164,10 +165,10 @@ public class GameManager : MonoBehaviour
                 _tutorial = FindObjectOfType<Tutorial>();
             }
 
-            if (_tutorial)
-            {
-                _interactionManager.SetTutorialObject(_tutorial);
-            }
+            // if (_tutorial)
+            // {
+            //     _interactionManager.SetTutorialObject(_tutorial);
+            // }
             // _tutorial.OpenNextTutorialObject();
         }
 
@@ -417,6 +418,7 @@ public class GameManager : MonoBehaviour
 
     public void ChangeBySoulStones(int addNum)
     {
+        
         if (SoulStones + addNum < 0)
         {
             SoulStones = 0;
@@ -431,11 +433,10 @@ public class GameManager : MonoBehaviour
 
             return;
         }
-
-        if (SoulStones + addNum > maxSoulStones)
-            addNum = maxSoulStones - SoulStones;
-
-        SoulStones += addNum;
+        
+        print(counter);
+        counter++;
+        SoulStones = Math.Min(addNum + SoulStones, maxSoulStones);
         _uiManager.SetSoulStones();
         _soulsCircle.ChangeSoulsAmount();
     }

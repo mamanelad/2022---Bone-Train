@@ -235,6 +235,10 @@ PrefabInstance:
       propertyPath: m_AnchoredPosition.y
       value: 75
       objectReference: {fileID: 0}
+    - target: {fileID: 8447537622321576489, guid: 832cb521db0a2594da2f3b5854b90c86, type: 3}
+      propertyPath: m_IsTrigger
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 8477522200000332856, guid: 832cb521db0a2594da2f3b5854b90c86, type: 3}
       propertyPath: m_Pivot.x
       value: 0
@@ -362,3 +366,29 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 4483603874112974673, guid: 832cb521db0a2594da2f3b5854b90c86, type: 3}
   m_PrefabInstance: {fileID: 5152716802352882640}
   m_PrefabAsset: {fileID: 0}
+--- !u!61 &6839179726725613286
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8771557790918347905}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: -29.852257, y: -9.284951}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0, y: 0}
+    oldSize: {x: 0, y: 0}
+    newSize: {x: 0, y: 0}
+    adaptiveTilingThreshold: 0
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 50.00267, y: 70.86024}
+  m_EdgeRadius: 0
