@@ -1,0 +1,1355 @@
+fileFormatVersion: 2
+guid: 1f8b8ce42d02a1d4f85bcbd053279a0d
+TextureImporter:
+  internalIDToNameTable: []
+  externalObjects: {}
+  serializedVersion: 12
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 1
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMasterTextureLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 0
+    wrapV: 0
+    wrapW: 0
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 128
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 0
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Server
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: bad souls inside_0-Sheet-export_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 2191
+        width: 333
+        height: 313
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: eac6332e131ce8f4a8d31be99f765cd5
+      internalID: 1407602308
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bad souls inside_0-Sheet-export_1
+      rect:
+        serializedVersion: 2
+        x: 333
+        y: 2191
+        width: 333
+        height: 313
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 77d71ad602d96d64d9c8b9dc0f0e4133
+      internalID: 1892895226
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bad souls inside_0-Sheet-export_2
+      rect:
+        serializedVersion: 2
+        x: 666
+        y: 2191
+        width: 333
+        height: 313
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: aadbff3a9fd1fb646b66fad52f1c16cd
+      internalID: -406878233
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bad souls inside_0-Sheet-export_3
+      rect:
+        serializedVersion: 2
+        x: 999
+        y: 2191
+        width: 333
+        height: 313
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fbe28bdaf35140a489a842f81ffa2e20
+      internalID: 150944453
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bad souls inside_0-Sheet-export_4
+      rect:
+        serializedVersion: 2
+        x: 1332
+        y: 2191
+        width: 333
+        height: 313
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7bd2d5581abeeb14cb78f537b0120005
+      internalID: -1810556595
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bad souls inside_0-Sheet-export_5
+      rect:
+        serializedVersion: 2
+        x: 1665
+        y: 2191
+        width: 333
+        height: 313
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 030bd450260f4604aaca4995010a71ef
+      internalID: 322076752
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bad souls inside_0-Sheet-export_6
+      rect:
+        serializedVersion: 2
+        x: 1998
+        y: 2191
+        width: 333
+        height: 313
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 545f4fe169359b047938d4dff747c44d
+      internalID: -883782157
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bad souls inside_0-Sheet-export_7
+      rect:
+        serializedVersion: 2
+        x: 2331
+        y: 2191
+        width: 333
+        height: 313
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1026182e024e23448a36bfe3782892a6
+      internalID: -749983126
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bad souls inside_0-Sheet-export_8
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1878
+        width: 333
+        height: 313
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1c7ea3a9efc633f40b2a325e5c0718dc
+      internalID: -244441666
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bad souls inside_0-Sheet-export_9
+      rect:
+        serializedVersion: 2
+        x: 333
+        y: 1878
+        width: 333
+        height: 313
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0319208b3d133ef4fbbe9b18ba38c689
+      internalID: 2140992691
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bad souls inside_0-Sheet-export_10
+      rect:
+        serializedVersion: 2
+        x: 666
+        y: 1878
+        width: 333
+        height: 313
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a15eaadfcbb4ee84b980a76b7076510f
+      internalID: 383018670
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bad souls inside_0-Sheet-export_11
+      rect:
+        serializedVersion: 2
+        x: 999
+        y: 1878
+        width: 333
+        height: 313
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 31df42e5cc722d14b9f41d4c0c78e62c
+      internalID: -294002732
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bad souls inside_0-Sheet-export_12
+      rect:
+        serializedVersion: 2
+        x: 1332
+        y: 1878
+        width: 333
+        height: 313
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8b010bd8aca86114a88a1eb6d095626a
+      internalID: 358339949
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bad souls inside_0-Sheet-export_13
+      rect:
+        serializedVersion: 2
+        x: 1665
+        y: 1878
+        width: 333
+        height: 313
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1b80ee3d2f68b7141ab2b1d9bb482880
+      internalID: 1104983361
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bad souls inside_0-Sheet-export_14
+      rect:
+        serializedVersion: 2
+        x: 1998
+        y: 1878
+        width: 333
+        height: 313
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4a828d0a9694dd848857bbc6fcb6d929
+      internalID: -71436910
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bad souls inside_0-Sheet-export_15
+      rect:
+        serializedVersion: 2
+        x: 2331
+        y: 1878
+        width: 333
+        height: 313
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 80afa2c56ad5eec4ba7a963a28276f74
+      internalID: -1441451717
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bad souls inside_0-Sheet-export_16
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1565
+        width: 333
+        height: 313
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 282104164992fba4fbdc279c945438b7
+      internalID: 1797221052
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bad souls inside_0-Sheet-export_17
+      rect:
+        serializedVersion: 2
+        x: 333
+        y: 1565
+        width: 333
+        height: 313
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c5e18611c8c00f04192160b686cb3a59
+      internalID: -1456556395
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bad souls inside_0-Sheet-export_18
+      rect:
+        serializedVersion: 2
+        x: 666
+        y: 1565
+        width: 333
+        height: 313
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 369450577b5b4d1448568ee7cdc8b302
+      internalID: -1781368136
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bad souls inside_0-Sheet-export_19
+      rect:
+        serializedVersion: 2
+        x: 999
+        y: 1565
+        width: 333
+        height: 313
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6138499a5037bbf4499800b127f11e3c
+      internalID: -1419132611
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bad souls inside_0-Sheet-export_20
+      rect:
+        serializedVersion: 2
+        x: 1332
+        y: 1565
+        width: 333
+        height: 313
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b9cab30473058154281ae68dd00c5c60
+      internalID: -518695601
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bad souls inside_0-Sheet-export_21
+      rect:
+        serializedVersion: 2
+        x: 1665
+        y: 1565
+        width: 333
+        height: 313
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: de94c326312400c468de302baca2843b
+      internalID: 547329422
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bad souls inside_0-Sheet-export_22
+      rect:
+        serializedVersion: 2
+        x: 1998
+        y: 1565
+        width: 333
+        height: 313
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f0bd6d4c35bdffe4e936e39c83c9d622
+      internalID: -671199538
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bad souls inside_0-Sheet-export_23
+      rect:
+        serializedVersion: 2
+        x: 2331
+        y: 1565
+        width: 333
+        height: 313
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9ffdd44f368fe864c8ba6273f7b08036
+      internalID: 1392411237
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bad souls inside_0-Sheet-export_24
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1252
+        width: 333
+        height: 313
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 409fe8d14a9425043a682e7783f36144
+      internalID: 375059695
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bad souls inside_0-Sheet-export_25
+      rect:
+        serializedVersion: 2
+        x: 333
+        y: 1252
+        width: 333
+        height: 313
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 524126328005f8a48a90cdb3eabb4b78
+      internalID: -1175568265
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bad souls inside_0-Sheet-export_26
+      rect:
+        serializedVersion: 2
+        x: 666
+        y: 1252
+        width: 333
+        height: 313
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2369c23572f44e2459dffbfe7e39276a
+      internalID: 361127371
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bad souls inside_0-Sheet-export_27
+      rect:
+        serializedVersion: 2
+        x: 999
+        y: 1252
+        width: 333
+        height: 313
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2cf4054848704b84b9420c4197b730ef
+      internalID: -1368108480
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bad souls inside_0-Sheet-export_28
+      rect:
+        serializedVersion: 2
+        x: 1332
+        y: 1252
+        width: 333
+        height: 313
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a4a8fa3a61caa0f438cc422b2c4a3016
+      internalID: -1144836391
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bad souls inside_0-Sheet-export_29
+      rect:
+        serializedVersion: 2
+        x: 1665
+        y: 1252
+        width: 333
+        height: 313
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 88fb83110ab0bff4badffc2b53d654fe
+      internalID: -2006150766
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bad souls inside_0-Sheet-export_30
+      rect:
+        serializedVersion: 2
+        x: 1998
+        y: 1252
+        width: 333
+        height: 313
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 08fc1064760b6eb4bb13006e88c45650
+      internalID: -1245776888
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bad souls inside_0-Sheet-export_31
+      rect:
+        serializedVersion: 2
+        x: 2331
+        y: 1252
+        width: 333
+        height: 313
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d481bd4580c78dc48a25881f520e7b8e
+      internalID: -1497291612
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bad souls inside_0-Sheet-export_32
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 939
+        width: 333
+        height: 313
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7bc4a4c9cb1849b4590d75925b89dc2c
+      internalID: -457194445
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bad souls inside_0-Sheet-export_33
+      rect:
+        serializedVersion: 2
+        x: 333
+        y: 939
+        width: 333
+        height: 313
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f5d3ba71162caed4b96d299fe66218b7
+      internalID: -2025657037
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bad souls inside_0-Sheet-export_34
+      rect:
+        serializedVersion: 2
+        x: 666
+        y: 939
+        width: 333
+        height: 313
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 68ad9d2e9366bf446bec3b85f1634bad
+      internalID: -275964154
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bad souls inside_0-Sheet-export_35
+      rect:
+        serializedVersion: 2
+        x: 999
+        y: 939
+        width: 333
+        height: 313
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ebbc46d3cd1c35b459d6932c9967b364
+      internalID: -973281182
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bad souls inside_0-Sheet-export_36
+      rect:
+        serializedVersion: 2
+        x: 1332
+        y: 939
+        width: 333
+        height: 313
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c62dcd9a5b40ee740afee7a171e32c1b
+      internalID: 225142150
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bad souls inside_0-Sheet-export_37
+      rect:
+        serializedVersion: 2
+        x: 1665
+        y: 939
+        width: 333
+        height: 313
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4fc3bbfbc158c4643b569f180150a554
+      internalID: -2059651009
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bad souls inside_0-Sheet-export_38
+      rect:
+        serializedVersion: 2
+        x: 1998
+        y: 939
+        width: 333
+        height: 313
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4344142f55959264fb5cd07602e771eb
+      internalID: 1121176634
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bad souls inside_0-Sheet-export_39
+      rect:
+        serializedVersion: 2
+        x: 2331
+        y: 939
+        width: 333
+        height: 313
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5c3cc517785d7064b9ba52dd02f10106
+      internalID: -1290809231
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bad souls inside_0-Sheet-export_40
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 626
+        width: 333
+        height: 313
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6ccd686ac2cd72943908f5e26d70c51e
+      internalID: -247408317
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bad souls inside_0-Sheet-export_41
+      rect:
+        serializedVersion: 2
+        x: 333
+        y: 626
+        width: 333
+        height: 313
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b2fe8ace4b9b5cd4f9cf92c1d9d539f6
+      internalID: 873768413
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bad souls inside_0-Sheet-export_42
+      rect:
+        serializedVersion: 2
+        x: 666
+        y: 626
+        width: 333
+        height: 313
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d71e9aa725313914482b435ff8c9c19a
+      internalID: -884410496
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bad souls inside_0-Sheet-export_43
+      rect:
+        serializedVersion: 2
+        x: 999
+        y: 626
+        width: 333
+        height: 313
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4476ff758734aa14da53c694c080fa2f
+      internalID: 535292913
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bad souls inside_0-Sheet-export_44
+      rect:
+        serializedVersion: 2
+        x: 1332
+        y: 626
+        width: 333
+        height: 313
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8cc35e848b071974a84cf2b5e7d616c3
+      internalID: -1354893716
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bad souls inside_0-Sheet-export_45
+      rect:
+        serializedVersion: 2
+        x: 1665
+        y: 626
+        width: 333
+        height: 313
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f2eb2070c63888f4e9680c034c0280a8
+      internalID: -755347203
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bad souls inside_0-Sheet-export_46
+      rect:
+        serializedVersion: 2
+        x: 1998
+        y: 626
+        width: 333
+        height: 313
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ec0953f7f75ec1f479f6530cf1e7a3bd
+      internalID: -291313179
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bad souls inside_0-Sheet-export_47
+      rect:
+        serializedVersion: 2
+        x: 2331
+        y: 626
+        width: 333
+        height: 313
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 14f7fcf5c7e00d742b76af77e5c2cd8e
+      internalID: -523248291
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bad souls inside_0-Sheet-export_48
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 313
+        width: 333
+        height: 313
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 97aaaea9877142f44ad9b27afaecf5e4
+      internalID: 1279566678
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bad souls inside_0-Sheet-export_49
+      rect:
+        serializedVersion: 2
+        x: 333
+        y: 313
+        width: 333
+        height: 313
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3ef527dc6681a824197d1712d2e5ddcc
+      internalID: -814469407
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bad souls inside_0-Sheet-export_50
+      rect:
+        serializedVersion: 2
+        x: 666
+        y: 313
+        width: 333
+        height: 313
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 35b5d1ef77763ad46acd5bdd0178c4bd
+      internalID: -1688989634
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bad souls inside_0-Sheet-export_51
+      rect:
+        serializedVersion: 2
+        x: 999
+        y: 313
+        width: 333
+        height: 313
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f22eac9c25a7ea84fb51de501c74c70d
+      internalID: -1923655653
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bad souls inside_0-Sheet-export_52
+      rect:
+        serializedVersion: 2
+        x: 1332
+        y: 313
+        width: 333
+        height: 313
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d50e0ad6061dbaf44867c4bd2c5e8f2b
+      internalID: 1008201935
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bad souls inside_0-Sheet-export_53
+      rect:
+        serializedVersion: 2
+        x: 1665
+        y: 313
+        width: 333
+        height: 313
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8f239cfa7f85fcd4387d068fb5f2ecef
+      internalID: -896095621
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bad souls inside_0-Sheet-export_54
+      rect:
+        serializedVersion: 2
+        x: 1998
+        y: 313
+        width: 333
+        height: 313
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e11e0a99ebdf833438a1d548559243e9
+      internalID: 916077130
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bad souls inside_0-Sheet-export_55
+      rect:
+        serializedVersion: 2
+        x: 2331
+        y: 313
+        width: 333
+        height: 313
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 95970d7d5895eed499f7acabe95a934c
+      internalID: 1889042523
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 9ddf82ebe9ae4274aa05ebed5990f619
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    nameFileIdTable:
+      bad souls inside_0-Sheet-export_19: -1419132611
+      bad souls inside_0-Sheet-export_0: 1407602308
+      bad souls inside_0-Sheet-export_8: -244441666
+      bad souls inside_0-Sheet-export_17: -1456556395
+      bad souls inside_0-Sheet-export_44: -1354893716
+      bad souls inside_0-Sheet-export_50: -1688989634
+      bad souls inside_0-Sheet-export_53: -896095621
+      bad souls inside_0-Sheet-export_9: 2140992691
+      bad souls inside_0-Sheet-export_29: -2006150766
+      bad souls inside_0-Sheet-export_41: 873768413
+      bad souls inside_0-Sheet-export_7: -749983126
+      bad souls inside_0-Sheet-export_39: -1290809231
+      bad souls inside_0-Sheet-export_52: 1008201935
+      bad souls inside_0-Sheet-export_2: -406878233
+      bad souls inside_0-Sheet-export_23: 1392411237
+      bad souls inside_0-Sheet-export_34: -275964154
+      bad souls inside_0-Sheet-export_22: -671199538
+      bad souls inside_0-Sheet-export_42: -884410496
+      bad souls inside_0-Sheet-export_51: -1923655653
+      bad souls inside_0-Sheet-export_32: -457194445
+      bad souls inside_0-Sheet-export_16: 1797221052
+      bad souls inside_0-Sheet-export_43: 535292913
+      bad souls inside_0-Sheet-export_40: -247408317
+      bad souls inside_0-Sheet-export_11: -294002732
+      bad souls inside_0-Sheet-export_20: -518695601
+      bad souls inside_0-Sheet-export_21: 547329422
+      bad souls inside_0-Sheet-export_25: -1175568265
+      bad souls inside_0-Sheet-export_31: -1497291612
+      bad souls inside_0-Sheet-export_4: -1810556595
+      bad souls inside_0-Sheet-export_5: 322076752
+      bad souls inside_0-Sheet-export_6: -883782157
+      bad souls inside_0-Sheet-export_15: -1441451717
+      bad souls inside_0-Sheet-export_27: -1368108480
+      bad souls inside_0-Sheet-export_46: -291313179
+      bad souls inside_0-Sheet-export_30: -1245776888
+      bad souls inside_0-Sheet-export_48: 1279566678
+      bad souls inside_0-Sheet-export_54: 916077130
+      bad souls inside_0-Sheet-export_24: 375059695
+      bad souls inside_0-Sheet-export_33: -2025657037
+      bad souls inside_0-Sheet-export_49: -814469407
+      bad souls inside_0-Sheet-export_37: -2059651009
+      bad souls inside_0-Sheet-export_14: -71436910
+      bad souls inside_0-Sheet-export_12: 358339949
+      bad souls inside_0-Sheet-export_38: 1121176634
+      bad souls inside_0-Sheet-export_3: 150944453
+      bad souls inside_0-Sheet-export_55: 1889042523
+      bad souls inside_0-Sheet-export_13: 1104983361
+      bad souls inside_0-Sheet-export_26: 361127371
+      bad souls inside_0-Sheet-export_36: 225142150
+      bad souls inside_0-Sheet-export_47: -523248291
+      bad souls inside_0-Sheet-export_1: 1892895226
+      bad souls inside_0-Sheet-export_45: -755347203
+      bad souls inside_0-Sheet-export_10: 383018670
+      bad souls inside_0-Sheet-export_28: -1144836391
+      bad souls inside_0-Sheet-export_35: -973281182
+      bad souls inside_0-Sheet-export_18: -1781368136
+  spritePackingTag: 
+  pSDRemoveMatte: 0
+  pSDShowRemoveMatteOption: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

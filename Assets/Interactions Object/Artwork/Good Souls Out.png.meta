@@ -1,0 +1,1817 @@
+fileFormatVersion: 2
+guid: bb32f20e67026ab4a9c90f34f2105e39
+TextureImporter:
+  internalIDToNameTable: []
+  externalObjects: {}
+  serializedVersion: 12
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 1
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMasterTextureLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 0
+    wrapV: 0
+    wrapW: 0
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 128
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 0
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Server
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: Good Souls Out_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 2968
+        width: 361
+        height: 371
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3e300a6ebc3c83e4c8a7f840d39c1102
+      internalID: 241028525
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Good Souls Out_1
+      rect:
+        serializedVersion: 2
+        x: 361
+        y: 2968
+        width: 361
+        height: 371
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f97fb8ba6dd282c458e7059c988e22ce
+      internalID: -187254467
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Good Souls Out_2
+      rect:
+        serializedVersion: 2
+        x: 722
+        y: 2968
+        width: 361
+        height: 371
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c3ccaf9a50d628d48bb8eca68b8aeec8
+      internalID: -757030447
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Good Souls Out_3
+      rect:
+        serializedVersion: 2
+        x: 1083
+        y: 2968
+        width: 361
+        height: 371
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 28a7b392158a67246879f2fe2a6e41ae
+      internalID: 588151191
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Good Souls Out_4
+      rect:
+        serializedVersion: 2
+        x: 1444
+        y: 2968
+        width: 361
+        height: 371
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 599f7a385f916a54cabbf2ed40d58e5e
+      internalID: 919066332
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Good Souls Out_5
+      rect:
+        serializedVersion: 2
+        x: 1805
+        y: 2968
+        width: 361
+        height: 371
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5e6bdb0adb119014eb18dd4a4eafe3b1
+      internalID: -1541495346
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Good Souls Out_6
+      rect:
+        serializedVersion: 2
+        x: 2166
+        y: 2968
+        width: 361
+        height: 371
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d8dc550ac6d3a704496af07aab22cca7
+      internalID: 1394982699
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Good Souls Out_7
+      rect:
+        serializedVersion: 2
+        x: 2527
+        y: 2968
+        width: 361
+        height: 371
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: affda440a6be7f6419c551542188d029
+      internalID: 1515760071
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Good Souls Out_8
+      rect:
+        serializedVersion: 2
+        x: 2888
+        y: 2968
+        width: 361
+        height: 371
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f45689f69f2541946986227a504e41bd
+      internalID: -1420872623
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Good Souls Out_9
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 2597
+        width: 361
+        height: 371
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 74dfcc0bbd60302488e539599f2b6708
+      internalID: 232047953
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Good Souls Out_10
+      rect:
+        serializedVersion: 2
+        x: 361
+        y: 2597
+        width: 361
+        height: 371
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c6b846dd9fff1bd499d143838358c3b9
+      internalID: -1697918528
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Good Souls Out_11
+      rect:
+        serializedVersion: 2
+        x: 722
+        y: 2597
+        width: 361
+        height: 371
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: faab9c11d81e29e41bbbfa05a9952080
+      internalID: 240041313
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Good Souls Out_12
+      rect:
+        serializedVersion: 2
+        x: 1083
+        y: 2597
+        width: 361
+        height: 371
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 922c0cea2f6b048448a81bacb74f84ba
+      internalID: -254558776
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Good Souls Out_13
+      rect:
+        serializedVersion: 2
+        x: 1444
+        y: 2597
+        width: 361
+        height: 371
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4be830a978f4dd34ca0b342c5f90152f
+      internalID: 1033181722
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Good Souls Out_14
+      rect:
+        serializedVersion: 2
+        x: 1805
+        y: 2597
+        width: 361
+        height: 371
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ed0086e46f0e504408e1c123525670c4
+      internalID: -1268593003
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Good Souls Out_15
+      rect:
+        serializedVersion: 2
+        x: 2166
+        y: 2597
+        width: 361
+        height: 371
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 20a1cd1dadb8fc448ab5a856f25757f5
+      internalID: -793890713
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Good Souls Out_16
+      rect:
+        serializedVersion: 2
+        x: 2527
+        y: 2597
+        width: 361
+        height: 371
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 55b2c6f367f7fd340b15adf43caf31b3
+      internalID: 1642568844
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Good Souls Out_17
+      rect:
+        serializedVersion: 2
+        x: 2888
+        y: 2597
+        width: 361
+        height: 371
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2b4f757c15091df4eb543309eba765b0
+      internalID: -28331245
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Good Souls Out_18
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 2226
+        width: 361
+        height: 371
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e419161edde029141b77b9e2d4999ca6
+      internalID: -1508518453
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Good Souls Out_19
+      rect:
+        serializedVersion: 2
+        x: 361
+        y: 2226
+        width: 361
+        height: 371
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6db1103f8ff2b3b4380367754a6b9586
+      internalID: -219492691
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Good Souls Out_20
+      rect:
+        serializedVersion: 2
+        x: 722
+        y: 2226
+        width: 361
+        height: 371
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5507041114e389e498d7616cfefc6b3c
+      internalID: 1958809194
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Good Souls Out_21
+      rect:
+        serializedVersion: 2
+        x: 1083
+        y: 2226
+        width: 361
+        height: 371
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7b88b569fe4d159458890752f4af2587
+      internalID: -835217966
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Good Souls Out_22
+      rect:
+        serializedVersion: 2
+        x: 1444
+        y: 2226
+        width: 361
+        height: 371
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c6bfd00df51900f43b4476521d188ba0
+      internalID: -1315161419
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Good Souls Out_23
+      rect:
+        serializedVersion: 2
+        x: 1805
+        y: 2226
+        width: 361
+        height: 371
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d90b80afb60a1fc44a0ad00c0255699c
+      internalID: 983754710
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Good Souls Out_24
+      rect:
+        serializedVersion: 2
+        x: 2166
+        y: 2226
+        width: 361
+        height: 371
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 19b88862c708e024980ff38b158f8277
+      internalID: 1756187525
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Good Souls Out_25
+      rect:
+        serializedVersion: 2
+        x: 2527
+        y: 2226
+        width: 361
+        height: 371
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7a0de4b38c0efd54ba72863355a975c7
+      internalID: 1409012697
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Good Souls Out_26
+      rect:
+        serializedVersion: 2
+        x: 2888
+        y: 2226
+        width: 361
+        height: 371
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c770d635fc1d6cd47aea8defdef0ed81
+      internalID: -161086867
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Good Souls Out_27
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1855
+        width: 361
+        height: 371
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 402e1d34f7f4d6c4089da44fdd3ab8d3
+      internalID: 288077022
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Good Souls Out_28
+      rect:
+        serializedVersion: 2
+        x: 361
+        y: 1855
+        width: 361
+        height: 371
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: aec0d8db7592c5b44be369b34cd85f95
+      internalID: 1990460677
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Good Souls Out_29
+      rect:
+        serializedVersion: 2
+        x: 722
+        y: 1855
+        width: 361
+        height: 371
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 09ae5e3737708d34a84752d81e3e4829
+      internalID: -1880011256
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Good Souls Out_30
+      rect:
+        serializedVersion: 2
+        x: 1083
+        y: 1855
+        width: 361
+        height: 371
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6d5812ae3a0c07b478d987ba39c0289a
+      internalID: -1486840491
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Good Souls Out_31
+      rect:
+        serializedVersion: 2
+        x: 1444
+        y: 1855
+        width: 361
+        height: 371
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 72d54b62360f03346b093ea66a8c3c07
+      internalID: -467103088
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Good Souls Out_32
+      rect:
+        serializedVersion: 2
+        x: 1805
+        y: 1855
+        width: 361
+        height: 371
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fa145a22e2c70974cb8173040b121280
+      internalID: 1995255009
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Good Souls Out_33
+      rect:
+        serializedVersion: 2
+        x: 2166
+        y: 1855
+        width: 361
+        height: 371
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 06b278b2b3bcce643b734d9d266a2cb4
+      internalID: -350861730
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Good Souls Out_34
+      rect:
+        serializedVersion: 2
+        x: 2527
+        y: 1855
+        width: 361
+        height: 371
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9b0fb404732782a41a8b8e5838d77af0
+      internalID: 651434892
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Good Souls Out_35
+      rect:
+        serializedVersion: 2
+        x: 2888
+        y: 1855
+        width: 361
+        height: 371
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3add7cd5592b7734e9a3c26860e2644d
+      internalID: 640932130
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Good Souls Out_36
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1484
+        width: 361
+        height: 371
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6b4aeb25ad5640e42a146845750c9bf8
+      internalID: 1594396905
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Good Souls Out_37
+      rect:
+        serializedVersion: 2
+        x: 361
+        y: 1484
+        width: 361
+        height: 371
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 058014097c8225a439641e7a8d5add4e
+      internalID: -387938752
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Good Souls Out_38
+      rect:
+        serializedVersion: 2
+        x: 722
+        y: 1484
+        width: 361
+        height: 371
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e65acf6d27ecccd42a97ca1f2839e0a3
+      internalID: 1961140540
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Good Souls Out_39
+      rect:
+        serializedVersion: 2
+        x: 1083
+        y: 1484
+        width: 361
+        height: 371
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 50d047c4f93362f49abd6b763500b5dc
+      internalID: -1310542992
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Good Souls Out_40
+      rect:
+        serializedVersion: 2
+        x: 1444
+        y: 1484
+        width: 361
+        height: 371
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8dd25f6b2e401b04c885529691f6f32f
+      internalID: 843029599
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Good Souls Out_41
+      rect:
+        serializedVersion: 2
+        x: 1805
+        y: 1484
+        width: 361
+        height: 371
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d9977811d86f89b48a2449409b81acab
+      internalID: -1183482139
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Good Souls Out_42
+      rect:
+        serializedVersion: 2
+        x: 2166
+        y: 1484
+        width: 361
+        height: 371
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d899e2bfd8c6f5d4ea594b9b1937916d
+      internalID: 1553133475
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Good Souls Out_43
+      rect:
+        serializedVersion: 2
+        x: 2527
+        y: 1484
+        width: 361
+        height: 371
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 58d4e6f44c16e4f49a71dc6df4f833cf
+      internalID: -1554486905
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Good Souls Out_44
+      rect:
+        serializedVersion: 2
+        x: 2888
+        y: 1484
+        width: 361
+        height: 371
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 38a79bfee47d7e14f8dc3c1f8da17a41
+      internalID: 1539086922
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Good Souls Out_45
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1113
+        width: 361
+        height: 371
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 270dc4fa14262b84c853b639e1d2ff55
+      internalID: 393246137
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Good Souls Out_46
+      rect:
+        serializedVersion: 2
+        x: 361
+        y: 1113
+        width: 361
+        height: 371
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 54236923a7af3c64d80cbeb07f0830e0
+      internalID: -1627841923
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Good Souls Out_47
+      rect:
+        serializedVersion: 2
+        x: 722
+        y: 1113
+        width: 361
+        height: 371
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2dc1478d00a92cc4bb6c437202080fb6
+      internalID: -2134747419
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Good Souls Out_48
+      rect:
+        serializedVersion: 2
+        x: 1083
+        y: 1113
+        width: 361
+        height: 371
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9ecc468488b47894d85d2f8d365f1c7f
+      internalID: 1300144327
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Good Souls Out_49
+      rect:
+        serializedVersion: 2
+        x: 1444
+        y: 1113
+        width: 361
+        height: 371
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bdcc37d844f818f4c8ce13155ec3711a
+      internalID: 611126418
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Good Souls Out_50
+      rect:
+        serializedVersion: 2
+        x: 1805
+        y: 1113
+        width: 361
+        height: 371
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6dcbd1275ce83814eb3539cd6cfd8112
+      internalID: 1920053419
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Good Souls Out_51
+      rect:
+        serializedVersion: 2
+        x: 2166
+        y: 1113
+        width: 361
+        height: 371
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5dc95c7d312065e40ae8fc938b86e369
+      internalID: -1745068278
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Good Souls Out_52
+      rect:
+        serializedVersion: 2
+        x: 2527
+        y: 1113
+        width: 361
+        height: 371
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 400c9b422e896554ca84b2f7af96e9a7
+      internalID: -1380656080
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Good Souls Out_53
+      rect:
+        serializedVersion: 2
+        x: 2888
+        y: 1113
+        width: 361
+        height: 371
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bcc2fd377350afa4b85219469fcc0f34
+      internalID: -1795970162
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Good Souls Out_54
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 742
+        width: 361
+        height: 371
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5919fe339ef48044a92cef4c54bd9a64
+      internalID: -404408481
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Good Souls Out_55
+      rect:
+        serializedVersion: 2
+        x: 361
+        y: 742
+        width: 361
+        height: 371
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b128dacd0ce455741a849ef202038e36
+      internalID: 145080618
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Good Souls Out_56
+      rect:
+        serializedVersion: 2
+        x: 722
+        y: 742
+        width: 361
+        height: 371
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c80865703058a844f9eaba0cbe55f7f3
+      internalID: -1534036233
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Good Souls Out_57
+      rect:
+        serializedVersion: 2
+        x: 1083
+        y: 742
+        width: 361
+        height: 371
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 182160defb85eec4795bf7b32122dcd4
+      internalID: 897972331
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Good Souls Out_58
+      rect:
+        serializedVersion: 2
+        x: 1444
+        y: 742
+        width: 361
+        height: 371
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3e92e4dba35248e49a455779798fc994
+      internalID: 2115585255
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Good Souls Out_59
+      rect:
+        serializedVersion: 2
+        x: 1805
+        y: 742
+        width: 361
+        height: 371
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 42e6d9057f3f1fa4cb25ab8b45477596
+      internalID: -1404022933
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Good Souls Out_60
+      rect:
+        serializedVersion: 2
+        x: 2166
+        y: 742
+        width: 361
+        height: 371
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 949c5521f5369014a93abb304d850e18
+      internalID: -1837459892
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Good Souls Out_61
+      rect:
+        serializedVersion: 2
+        x: 2527
+        y: 742
+        width: 361
+        height: 371
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 06b79e30f7041bb4bb1636e49b96704f
+      internalID: 821670833
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Good Souls Out_62
+      rect:
+        serializedVersion: 2
+        x: 2888
+        y: 742
+        width: 361
+        height: 371
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6d3b6b1a2c68cc947ae84f4d14cdac6d
+      internalID: 465857422
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Good Souls Out_63
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 371
+        width: 361
+        height: 371
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: dd794769c10cd144ba9a2704517a61a9
+      internalID: 207664343
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Good Souls Out_64
+      rect:
+        serializedVersion: 2
+        x: 361
+        y: 371
+        width: 361
+        height: 371
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c299c2bc2dbbb4a46b1e91c4c124b205
+      internalID: 938281020
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Good Souls Out_65
+      rect:
+        serializedVersion: 2
+        x: 722
+        y: 371
+        width: 361
+        height: 371
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 43893984c3b38ed49b6e4c6924edaebb
+      internalID: -1574286385
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Good Souls Out_66
+      rect:
+        serializedVersion: 2
+        x: 1083
+        y: 371
+        width: 361
+        height: 371
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: facb6a7ca127b92459967608d7c93e73
+      internalID: 1718645517
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Good Souls Out_67
+      rect:
+        serializedVersion: 2
+        x: 1444
+        y: 371
+        width: 361
+        height: 371
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b957127a135d68144a4fe951749c8310
+      internalID: -1921976627
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Good Souls Out_68
+      rect:
+        serializedVersion: 2
+        x: 1805
+        y: 371
+        width: 361
+        height: 371
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cacb86ad3f78887478ba849a06241a6a
+      internalID: -456191916
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Good Souls Out_69
+      rect:
+        serializedVersion: 2
+        x: 2166
+        y: 371
+        width: 361
+        height: 371
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 88f369977ce40014e94df0e9c016b6d8
+      internalID: -1363654187
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Good Souls Out_70
+      rect:
+        serializedVersion: 2
+        x: 2527
+        y: 371
+        width: 361
+        height: 371
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d5878b0d1bbfe6f4284d0a94d54ef05a
+      internalID: -1734985409
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Good Souls Out_71
+      rect:
+        serializedVersion: 2
+        x: 2888
+        y: 371
+        width: 361
+        height: 371
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bb73f029b907f914da4be304e3e3f38f
+      internalID: 666209243
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Good Souls Out_72
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 361
+        height: 371
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6b4f1d3c40fc68e47877411a9ec72621
+      internalID: 1349787288
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Good Souls Out_73
+      rect:
+        serializedVersion: 2
+        x: 361
+        y: 0
+        width: 361
+        height: 371
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8ce93c7ab28c319438740d5858344d3e
+      internalID: 1337809233
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Good Souls Out_74
+      rect:
+        serializedVersion: 2
+        x: 722
+        y: 0
+        width: 361
+        height: 371
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c837a621897543b45b01db183ee8b837
+      internalID: 1863426670
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Good Souls Out_75
+      rect:
+        serializedVersion: 2
+        x: 1083
+        y: 0
+        width: 361
+        height: 371
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cafb7ada360fba645a250d9bf219cb78
+      internalID: -1216407599
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Good Souls Out_76
+      rect:
+        serializedVersion: 2
+        x: 1444
+        y: 0
+        width: 361
+        height: 371
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4e4ddd2fc467930499aface700941af2
+      internalID: -443334547
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 694d2aa7bedd7b044a3852372ccdddca
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    nameFileIdTable:
+      Good Souls Out_59: -1404022933
+      Good Souls Out_68: -456191916
+      Good Souls Out_27: 288077022
+      Good Souls Out_49: 611126418
+      Good Souls Out_61: 821670833
+      Good Souls Out_22: -1315161419
+      Good Souls Out_57: 897972331
+      Good Souls Out_34: 651434892
+      Good Souls Out_58: 2115585255
+      Good Souls Out_16: 1642568844
+      Good Souls Out_19: -219492691
+      Good Souls Out_37: -387938752
+      Good Souls Out_17: -28331245
+      Good Souls Out_35: 640932130
+      Good Souls Out_63: 207664343
+      Good Souls Out_65: -1574286385
+      Good Souls Out_64: 938281020
+      Good Souls Out_23: 983754710
+      Good Souls Out_70: -1734985409
+      Good Souls Out_76: -443334547
+      Good Souls Out_31: -467103088
+      Good Souls Out_42: 1553133475
+      Good Souls Out_73: 1337809233
+      Good Souls Out_55: 145080618
+      Good Souls Out_39: -1310542992
+      Good Souls Out_3: 588151191
+      Good Souls Out_5: -1541495346
+      Good Souls Out_72: 1349787288
+      Good Souls Out_32: 1995255009
+      Good Souls Out_43: -1554486905
+      Good Souls Out_0: 241028525
+      Good Souls Out_40: 843029599
+      Good Souls Out_36: 1594396905
+      Good Souls Out_52: -1380656080
+      Good Souls Out_14: -1268593003
+      Good Souls Out_50: 1920053419
+      Good Souls Out_28: 1990460677
+      Good Souls Out_1: -187254467
+      Good Souls Out_8: -1420872623
+      Good Souls Out_54: -404408481
+      Good Souls Out_13: 1033181722
+      Good Souls Out_41: -1183482139
+      Good Souls Out_11: 240041313
+      Good Souls Out_24: 1756187525
+      Good Souls Out_71: 666209243
+      Good Souls Out_4: 919066332
+      Good Souls Out_26: -161086867
+      Good Souls Out_21: -835217966
+      Good Souls Out_2: -757030447
+      Good Souls Out_46: -1627841923
+      Good Souls Out_15: -793890713
+      Good Souls Out_7: 1515760071
+      Good Souls Out_25: 1409012697
+      Good Souls Out_56: -1534036233
+      Good Souls Out_33: -350861730
+      Good Souls Out_38: 1961140540
+      Good Souls Out_47: -2134747419
+      Good Souls Out_67: -1921976627
+      Good Souls Out_69: -1363654187
+      Good Souls Out_45: 393246137
+      Good Souls Out_44: 1539086922
+      Good Souls Out_60: -1837459892
+      Good Souls Out_74: 1863426670
+      Good Souls Out_29: -1880011256
+      Good Souls Out_62: 465857422
+      Good Souls Out_53: -1795970162
+      Good Souls Out_9: 232047953
+      Good Souls Out_12: -254558776
+      Good Souls Out_75: -1216407599
+      Good Souls Out_51: -1745068278
+      Good Souls Out_30: -1486840491
+      Good Souls Out_18: -1508518453
+      Good Souls Out_20: 1958809194
+      Good Souls Out_48: 1300144327
+      Good Souls Out_66: 1718645517
+      Good Souls Out_6: 1394982699
+      Good Souls Out_10: -1697918528
+  spritePackingTag: 
+  pSDRemoveMatte: 0
+  pSDShowRemoveMatteOption: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

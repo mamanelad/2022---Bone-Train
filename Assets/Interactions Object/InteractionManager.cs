@@ -23,6 +23,7 @@ public class InteractionManager : MonoBehaviour
 
     [SerializeField] private List<GameObject> optionsGameObjects;
     [SerializeField] private Animator itemAnimator;
+    [SerializeField] private ParticalsManager particlesManager;
     private bool isItemPoleUp = true;
 
     private EventInstance interactionAudio;
@@ -108,7 +109,19 @@ public class InteractionManager : MonoBehaviour
     public void ChooseOption(LoadOption.Option option)
     {
         GameManager.Shared.ChangeByGoodSouls(option.goodSouls);
+        
+        if(option.goodSouls > 0)
+            particlesManager.PlayGoodSoulsInAnim();
+        if(option.goodSouls < 0)
+            particlesManager.PlayGoodSoulsOutAnim();
+        
         GameManager.Shared.ChangeByBadSouls(option.badSouls);
+        
+        if (option.badSouls > 0)
+            particlesManager.PlayBadSoulsInAnim();
+        if (option.badSouls < 0)
+            particlesManager.PlayBadSoulsOutAnim();
+        
         GameManager.Shared.ChangeBySoulStones(option.soulsStones);
 
         if (!option.sound.IsNull)
