@@ -122,7 +122,7 @@ public class EnemyManager : MonoBehaviour
      */
     private bool CanCreateNewEnemy()
     {
-        
+        if (lockEnemies) return false;
         if (_enemiesAmount >= enemiesAmountMax) return false;
         var curTrainState = GameManager.Shared.GetSpeedState();
         creatEnemyTimer -= Time.deltaTime;
