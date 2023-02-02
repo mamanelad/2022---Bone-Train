@@ -26159,6 +26159,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: UI Manager
       objectReference: {fileID: 0}
+    - target: {fileID: 4926145161476119688, guid: f8a337fa67b5c5049bc9d0cff64a23c4, type: 3}
+      propertyPath: m_text
+      value: Choose a Direction using the arrows, the icon above will help you navigate
+        to the next stop
+      objectReference: {fileID: 0}
     - target: {fileID: 5284306571700769047, guid: f8a337fa67b5c5049bc9d0cff64a23c4, type: 3}
       propertyPath: m_IsActive
       value: 1

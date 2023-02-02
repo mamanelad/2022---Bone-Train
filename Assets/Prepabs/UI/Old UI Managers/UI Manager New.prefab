@@ -4804,7 +4804,8 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Drive in your desired direction by selecting an Arrow.
+  m_text: Choose a Direction using the arrows, the icon above will help you navigate
+    to the next stop
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: f117c3645a210324fa84dddf372021cf, type: 2}
   m_sharedMaterial: {fileID: -742034729039544998, guid: f117c3645a210324fa84dddf372021cf, type: 2}
@@ -9024,7 +9025,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6427538024371469866, guid: db217c96963e5004caa753ac424f5df6, type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: -79
+      value: 19
       objectReference: {fileID: 0}
     - target: {fileID: 6427538024371469866, guid: db217c96963e5004caa753ac424f5df6, type: 3}
       propertyPath: m_AnchoredPosition.y
