@@ -131,6 +131,11 @@ public class GameManager : MonoBehaviour
     [Space(10)] [Header("Game Data")] [SerializeField]
     private GameData gameData;
 
+    [Space(10)] [Header("Particals")]
+    public ParticlesMine blueParticle;
+
+    public ParticlesMine redParticle;
+
     private void Awake()
     {
         Shared = this;
@@ -386,6 +391,9 @@ public class GameManager : MonoBehaviour
 
     public void ChangeByGoodSouls(int addNum)
     {
+        if (addNum > 0)
+            blueParticle.TurnOn();
+        
         GoodSouls = Math.Max(0, GoodSouls + addNum);
         _uiManager.SetGoodSouls();
         _soulsCircle.ChangeSoulsAmount();
@@ -400,6 +408,9 @@ public class GameManager : MonoBehaviour
 
     public void ChangeByBadSouls(int addNum)
     {
+        if (addNum > 0)
+            redParticle.TurnOn();;
+        
         BadSouls = Math.Max(0, BadSouls + addNum);
         _uiManager.SetBadSouls();
         _soulsCircle.ChangeSoulsAmount();
@@ -817,6 +828,7 @@ public class GameManager : MonoBehaviour
     {
         badSoulsCanEatGoodSouls = true;
     }
+
     public void GameOver()
     {
         StopTrain();
