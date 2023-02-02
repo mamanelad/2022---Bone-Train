@@ -415,7 +415,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Beware of the bad souls, for they have the power to corrupt good ones
+  m_text: Beware of bad souls, for they have the power to corrupt good ones
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: f117c3645a210324fa84dddf372021cf, type: 2}
   m_sharedMaterial: {fileID: -742034729039544998, guid: f117c3645a210324fa84dddf372021cf, type: 2}
@@ -902,6 +902,7 @@ GameObject:
   - component: {fileID: 4577881955194865133}
   - component: {fileID: 7438774955559048379}
   - component: {fileID: 7356352824880972329}
+  - component: {fileID: 848375082374398356}
   m_Layer: 5
   m_Name: BadSouls
   m_TagString: Untagged
@@ -988,6 +989,36 @@ MonoBehaviour:
   myKind: 5
   closeTimer: 3
   nextObject: 11
+--- !u!114 &848375082374398356
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2263186252688523534}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9a6610d2e704f1648819acc8d7460285, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  CollisionTag: 
+  EventReference:
+    Guid:
+      Data1: -2070950874
+      Data2: 1150762428
+      Data3: 1654459318
+      Data4: -529839920
+    Path: event:/Tutorial - Bad Souls
+  Event: 
+  PlayEvent: 11
+  StopEvent: 12
+  AllowFadeout: 1
+  TriggerOnce: 0
+  Preload: 0
+  Params: []
+  OverrideAttenuation: 0
+  OverrideMinDistance: 1
+  OverrideMaxDistance: 20
 --- !u!1 &2461568360949796171
 GameObject:
   m_ObjectHideFlags: 0
@@ -1660,6 +1691,7 @@ GameObject:
   - component: {fileID: 8895925093539032674}
   - component: {fileID: 1218911650664159937}
   - component: {fileID: 8116413372151986493}
+  - component: {fileID: 5581346400748007521}
   m_Layer: 5
   m_Name: Arrows
   m_TagString: Untagged
@@ -1746,6 +1778,36 @@ MonoBehaviour:
   myKind: 8
   closeTimer: 3
   nextObject: 11
+--- !u!114 &5581346400748007521
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3394705542675068479}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9a6610d2e704f1648819acc8d7460285, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  CollisionTag: 
+  EventReference:
+    Guid:
+      Data1: 1450845385
+      Data2: 1238604012
+      Data3: 1923633599
+      Data4: -358017731
+    Path: event:/Tutorial - Buttons
+  Event: 
+  PlayEvent: 11
+  StopEvent: 12
+  AllowFadeout: 1
+  TriggerOnce: 0
+  Preload: 0
+  Params: []
+  OverrideAttenuation: 0
+  OverrideMinDistance: 1
+  OverrideMaxDistance: 20
 --- !u!1 &3395619961314743299
 GameObject:
   m_ObjectHideFlags: 0
@@ -3740,6 +3802,7 @@ GameObject:
   - component: {fileID: 441626543254279576}
   - component: {fileID: 5291469100584976528}
   - component: {fileID: 1241800953107822089}
+  - component: {fileID: 2952200492791488629}
   m_Layer: 5
   m_Name: GoodSouls
   m_TagString: Untagged
@@ -3826,6 +3889,36 @@ MonoBehaviour:
   myKind: 4
   closeTimer: 3
   nextObject: 11
+--- !u!114 &2952200492791488629
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5747399584398235226}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9a6610d2e704f1648819acc8d7460285, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  CollisionTag: 
+  EventReference:
+    Guid:
+      Data1: -2040458850
+      Data2: 1084566375
+      Data3: -1131429760
+      Data4: 1405809949
+    Path: event:/Tutorial - Good Souls
+  Event: 
+  PlayEvent: 11
+  StopEvent: 12
+  AllowFadeout: 1
+  TriggerOnce: 0
+  Preload: 0
+  Params: []
+  OverrideAttenuation: 0
+  OverrideMinDistance: 1
+  OverrideMaxDistance: 20
 --- !u!1 &5868274102948563428
 GameObject:
   m_ObjectHideFlags: 0
@@ -4108,6 +4201,7 @@ GameObject:
   - component: {fileID: 3453401896989782446}
   - component: {fileID: 4179875551703244622}
   - component: {fileID: 5813522346333961599}
+  - component: {fileID: 1711246319253477823}
   m_Layer: 5
   m_Name: MiniMap
   m_TagString: Untagged
@@ -4194,6 +4288,36 @@ MonoBehaviour:
   myKind: 7
   closeTimer: 3
   nextObject: 8
+--- !u!114 &1711246319253477823
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5952379546963329384}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9a6610d2e704f1648819acc8d7460285, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  CollisionTag: 
+  EventReference:
+    Guid:
+      Data1: -173140838
+      Data2: 1288584257
+      Data3: -583233641
+      Data4: -1853171624
+    Path: event:/Tutorial - Minimap
+  Event: 
+  PlayEvent: 11
+  StopEvent: 12
+  AllowFadeout: 1
+  TriggerOnce: 0
+  Preload: 0
+  Params: []
+  OverrideAttenuation: 0
+  OverrideMinDistance: 1
+  OverrideMaxDistance: 20
 --- !u!1 &6020694540578186980
 GameObject:
   m_ObjectHideFlags: 0
@@ -6577,6 +6701,7 @@ GameObject:
   - component: {fileID: 2078421474357054609}
   - component: {fileID: 5582149233723057352}
   - component: {fileID: 5982529566937633796}
+  - component: {fileID: 147747719489441880}
   m_Layer: 5
   m_Name: SpeedMeter
   m_TagString: Untagged
@@ -6663,6 +6788,36 @@ MonoBehaviour:
   myKind: 3
   closeTimer: 4
   nextObject: 11
+--- !u!114 &147747719489441880
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7319555655858469417}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9a6610d2e704f1648819acc8d7460285, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  CollisionTag: 
+  EventReference:
+    Guid:
+      Data1: 57234827
+      Data2: 1274871310
+      Data3: -369174882
+      Data4: -764868373
+    Path: event:/Tutorial - Speed Bar
+  Event: 
+  PlayEvent: 11
+  StopEvent: 12
+  AllowFadeout: 1
+  TriggerOnce: 0
+  Preload: 0
+  Params: []
+  OverrideAttenuation: 0
+  OverrideMinDistance: 1
+  OverrideMaxDistance: 20
 --- !u!1 &7345270998107430344
 GameObject:
   m_ObjectHideFlags: 0
@@ -8382,6 +8537,7 @@ GameObject:
   - component: {fileID: 5664669469657759984}
   - component: {fileID: 8089791882059816995}
   - component: {fileID: 4909123017436322091}
+  - component: {fileID: 6442720097155440774}
   m_Layer: 5
   m_Name: Handle
   m_TagString: Untagged
@@ -8467,6 +8623,36 @@ MonoBehaviour:
   myKind: 0
   closeTimer: 3
   nextObject: 11
+--- !u!114 &6442720097155440774
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8775859888441091715}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9a6610d2e704f1648819acc8d7460285, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  CollisionTag: 
+  EventReference:
+    Guid:
+      Data1: 527258482
+      Data2: 1267374146
+      Data3: -1839386972
+      Data4: -2044753383
+    Path: event:/Tutorial/Tutorial - Handle
+  Event: 
+  PlayEvent: 11
+  StopEvent: 12
+  AllowFadeout: 1
+  TriggerOnce: 0
+  Preload: 0
+  Params: []
+  OverrideAttenuation: 0
+  OverrideMinDistance: 1
+  OverrideMaxDistance: 20
 --- !u!1 &8781858864272624358
 GameObject:
   m_ObjectHideFlags: 0
@@ -8959,6 +9145,7 @@ GameObject:
   - component: {fileID: 4072439883728413612}
   - component: {fileID: 7518503687263793236}
   - component: {fileID: 5223141885251618815}
+  - component: {fileID: 9214053201482426566}
   m_Layer: 5
   m_Name: Fuel&Furnace
   m_TagString: Untagged
@@ -9045,6 +9232,36 @@ MonoBehaviour:
   myKind: 1
   closeTimer: 3
   nextObject: 11
+--- !u!114 &9214053201482426566
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9162342231007060896}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9a6610d2e704f1648819acc8d7460285, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  CollisionTag: 
+  EventReference:
+    Guid:
+      Data1: 1191258520
+      Data2: 1097048177
+      Data3: -1673923396
+      Data4: 237062971
+    Path: event:/Tutorial - Fuel
+  Event: 
+  PlayEvent: 11
+  StopEvent: 12
+  AllowFadeout: 1
+  TriggerOnce: 0
+  Preload: 0
+  Params: []
+  OverrideAttenuation: 0
+  OverrideMinDistance: 1
+  OverrideMaxDistance: 20
 --- !u!1001 &6333384555774905582
 PrefabInstance:
   m_ObjectHideFlags: 0
