@@ -48,7 +48,7 @@ public class EnemyManager : MonoBehaviour
     }
 
 
-    public void CloseAndLockEnemies()
+    private void CloseAndLockEnemies()
     {
         if (closeEnemies) return;
         closeEnemies = true;

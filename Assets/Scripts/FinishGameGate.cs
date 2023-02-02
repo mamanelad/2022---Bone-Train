@@ -12,7 +12,11 @@ public class FinishGameGate : MonoBehaviour
     private void OnTriggerEnter(Collider other)
     {
         if (other.CompareTag("Train"))
+        {
             StartCoroutine(FadeOut());
+            FindObjectOfType<EnemyManager>().lockEnemies = true;
+        }
+            
     }
 
     private IEnumerator FadeOut()
