@@ -37,32 +37,34 @@ MonoBehaviour:
     offer.
   options:
   - title: Give him fuel
-    goodSouls: 0
+    goodSouls: 50
     badSouls: 0
     soulsStones: -50
     sword: 0
     shield: 1
     sound:
       Guid:
-        Data1: 0
-        Data2: 0
-        Data3: 0
-        Data4: 0
-      Path: 
+        Data1: 383367973
+        Data2: 1217064417
+        Data3: -371192929
+        Data4: 605849415
+      Path: event:/UI/Good Souls Laugh
     text: Give him fifty fuel
     odds: 0
+    tag: 
   - title: Keep driving
     goodSouls: 0
-    badSouls: 0
+    badSouls: 50
     soulsStones: 0
     sword: 0
     shield: 0
     sound:
       Guid:
-        Data1: 0
-        Data2: 0
-        Data3: 0
-        Data4: 0
-      Path: 
+        Data1: -732775942
+        Data2: 1244771957
+        Data3: -158238327
+        Data4: -79686689
+      Path: event:/UI/Bad Souls Laugh
     text: Send him back to his master empty-handed.
     odds: 0
+    tag: 

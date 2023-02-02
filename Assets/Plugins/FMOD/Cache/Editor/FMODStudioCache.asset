@@ -81,6 +81,33 @@ MonoBehaviour:
   MinDistance: 1
   MaxDistance: 20
   Length: 0
+--- !u!114 &-8204158192456425630
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/UI/Bad Souls Laugh
+  m_EditorClassIdentifier: 
+  Path: event:/UI/Bad Souls Laugh
+  Guid:
+    Data1: -732775942
+    Data2: 1244771957
+    Data3: -158238327
+    Data4: -79686689
+  Banks:
+  - {fileID: 3004629194860046456}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 0
 --- !u!114 &-7883958894642788043
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -378,6 +405,33 @@ MonoBehaviour:
   MinDistance: 1
   MaxDistance: 20
   Length: 0
+--- !u!114 &-6349439686192734413
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/UI/Good Souls Laugh
+  m_EditorClassIdentifier: 
+  Path: event:/UI/Good Souls Laugh
+  Guid:
+    Data1: 383367973
+    Data2: 1217064417
+    Data3: -371192929
+    Data4: 605849415
+  Banks:
+  - {fileID: 3004629194860046456}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 0
 --- !u!114 &-6120506523615828193
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -663,10 +717,10 @@ MonoBehaviour:
   Path: Assets/FMODBanks/Desktop/Master.strings.bank
   Name: Master.strings
   StudioPath: bank:/Master.strings
-  lastModified: 638109190293690173
+  lastModified: 638109257294014131
   FileSizes:
   - Name: 
-    Value: 3630
+    Value: 3780
   Exists: 1
 --- !u!114 &-1859038420037488280
 MonoBehaviour:
@@ -857,6 +911,33 @@ MonoBehaviour:
   MinDistance: 1
   MaxDistance: 20
   Length: 0
+--- !u!114 &-1115840608099453413
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Narration/Congratulations
+  m_EditorClassIdentifier: 
+  Path: event:/Narration/Congratulations
+  Guid:
+    Data1: -430083094
+    Data2: 1299187089
+    Data3: -139262550
+    Data4: 190257192
+  Banks:
+  - {fileID: 3004629194860046456}
+  IsStream: 1
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 0
 --- !u!114 &-578211025102697337
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1019,12 +1100,15 @@ MonoBehaviour:
   - {fileID: -4281915734788966288}
   - {fileID: 365939171475958441}
   - {fileID: -5040187624096443336}
+  - {fileID: -1115840608099453413}
+  - {fileID: -6349439686192734413}
+  - {fileID: -8204158192456425630}
   EditorParameters: []
   MasterBanks:
   - {fileID: 3004629194860046456}
   StringsBanks:
   - {fileID: -2880105610649985714}
-  cacheTime: 638109190293690173
+  cacheTime: 638109257294014131
   cacheVersion: 131601
 --- !u!114 &365939171475958441
 MonoBehaviour:
@@ -1284,7 +1368,7 @@ MonoBehaviour:
   Path: Assets/FMODBanks/Desktop/Master.bank
   Name: Master
   StudioPath: bank:/Master
-  lastModified: 638109190293670164
+  lastModified: 638109257293980996
   FileSizes: []
   Exists: 1
 --- !u!114 &3286631091616812251

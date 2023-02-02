@@ -36,7 +36,7 @@ MonoBehaviour:
   - title: Oak
     goodSouls: 0
     badSouls: -100
-    soulsStones: -200
+    soulsStones: -100
     sword: 0
     shield: 0
     sound:
@@ -48,10 +48,11 @@ MonoBehaviour:
       Path: 
     text: 
     odds: 0
+    tag: 
   - title: Willow
     goodSouls: 0
     badSouls: -500
-    soulsStones: -300
+    soulsStones: -250
     sword: 0
     shield: 0
     sound:
@@ -63,3 +64,4 @@ MonoBehaviour:
       Path: 
     text: Feed him until he is stratified.
     odds: 0
+    tag: 

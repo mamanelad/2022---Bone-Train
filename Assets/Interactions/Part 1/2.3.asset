@@ -34,9 +34,9 @@ MonoBehaviour:
     disgust and fear but the fuel he offers is crucial. The decision is yours. '
   options:
   - title: Give Him Souls
-    goodSouls: -400
+    goodSouls: -200
     badSouls: 0
-    soulsStones: 200
+    soulsStones: 100
     sword: 0
     shield: 0
     sound:
@@ -48,8 +48,9 @@ MonoBehaviour:
       Path: 
     text: 
     odds: 0
+    tag: 
   - title: Go Away
-    goodSouls: -30
+    goodSouls: -100
     badSouls: 0
     soulsStones: 0
     sword: 0
@@ -63,6 +64,7 @@ MonoBehaviour:
       Path: 
     text: Turn down the offer
     odds: 0
+    tag: 
   - title: Go Away
     goodSouls: 0
     badSouls: 0
@@ -78,3 +80,4 @@ MonoBehaviour:
       Path: 
     text: Turn down the offer, respectfully
     odds: 0
+    tag: 

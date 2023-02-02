@@ -37,7 +37,7 @@ MonoBehaviour:
   - title: Pay his asking price
     goodSouls: -200
     badSouls: 0
-    soulsStones: -200
+    soulsStones: -100
     sword: 0
     shield: 0
     sound:
@@ -49,10 +49,11 @@ MonoBehaviour:
       Path: 
     text: 
     odds: 0
+    tag: 
   - title: 'pay half the price '
     goodSouls: -250
     badSouls: 0
-    soulsStones: -200
+    soulsStones: -150
     sword: 0
     shield: 0
     sound:
@@ -64,10 +65,11 @@ MonoBehaviour:
       Path: 
     text: Try paying half the first option
     odds: 0
+    tag: 
   - title: 'Try to ecsacpe '
     goodSouls: -300
     badSouls: 0
-    soulsStones: -300
+    soulsStones: -200
     sword: 0
     shield: 0
     sound:
@@ -79,3 +81,4 @@ MonoBehaviour:
       Path: 
     text: Try to run away from the fiend
     odds: 70
+    tag: 

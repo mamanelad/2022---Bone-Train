@@ -56,11 +56,11 @@ MonoBehaviour:
     shield: 0
     sound:
       Guid:
-        Data1: 0
-        Data2: 0
-        Data3: 0
-        Data4: 0
-      Path: 
+        Data1: -732775942
+        Data2: 1244771957
+        Data3: -158238327
+        Data4: -79686689
+      Path: event:/UI/Bad Souls Laugh
     text: 
     odds: 0
     tag: 
