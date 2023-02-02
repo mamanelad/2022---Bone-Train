@@ -121,6 +121,7 @@ public class GameManager : MonoBehaviour
     
     [Space(10)][Header("Keyboard")] [SerializeField] private KeyCode closeTutorialsKey = KeyCode.T;
     [SerializeField] private KeyCode restartKey = KeyCode.R;
+    [SerializeField] private KeyCode exitKey = KeyCode.Escape;
 
     [Space(10)] [Header("Game Data")] [SerializeField]
     private GameData gameData;
@@ -181,9 +182,9 @@ public class GameManager : MonoBehaviour
 
     private void Update()
     {
-        if (Input.GetKey(restartKey))
+        if (Input.GetKey(exitKey))
         {
-            
+            Application.Quit();
         }
         
         if (Input.GetKey(closeTutorialsKey))
@@ -196,7 +197,7 @@ public class GameManager : MonoBehaviour
             InitSouls();
         }
 
-        if (Input.GetKeyDown(KeyCode.R))
+        if (Input.GetKeyDown(restartKey))
         {
             ReturnToStartScreen();
         }
