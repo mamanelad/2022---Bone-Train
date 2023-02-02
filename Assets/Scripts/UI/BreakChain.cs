@@ -19,6 +19,12 @@ public class BreakChain : MonoBehaviour
     private float _sliderValue;
     private bool wait;
     
+    public bool shakeHandle;
+    private bool shakeHandleUp;
+    [SerializeField] private float shakeValue = 5f;
+    [SerializeField] private float shakeTime = 1f;
+    private float shakeTimer;
+    
     private enum StopOrStart
     {
         Stop,
@@ -29,6 +35,7 @@ public class BreakChain : MonoBehaviour
 
     private void Start()
     {
+        shakeTimer = shakeTime;
         _slider.onValueChanged.AddListener((newVal => { _sliderValue = newVal; }));
         
         _maxSliderAmount = _slider.maxValue;
@@ -39,10 +46,18 @@ public class BreakChain : MonoBehaviour
 
     private void Update()
     {
+
+        if (shakeHandle)
+        {
+            ShakeHandle();
+        }
+            
+        
         float curScore = Mathf.SmoothDamp(_sliderValue, score, ref _currentVelocity, smoothFactor * Time.deltaTime);
         _slider.value = curScore;
         CalculatePercentage();
     }
+    
 
     private void CalculatePercentage()
     {
@@ -86,6 +101,24 @@ public class BreakChain : MonoBehaviour
         }
     }
 
+
+    public void ShakeHandle()
+    {
+        shakeTimer -= Time.deltaTime;
+        if (shakeTimer <= 0)
+        {
+            shakeTimer = shakeTime;
+            var value = shakeValue;
+            if (!shakeHandleUp)
+            {
+                value *= -1;
+            }
+
+            shakeHandleUp = !shakeHandleUp;
+            _slider.value += value;
+        }
+    }
+
     public void StartDrag()
     {
         GameManager.Shared.GetMouse().ChangeToDragMouse();
@@ -104,5 +137,11 @@ public class BreakChain : MonoBehaviour
     public void PointerExit()
     {
         GameManager.Shared.GetMouse().ChangeSizeSmaller();
+    }
+
+    public void Shake(bool mood)
+    {
+        print("kaka");
+        shakeHandle = mood;
     }
 }

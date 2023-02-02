@@ -46,8 +46,8 @@ public class Tutorial : MonoBehaviour
             handleShowTime -= Time.deltaTime;
             if (handleShowTime <= 0)
             {
-                OpenTutorialObject(TutorialObject.TutorialKind.StartHandle);
                 _handleWasOn = true;
+                OpenTutorialObject(TutorialObject.TutorialKind.StartHandle);
             }
 
             return;
@@ -70,34 +70,26 @@ public class Tutorial : MonoBehaviour
             return;
         }
 
-        print("kaka");
 
-
-        if (test)
-        {
-            test = false;
-            TestFunction();
-        }
-
-        // if (Input.GetKey(KeyCode.Space))
+        //
+        // if (test)
         // {
-        //     print("got to where it needed to delete the game object --- before");
         //     test = false;
-        //     NextButton();
-        //     _currTutorialObject.gameObject.SetActive(false);
+        //     TestFunction();
         // }
     }
 
-    private void TestFunction()
-    {
-        test = false;
-        OpenNextTutorialObject();
-    }
+    // private void TestFunction()
+    // {
+    //     test = false;
+    //     OpenNextTutorialObject();
+    // }
 
 
     public void OpenTutorialObject(TutorialObject.TutorialKind tutorialKindToOpen)
     {
-        Time.timeScale = 0;
+        if (!_handleWasOn) return;
+
         foreach (var tutorialObject in tutorialObjects)
         {
             if (tutorialObject.myKind == tutorialKindToOpen)
@@ -107,16 +99,22 @@ public class Tutorial : MonoBehaviour
             }
         }
 
+        if (_currTutorialObject.stopTime)
+            Time.timeScale = _currTutorialObject.slowMotionTime;
+
+        if (_currTutorialObject.closeWithTime)
+            _currTutorialObject.StartCloseRoutine();
+
         _currTutorialObject.gameObject.SetActive(true);
         _tutorialIndex += 1;
     }
 
-    public void CloseTutorialObject(TutorialObject.TutorialKind tutorialKindToOpen)
+    public void CloseTutorialObject(TutorialObject.TutorialKind tutorialKindToClose)
     {
         var objectToClose = _currTutorialObject;
         foreach (var tutorialObject in tutorialObjects)
         {
-            if (tutorialObject.myKind == tutorialKindToOpen)
+            if (tutorialObject.myKind == tutorialKindToClose)
             {
                 objectToClose = tutorialObject;
                 break;
@@ -126,8 +124,114 @@ public class Tutorial : MonoBehaviour
         test = false;
         objectToClose.gameObject.SetActive(false);
         // print("got to where it needed to delete the game object");
-        Time.timeScale = 1;
+        if (_currTutorialObject.openWithTime)
+            Time.timeScale = 1;
     }
+
+
+    public bool IsTutorialFinished()
+    {
+        return !(_tutorialIndex < amountOfTutorialObjects);
+    }
+
+    public void FirstTimeHandle()
+    {
+        CloseTutorialObject(TutorialObject.TutorialKind.StartHandle);
+        _handleWasUse = true;
+        GameManager.Shared.ShakeHandle(false);
+    }
+
+    public void FirstTimeFurnace()
+    {
+        if (_fueSequencesIsOver) return;
+        _fueSequencesIsOver = true;
+        CloseTutorialObject(TutorialObject.TutorialKind.Fuel);
+        OpenTutorialObject(TutorialObject.TutorialKind.SpeedMeter);
+    }
+    
+    public void FirstTimeArrows()
+    {
+        CloseTutorialObject(TutorialObject.TutorialKind.Arrows);
+    }
+
+    public void NextButton()
+    {
+        CloseTutorialObject(_currTutorialObject.myKind);
+        if (_currTutorialObject.nextObject != TutorialObject.TutorialKind.None)
+            OpenTutorialObject(_currTutorialObject.nextObject);
+    }
+    
+    public void StartJunction()
+    {
+        OpenTutorialObject(TutorialObject.TutorialKind.MiniMap);
+    }
+    // public void NextButton()
+    // {
+    //     var curKind = _currTutorialObject.myKind;
+    //     _currTutorialObject.gameObject.SetActive(false);
+    //     bool returnToRegularTime = true;
+    //
+    //     switch (curKind)
+    //     {
+    //         case TutorialObject.TutorialKind.StartHandle:
+    //             break;
+    //
+    //         case TutorialObject.TutorialKind.Fuel:
+    //             OpenTutorialObject(TutorialObject.TutorialKind.Furnace);
+    //             returnToRegularTime = false;
+    //             break;
+    //
+    //         case TutorialObject.TutorialKind.Furnace:
+    //             OpenTutorialObject(TutorialObject.TutorialKind.SpeedMeter);
+    //             returnToRegularTime = false;
+    //             break;
+    //
+    //         case TutorialObject.TutorialKind.SpeedMeter:
+    //             _fueSequencesIsOver = true;
+    //             break;
+    //
+    //         case TutorialObject.TutorialKind.GoodSouls:
+    //             break;
+    //
+    //         case TutorialObject.TutorialKind.BadSouls:
+    //             break;
+    //
+    //         case TutorialObject.TutorialKind.Deals:
+    //             break;
+    //
+    //         case TutorialObject.TutorialKind.MiniMap:
+    //             returnToRegularTime = false;
+    //             OpenTutorialObject(TutorialObject.TutorialKind.Junction);
+    //             break;
+    //
+    //         case TutorialObject.TutorialKind.Junction:
+    //             returnToRegularTime = false;
+    //             OpenTutorialObject(TutorialObject.TutorialKind.Arrows);
+    //             break;
+    //
+    //         case TutorialObject.TutorialKind.Arrows:
+    //             break;
+    //
+    //
+    //         case TutorialObject.TutorialKind.SpecialItem:
+    //             break;
+    //     }
+    //
+    //
+    //     test = false;
+    //
+    //     print("got to where it needed to delete the game object");
+    //
+    //     if (returnToRegularTime)
+    //     {
+    //         Time.timeScale = 1;
+    //     }
+    // }
+
+    // public void NextButtonFromEventObject()
+    // {
+    //     NextButton();
+    // }
 
     public void OpenNextTutorialObject()
     {
@@ -157,83 +261,11 @@ public class Tutorial : MonoBehaviour
         _tutorialIndex += 1;
     }
 
-
-    public void NextButton()
+    public void CloseTutorial()
     {
-        var curKind = _currTutorialObject.myKind;
-        _currTutorialObject.gameObject.SetActive(false);
-        bool returnToRegularTime = true;
-
-        switch (curKind)
+        foreach (var tutorialObject in tutorialObjects)
         {
-            case TutorialObject.TutorialKind.StartHandle:
-                break;
-
-            case TutorialObject.TutorialKind.Fuel:
-                OpenTutorialObject(TutorialObject.TutorialKind.Furnace);
-                returnToRegularTime = false;
-                break;
-
-            case TutorialObject.TutorialKind.Furnace:
-                OpenTutorialObject(TutorialObject.TutorialKind.SpeedMeter);
-                returnToRegularTime = false;
-                break;
-
-            case TutorialObject.TutorialKind.SpeedMeter:
-                _fueSequencesIsOver = true;
-                break;
-
-            case TutorialObject.TutorialKind.GoodSouls:
-                break;
-
-            case TutorialObject.TutorialKind.BadSouls:
-                break;
-
-            case TutorialObject.TutorialKind.Deals:
-                break;
-
-            case TutorialObject.TutorialKind.MiniMap:
-                returnToRegularTime = false;
-                OpenTutorialObject(TutorialObject.TutorialKind.Junction);
-                break;
-
-            case TutorialObject.TutorialKind.Junction:
-                returnToRegularTime = false;
-                OpenTutorialObject(TutorialObject.TutorialKind.Arrows);
-                break;
-
-            case TutorialObject.TutorialKind.Arrows:
-                break;
-
-
-            case TutorialObject.TutorialKind.SpecialItem:
-                break;
-        }
-
-
-        test = false;
-
-        print("got to where it needed to delete the game object");
-
-        if (returnToRegularTime)
-        {
-            Time.timeScale = 1;
-        }
-    }
-
-    public void NextButtonFromEventObject()
-    {
-        NextButton();
-    }
-
-    public bool IsTutorialFinished()
-    {
-        return !(_tutorialIndex < amountOfTutorialObjects);
-    }
-
-    public void FirstTimeHandle()
-    {
-        CloseTutorialObject(TutorialObject.TutorialKind.StartHandle);
-        _handleWasUse = true;
+            tutorialObject.gameObject.SetActive(false);
+        } 
     }
 }

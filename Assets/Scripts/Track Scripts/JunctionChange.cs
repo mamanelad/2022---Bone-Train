@@ -106,6 +106,7 @@ public class JunctionChange : MonoBehaviour
             {
                 
                 GameManager.Shared.ArrowsTurnOnAndOff(true, _iconIndexArray);
+                GameManager.Shared.TutorialsJunction();
                 colliderSphere.enabled = false;
                 colliderBox.enabled = true;
             }

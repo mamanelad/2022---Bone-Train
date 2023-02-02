@@ -22,7 +22,7 @@ public class GameManager : MonoBehaviour
     [SerializeField] public int badSoulsInitializeValue;
     [SerializeField] public int swordsInitializeValue;
     [SerializeField] public int shieldsInitializeValue;
-    
+
     [SerializeField] private int maxSoulStones;
     [NonSerialized] public int SoulStones;
     [NonSerialized] public int GoodSouls;
@@ -86,12 +86,14 @@ public class GameManager : MonoBehaviour
     [Space(20)] [Header("Tutorial")] [SerializeField]
     private bool _tutorialIsOn;
 
-    [SerializeField]private Tutorial _tutorial;
+    private Tutorial _tutorial;
     private bool _firstTimeUsingStartHandle = true;
     private bool _firstTimeAddingGoodSouls = true;
     private bool _firstTimeAddingBadSouls = true;
     private bool _firstTimeArrows = true;
     private bool _firstTimeSpecialItem = true;
+    private bool _firstTimeJunction = true;
+    private bool _firstTimeArrowsTuturial = true;
 
     [Header("Test")] [SerializeField] private bool testArrows0;
     [SerializeField] private bool testArrows;
@@ -160,6 +162,11 @@ public class GameManager : MonoBehaviour
             }
 
             // _tutorial.OpenNextTutorialObject();
+        }
+
+        else
+        {
+            CloseTutorial();
         }
     }
 
@@ -305,9 +312,8 @@ public class GameManager : MonoBehaviour
             {
                 _tutorial.FirstTimeHandle();
             }
-            
         }
-        
+
         ChangeBySoulStones(takeDownFuelContinueTrain);
         speedState = SpeedState.Run;
     }
@@ -343,8 +349,8 @@ public class GameManager : MonoBehaviour
             if (_tutorialIsOn)
                 _tutorial.OpenTutorialObject(TutorialObject.TutorialKind.GoodSouls);
         }
-        
-        
+
+
         if (GoodSouls + addNum < 0)
         {
             GoodSouls = 0;
@@ -370,7 +376,7 @@ public class GameManager : MonoBehaviour
             if (_tutorialIsOn)
                 _tutorial.OpenTutorialObject(TutorialObject.TutorialKind.BadSouls);
         }
-        
+
         if (BadSouls + addNum < 0)
         {
             BadSouls = 0;
@@ -424,7 +430,7 @@ public class GameManager : MonoBehaviour
             if (_tutorialIsOn)
                 _tutorial.OpenTutorialObject(TutorialObject.TutorialKind.SpecialItem);
         }
-        
+
         if (Swords + addNum < 0)
             Swords = 0;
 
@@ -440,7 +446,7 @@ public class GameManager : MonoBehaviour
             if (_tutorialIsOn)
                 _tutorial.OpenTutorialObject(TutorialObject.TutorialKind.SpecialItem);
         }
-        
+
         if (Shields + addNum < 0)
             Shields = 0;
 
@@ -454,8 +460,15 @@ public class GameManager : MonoBehaviour
         return curSpeed;
     }
 
-    public void SetSpeed(float newSpeed)
+
+    public void SetSpeed(float newSpeed, bool fromFurnace = false)
     {
+        if (fromFurnace)
+        {
+            if (_tutorialIsOn)
+                _tutorial.FirstTimeFurnace();
+        }
+
         UIAudioManager.Instance.SetTrainLoopSpeed(GetCurrSpeedPerspectiveToStartSpeed());
         if (speedState == SpeedState.Stop)
         {
@@ -499,12 +512,10 @@ public class GameManager : MonoBehaviour
             if (mood)
             {
                 _firstTimeArrows = false;
-                if (_tutorialIsOn)
-                    _tutorial.OpenTutorialObject(TutorialObject.TutorialKind.MiniMap);
             }
         }
-        
-        
+
+
         foreach (var arrow in _arrows)
         {
             switch (mood)
@@ -573,14 +584,14 @@ public class GameManager : MonoBehaviour
     {
         return _arrowSide;
     }
-    
+
 
     public void SetArrowSide(Arrow.ArrowSide sideChosen)
     {
         _arrowSide = sideChosen;
     }
 
-    
+
     public float GetMaxSpeed()
     {
         return maxSpeed;
@@ -725,7 +736,46 @@ public class GameManager : MonoBehaviour
     {
         return _tutorialIsOn;
     }
+
+    public void ShakeHandle(bool mood)
+    {
+        BreakChain breakChain = FindObjectOfType<BreakChain>();
+        if (breakChain)
+            breakChain.Shake(mood);
+    }
+
+    public void TutorialsJunction()
+    {
+        if (_tutorialIsOn)
+        {
+            if (_firstTimeJunction)
+            {
+                _firstTimeJunction = false;
+                _tutorial.StartJunction();
+            }
+        }
+    }
+
+    public void ArrowsTutorial()
+    {
+        if (_firstTimeArrowsTuturial)
+        {
+            _firstTimeArrowsTuturial = false;
+            _tutorial.FirstTimeArrows();
+        }
+    }
     
+    private void CloseTutorial()
+    {
+        if (!_tutorial)
+            _tutorial = FindObjectOfType<Tutorial>();
+        
+        if (_tutorial)
+        {
+            _tutorial.CloseTutorial();
+            _tutorial.gameObject.SetActive(false);
+        }
+    }
 }
 
 public enum Morale : int

@@ -1,0 +1,66 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c86e91921e9ba5e419d15579e50b8591, type: 3}
+  m_Name: Special Mom
+  m_EditorClassIdentifier: 
+  character: {fileID: 21300000, guid: 03a97c0af9e0c8a49897865ee207001c, type: 3}
+  audio:
+    Guid:
+      Data1: -1552607613
+      Data2: 1253196072
+      Data3: -1630844256
+      Data4: -1168212406
+    Path: event:/Interactions/Special/Special Mom
+  enteredDistanceAudio:
+    Guid:
+      Data1: 0
+      Data2: 0
+      Data3: 0
+      Data4: 0
+    Path: 
+  iconIndex: 3
+  title: Unexpected Encounter!
+  textBox: 'In a sinister corner of Hell, you encounter the tormented soul of a mother.
+    She implores you to open the doors of your train and allow her children who were
+    wrongly cast into the fiery realm to board. But be warned stopping in this part
+    of Hell will attract evil spirits. '
+  options:
+  - title: Open the doors
+    goodSouls: 3
+    badSouls: 100
+    soulsStones: 0
+    sword: 0
+    shield: 0
+    sound:
+      Guid:
+        Data1: 0
+        Data2: 0
+        Data3: 0
+        Data4: 0
+      Path: 
+    text: 
+    odds: 0
+  - title: Continue
+    goodSouls: 0
+    badSouls: 0
+    soulsStones: 0
+    sword: 0
+    shield: 0
+    sound:
+      Guid:
+        Data1: 0
+        Data2: 0
+        Data3: 0
+        Data4: 0
+      Path: 
+    text: Don't open then doors
+    odds: 0
