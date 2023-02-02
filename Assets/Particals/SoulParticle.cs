@@ -12,6 +12,24 @@ public class SoulParticle : MonoBehaviour
     public float lerpAmount = 0.5f;
     
     private int counter;
+    
+    //
+    // public float speed = 10.0f;
+    // public Vector3 direction;
+    
+    public float speed = 10.0f;
+    public float radius = 5.0f;
+    private float angle;
+    private Vector3 direction;
+
+    [SerializeField] private float minusScaleValue = 0.001f;
+    private Vector3 oldScale;
+
+    private void Start()
+    {
+        oldScale = gameObject.transform.localScale;
+    }
+
     void Update()
     {
         timeToLive -= Time.deltaTime;
@@ -20,27 +38,39 @@ public class SoulParticle : MonoBehaviour
             Destroy(gameObject);
         }
         
-        var plusX = Random.Range(-maxMove, maxMove);
-        var plusY = Random.Range(-maxMove, maxMove);
-        var plusZ = Random.Range(-maxMove, maxMove);
-        
-        plusX *= Random.Range(-maxMove, maxMove);
-        plusY *= Random.Range(-maxMove, maxMove);
-        plusZ *= Random.Range(-maxMove, maxMove);
-
-        plusX += MathF.Sin(plusY);
-        plusY += MathF.Cos(plusX);
-        plusZ += MathF.Tan(plusX);
+        var plusX = Random.Range(minMove, maxMove);
+        var plusY = Random.Range(minMove, maxMove);
+        var plusZ = Random.Range(minMove, maxMove);
         //
-        
-        
-        
-        var newPos = transform.position;
-        newPos += new Vector3(plusX, plusY, plusZ);
+        // plusX *= Random.Range(-maxMove, maxMove);
+        // plusY *= Random.Range(-maxMove, maxMove);
+        // plusZ *= Random.Range(-maxMove, maxMove);
+        //
+        // plusX += MathF.Sin(plusY);
+        // plusY += MathF.Cos(plusX);
+        // plusZ += MathF.Tan(plusX);
+        // //
+        //
+        //
+        //
+        var direction = new Vector3(plusX, plusY, plusZ);
 
-        var x = Vector3.Lerp(transform.position, newPos, lerpAmount);
+        //
+        // var x = Vector3.Lerp(transform.position, newPos, lerpAmount);
+        //
+        //
+        transform.position += direction * speed * Time.deltaTime;
+        var newScale = oldScale - new Vector3(minusScaleValue, minusScaleValue, minusScaleValue);
+        if (newScale.x <= 0)
+        {
+            Destroy(gameObject);
+        }
+        oldScale = newScale;
+        transform.localScale = newScale;
 
-        
-        transform.position = x;
+        //     
+        //         direction = new Vector3(Random.Range(-1.0f, 1.0f), 1, Random.Range(-1.0f, 1.0f));
+        //         
+        //     
     }
 }
