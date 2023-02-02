@@ -22,7 +22,7 @@ public class GameManager : MonoBehaviour
     [SerializeField] public int badSoulsInitializeValue;
     [SerializeField] public int swordsInitializeValue;
     [SerializeField] public int shieldsInitializeValue;
-
+    
     [SerializeField] private int maxSoulStones;
     [NonSerialized] public int SoulStones;
     [NonSerialized] public int GoodSouls;
@@ -36,7 +36,7 @@ public class GameManager : MonoBehaviour
     private Arrow.ArrowSide _arrowSide = Arrow.ArrowSide.None;
     private SoulsCircle _soulsCircle;
     public bool badSoulsCanEatGoodSouls = true;
-    
+
     [Space(20)] [Header("Extra")] public static GameManager Shared;
     [HideInInspector] public Morale morale = Morale.Neutral;
     private Mouse _mouse;
@@ -119,8 +119,10 @@ public class GameManager : MonoBehaviour
 
 
     [Space(20)] [Header("Check PointS")] private CheckPointData _CheckPointData;
-    
-    [Space(10)][Header("Keyboard")] [SerializeField] private KeyCode closeTutorialsKey = KeyCode.T;
+
+    [Space(10)] [Header("Keyboard")] [SerializeField]
+    private KeyCode closeTutorialsKey = KeyCode.T;
+
     [SerializeField] private KeyCode restartKey = KeyCode.R;
     [SerializeField] private KeyCode exitKey = KeyCode.Escape;
 
@@ -187,11 +189,12 @@ public class GameManager : MonoBehaviour
         {
             Application.Quit();
         }
-        
+
         if (Input.GetKey(closeTutorialsKey))
         {
             CloseTutorial();
         }
+
         if (!_initFinish && _uiManager)
         {
             _initFinish = true;
@@ -222,7 +225,7 @@ public class GameManager : MonoBehaviour
         ArrowOverHandler();
         if ((Input.GetKeyDown(KeyCode.Escape)))
         {
-            SceneManager.LoadScene("startscreen final" );
+            SceneManager.LoadScene("startscreen final");
         }
 
         if (_interactionManager == null)
@@ -258,6 +261,7 @@ public class GameManager : MonoBehaviour
     {
         SceneManager.LoadScene("startscreen final");
     }
+
     private void InitSpeed()
     {
         curSpeed = Mathf.Lerp(speedToStartBreaking, maxSpeed, 0.5f);
@@ -385,15 +389,10 @@ public class GameManager : MonoBehaviour
 
     public void ChangeByGoodSouls(int addNum)
     {
-        if (GoodSouls + addNum < 0)
-        {
-            GoodSouls = 0;
-            return;
-        }
-
-        GoodSouls += addNum;
+        GoodSouls = Math.Max(0,GoodSouls + addNum);
         _uiManager.SetGoodSouls();
         _soulsCircle.ChangeSoulsAmount();
+        if (GoodSouls == 0) GameOver();
     }
 
     public int GetGoodSouls()
@@ -404,21 +403,7 @@ public class GameManager : MonoBehaviour
 
     public void ChangeByBadSouls(int addNum)
     {
-        if (_firstTimeAddingBadSouls)
-        {
-            _firstTimeAddingBadSouls = false;
-            if (_tutorialIsOn)
-                _tutorial.OpenTutorialObject(TutorialObject.TutorialKind.BadSouls);
-        }
-
-        if (BadSouls + addNum < 0)
-        {
-            BadSouls = 0;
-            return;
-        }
-
-        BadSouls += addNum;
-
+        BadSouls = Math.Max(0,BadSouls + addNum);
         _uiManager.SetBadSouls();
         _soulsCircle.ChangeSoulsAmount();
     }
@@ -430,27 +415,20 @@ public class GameManager : MonoBehaviour
 
     public void ChangeBySoulStones(int addNum)
     {
-        if (SoulStones + addNum < 0)
-        {
-            SoulStones = 0;
-            if (devilEvent == null)
-            {
-                print("No devil event");
-            }
-            else
-            {
-                _interactionManager.StartInteraction(devilEvent);
-            }
+        SoulStones = Math.Max(0,SoulStones + addNum);
+        SoulStones = Math.Min(maxSoulStones,SoulStones);
 
-            return;
-        }
-
-        if (SoulStones + addNum > maxSoulStones)
-            addNum = maxSoulStones - SoulStones;
-
-        SoulStones += addNum;
+        
         _uiManager.SetSoulStones();
         _soulsCircle.ChangeSoulsAmount();
+        
+        if (SoulStones == 0)
+        {
+            if (devilEvent == null)
+                print("No devil event");
+            else
+                _interactionManager.StartInteraction(devilEvent);
+        }
     }
 
     public int GetSoulStones()
@@ -818,18 +796,11 @@ public class GameManager : MonoBehaviour
 
     public void EndFuelEvent()
     {
-        
     }
-    
+
     public void GameOver()
     {
         SceneManager.LoadScene("Game lose");
-    }
-    
-    public void GameWon()
-    {
-        gameData.goodSoulsAmount = GoodSouls;
-        SceneManager.LoadScene("Game win");
     }
 }
 
