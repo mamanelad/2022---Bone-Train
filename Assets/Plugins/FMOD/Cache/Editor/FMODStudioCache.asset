@@ -1,7 +1,11 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
 <<<<<<< HEAD
+<<<<<<< HEAD
 --- !u!114 &-8127778390315791269
+=======
+--- !u!114 &-8770516703582517221
+>>>>>>> 4ca572b1b60a43dd2d3de7bd8b05dcee900d939e
 =======
 --- !u!114 &-8770516703582517221
 >>>>>>> 4ca572b1b60a43dd2d3de7bd8b05dcee900d939e
@@ -15,6 +19,7 @@ MonoBehaviour:
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
 <<<<<<< HEAD
+<<<<<<< HEAD
   m_Name: event:/Interactions/Part 2/3.1
   m_EditorClassIdentifier: 
   Path: event:/Interactions/Part 2/3.1
@@ -26,6 +31,8 @@ MonoBehaviour:
   Banks:
   - {fileID: 2736820969436583162}
 =======
+=======
+>>>>>>> 4ca572b1b60a43dd2d3de7bd8b05dcee900d939e
   m_Name: event:/Events/Tree/Tree1_Deny
   m_EditorClassIdentifier: 
   Path: event:/Events/Tree/Tree1_Deny
@@ -63,6 +70,9 @@ MonoBehaviour:
     Data4: 1370806773
   Banks:
   - {fileID: 3004629194860046456}
+<<<<<<< HEAD
+>>>>>>> 4ca572b1b60a43dd2d3de7bd8b05dcee900d939e
+=======
 >>>>>>> 4ca572b1b60a43dd2d3de7bd8b05dcee900d939e
   IsStream: 1
   Is3D: 0
@@ -71,6 +81,7 @@ MonoBehaviour:
   MinDistance: 1
   MaxDistance: 20
   Length: 0
+<<<<<<< HEAD
 <<<<<<< HEAD
 --- !u!114 &-8038322856068030197
 MonoBehaviour:
@@ -130,6 +141,9 @@ MonoBehaviour:
 =======
 --- !u!114 &-8666297952836283133
 >>>>>>> 4ca572b1b60a43dd2d3de7bd8b05dcee900d939e
+=======
+--- !u!114 &-8666297952836283133
+>>>>>>> 4ca572b1b60a43dd2d3de7bd8b05dcee900d939e
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -149,7 +163,11 @@ MonoBehaviour:
     Data4: 726533862
   Banks:
 <<<<<<< HEAD
+<<<<<<< HEAD
   - {fileID: 2736820969436583162}
+=======
+  - {fileID: 3004629194860046456}
+>>>>>>> 4ca572b1b60a43dd2d3de7bd8b05dcee900d939e
 =======
   - {fileID: 3004629194860046456}
 >>>>>>> 4ca572b1b60a43dd2d3de7bd8b05dcee900d939e
@@ -161,7 +179,11 @@ MonoBehaviour:
   MaxDistance: 20
   Length: 0
 <<<<<<< HEAD
+<<<<<<< HEAD
 --- !u!114 &-7219190367911042828
+=======
+--- !u!114 &-7883958894642788043
+>>>>>>> 4ca572b1b60a43dd2d3de7bd8b05dcee900d939e
 =======
 --- !u!114 &-7883958894642788043
 >>>>>>> 4ca572b1b60a43dd2d3de7bd8b05dcee900d939e
@@ -175,6 +197,7 @@ MonoBehaviour:
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
 <<<<<<< HEAD
+<<<<<<< HEAD
   m_Name: event:/UI/Sword Use
   m_EditorClassIdentifier: 
   Path: event:/UI/Sword Use
@@ -187,6 +210,8 @@ MonoBehaviour:
   - {fileID: 2736820969436583162}
   IsStream: 0
 =======
+=======
+>>>>>>> 4ca572b1b60a43dd2d3de7bd8b05dcee900d939e
   m_Name: event:/Interactions/Part 3/6.1
   m_EditorClassIdentifier: 
   Path: event:/Interactions/Part 3/6.1
@@ -198,6 +223,9 @@ MonoBehaviour:
   Banks:
   - {fileID: 3004629194860046456}
   IsStream: 1
+<<<<<<< HEAD
+>>>>>>> 4ca572b1b60a43dd2d3de7bd8b05dcee900d939e
+=======
 >>>>>>> 4ca572b1b60a43dd2d3de7bd8b05dcee900d939e
   Is3D: 0
   IsOneShot: 1
@@ -206,7 +234,11 @@ MonoBehaviour:
   MaxDistance: 20
   Length: 0
 <<<<<<< HEAD
+<<<<<<< HEAD
 --- !u!114 &-6919113931547154056
+=======
+--- !u!114 &-7860776789211535283
+>>>>>>> 4ca572b1b60a43dd2d3de7bd8b05dcee900d939e
 =======
 --- !u!114 &-7860776789211535283
 >>>>>>> 4ca572b1b60a43dd2d3de7bd8b05dcee900d939e
@@ -220,6 +252,7 @@ MonoBehaviour:
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
 <<<<<<< HEAD
+<<<<<<< HEAD
   m_Name: event:/UI/Shield Use
   m_EditorClassIdentifier: 
   Path: event:/UI/Shield Use
@@ -232,6 +265,8 @@ MonoBehaviour:
   - {fileID: 2736820969436583162}
   IsStream: 0
 =======
+=======
+>>>>>>> 4ca572b1b60a43dd2d3de7bd8b05dcee900d939e
   m_Name: event:/Interactions/Part 2/4.2
   m_EditorClassIdentifier: 
   Path: event:/Interactions/Part 2/4.2
@@ -243,6 +278,9 @@ MonoBehaviour:
   Banks:
   - {fileID: 3004629194860046456}
   IsStream: 1
+<<<<<<< HEAD
+>>>>>>> 4ca572b1b60a43dd2d3de7bd8b05dcee900d939e
+=======
 >>>>>>> 4ca572b1b60a43dd2d3de7bd8b05dcee900d939e
   Is3D: 0
   IsOneShot: 1
@@ -251,7 +289,11 @@ MonoBehaviour:
   MaxDistance: 20
   Length: 0
 <<<<<<< HEAD
+<<<<<<< HEAD
 --- !u!114 &-6913084861723363938
+=======
+--- !u!114 &-7780729237483653751
+>>>>>>> 4ca572b1b60a43dd2d3de7bd8b05dcee900d939e
 =======
 --- !u!114 &-7780729237483653751
 >>>>>>> 4ca572b1b60a43dd2d3de7bd8b05dcee900d939e
@@ -265,6 +307,7 @@ MonoBehaviour:
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
 <<<<<<< HEAD
+<<<<<<< HEAD
   m_Name: event:/UI/UI Hover
   m_EditorClassIdentifier: 
   Path: event:/UI/UI Hover
@@ -276,6 +319,8 @@ MonoBehaviour:
   Banks:
   - {fileID: 2736820969436583162}
 =======
+=======
+>>>>>>> 4ca572b1b60a43dd2d3de7bd8b05dcee900d939e
   m_Name: event:/Train/Train Halt
   m_EditorClassIdentifier: 
   Path: event:/Train/Train Halt
@@ -286,6 +331,9 @@ MonoBehaviour:
     Data4: 916339100
   Banks:
   - {fileID: 3004629194860046456}
+<<<<<<< HEAD
+>>>>>>> 4ca572b1b60a43dd2d3de7bd8b05dcee900d939e
+=======
 >>>>>>> 4ca572b1b60a43dd2d3de7bd8b05dcee900d939e
   IsStream: 0
   Is3D: 0
@@ -295,7 +343,11 @@ MonoBehaviour:
   MaxDistance: 20
   Length: 0
 <<<<<<< HEAD
+<<<<<<< HEAD
 --- !u!114 &-5351619104057210230
+=======
+--- !u!114 &-7321987964023865580
+>>>>>>> 4ca572b1b60a43dd2d3de7bd8b05dcee900d939e
 =======
 --- !u!114 &-7321987964023865580
 >>>>>>> 4ca572b1b60a43dd2d3de7bd8b05dcee900d939e
@@ -309,6 +361,7 @@ MonoBehaviour:
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
 <<<<<<< HEAD
+<<<<<<< HEAD
   m_Name: event:/Events/Tollgate/Tollgate1_Text
   m_EditorClassIdentifier: 
   Path: event:/Events/Tollgate/Tollgate1_Text
@@ -321,6 +374,8 @@ MonoBehaviour:
   - {fileID: 2736820969436583162}
   IsStream: 0
 =======
+=======
+>>>>>>> 4ca572b1b60a43dd2d3de7bd8b05dcee900d939e
   m_Name: event:/Interactions/Part 1/1.3
   m_EditorClassIdentifier: 
   Path: event:/Interactions/Part 1/1.3
@@ -332,6 +387,9 @@ MonoBehaviour:
   Banks:
   - {fileID: 3004629194860046456}
   IsStream: 1
+<<<<<<< HEAD
+>>>>>>> 4ca572b1b60a43dd2d3de7bd8b05dcee900d939e
+=======
 >>>>>>> 4ca572b1b60a43dd2d3de7bd8b05dcee900d939e
   Is3D: 0
   IsOneShot: 1
@@ -340,7 +398,11 @@ MonoBehaviour:
   MaxDistance: 20
   Length: 0
 <<<<<<< HEAD
+<<<<<<< HEAD
 --- !u!114 &-5292726896805242233
+=======
+--- !u!114 &-7154246058172483574
+>>>>>>> 4ca572b1b60a43dd2d3de7bd8b05dcee900d939e
 =======
 --- !u!114 &-7154246058172483574
 >>>>>>> 4ca572b1b60a43dd2d3de7bd8b05dcee900d939e
@@ -363,7 +425,11 @@ MonoBehaviour:
     Data4: -1920904646
   Banks:
 <<<<<<< HEAD
+<<<<<<< HEAD
   - {fileID: 2736820969436583162}
+=======
+  - {fileID: 3004629194860046456}
+>>>>>>> 4ca572b1b60a43dd2d3de7bd8b05dcee900d939e
 =======
   - {fileID: 3004629194860046456}
 >>>>>>> 4ca572b1b60a43dd2d3de7bd8b05dcee900d939e
@@ -375,7 +441,11 @@ MonoBehaviour:
   MaxDistance: 20
   Length: 0
 <<<<<<< HEAD
+<<<<<<< HEAD
 --- !u!114 &-4232163699651857052
+=======
+--- !u!114 &-7117468644412602095
+>>>>>>> 4ca572b1b60a43dd2d3de7bd8b05dcee900d939e
 =======
 --- !u!114 &-7117468644412602095
 >>>>>>> 4ca572b1b60a43dd2d3de7bd8b05dcee900d939e
@@ -389,6 +459,7 @@ MonoBehaviour:
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
 <<<<<<< HEAD
+<<<<<<< HEAD
   m_Name: event:/Narration/Level Intro
   m_EditorClassIdentifier: 
   Path: event:/Narration/Level Intro
@@ -400,6 +471,8 @@ MonoBehaviour:
   Banks:
   - {fileID: 2736820969436583162}
 =======
+=======
+>>>>>>> 4ca572b1b60a43dd2d3de7bd8b05dcee900d939e
   m_Name: event:/Interactions/Special/Special Demon
   m_EditorClassIdentifier: 
   Path: event:/Interactions/Special/Special Demon
@@ -410,6 +483,9 @@ MonoBehaviour:
     Data4: -376769737
   Banks:
   - {fileID: 3004629194860046456}
+<<<<<<< HEAD
+>>>>>>> 4ca572b1b60a43dd2d3de7bd8b05dcee900d939e
+=======
 >>>>>>> 4ca572b1b60a43dd2d3de7bd8b05dcee900d939e
   IsStream: 1
   Is3D: 0
@@ -419,7 +495,11 @@ MonoBehaviour:
   MaxDistance: 20
   Length: 0
 <<<<<<< HEAD
+<<<<<<< HEAD
 --- !u!114 &-4184818260690755054
+=======
+--- !u!114 &-6881623709860968140
+>>>>>>> 4ca572b1b60a43dd2d3de7bd8b05dcee900d939e
 =======
 --- !u!114 &-6881623709860968140
 >>>>>>> 4ca572b1b60a43dd2d3de7bd8b05dcee900d939e
@@ -442,7 +522,11 @@ MonoBehaviour:
     Data4: 1116156184
   Banks:
 <<<<<<< HEAD
+<<<<<<< HEAD
   - {fileID: 2736820969436583162}
+=======
+  - {fileID: 3004629194860046456}
+>>>>>>> 4ca572b1b60a43dd2d3de7bd8b05dcee900d939e
 =======
   - {fileID: 3004629194860046456}
 >>>>>>> 4ca572b1b60a43dd2d3de7bd8b05dcee900d939e
@@ -454,7 +538,11 @@ MonoBehaviour:
   MaxDistance: 20
   Length: 0
 <<<<<<< HEAD
+<<<<<<< HEAD
 --- !u!114 &-4120144136319031687
+=======
+--- !u!114 &-6791187463380306773
+>>>>>>> 4ca572b1b60a43dd2d3de7bd8b05dcee900d939e
 =======
 --- !u!114 &-6791187463380306773
 >>>>>>> 4ca572b1b60a43dd2d3de7bd8b05dcee900d939e
@@ -468,6 +556,7 @@ MonoBehaviour:
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
 <<<<<<< HEAD
+<<<<<<< HEAD
   m_Name: event:/Interactions/Part 0/Good Souls
   m_EditorClassIdentifier: 
   Path: event:/Interactions/Part 0/Good Souls
@@ -478,6 +567,45 @@ MonoBehaviour:
     Data4: 1370806773
   Banks:
   - {fileID: 2736820969436583162}
+=======
+  m_Name: event:/UI/Event Start
+  m_EditorClassIdentifier: 
+  Path: event:/UI/Event Start
+  Guid:
+    Data1: -1883182190
+    Data2: 1208950864
+    Data3: -871205744
+    Data4: -1790376566
+  Banks:
+  - {fileID: 3004629194860046456}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 0
+--- !u!114 &-6540307534535272843
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Narration/Level Intro
+  m_EditorClassIdentifier: 
+  Path: event:/Narration/Level Intro
+  Guid:
+    Data1: -169757048
+    Data2: 1184210307
+    Data3: -185925465
+    Data4: 1994531423
+  Banks:
+  - {fileID: 3004629194860046456}
+>>>>>>> 4ca572b1b60a43dd2d3de7bd8b05dcee900d939e
   IsStream: 1
   Is3D: 0
   IsOneShot: 1
@@ -485,6 +613,7 @@ MonoBehaviour:
   MinDistance: 1
   MaxDistance: 20
   Length: 0
+<<<<<<< HEAD
 --- !u!114 &-3838536174342932280
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -993,6 +1122,8 @@ MonoBehaviour:
   MinDistance: 1
   MaxDistance: 20
   Length: 0
+=======
+>>>>>>> 4ca572b1b60a43dd2d3de7bd8b05dcee900d939e
 --- !u!114 &-6469293592379369405
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1540,6 +1671,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   EditorBanks:
 <<<<<<< HEAD
+<<<<<<< HEAD
   - {fileID: -3670309893510280714}
   - {fileID: 2736820969436583162}
   EditorEvents:
@@ -1672,10 +1804,81 @@ MonoBehaviour:
   MasterBanks:
   - {fileID: 3004629194860046456}
   StringsBanks:
+=======
+  - {fileID: -2880105610649985714}
+  - {fileID: 3004629194860046456}
+  EditorEvents:
+  - {fileID: -6469293592379369405}
+  - {fileID: 7609040672362590814}
+  - {fileID: -8770516703582517221}
+  - {fileID: 9079187999818135116}
+  - {fileID: -7321987964023865580}
+  - {fileID: 6035490840231336757}
+  - {fileID: 8499950339219959948}
+  - {fileID: 1400628128656563292}
+  - {fileID: -4212439809157553545}
+  - {fileID: 7272882784703633502}
+  - {fileID: -5190403882702052261}
+  - {fileID: -5308691342998020603}
+  - {fileID: -440814727949732921}
+  - {fileID: -1859038420037488280}
+  - {fileID: -8673377378910865545}
+  - {fileID: 1083321038926331475}
+  - {fileID: -4510643910283718594}
+  - {fileID: -212312426212497819}
+  - {fileID: -1682927178264761876}
+  - {fileID: 7985350450543733866}
+  - {fileID: -4898371147039375934}
+  - {fileID: 9181252941314977968}
+  - {fileID: -7780729237483653751}
+  - {fileID: -3721418342468747872}
+  - {fileID: 1165500022958094944}
+  - {fileID: 2064995107351439029}
+  - {fileID: -6881623709860968140}
+  - {fileID: -6540307534535272843}
+  - {fileID: 1427709935699582169}
+  - {fileID: 8708740045748516198}
+  - {fileID: -578211025102697337}
+  - {fileID: -4208745386728062584}
+  - {fileID: -6791187463380306773}
+  - {fileID: -1138644591673644463}
+  - {fileID: 4456215470996239110}
+  - {fileID: 7938740210075042337}
+  - {fileID: -8666297952836283133}
+  - {fileID: 5393612407228476125}
+  - {fileID: -1566837526296459473}
+  - {fileID: 3286631091616812251}
+  - {fileID: 3895709406093922293}
+  - {fileID: -7883958894642788043}
+  - {fileID: -1206520239789243012}
+  - {fileID: 2318638583897110690}
+  - {fileID: -7860776789211535283}
+  - {fileID: 6343418587913217938}
+  - {fileID: 2479376538400534212}
+  - {fileID: -1354736743529595811}
+  - {fileID: 4246569368791645392}
+  - {fileID: -7154246058172483574}
+  - {fileID: -6120506523615828193}
+  - {fileID: 7098559855388935870}
+  - {fileID: 7464838002800523802}
+  - {fileID: 9029105901087601234}
+  - {fileID: -7117468644412602095}
+  - {fileID: 2870566973981817590}
+  - {fileID: -1501878501600835341}
+  - {fileID: 4896668935904816066}
+  - {fileID: 4312327068138372315}
+  EditorParameters: []
+  MasterBanks:
+  - {fileID: 3004629194860046456}
+  StringsBanks:
+>>>>>>> 4ca572b1b60a43dd2d3de7bd8b05dcee900d939e
   - {fileID: -2880105610649985714}
   cacheTime: 638108982124112245
   cacheVersion: 131601
 --- !u!114 &1083321038926331475
+<<<<<<< HEAD
+>>>>>>> 4ca572b1b60a43dd2d3de7bd8b05dcee900d939e
+=======
 >>>>>>> 4ca572b1b60a43dd2d3de7bd8b05dcee900d939e
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1687,7 +1890,10 @@ MonoBehaviour:
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> 4ca572b1b60a43dd2d3de7bd8b05dcee900d939e
   m_Name: event:/Interactions/Part 0/0.2
   m_EditorClassIdentifier: 
   Path: event:/Interactions/Part 0/0.2
@@ -1769,6 +1975,9 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+<<<<<<< HEAD
+>>>>>>> 4ca572b1b60a43dd2d3de7bd8b05dcee900d939e
+=======
 >>>>>>> 4ca572b1b60a43dd2d3de7bd8b05dcee900d939e
   m_Name: event:/Events/Roadblock/Roadblock1_Enter
   m_EditorClassIdentifier: 
@@ -1780,7 +1989,11 @@ MonoBehaviour:
     Data4: 1100621107
   Banks:
 <<<<<<< HEAD
+<<<<<<< HEAD
   - {fileID: 2736820969436583162}
+=======
+  - {fileID: 3004629194860046456}
+>>>>>>> 4ca572b1b60a43dd2d3de7bd8b05dcee900d939e
 =======
   - {fileID: 3004629194860046456}
 >>>>>>> 4ca572b1b60a43dd2d3de7bd8b05dcee900d939e
@@ -1792,8 +2005,11 @@ MonoBehaviour:
   MaxDistance: 20
   Length: 0
 <<<<<<< HEAD
+<<<<<<< HEAD
 --- !u!114 &115681582917852606
 =======
+=======
+>>>>>>> 4ca572b1b60a43dd2d3de7bd8b05dcee900d939e
 --- !u!114 &2064995107351439029
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2029,6 +2245,9 @@ MonoBehaviour:
   MaxDistance: 20
   Length: 0
 --- !u!114 &4456215470996239110
+<<<<<<< HEAD
+>>>>>>> 4ca572b1b60a43dd2d3de7bd8b05dcee900d939e
+=======
 >>>>>>> 4ca572b1b60a43dd2d3de7bd8b05dcee900d939e
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2049,7 +2268,11 @@ MonoBehaviour:
     Data4: -1926059367
   Banks:
 <<<<<<< HEAD
+<<<<<<< HEAD
   - {fileID: 2736820969436583162}
+=======
+  - {fileID: 3004629194860046456}
+>>>>>>> 4ca572b1b60a43dd2d3de7bd8b05dcee900d939e
 =======
   - {fileID: 3004629194860046456}
 >>>>>>> 4ca572b1b60a43dd2d3de7bd8b05dcee900d939e
@@ -2061,7 +2284,11 @@ MonoBehaviour:
   MaxDistance: 20
   Length: 0
 <<<<<<< HEAD
+<<<<<<< HEAD
 --- !u!114 &390904938826666731
+=======
+--- !u!114 &4896668935904816066
+>>>>>>> 4ca572b1b60a43dd2d3de7bd8b05dcee900d939e
 =======
 --- !u!114 &4896668935904816066
 >>>>>>> 4ca572b1b60a43dd2d3de7bd8b05dcee900d939e
@@ -2074,6 +2301,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+<<<<<<< HEAD
 <<<<<<< HEAD
   m_Name: event:/Interactions/Part 1/1.3
   m_EditorClassIdentifier: 
@@ -2097,6 +2325,18 @@ MonoBehaviour:
   Banks:
   - {fileID: 3004629194860046456}
 >>>>>>> 4ca572b1b60a43dd2d3de7bd8b05dcee900d939e
+=======
+  m_Name: event:/Interactions/Special/Special Dog Bad
+  m_EditorClassIdentifier: 
+  Path: event:/Interactions/Special/Special Dog Bad
+  Guid:
+    Data1: 1424553589
+    Data2: 1277585321
+    Data3: -1580767073
+    Data4: -1851076827
+  Banks:
+  - {fileID: 3004629194860046456}
+>>>>>>> 4ca572b1b60a43dd2d3de7bd8b05dcee900d939e
   IsStream: 1
   Is3D: 0
   IsOneShot: 1
@@ -2105,8 +2345,11 @@ MonoBehaviour:
   MaxDistance: 20
   Length: 0
 <<<<<<< HEAD
+<<<<<<< HEAD
 --- !u!114 &1139421353474600978
 =======
+=======
+>>>>>>> 4ca572b1b60a43dd2d3de7bd8b05dcee900d939e
 --- !u!114 &5393612407228476125
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2135,6 +2378,9 @@ MonoBehaviour:
   MaxDistance: 20
   Length: 0
 --- !u!114 &6035490840231336757
+<<<<<<< HEAD
+>>>>>>> 4ca572b1b60a43dd2d3de7bd8b05dcee900d939e
+=======
 >>>>>>> 4ca572b1b60a43dd2d3de7bd8b05dcee900d939e
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2155,7 +2401,11 @@ MonoBehaviour:
     Data4: -785462424
   Banks:
 <<<<<<< HEAD
+<<<<<<< HEAD
   - {fileID: 2736820969436583162}
+=======
+  - {fileID: 3004629194860046456}
+>>>>>>> 4ca572b1b60a43dd2d3de7bd8b05dcee900d939e
 =======
   - {fileID: 3004629194860046456}
 >>>>>>> 4ca572b1b60a43dd2d3de7bd8b05dcee900d939e
@@ -2167,7 +2417,11 @@ MonoBehaviour:
   MaxDistance: 20
   Length: 0
 <<<<<<< HEAD
+<<<<<<< HEAD
 --- !u!114 &1268045206036076510
+=======
+--- !u!114 &6343418587913217938
+>>>>>>> 4ca572b1b60a43dd2d3de7bd8b05dcee900d939e
 =======
 --- !u!114 &6343418587913217938
 >>>>>>> 4ca572b1b60a43dd2d3de7bd8b05dcee900d939e
@@ -2190,7 +2444,11 @@ MonoBehaviour:
     Data4: -1695164205
   Banks:
 <<<<<<< HEAD
+<<<<<<< HEAD
   - {fileID: 2736820969436583162}
+=======
+  - {fileID: 3004629194860046456}
+>>>>>>> 4ca572b1b60a43dd2d3de7bd8b05dcee900d939e
 =======
   - {fileID: 3004629194860046456}
 >>>>>>> 4ca572b1b60a43dd2d3de7bd8b05dcee900d939e
@@ -2202,7 +2460,11 @@ MonoBehaviour:
   MaxDistance: 20
   Length: 0
 <<<<<<< HEAD
+<<<<<<< HEAD
 --- !u!114 &1534128842167409848
+=======
+--- !u!114 &7098559855388935870
+>>>>>>> 4ca572b1b60a43dd2d3de7bd8b05dcee900d939e
 =======
 --- !u!114 &7098559855388935870
 >>>>>>> 4ca572b1b60a43dd2d3de7bd8b05dcee900d939e
@@ -2215,6 +2477,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+<<<<<<< HEAD
 <<<<<<< HEAD
   m_Name: event:/Interactions/Part 2/4.1
   m_EditorClassIdentifier: 
@@ -2238,6 +2501,18 @@ MonoBehaviour:
   Banks:
   - {fileID: 3004629194860046456}
 >>>>>>> 4ca572b1b60a43dd2d3de7bd8b05dcee900d939e
+=======
+  m_Name: event:/Interactions/Part 0/0.1
+  m_EditorClassIdentifier: 
+  Path: event:/Interactions/Part 0/0.1
+  Guid:
+    Data1: 1990183923
+    Data2: 1139162731
+    Data3: -1729417084
+    Data4: -575921900
+  Banks:
+  - {fileID: 3004629194860046456}
+>>>>>>> 4ca572b1b60a43dd2d3de7bd8b05dcee900d939e
   IsStream: 1
   Is3D: 0
   IsOneShot: 1
@@ -2246,7 +2521,11 @@ MonoBehaviour:
   MaxDistance: 20
   Length: 0
 <<<<<<< HEAD
+<<<<<<< HEAD
 --- !u!114 &2087794108473537537
+=======
+--- !u!114 &7272882784703633502
+>>>>>>> 4ca572b1b60a43dd2d3de7bd8b05dcee900d939e
 =======
 --- !u!114 &7272882784703633502
 >>>>>>> 4ca572b1b60a43dd2d3de7bd8b05dcee900d939e
@@ -2259,6 +2538,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+<<<<<<< HEAD
 <<<<<<< HEAD
   m_Name: event:/Interactions/Part 2/5.2
   m_EditorClassIdentifier: 
@@ -2354,6 +2634,18 @@ MonoBehaviour:
   Banks:
   - {fileID: 3004629194860046456}
 >>>>>>> 4ca572b1b60a43dd2d3de7bd8b05dcee900d939e
+=======
+  m_Name: event:/Events/Miser/Miser1_Enter
+  m_EditorClassIdentifier: 
+  Path: event:/Events/Miser/Miser1_Enter
+  Guid:
+    Data1: 1950678822
+    Data2: 1257656094
+    Data3: 1922056849
+    Data4: -852207506
+  Banks:
+  - {fileID: 3004629194860046456}
+>>>>>>> 4ca572b1b60a43dd2d3de7bd8b05dcee900d939e
   IsStream: 0
   Is3D: 0
   IsOneShot: 1
@@ -2362,7 +2654,11 @@ MonoBehaviour:
   MaxDistance: 20
   Length: 0
 <<<<<<< HEAD
+<<<<<<< HEAD
 --- !u!114 &3344062741200226052
+=======
+--- !u!114 &7464838002800523802
+>>>>>>> 4ca572b1b60a43dd2d3de7bd8b05dcee900d939e
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -2372,6 +2668,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+<<<<<<< HEAD
   m_Name: event:/Interactions/Part 3/8.3
   m_EditorClassIdentifier: 
   Path: event:/Interactions/Part 3/8.3
@@ -2382,6 +2679,18 @@ MonoBehaviour:
     Data4: -1858296930
   Banks:
   - {fileID: 2736820969436583162}
+=======
+  m_Name: event:/Interactions/Part 2/3.1
+  m_EditorClassIdentifier: 
+  Path: event:/Interactions/Part 2/3.1
+  Guid:
+    Data1: 2018383093
+    Data2: 1244568128
+    Data3: -928991845
+    Data4: -33221537
+  Banks:
+  - {fileID: 3004629194860046456}
+>>>>>>> 4ca572b1b60a43dd2d3de7bd8b05dcee900d939e
   IsStream: 1
   Is3D: 0
   IsOneShot: 1
@@ -2389,7 +2698,11 @@ MonoBehaviour:
   MinDistance: 1
   MaxDistance: 20
   Length: 0
+<<<<<<< HEAD
 --- !u!114 &3579827338804885685
+=======
+--- !u!114 &7609040672362590814
+>>>>>>> 4ca572b1b60a43dd2d3de7bd8b05dcee900d939e
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -2399,6 +2712,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+<<<<<<< HEAD
   m_Name: event:/Interactions/Part 3/6.1
   m_EditorClassIdentifier: 
   Path: event:/Interactions/Part 3/6.1
@@ -2437,12 +2751,26 @@ MonoBehaviour:
   Banks:
   - {fileID: 2736820969436583162}
   IsStream: 0
+=======
+  m_Name: event:/Interactions/Part 2/5.2
+  m_EditorClassIdentifier: 
+  Path: event:/Interactions/Part 2/5.2
+  Guid:
+    Data1: -42841085
+    Data2: 1266977332
+    Data3: 277633444
+    Data4: 1684108936
+  Banks:
+  - {fileID: 3004629194860046456}
+  IsStream: 1
+>>>>>>> 4ca572b1b60a43dd2d3de7bd8b05dcee900d939e
   Is3D: 0
   IsOneShot: 1
   Parameters: []
   MinDistance: 1
   MaxDistance: 20
   Length: 0
+<<<<<<< HEAD
 --- !u!114 &4509208187605795832
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2608,6 +2936,9 @@ MonoBehaviour:
 =======
 --- !u!114 &7938740210075042337
 >>>>>>> 4ca572b1b60a43dd2d3de7bd8b05dcee900d939e
+=======
+--- !u!114 &7938740210075042337
+>>>>>>> 4ca572b1b60a43dd2d3de7bd8b05dcee900d939e
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -2627,7 +2958,11 @@ MonoBehaviour:
     Data4: 2106194265
   Banks:
 <<<<<<< HEAD
+<<<<<<< HEAD
   - {fileID: 2736820969436583162}
+=======
+  - {fileID: 3004629194860046456}
+>>>>>>> 4ca572b1b60a43dd2d3de7bd8b05dcee900d939e
 =======
   - {fileID: 3004629194860046456}
 >>>>>>> 4ca572b1b60a43dd2d3de7bd8b05dcee900d939e
@@ -2638,6 +2973,7 @@ MonoBehaviour:
   MinDistance: 1
   MaxDistance: 20
   Length: 0
+<<<<<<< HEAD
 <<<<<<< HEAD
 --- !u!114 &6948864476002312688
 MonoBehaviour:
@@ -2724,6 +3060,9 @@ MonoBehaviour:
 =======
 --- !u!114 &7985350450543733866
 >>>>>>> 4ca572b1b60a43dd2d3de7bd8b05dcee900d939e
+=======
+--- !u!114 &7985350450543733866
+>>>>>>> 4ca572b1b60a43dd2d3de7bd8b05dcee900d939e
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -2743,7 +3082,11 @@ MonoBehaviour:
     Data4: 318381963
   Banks:
 <<<<<<< HEAD
+<<<<<<< HEAD
   - {fileID: 2736820969436583162}
+=======
+  - {fileID: 3004629194860046456}
+>>>>>>> 4ca572b1b60a43dd2d3de7bd8b05dcee900d939e
 =======
   - {fileID: 3004629194860046456}
 >>>>>>> 4ca572b1b60a43dd2d3de7bd8b05dcee900d939e
@@ -2755,7 +3098,11 @@ MonoBehaviour:
   MaxDistance: 20
   Length: 0
 <<<<<<< HEAD
+<<<<<<< HEAD
 --- !u!114 &8439146766457333481
+=======
+--- !u!114 &8499950339219959948
+>>>>>>> 4ca572b1b60a43dd2d3de7bd8b05dcee900d939e
 =======
 --- !u!114 &8499950339219959948
 >>>>>>> 4ca572b1b60a43dd2d3de7bd8b05dcee900d939e
@@ -2769,6 +3116,7 @@ MonoBehaviour:
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
 <<<<<<< HEAD
+<<<<<<< HEAD
   m_Name: event:/Interactions/Part 3/6.2
   m_EditorClassIdentifier: 
   Path: event:/Interactions/Part 3/6.2
@@ -2780,6 +3128,8 @@ MonoBehaviour:
   Banks:
   - {fileID: 2736820969436583162}
 =======
+=======
+>>>>>>> 4ca572b1b60a43dd2d3de7bd8b05dcee900d939e
   m_Name: event:/Interactions/Part 3/8.3
   m_EditorClassIdentifier: 
   Path: event:/Interactions/Part 3/8.3
@@ -2790,6 +3140,9 @@ MonoBehaviour:
     Data4: -1858296930
   Banks:
   - {fileID: 3004629194860046456}
+<<<<<<< HEAD
+>>>>>>> 4ca572b1b60a43dd2d3de7bd8b05dcee900d939e
+=======
 >>>>>>> 4ca572b1b60a43dd2d3de7bd8b05dcee900d939e
   IsStream: 1
   Is3D: 0
@@ -2799,7 +3152,11 @@ MonoBehaviour:
   MaxDistance: 20
   Length: 0
 <<<<<<< HEAD
+<<<<<<< HEAD
 --- !u!114 &8716769491785984612
+=======
+--- !u!114 &8708740045748516198
+>>>>>>> 4ca572b1b60a43dd2d3de7bd8b05dcee900d939e
 =======
 --- !u!114 &8708740045748516198
 >>>>>>> 4ca572b1b60a43dd2d3de7bd8b05dcee900d939e
@@ -2822,7 +3179,11 @@ MonoBehaviour:
     Data4: -1820417497
   Banks:
 <<<<<<< HEAD
+<<<<<<< HEAD
   - {fileID: 2736820969436583162}
+=======
+  - {fileID: 3004629194860046456}
+>>>>>>> 4ca572b1b60a43dd2d3de7bd8b05dcee900d939e
 =======
   - {fileID: 3004629194860046456}
 >>>>>>> 4ca572b1b60a43dd2d3de7bd8b05dcee900d939e
@@ -2834,7 +3195,11 @@ MonoBehaviour:
   MaxDistance: 20
   Length: 0
 <<<<<<< HEAD
+<<<<<<< HEAD
 --- !u!114 &9148228124153158623
+=======
+--- !u!114 &9029105901087601234
+>>>>>>> 4ca572b1b60a43dd2d3de7bd8b05dcee900d939e
 =======
 --- !u!114 &9029105901087601234
 >>>>>>> 4ca572b1b60a43dd2d3de7bd8b05dcee900d939e
@@ -2848,6 +3213,7 @@ MonoBehaviour:
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
 <<<<<<< HEAD
+<<<<<<< HEAD
   m_Name: event:/Train/Train Horn
   m_EditorClassIdentifier: 
   Path: event:/Train/Train Horn
@@ -2859,6 +3225,8 @@ MonoBehaviour:
   Banks:
   - {fileID: 2736820969436583162}
 =======
+=======
+>>>>>>> 4ca572b1b60a43dd2d3de7bd8b05dcee900d939e
   m_Name: event:/UI/Sword Use
   m_EditorClassIdentifier: 
   Path: event:/UI/Sword Use
@@ -2923,6 +3291,9 @@ MonoBehaviour:
     Data4: 1924209560
   Banks:
   - {fileID: 3004629194860046456}
+<<<<<<< HEAD
+>>>>>>> 4ca572b1b60a43dd2d3de7bd8b05dcee900d939e
+=======
 >>>>>>> 4ca572b1b60a43dd2d3de7bd8b05dcee900d939e
   IsStream: 0
   Is3D: 0
