@@ -25,8 +25,16 @@ public class EventGate : MonoBehaviour
 
         SetUpMinimapIcon();
 
-        sphereTrigger.enabled = true;
-        eventTrigger.enabled = false;
+        if (sphereTrigger != null)
+        {
+            sphereTrigger.enabled = true;
+            eventTrigger.enabled = false;
+        }
+        else
+        {
+            eventTrigger.enabled = true;
+        }
+
     }
 
     private void SetUpMinimapIcon()
@@ -44,7 +52,7 @@ public class EventGate : MonoBehaviour
 
         if (other.CompareTag("Train"))
         {
-            if (sphereTrigger.enabled)
+            if (sphereTrigger && sphereTrigger.enabled)
             {
                 sphereTrigger.enabled = false;
                 eventTrigger.enabled = true;
