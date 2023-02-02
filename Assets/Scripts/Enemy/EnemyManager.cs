@@ -19,6 +19,7 @@ public class EnemyManager : MonoBehaviour
 
     [Space(10)] [Header("Distance")] [SerializeField]
     private float maxDistanceToCreateNewEnemy = 20f;
+
     [SerializeField] private float minDistanceToCreateNewEnemy = 10f;
 
     [Space(10)] [Header("Angle")] [SerializeField]
@@ -28,23 +29,36 @@ public class EnemyManager : MonoBehaviour
     [Space(10)] [Header("Times")] [SerializeField]
     private float addEnemiesTime = 3f;
 
+    [SerializeField] private float maxTimeToCreatEnemy = 8f;
+    [SerializeField] private float creatEnemyTimer;
+
     private bool _wait;
 
     private float _addEnemiesTimer;
-    
+
+    [Space(10)] [Header("Close Enemies")] public bool lockEnemies = true;
+    public bool closeEnemies;
+
     [Space(10)] [Header("Tests")] [SerializeField]
     private bool creatEnemy;
 
     [SerializeField] private bool creatCloseEnemy;
-    // [Space(10)] [Header("Speed")] [SerializeField]
-    // private float speedToCreatEnemy;
-    
-    // [Space(10)] [Header("Times")]
-    // Start is called before the first frame update
+
 
     private void Awake()
     {
+        creatEnemyTimer = maxTimeToCreatEnemy;
         _addEnemiesTimer = addEnemiesTime;
+    }
+
+
+    private void CloseAndLockEnemies()
+    {
+        if (closeEnemies) return;
+        closeEnemies = true;
+        var objects = FindObjectsOfType<Enemy>();
+        foreach (var obj in objects)
+            obj.gameObject.SetActive(false);
     }
 
     void Start()
@@ -54,6 +68,11 @@ public class EnemyManager : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        if (lockEnemies)
+            CloseAndLockEnemies();
+        else
+            closeEnemies = false;
+
         if (!_eventManager)
             _eventManager = GameManager.Shared.GetEventManager();
 
@@ -66,16 +85,17 @@ public class EnemyManager : MonoBehaviour
                 _addEnemiesTimer = addEnemiesTime;
             }
         }
-        
+
         if (!_wait && (CanCreateNewEnemy() || creatEnemy))
             CreateNewEnemy();
-        
     }
 
     public void AttackTrain(Enemy curEnemy = null)
     {
+        if (lockEnemies) return;
         if (enemyEvent)
-        {    _eventManager = GameManager.Shared.GetEventManager();
+        {
+            _eventManager = GameManager.Shared.GetEventManager();
             _eventManager.StartInteraction(enemyEvent);
         }
 
@@ -89,13 +109,11 @@ public class EnemyManager : MonoBehaviour
             Destroy(curEnemy.gameObject);
             DecreesEnemiesAmount();
         }
-        
     }
 
     private void DecreesEnemiesAmount()
     {
-        _enemiesAmount = Mathf.Max(0, _enemiesAmount-1);
-
+        _enemiesAmount = Mathf.Max(0, _enemiesAmount - 1);
     }
 
     /**
@@ -104,13 +122,21 @@ public class EnemyManager : MonoBehaviour
      */
     private bool CanCreateNewEnemy()
     {
+        
         if (_enemiesAmount >= enemiesAmountMax) return false;
         var curTrainState = GameManager.Shared.GetSpeedState();
-        return curTrainState == GameManager.SpeedState.Low;
+        creatEnemyTimer -= Time.deltaTime;
+        bool ret = creatEnemyTimer <= 0 || curTrainState == GameManager.SpeedState.Low;
+
+        if (ret)
+            creatEnemyTimer = maxTimeToCreatEnemy;
+
+        return ret;
     }
 
     private void CreateNewEnemy()
     {
+        if (lockEnemies) return;
         _wait = true;
         creatEnemy = false;
         _enemiesAmount += 1;
@@ -123,10 +149,10 @@ public class EnemyManager : MonoBehaviour
         {
             distant = 100f;
         }
-        
+
         var directionAndLength = distant * oppositeDirection;
 
-        var randomRotationAngle = Random.Range(-rotationAngle , rotationAngle );
+        var randomRotationAngle = Random.Range(-rotationAngle, rotationAngle);
         var newDirectionVector = Quaternion.AngleAxis(randomRotationAngle, Vector3.up) * directionAndLength;
 
         var trainPos = GameManager.Shared.GetTrainPosition();
