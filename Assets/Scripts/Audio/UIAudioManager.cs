@@ -11,6 +11,8 @@ public class UIAudioManager : MonoBehaviour
     [Header("UI Sounds")] [SerializeField] private EventReference uiClick;
     [SerializeField] private EventReference uiHover;
     [SerializeField] private EventReference uiEventStart;
+    [SerializeField] private EventReference clickSwordSound;
+    [SerializeField] private EventReference clickShieldSound;
 
     [Header("Train Sounds")] [SerializeField]
     private EventReference trainHorn;
@@ -71,6 +73,16 @@ public class UIAudioManager : MonoBehaviour
     public void PlayBurnCoal()
     {
         RuntimeManager.PlayOneShot(burnCoal);
+    }
+    
+    public void PlayClickSwordSound()
+    {
+        RuntimeManager.PlayOneShot(clickSwordSound);
+    }
+    
+    public void PlayClickShieldSound()
+    {
+        RuntimeManager.PlayOneShot(clickShieldSound);
     }
 
 
