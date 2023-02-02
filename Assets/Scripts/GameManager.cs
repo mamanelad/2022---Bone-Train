@@ -396,6 +396,7 @@ public class GameManager : MonoBehaviour
         
         GoodSouls = Math.Max(0, GoodSouls + addNum);
         _uiManager.SetGoodSouls();
+        gameData.goodSoulsAmount = GoodSouls;
         _soulsCircle.ChangeSoulsAmount();
         if (GoodSouls == 0) GameOver();
     }

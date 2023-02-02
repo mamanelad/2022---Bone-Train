@@ -9,14 +9,9 @@ public class SoulParticle : MonoBehaviour
     [SerializeField] private float timeToLive;
     [SerializeField] private float maxMove;
     [SerializeField] private float minMove;
-    public float lerpAmount = 0.5f;
-    
-    private int counter;
-    
-    //
-    // public float speed = 10.0f;
-    // public Vector3 direction;
-    
+
+
+
     public float speed = 10.0f;
     public float radius = 5.0f;
     private float angle;
@@ -67,10 +62,6 @@ public class SoulParticle : MonoBehaviour
         }
         oldScale = newScale;
         transform.localScale = newScale;
-
-        //     
-        //         direction = new Vector3(Random.Range(-1.0f, 1.0f), 1, Random.Range(-1.0f, 1.0f));
-        //         
-        //     
+        
     }
 }
