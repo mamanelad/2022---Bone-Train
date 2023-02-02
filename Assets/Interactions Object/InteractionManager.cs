@@ -74,7 +74,7 @@ public class InteractionManager : MonoBehaviour
         if (goodSoulsAdded)
             GameManager.Shared.OpenGoodSoulTuturial();
         if (badSoulsAdded)
-            GameManager.Shared.OpenGoodSoulTuturial();
+            GameManager.Shared.OpenBadsoulTuturial();
     }
 
     public void LoadInteraction()

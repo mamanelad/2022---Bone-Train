@@ -8,7 +8,7 @@ public class FinishGameGate : MonoBehaviour
 {
     [SerializeField] private Animator fadeOutAnimator;
     [SerializeField] private GameObject fadeOutGameObject;
-
+    [SerializeField] private KeyCode exitKey = KeyCode.Escape;
     private void OnTriggerEnter(Collider other)
     {
         if (other.CompareTag("Train"))
@@ -22,5 +22,13 @@ public class FinishGameGate : MonoBehaviour
         fadeOutAnimator.SetTrigger("Fade Out");
         yield return new WaitForSeconds(5f);
         SceneManager.LoadScene("Game win", LoadSceneMode.Single);
+    }
+    
+    private void Update()
+    {
+        if(Input.GetKey(exitKey))
+        {
+            Application.Quit();
+        }
     }
 }
