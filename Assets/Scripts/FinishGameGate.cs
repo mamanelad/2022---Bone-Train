@@ -19,12 +19,15 @@ public class FinishGameGate : MonoBehaviour
             
     }
 
-    private IEnumerator FadeOut()
+    public IEnumerator FadeOut(bool lostGame = false)
     {
         // stop eating boolean
         fadeOutGameObject.SetActive(true);
         fadeOutAnimator.SetTrigger("Fade Out");
         yield return new WaitForSeconds(5f);
-        SceneManager.LoadScene("Game win", LoadSceneMode.Single);
+        if (lostGame)
+            SceneManager.LoadScene("Game lose", LoadSceneMode.Single);
+        else
+            SceneManager.LoadScene("Game win", LoadSceneMode.Single);
     }
 }

@@ -1,4 +1,5 @@
 using System;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEditor;
 using UnityEngine;
@@ -423,8 +424,14 @@ public class GameManager : MonoBehaviour
             if (devilEvent == null)
                 print("No devil event");
             else
-                _interactionManager.StartInteraction(devilEvent);
+                StartCoroutine(StartDevilEvent());
         }
+    }
+
+    private IEnumerator StartDevilEvent()
+    {
+        yield return new WaitForSeconds(0.5f);
+        _interactionManager.StartInteraction(devilEvent);
     }
 
     public int GetSoulStones()
@@ -804,7 +811,8 @@ public class GameManager : MonoBehaviour
 
     public void GameOver()
     {
-        SceneManager.LoadScene("Game lose");
+        StopTrain();
+        StartCoroutine(FindObjectOfType<FinishGameGate>().FadeOut(true));
     }
 }
 
