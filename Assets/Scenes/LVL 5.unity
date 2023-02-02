@@ -4741,6 +4741,17 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 302018337}
   m_Mesh: {fileID: -6940246184706110475, guid: ea593facc8051344d8235e3c15c15002, type: 3}
+--- !u!114 &305483107 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 4630044781313961318, guid: f8a337fa67b5c5049bc9d0cff64a23c4, type: 3}
+  m_PrefabInstance: {fileID: 1493355842}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 05b9893517ed14447bf3284cbe94a337, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &310148290
 GameObject:
   m_ObjectHideFlags: 0
@@ -22481,17 +22492,6 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 52770447584282322, guid: 63c220246fd4b54478ee834892b14d03, type: 3}
   m_PrefabInstance: {fileID: 1334174107}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &1337493861 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 7135523843903143886, guid: f8a337fa67b5c5049bc9d0cff64a23c4, type: 3}
-  m_PrefabInstance: {fileID: 1493355842}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 05b9893517ed14447bf3284cbe94a337, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1001 &1337584477
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -26125,7 +26125,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5284306571700769047, guid: f8a337fa67b5c5049bc9d0cff64a23c4, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 7457643688509664045, guid: f8a337fa67b5c5049bc9d0cff64a23c4, type: 3}
       propertyPath: m_Sprite
@@ -44362,8 +44362,8 @@ MonoBehaviour:
   takeDownDragBadSouls: -10
   arrowsAreOnSlowMotionTimeScale: 0.173
   regularTimeScale: 1
-  _tutorialIsOn: 0
-  _tutorial: {fileID: 1337493861}
+  _tutorialIsOn: 1
+  _tutorial: {fileID: 305483107}
   testArrows0: 0
   testArrows: 1
   openArrows: 0
