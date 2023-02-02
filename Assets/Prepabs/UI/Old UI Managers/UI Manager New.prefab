@@ -7405,12 +7405,13 @@ MonoBehaviour:
   minFillAmount: 0
   maxFillAmount: 0.25
   addToBlack: 0.017
-  changeBarTime: 0.1
-  addFillBy: 0.1
-  eatGoodSoulsPercentage: 0
-  eatGoodSoulsTime: 1
-  test: 0
-  goodSoulsTest: 100
+  changeBarTime: 0.55
+  addFillBy: 0.045
+  eatGoodSoulsPercentage: 0.01
+  eatGoodSoulsTime: 1.5
+  _lock: 0
+  test: 1
+  goodSoulsTest: 1000
   badSoulsTest: 100
 --- !u!1 &7729622835430331731
 GameObject:
