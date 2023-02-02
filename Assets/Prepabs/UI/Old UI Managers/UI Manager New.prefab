@@ -8069,7 +8069,9 @@ MonoBehaviour:
   InteractionWorkWith: 
   arrowsWorkWith: 
   speedBar: {fileID: 1711490449320883408}
-  speedBarAdd: 0.01
+  maxFillValue: 0.85
+  minFillValue: 0.2
+  speedBarAdd: 0.005
 --- !u!1 &8477522200181223058
 GameObject:
   m_ObjectHideFlags: 0

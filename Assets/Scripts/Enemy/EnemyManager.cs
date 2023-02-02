@@ -41,8 +41,8 @@ public class EnemyManager : MonoBehaviour
 
     [Space(10)] [Header("Tests")] [SerializeField]
     private bool creatEnemy;
-
-    [SerializeField] private bool creatCloseEnemy;
+    //
+    // [SerializeField] private bool creatCloseEnemy;
 
 
     private void Awake()
@@ -145,10 +145,10 @@ public class EnemyManager : MonoBehaviour
         var distanceToCreat = Random.Range(minDistanceToCreateNewEnemy, maxDistanceToCreateNewEnemy);
 
         var distant = distanceToCreat;
-        if (creatCloseEnemy)
-        {
-            distant = 100f;
-        }
+        // if (creatCloseEnemy)
+        // {
+        //     distant = 100f;
+        // }
 
         var directionAndLength = distant * oppositeDirection;
 

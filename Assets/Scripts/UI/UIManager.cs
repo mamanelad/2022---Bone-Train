@@ -41,6 +41,9 @@ public class UIManager : MonoBehaviour
 
     [Space(10)] [Header("Speed Bar")] [SerializeField]
     private Image speedBar;
+
+    [SerializeField] private float maxFillValue = 0.75f;
+    [SerializeField] private float minFillValue = 0.2f;
     [SerializeField][Range(0,1)] private float speedBarAdd = 0.5f;
 
     private void Start()
@@ -60,6 +63,8 @@ public class UIManager : MonoBehaviour
     {
         var wantedFill = Mathf.InverseLerp(0, GameManager.Shared.GetMaxSpeed(), GameManager.Shared.GetSpeed());
         var newFill = Mathf.Lerp(speedBar.fillAmount, wantedFill, speedBarAdd);
+        newFill = Math.Min(newFill, maxFillValue);
+        newFill = Math.Max(newFill, minFillValue);
         speedBar.fillAmount = newFill;
 
     }

@@ -66,15 +66,15 @@ public class Furnace : MonoBehaviour
 
             var amountToDecrees = decreesSpeedLow;
 
-            switch (speedState)
-            {
-                case GameManager.SpeedState.Stop:
-                    return;
-
-                case GameManager.SpeedState.Low:
-                    amountToDecrees = decreesSpeedHigh; 
-                    break;
-            }
+            // switch (speedState)
+            // {
+            //     case GameManager.SpeedState.Stop:
+            //         return;
+            //
+            //     case GameManager.SpeedState.Low:
+            //         amountToDecrees = lo; 
+            //         break;
+            // }
 
             var newSpeed = GameManager.Shared.GetSpeed() - amountToDecrees;
             
