@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c86e91921e9ba5e419d15579e50b8591, type: 3}
   m_Name: Special Dog Bad
   m_EditorClassIdentifier: 
-  character: {fileID: 0}
+  character: {fileID: 21300000, guid: d82c6e0c4bbb93842abb969d9403dc5b, type: 3}
   audio:
     Guid:
       Data1: 1424553589
