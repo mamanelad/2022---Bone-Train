@@ -6562,7 +6562,7 @@ MonoBehaviour:
   - {fileID: 5813522346333961599}
   - {fileID: 8116413372151986493}
   - {fileID: 8075017681491915640}
-  handleShowTime: 1.5
+  handleShowTime: 0
   fuelShowTime: 4
   test: 0
 --- !u!1 &7319555655858469417
