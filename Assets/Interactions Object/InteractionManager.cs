@@ -20,7 +20,7 @@ public class InteractionManager : MonoBehaviour
     [SerializeField] private TextMeshProUGUI textBox;
 
     [SerializeField] private LoadIcon icon;
-    
+
     [SerializeField] private List<GameObject> optionsGameObjects;
     [SerializeField] private Animator itemAnimator;
     private bool isItemPoleUp = true;
@@ -60,10 +60,10 @@ public class InteractionManager : MonoBehaviour
     public IEnumerator EndInteractionRoutine()
     {
         yield return new WaitForSecondsRealtime(0.2f);
-        
+
         if (isItemPoleUp)
             itemAnimator.SetTrigger(Down);
-        
+
         interactionAudio.stop(STOP_MODE.ALLOWFADEOUT);
         DisableOptions();
         UIAudioManager.Instance.ResumeTrainLoop();
@@ -75,7 +75,6 @@ public class InteractionManager : MonoBehaviour
             GameManager.Shared.OpenGoodSoulTuturial();
         if (badSoulsAdded)
             GameManager.Shared.OpenGoodSoulTuturial();
-
     }
 
     public void LoadInteraction()
@@ -103,22 +102,24 @@ public class InteractionManager : MonoBehaviour
             optionCounter += 1;
         }
     }
-    
+
     public void ChooseOption(LoadOption.Option option)
     {
         GameManager.Shared.ChangeByGoodSouls(option.goodSouls);
         GameManager.Shared.ChangeByBadSouls(option.badSouls);
         GameManager.Shared.ChangeBySoulStones(option.soulsStones);
-        
+
         goodSoulsAdded = option.goodSouls > 0;
         badSoulsAdded = option.badSouls > 0;
-        
+
         if (option.sword)
             GameManager.Shared.ChangeBySwords(1);
         if (option.shield)
             GameManager.Shared.ChangeByShields(1);
         if (!option.sound.IsNull)
             RuntimeManager.PlayOneShot(option.sound);
+
+        UseOptionTag(option.tag);
 
         EndInteraction();
     }
@@ -127,7 +128,7 @@ public class InteractionManager : MonoBehaviour
     {
         if (index == SWORD && GameManager.Shared.Swords > 0)
             ActivateSword();
-    
+
         if (index == SHIELD && GameManager.Shared.Shields > 0)
             ActivateShield();
     }
@@ -177,6 +178,31 @@ public class InteractionManager : MonoBehaviour
         foreach (var option in optionsGameObjects)
         {
             option.GetComponent<LoadOption>().SetTutorialObject(tutorial);
+        }
+    }
+
+    private void UseOptionTag(string tag)
+    {
+        if (tag == "")
+            return;
+
+        SpecialInteractionHandler handler = FindObjectOfType<SpecialInteractionHandler>();
+        if (tag == "GOOD DOG")
+        {
+            print("Changed to good dog end");
+            handler.SetDogGood();
+        }
+
+        if (tag == "GOOD MOM")
+        {
+            print("Changed to good mom end");
+            handler.SetMomGood();
+        }
+
+        if (tag == "GOOD DEMON")
+        {
+            print("Changed to good demon end");
+            handler.SetDemonGood();
         }
     }
 }
