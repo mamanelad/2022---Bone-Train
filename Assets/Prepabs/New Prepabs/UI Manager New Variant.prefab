@@ -43,6 +43,10 @@ PrefabInstance:
       propertyPath: m_AnchoredPosition.y
       value: -209.27293
       objectReference: {fileID: 0}
+    - target: {fileID: 2263186252688523534, guid: 832cb521db0a2594da2f3b5854b90c86, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 2535666530027246694, guid: 832cb521db0a2594da2f3b5854b90c86, type: 3}
       propertyPath: m_AnchoredPosition.x
       value: 0
@@ -63,6 +67,26 @@ PrefabInstance:
       propertyPath: m_AnchoredPosition.y
       value: 75
       objectReference: {fileID: 0}
+    - target: {fileID: 3394705542675068479, guid: 832cb521db0a2594da2f3b5854b90c86, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3794356606853425261, guid: 832cb521db0a2594da2f3b5854b90c86, type: 3}
+      propertyPath: m_fontAsset
+      value: 
+      objectReference: {fileID: 11400000, guid: f117c3645a210324fa84dddf372021cf, type: 2}
+    - target: {fileID: 3794356606853425261, guid: 832cb521db0a2594da2f3b5854b90c86, type: 3}
+      propertyPath: m_sharedMaterial
+      value: 
+      objectReference: {fileID: -742034729039544998, guid: f117c3645a210324fa84dddf372021cf, type: 2}
+    - target: {fileID: 3970994616405308017, guid: 832cb521db0a2594da2f3b5854b90c86, type: 3}
+      propertyPath: m_fontAsset
+      value: 
+      objectReference: {fileID: 11400000, guid: f117c3645a210324fa84dddf372021cf, type: 2}
+    - target: {fileID: 3970994616405308017, guid: 832cb521db0a2594da2f3b5854b90c86, type: 3}
+      propertyPath: m_sharedMaterial
+      value: 
+      objectReference: {fileID: -742034729039544998, guid: f117c3645a210324fa84dddf372021cf, type: 2}
     - target: {fileID: 4431861655446008432, guid: 832cb521db0a2594da2f3b5854b90c86, type: 3}
       propertyPath: m_Sprite
       value: 
@@ -102,6 +126,14 @@ PrefabInstance:
     - target: {fileID: 4592040525470580117, guid: 832cb521db0a2594da2f3b5854b90c86, type: 3}
       propertyPath: mouseOverColor.r
       value: 0.49019608
+      objectReference: {fileID: 0}
+    - target: {fileID: 5747399584398235226, guid: 832cb521db0a2594da2f3b5854b90c86, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5952379546963329384, guid: 832cb521db0a2594da2f3b5854b90c86, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6204973101719732498, guid: 832cb521db0a2594da2f3b5854b90c86, type: 3}
       propertyPath: m_IsActive
@@ -147,6 +179,10 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 7319555655858469417, guid: 832cb521db0a2594da2f3b5854b90c86, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 7343203590258013952, guid: 832cb521db0a2594da2f3b5854b90c86, type: 3}
       propertyPath: m_IsActive
       value: 0
@@ -155,6 +191,14 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 7499405741058057202, guid: 832cb521db0a2594da2f3b5854b90c86, type: 3}
+      propertyPath: m_fontAsset
+      value: 
+      objectReference: {fileID: 11400000, guid: f117c3645a210324fa84dddf372021cf, type: 2}
+    - target: {fileID: 7499405741058057202, guid: 832cb521db0a2594da2f3b5854b90c86, type: 3}
+      propertyPath: m_sharedMaterial
+      value: 
+      objectReference: {fileID: -742034729039544998, guid: f117c3645a210324fa84dddf372021cf, type: 2}
     - target: {fileID: 7686474392751645942, guid: 832cb521db0a2594da2f3b5854b90c86, type: 3}
       propertyPath: m_AnchoredPosition.x
       value: 0
@@ -167,6 +211,14 @@ PrefabInstance:
       propertyPath: eatGoodSoulsPercentage
       value: 0.1
       objectReference: {fileID: 0}
+    - target: {fileID: 7766191981039575998, guid: 832cb521db0a2594da2f3b5854b90c86, type: 3}
+      propertyPath: m_fontAsset
+      value: 
+      objectReference: {fileID: 11400000, guid: f117c3645a210324fa84dddf372021cf, type: 2}
+    - target: {fileID: 7766191981039575998, guid: 832cb521db0a2594da2f3b5854b90c86, type: 3}
+      propertyPath: m_sharedMaterial
+      value: 
+      objectReference: {fileID: -742034729039544998, guid: f117c3645a210324fa84dddf372021cf, type: 2}
     - target: {fileID: 8128807457174154500, guid: 832cb521db0a2594da2f3b5854b90c86, type: 3}
       propertyPath: m_AnchoredPosition.x
       value: 0
@@ -274,6 +326,18 @@ PrefabInstance:
     - target: {fileID: 8477522200181223052, guid: 832cb521db0a2594da2f3b5854b90c86, type: 3}
       propertyPath: addToPositionX
       value: -250
+      objectReference: {fileID: 0}
+    - target: {fileID: 8775859888441091715, guid: 832cb521db0a2594da2f3b5854b90c86, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9133442859291552972, guid: 832cb521db0a2594da2f3b5854b90c86, type: 3}
+      propertyPath: m_text
+      value: 'pull the  handle To stop or start your train  '
+      objectReference: {fileID: 0}
+    - target: {fileID: 9162342231007060896, guid: 832cb521db0a2594da2f3b5854b90c86, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 832cb521db0a2594da2f3b5854b90c86, type: 3}

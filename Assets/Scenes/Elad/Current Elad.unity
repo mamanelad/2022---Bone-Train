@@ -19688,6 +19688,18 @@ PrefabInstance:
       propertyPath: m_AnchoredPosition.y
       value: -70
       objectReference: {fileID: 0}
+    - target: {fileID: 3226551652576000649, guid: f8a337fa67b5c5049bc9d0cff64a23c4, type: 3}
+      propertyPath: m_FillAmount
+      value: 0.137
+      objectReference: {fileID: 0}
+    - target: {fileID: 3226551652576000650, guid: f8a337fa67b5c5049bc9d0cff64a23c4, type: 3}
+      propertyPath: m_SizeDelta.y
+      value: 545.3209
+      objectReference: {fileID: 0}
+    - target: {fileID: 3226551652576000650, guid: f8a337fa67b5c5049bc9d0cff64a23c4, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: -136.00159
+      objectReference: {fileID: 0}
     - target: {fileID: 3226551652577162254, guid: f8a337fa67b5c5049bc9d0cff64a23c4, type: 3}
       propertyPath: m_text
       value: Drive in your desired direction by selecting an Arrow.
@@ -19856,6 +19868,26 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 3226551653729351297, guid: f8a337fa67b5c5049bc9d0cff64a23c4, type: 3}
+      propertyPath: m_Color.a
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3226551653729351297, guid: f8a337fa67b5c5049bc9d0cff64a23c4, type: 3}
+      propertyPath: m_Color.b
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3226551653729351297, guid: f8a337fa67b5c5049bc9d0cff64a23c4, type: 3}
+      propertyPath: m_Color.g
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3226551653729351297, guid: f8a337fa67b5c5049bc9d0cff64a23c4, type: 3}
+      propertyPath: m_Color.r
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3226551653729351297, guid: f8a337fa67b5c5049bc9d0cff64a23c4, type: 3}
+      propertyPath: m_FillAmount
+      value: 0.116
+      objectReference: {fileID: 0}
     - target: {fileID: 3226551653784298436, guid: f8a337fa67b5c5049bc9d0cff64a23c4, type: 3}
       propertyPath: m_SizeDelta.x
       value: 500.4567
@@ -19879,6 +19911,22 @@ PrefabInstance:
     - target: {fileID: 3226551653844591549, guid: f8a337fa67b5c5049bc9d0cff64a23c4, type: 3}
       propertyPath: eatGoodSoulsPercentage
       value: 0.05
+      objectReference: {fileID: 0}
+    - target: {fileID: 3226551654064996360, guid: f8a337fa67b5c5049bc9d0cff64a23c4, type: 3}
+      propertyPath: m_Color.a
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3226551654064996360, guid: f8a337fa67b5c5049bc9d0cff64a23c4, type: 3}
+      propertyPath: m_Color.b
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3226551654064996360, guid: f8a337fa67b5c5049bc9d0cff64a23c4, type: 3}
+      propertyPath: m_Color.g
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3226551654064996360, guid: f8a337fa67b5c5049bc9d0cff64a23c4, type: 3}
+      propertyPath: m_Color.r
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 3226551654084362164, guid: f8a337fa67b5c5049bc9d0cff64a23c4, type: 3}
       propertyPath: m_IsActive
@@ -20118,7 +20166,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5284306571700769047, guid: f8a337fa67b5c5049bc9d0cff64a23c4, type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5573105868876046283, guid: f8a337fa67b5c5049bc9d0cff64a23c4, type: 3}
       propertyPath: m_Color.a

@@ -8,6 +8,7 @@ using UnityEngine.UI;
 
 public class SoulsCircle : MonoBehaviour
 {
+    
     [SerializeField] private Image badSoulsImage;
     [SerializeField] private Image blackMarkImage;
     [SerializeField] [Range(0f, 0.25f)] private float fillAmountOld;

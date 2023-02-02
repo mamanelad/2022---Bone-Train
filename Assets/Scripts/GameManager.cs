@@ -119,7 +119,7 @@ public class GameManager : MonoBehaviour
 
     [Space(20)] [Header("Check PointS")] private CheckPointData _CheckPointData;
     
-    [Space(10)][Header("Keyboard")] [SerializeField] private KeyCode closeTutorialsKey;
+    [Space(10)][Header("Keyboard")] [SerializeField] private KeyCode closeTutorialsKey = KeyCode.T;
     
     
 
