@@ -7,9 +7,8 @@ using UnityEngine.SceneManagement;
 public class FinishGameGate : MonoBehaviour
 {
     [SerializeField] private Animator fadeOutAnimator;
-    
-    
-    
+    [SerializeField] private GameObject fadeOutGameObject;
+
     private void OnTriggerEnter(Collider other)
     {
         if (other.CompareTag("Train"))
@@ -18,6 +17,8 @@ public class FinishGameGate : MonoBehaviour
 
     private IEnumerator FadeOut()
     {
+        // stop eating boolean
+        fadeOutGameObject.SetActive(true);
         fadeOutAnimator.SetTrigger("Fade Out");
         yield return new WaitForSeconds(5f);
         SceneManager.LoadScene("Game win", LoadSceneMode.Single);
