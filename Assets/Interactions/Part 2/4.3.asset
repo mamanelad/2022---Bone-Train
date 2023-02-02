@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c86e91921e9ba5e419d15579e50b8591, type: 3}
   m_Name: 4.3
   m_EditorClassIdentifier: 
-  character: {fileID: 21300000, guid: f8b7b2f7a1d7565499de4ee8631a9a31, type: 3}
+  character: {fileID: 21300000, guid: f20a3648caa20fb4eb59eb0923d9616f, type: 3}
   audio:
     Guid:
       Data1: 1769832423
@@ -47,6 +47,7 @@ MonoBehaviour:
       Path: 
     text: 
     odds: 0
+    tag: 
   - title: Pay with fuel
     goodSouls: 0
     badSouls: 50
@@ -62,6 +63,7 @@ MonoBehaviour:
       Path: 
     text: 
     odds: 0
+    tag: 
   - title: Walk away
     goodSouls: 0
     badSouls: 0
@@ -77,3 +79,4 @@ MonoBehaviour:
       Path: 
     text: Get nothing
     odds: 0
+    tag: 
