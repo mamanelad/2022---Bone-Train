@@ -37,7 +37,7 @@ MonoBehaviour:
     only way to escape the depths of Hell.
   options:
   - title: Pay up
-    goodSouls: -150
+    goodSouls: -200
     badSouls: 0
     soulsStones: 0
     sword: 0

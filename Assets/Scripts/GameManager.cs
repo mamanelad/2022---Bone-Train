@@ -1,6 +1,7 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using FMODUnity;
 using UnityEditor;
 using UnityEngine;
 using UnityEngine.EventSystems;
@@ -445,8 +446,8 @@ public class GameManager : MonoBehaviour
         yield return new WaitForSeconds(0.5f);
         if (SoulStones <= 0)
         {
-            _interactionManager.StartInteraction(devilEvent);
             Time.timeScale = 1;
+            _interactionManager.StartInteraction(devilEvent);
         }
     }
 
@@ -833,6 +834,7 @@ public class GameManager : MonoBehaviour
     public void GameOver()
     {
         StopTrain();
+        FindObjectOfType<EnemyManager>().lockEnemies = true;
         StartCoroutine(FindObjectOfType<FinishGameGate>().FadeOut(true));
     }
 }

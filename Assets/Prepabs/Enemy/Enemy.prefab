@@ -45,7 +45,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 74845a465a2ff9a46b04cec64394dab0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _speedPercentageFromTrainMax: 15
+  _speedPercentageFromTrainMax: 12
   _speedPercentageFromTrainMin: 8
   factorSpeed: 0.003
   distanceForAttack: 20

@@ -95,4 +95,4 @@ MonoBehaviour:
   lerpAmount: 0.5
   speed: 10
   radius: 100
-  minusScaleValue: 0.01
+  minusScaleValue: 0.005
