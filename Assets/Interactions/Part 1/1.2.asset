@@ -41,13 +41,14 @@ MonoBehaviour:
     shield: 0
     sound:
       Guid:
-        Data1: 0
-        Data2: 0
-        Data3: 0
-        Data4: 0
-      Path: 
+        Data1: -503712852
+        Data2: 1102393450
+        Data3: -2059897944
+        Data4: -1863235680
+      Path: event:/UI/Good Souls Cry
     text: 
     odds: 0
+    tag: 
   - title: Choose not to pay
     goodSouls: -50
     badSouls: 0
@@ -56,10 +57,11 @@ MonoBehaviour:
     shield: 0
     sound:
       Guid:
-        Data1: 0
-        Data2: 0
-        Data3: 0
-        Data4: 0
-      Path: 
+        Data1: -503712852
+        Data2: 1102393450
+        Data3: -2059897944
+        Data4: -1863235680
+      Path: event:/UI/Good Souls Cry
     text: Take your chance.
     odds: 80
+    tag: 

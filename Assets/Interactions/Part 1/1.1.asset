@@ -40,13 +40,14 @@ MonoBehaviour:
     shield: 0
     sound:
       Guid:
-        Data1: 0
-        Data2: 0
-        Data3: 0
-        Data4: 0
-      Path: 
+        Data1: -503712852
+        Data2: 1102393450
+        Data3: -2059897944
+        Data4: -1863235680
+      Path: event:/UI/Good Souls Cry
     text: 
     odds: 0
+    tag: 
   - title: Pay with fuel
     goodSouls: 0
     badSouls: 50
@@ -55,13 +56,14 @@ MonoBehaviour:
     shield: 0
     sound:
       Guid:
-        Data1: 0
-        Data2: 0
-        Data3: 0
-        Data4: 0
-      Path: 
+        Data1: -732775942
+        Data2: 1244771957
+        Data3: -158238327
+        Data4: -79686689
+      Path: event:/UI/Bad Souls Laugh
     text: 
     odds: 0
+    tag: 
   - title: Walk away
     goodSouls: 0
     badSouls: 0
@@ -77,3 +79,4 @@ MonoBehaviour:
       Path: 
     text: Get nothing
     odds: 0
+    tag: 
