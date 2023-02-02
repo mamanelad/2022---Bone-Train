@@ -19596,6 +19596,10 @@ PrefabInstance:
       propertyPath: m_AnchorMin.y
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 1929325538652023568, guid: f8a337fa67b5c5049bc9d0cff64a23c4, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 1929325538652023570, guid: f8a337fa67b5c5049bc9d0cff64a23c4, type: 3}
       propertyPath: shakeTime
       value: 0.3
@@ -19976,6 +19980,26 @@ PrefabInstance:
       propertyPath: m_AnchoredPosition.y
       value: 8.8
       objectReference: {fileID: 0}
+    - target: {fileID: 3260181666593471963, guid: f8a337fa67b5c5049bc9d0cff64a23c4, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3522009272170959188, guid: f8a337fa67b5c5049bc9d0cff64a23c4, type: 3}
+      propertyPath: m_SizeDelta.x
+      value: 477.6078
+      objectReference: {fileID: 0}
+    - target: {fileID: 3522009272170959188, guid: f8a337fa67b5c5049bc9d0cff64a23c4, type: 3}
+      propertyPath: m_SizeDelta.y
+      value: 243.5531
+      objectReference: {fileID: 0}
+    - target: {fileID: 3522009272170959188, guid: f8a337fa67b5c5049bc9d0cff64a23c4, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 86.3769
+      objectReference: {fileID: 0}
+    - target: {fileID: 3522009272170959188, guid: f8a337fa67b5c5049bc9d0cff64a23c4, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: -69
+      objectReference: {fileID: 0}
     - target: {fileID: 3613036061576144872, guid: f8a337fa67b5c5049bc9d0cff64a23c4, type: 3}
       propertyPath: m_Pivot.x
       value: 0
@@ -20064,6 +20088,22 @@ PrefabInstance:
       propertyPath: m_Name
       value: UI Manager
       objectReference: {fileID: 0}
+    - target: {fileID: 3613036061576144877, guid: f8a337fa67b5c5049bc9d0cff64a23c4, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3731258739762793151, guid: f8a337fa67b5c5049bc9d0cff64a23c4, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4630044781313961318, guid: f8a337fa67b5c5049bc9d0cff64a23c4, type: 3}
+      propertyPath: fuelShowTime
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 4796043146055942691, guid: f8a337fa67b5c5049bc9d0cff64a23c4, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: -70
+      objectReference: {fileID: 0}
     - target: {fileID: 4980269209558398887, guid: f8a337fa67b5c5049bc9d0cff64a23c4, type: 3}
       propertyPath: m_AnchoredPosition.x
       value: 151.4
@@ -20078,7 +20118,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5284306571700769047, guid: f8a337fa67b5c5049bc9d0cff64a23c4, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 5573105868876046283, guid: f8a337fa67b5c5049bc9d0cff64a23c4, type: 3}
       propertyPath: m_Color.a
@@ -20095,6 +20135,78 @@ PrefabInstance:
     - target: {fileID: 5573105868876046283, guid: f8a337fa67b5c5049bc9d0cff64a23c4, type: 3}
       propertyPath: m_Color.r
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6021202188827257938, guid: f8a337fa67b5c5049bc9d0cff64a23c4, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6434565236689435504, guid: f8a337fa67b5c5049bc9d0cff64a23c4, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6607435908640712411, guid: f8a337fa67b5c5049bc9d0cff64a23c4, type: 3}
+      propertyPath: myKind
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 6607435908640712411, guid: f8a337fa67b5c5049bc9d0cff64a23c4, type: 3}
+      propertyPath: stopTime
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6607435908640712411, guid: f8a337fa67b5c5049bc9d0cff64a23c4, type: 3}
+      propertyPath: slowMotionTime
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7057090400864990167, guid: f8a337fa67b5c5049bc9d0cff64a23c4, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7110989310821709426, guid: f8a337fa67b5c5049bc9d0cff64a23c4, type: 3}
+      propertyPath: m_text
+      value: Beware of the bad souls, for they have the power to corrupt good ones
+      objectReference: {fileID: 0}
+    - target: {fileID: 7110989310821709426, guid: f8a337fa67b5c5049bc9d0cff64a23c4, type: 3}
+      propertyPath: m_fontSize
+      value: 31.65
+      objectReference: {fileID: 0}
+    - target: {fileID: 7110989310821709426, guid: f8a337fa67b5c5049bc9d0cff64a23c4, type: 3}
+      propertyPath: m_margin.w
+      value: -4.3237877
+      objectReference: {fileID: 0}
+    - target: {fileID: 7110989310821709426, guid: f8a337fa67b5c5049bc9d0cff64a23c4, type: 3}
+      propertyPath: m_margin.x
+      value: -118.13359
+      objectReference: {fileID: 0}
+    - target: {fileID: 7110989310821709426, guid: f8a337fa67b5c5049bc9d0cff64a23c4, type: 3}
+      propertyPath: m_margin.y
+      value: -52.598053
+      objectReference: {fileID: 0}
+    - target: {fileID: 7110989310821709426, guid: f8a337fa67b5c5049bc9d0cff64a23c4, type: 3}
+      propertyPath: m_margin.z
+      value: -117.594604
+      objectReference: {fileID: 0}
+    - target: {fileID: 7110989310821709426, guid: f8a337fa67b5c5049bc9d0cff64a23c4, type: 3}
+      propertyPath: m_fontAsset
+      value: 
+      objectReference: {fileID: 11400000, guid: f117c3645a210324fa84dddf372021cf, type: 2}
+    - target: {fileID: 7110989310821709426, guid: f8a337fa67b5c5049bc9d0cff64a23c4, type: 3}
+      propertyPath: m_fontSizeMax
+      value: 36
+      objectReference: {fileID: 0}
+    - target: {fileID: 7110989310821709426, guid: f8a337fa67b5c5049bc9d0cff64a23c4, type: 3}
+      propertyPath: m_fontSizeMin
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 7110989310821709426, guid: f8a337fa67b5c5049bc9d0cff64a23c4, type: 3}
+      propertyPath: m_sharedMaterial
+      value: 
+      objectReference: {fileID: -742034729039544998, guid: f117c3645a210324fa84dddf372021cf, type: 2}
+    - target: {fileID: 7110989310821709426, guid: f8a337fa67b5c5049bc9d0cff64a23c4, type: 3}
+      propertyPath: m_enableAutoSizing
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7110989310821709426, guid: f8a337fa67b5c5049bc9d0cff64a23c4, type: 3}
+      propertyPath: m_HorizontalAlignment
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 7135523843903143886, guid: f8a337fa67b5c5049bc9d0cff64a23c4, type: 3}
       propertyPath: tutorialObjects.Array.size
@@ -20136,6 +20248,10 @@ PrefabInstance:
       propertyPath: m_Sprite
       value: 
       objectReference: {fileID: 36459952, guid: 88468806d67ba5543aa10af74222f54c, type: 3}
+    - target: {fileID: 8950603609114439914, guid: f8a337fa67b5c5049bc9d0cff64a23c4, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f8a337fa67b5c5049bc9d0cff64a23c4, type: 3}
 --- !u!1001 &1497422081
@@ -34950,7 +35066,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1087cd3f00155da418aaacf6cfc76723, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  devilEvent: {fileID: 0}
+  devilEvent: {fileID: 11400000, guid: 9ce7d36e7d369d24f8aa186881b28a4c, type: 2}
   soulStonesInitializeValue: 100
   goodSoulsInitializeValue: 100
   badSoulsInitializeValue: 0
@@ -34976,11 +35092,12 @@ MonoBehaviour:
   takeDownDragBadSouls: -10
   arrowsAreOnSlowMotionTimeScale: 0.173
   regularTimeScale: 1
-  _tutorialIsOn: 0
+  _tutorialIsOn: 1
   testArrows0: 0
   testArrows: 1
   openArrows: 0
   closeArrows: 0
+  closeTutorialsKey: 116
 --- !u!114 &1619814913223880246
 MonoBehaviour:
   m_ObjectHideFlags: 0
