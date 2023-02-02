@@ -157,6 +157,7 @@ public class Tutorial : MonoBehaviour
     
     public void FirstTimeArrows()
     {
+        FindObjectOfType<EnemyManager>().lockEnemies = false;
         CloseTutorialObject(TutorialObject.TutorialKind.Arrows);
     }
 

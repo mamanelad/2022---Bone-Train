@@ -22,7 +22,7 @@ public class GameManager : MonoBehaviour
     [SerializeField] public int badSoulsInitializeValue;
     [SerializeField] public int swordsInitializeValue;
     [SerializeField] public int shieldsInitializeValue;
-    
+
     [SerializeField] private int maxSoulStones;
     [NonSerialized] public int SoulStones;
     [NonSerialized] public int GoodSouls;
@@ -82,6 +82,7 @@ public class GameManager : MonoBehaviour
 
     [Space(20)] [Header("Extra")] private Vector3 _moveDirection;
     private Vector3 _trainPosition;
+    [SerializeField] private float minChangeDistanceDirection = 10f;
 
 
     [Space(20)] [Header("Tutorial")] [SerializeField]
@@ -179,6 +180,7 @@ public class GameManager : MonoBehaviour
 
     private void Update()
     {
+        print(speedState);
         if (Input.GetKey(exitKey))
         {
             Application.Quit();
@@ -383,7 +385,7 @@ public class GameManager : MonoBehaviour
 
     public void ChangeByGoodSouls(int addNum)
     {
-        GoodSouls = Math.Max(0,GoodSouls + addNum);
+        GoodSouls = Math.Max(0, GoodSouls + addNum);
         _uiManager.SetGoodSouls();
         _soulsCircle.ChangeSoulsAmount();
         if (GoodSouls == 0) GameOver();
@@ -397,7 +399,7 @@ public class GameManager : MonoBehaviour
 
     public void ChangeByBadSouls(int addNum)
     {
-        BadSouls = Math.Max(0,BadSouls + addNum);
+        BadSouls = Math.Max(0, BadSouls + addNum);
         _uiManager.SetBadSouls();
         _soulsCircle.ChangeSoulsAmount();
     }
@@ -409,13 +411,13 @@ public class GameManager : MonoBehaviour
 
     public void ChangeBySoulStones(int addNum)
     {
-        SoulStones = Math.Max(0,SoulStones + addNum);
-        SoulStones = Math.Min(maxSoulStones,SoulStones);
+        SoulStones = Math.Max(0, SoulStones + addNum);
+        SoulStones = Math.Min(maxSoulStones, SoulStones);
 
-        
+
         _uiManager.SetSoulStones();
         _soulsCircle.ChangeSoulsAmount();
-        
+
         if (SoulStones == 0)
         {
             if (devilEvent == null)
@@ -690,9 +692,17 @@ public class GameManager : MonoBehaviour
     private void CalculateMovingDirection()
     {
         var newTrainPosition = train.transform.position;
-        _moveDirection = newTrainPosition - _trainPosition;
-        _trainPosition = newTrainPosition;
+
+        var distFromPrevPosition = Vector3.Distance(newTrainPosition, _trainPosition);
+        if (distFromPrevPosition >= minChangeDistanceDirection)
+        {
+            _trainPosition = newTrainPosition;
+            _moveDirection = newTrainPosition - _trainPosition;
+        }
+        else
+            _moveDirection = new Vector3(-1, 0, 0);
     }
+
 
     public Vector3 GetTrainDirection()
     {
