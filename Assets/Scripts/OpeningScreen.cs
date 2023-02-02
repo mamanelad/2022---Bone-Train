@@ -9,4 +9,10 @@ public class OpeningScreen : MonoBehaviour
     {
         SceneManager.LoadScene("LVL 5", LoadSceneMode.Single);
     }
+    
+    
+    public void RetuenToStartScreen()
+    {
+        SceneManager.LoadScene("startscreen final");
+    }
 }

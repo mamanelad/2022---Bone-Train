@@ -120,14 +120,16 @@ public class GameManager : MonoBehaviour
     [Space(20)] [Header("Check PointS")] private CheckPointData _CheckPointData;
     
     [Space(10)][Header("Keyboard")] [SerializeField] private KeyCode closeTutorialsKey = KeyCode.T;
-    
-    
+    [SerializeField] private KeyCode restartKey = KeyCode.R;
+
+    [Space(10)] [Header("Game Data")] [SerializeField]
+    private GameData gameData;
 
     private void Awake()
     {
         Shared = this;
         speedState = SpeedState.Run;
-
+        gameData.goodSoulsAmount = 0;
 
         // InitUiNumbers();
         InitiateCheckPointData();
@@ -179,6 +181,11 @@ public class GameManager : MonoBehaviour
 
     private void Update()
     {
+        if (Input.GetKey(restartKey))
+        {
+            
+        }
+        
         if (Input.GetKey(closeTutorialsKey))
         {
             CloseTutorial();
@@ -191,7 +198,7 @@ public class GameManager : MonoBehaviour
 
         if (Input.GetKeyDown(KeyCode.R))
         {
-            SceneManager.LoadScene("Opening screen", LoadSceneMode.Single);
+            ReturnToStartScreen();
         }
 
         if (openArrows)
@@ -213,7 +220,7 @@ public class GameManager : MonoBehaviour
         ArrowOverHandler();
         if ((Input.GetKeyDown(KeyCode.Escape)))
         {
-            SceneManager.LoadScene("MainMenue");
+            SceneManager.LoadScene("startscreen final" );
         }
 
         if (_interactionManager == null)
@@ -245,6 +252,10 @@ public class GameManager : MonoBehaviour
         CalculateMovingDirection();
     }
 
+    public void ReturnToStartScreen()
+    {
+        SceneManager.LoadScene("startscreen final");
+    }
     private void InitSpeed()
     {
         curSpeed = Mathf.Lerp(speedToStartBreaking, maxSpeed, 0.5f);
@@ -805,6 +816,18 @@ public class GameManager : MonoBehaviour
 
     public void EndFuelEvent()
     {
+        
+    }
+    
+    public void GameOver()
+    {
+        SceneManager.LoadScene("Game lose");
+    }
+    
+    public void GameWon()
+    {
+        gameData.goodSoulsAmount = GoodSouls;
+        SceneManager.LoadScene("Game win");
     }
 }
 
