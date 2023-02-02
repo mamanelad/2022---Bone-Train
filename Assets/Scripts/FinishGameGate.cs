@@ -15,6 +15,7 @@ public class FinishGameGate : MonoBehaviour
         {
             StartCoroutine(FadeOut());
             FindObjectOfType<EnemyManager>().lockEnemies = true;
+            GameManager.Shared.StopEatingGoodSouls();
         }
             
     }

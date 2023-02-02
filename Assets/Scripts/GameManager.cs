@@ -813,6 +813,10 @@ public class GameManager : MonoBehaviour
     {
     }
 
+    public void StopEatingGoodSouls()
+    {
+        badSoulsCanEatGoodSouls = true;
+    }
     public void GameOver()
     {
         StopTrain();
