@@ -26,6 +26,7 @@ public class InteractionManager : MonoBehaviour
     private bool isItemPoleUp = true;
 
     private EventInstance interactionAudio;
+    private float currentTimeScale;
 
     private bool goodSoulsAdded;
     private bool badSoulsAdded;
@@ -38,6 +39,7 @@ public class InteractionManager : MonoBehaviour
     public void StartInteraction(InteractionData newInteractionData)
     {
         gameObject.SetActive(true);
+        currentTimeScale = Time.timeScale;
         interactionData = newInteractionData;
         interactionOptions = newInteractionData.options;
         LoadInteraction();
@@ -69,7 +71,7 @@ public class InteractionManager : MonoBehaviour
         UIAudioManager.Instance.ResumeTrainLoop();
         GameManager.Shared.ContinueTrain();
         gameObject.SetActive(false);
-        Time.timeScale = 1;
+        Time.timeScale = currentTimeScale;
 
         if (goodSoulsAdded)
             GameManager.Shared.OpenGoodSoulTuturial();
