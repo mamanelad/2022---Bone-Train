@@ -717,10 +717,10 @@ MonoBehaviour:
   Path: Assets/FMODBanks/Desktop/Master.strings.bank
   Name: Master.strings
   StudioPath: bank:/Master.strings
-  lastModified: 638109273319641063
+  lastModified: 638109282847257382
   FileSizes:
   - Name: 
-    Value: 3872
+    Value: 3912
   Exists: 1
 --- !u!114 &-1859038420037488280
 MonoBehaviour:
@@ -1105,12 +1105,13 @@ MonoBehaviour:
   - {fileID: -8204158192456425630}
   - {fileID: 2659207642188327386}
   - {fileID: 2473277083600048373}
+  - {fileID: 1748523362800132564}
   EditorParameters: []
   MasterBanks:
   - {fileID: 3004629194860046456}
   StringsBanks:
   - {fileID: -2880105610649985714}
-  cacheTime: 638109273319641063
+  cacheTime: 638109282847257382
   cacheVersion: 131601
 --- !u!114 &365939171475958441
 MonoBehaviour:
@@ -1238,6 +1239,33 @@ MonoBehaviour:
     Data2: 1331125158
     Data3: -247522910
     Data4: 1100621107
+  Banks:
+  - {fileID: 3004629194860046456}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 0
+--- !u!114 &1748523362800132564
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/UI/Dog Bark
+  m_EditorClassIdentifier: 
+  Path: event:/UI/Dog Bark
+  Guid:
+    Data1: -356482678
+    Data2: 1322040584
+    Data3: -840385902
+    Data4: -1715339890
   Banks:
   - {fileID: 3004629194860046456}
   IsStream: 0
@@ -1424,7 +1452,7 @@ MonoBehaviour:
   Path: Assets/FMODBanks/Desktop/Master.bank
   Name: Master
   StudioPath: bank:/Master
-  lastModified: 638109273319601046
+  lastModified: 638109282847227372
   FileSizes: []
   Exists: 1
 --- !u!114 &3286631091616812251
