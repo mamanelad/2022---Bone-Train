@@ -20,14 +20,20 @@ public class InteractionManager : MonoBehaviour
     [SerializeField] private TextMeshProUGUI textBox;
 
     [SerializeField] private LoadIcon icon;
-
-    // [SerializeField] private LoadSpecialItem specialItem;
+    
     [SerializeField] private List<GameObject> optionsGameObjects;
+    [SerializeField] private Animator itemAnimator;
+    private bool isItemPoleUp = true;
 
     private EventInstance interactionAudio;
 
     private bool goodSoulsAdded;
     private bool badSoulsAdded;
+    private static readonly int Up = Animator.StringToHash("Up");
+    private static readonly int Down = Animator.StringToHash("Down");
+
+    private const int SWORD = 0;
+    private const int SHIELD = 1;
 
     [Space(20)] [Header("Tests")] [SerializeField]
     private bool isOn = true;
@@ -43,6 +49,7 @@ public class InteractionManager : MonoBehaviour
         if (!interactionData.audio.IsNull)
             interactionAudio.start();
 
+        itemAnimator.SetTrigger(Up);
         UIAudioManager.Instance.PlayUIEventStart();
         UIAudioManager.Instance.PauseTrainLoop();
         GameManager.Shared.StopTrain();
@@ -57,6 +64,10 @@ public class InteractionManager : MonoBehaviour
     public IEnumerator EndInteractionRoutine()
     {
         yield return new WaitForSecondsRealtime(0.2f);
+        
+        if (isItemPoleUp)
+            itemAnimator.SetTrigger(Down);
+        
         interactionAudio.stop(STOP_MODE.ALLOWFADEOUT);
         DisableOptions();
         UIAudioManager.Instance.ResumeTrainLoop();
@@ -82,7 +93,6 @@ public class InteractionManager : MonoBehaviour
         icon.Load(interactionData.iconIndex);
 
         LoadOptions();
-        // LoadSpecial();
     }
 
     private void LoadOptions()
@@ -96,22 +106,7 @@ public class InteractionManager : MonoBehaviour
             optionCounter += 1;
         }
     }
-
-    // private void LoadSpecial()
-    // {
-    //     if (interactionData.iconIndex == LoadIcon.IconIndex.ENEMY)
-    //         specialItem.Load(LoadSpecialItem.SpecialItemIndex.SHIELD);
-    //
-    //     if (interactionData.iconIndex == LoadIcon.IconIndex.REGULAR)
-    //         specialItem.Load(LoadSpecialItem.SpecialItemIndex.SWORD);
-    //
-    //     if (interactionData.iconIndex == LoadIcon.IconIndex.CHANCE)
-    //         specialItem.Load(LoadSpecialItem.SpecialItemIndex.SWORD);
-    //
-    //     if (interactionData.iconIndex == LoadIcon.IconIndex.ITEM)
-    //         specialItem.Load(LoadSpecialItem.SpecialItemIndex.SWORD);
-    // }
-
+    
     public void ChooseOption(LoadOption.Option option)
     {
         GameManager.Shared.ChangeByGoodSouls(option.goodSouls);
@@ -131,25 +126,31 @@ public class InteractionManager : MonoBehaviour
         EndInteraction();
     }
 
-    // public void ActivateSpecialItem(LoadSpecialItem.SpecialItemIndex index)
-    // {
-    //     if (index == LoadSpecialItem.SpecialItemIndex.SWORD)
-    //         ActivateSword();
-    //
-    //     if (index == LoadSpecialItem.SpecialItemIndex.SHIELD)
-    //         ActivateShield();
-    // }
+    public void ActivateSpecialItem(int index)
+    {
+        if (index == SWORD && GameManager.Shared.Swords > 0)
+            ActivateSword();
+    
+        if (index == SHIELD && GameManager.Shared.Shields > 0)
+            ActivateShield();
+    }
 
     private void ActivateSword()
     {
+        itemAnimator.SetTrigger(Down);
+        isItemPoleUp = false;
         GameManager.Shared.ChangeBySwords(-1);
+        UIAudioManager.Instance.PlayClickSwordSound();
         RemoveNegativeOptions();
         LoadOptions();
     }
 
     private void ActivateShield()
     {
+        itemAnimator.SetTrigger(Down);
+        isItemPoleUp = false;
         GameManager.Shared.ChangeByShields(-1);
+        UIAudioManager.Instance.PlayClickShieldSound();
         EndInteraction();
     }
 
