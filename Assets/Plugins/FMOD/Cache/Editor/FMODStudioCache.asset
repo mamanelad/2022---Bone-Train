@@ -216,6 +216,33 @@ MonoBehaviour:
   MinDistance: 1
   MaxDistance: 20
   Length: 0
+--- !u!114 &-7646589475530876492
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Tutorial - Good Souls
+  m_EditorClassIdentifier: 
+  Path: event:/Tutorial - Good Souls
+  Guid:
+    Data1: -2040458850
+    Data2: 1084566375
+    Data3: -1131429760
+    Data4: 1405809949
+  Banks:
+  - {fileID: 5248773632293705165}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 0
 --- !u!114 &-7288505764748386319
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -648,6 +675,33 @@ MonoBehaviour:
   MinDistance: 1
   MaxDistance: 20
   Length: 0
+--- !u!114 &-2421320904023189155
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Tutorial - Buttons
+  m_EditorClassIdentifier: 
+  Path: event:/Tutorial - Buttons
+  Guid:
+    Data1: 1450845385
+    Data2: 1238604012
+    Data3: 1923633599
+    Data4: -358017731
+  Banks:
+  - {fileID: 5248773632293705165}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 0
 --- !u!114 &-2325215618045523643
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -675,6 +729,33 @@ MonoBehaviour:
   MinDistance: 1
   MaxDistance: 20
   Length: 0
+--- !u!114 &-2123565583372707340
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Tutorial - Minimap
+  m_EditorClassIdentifier: 
+  Path: event:/Tutorial - Minimap
+  Guid:
+    Data1: -173140838
+    Data2: 1288584257
+    Data3: -583233641
+    Data4: -1853171624
+  Banks:
+  - {fileID: 5248773632293705165}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 0
 --- !u!114 &-2112521005593438730
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -693,6 +774,33 @@ MonoBehaviour:
     Data2: 1322040584
     Data3: -840385902
     Data4: -1715339890
+  Banks:
+  - {fileID: 5248773632293705165}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 0
+--- !u!114 &-2051599397325777274
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Tutorial - Fuel
+  m_EditorClassIdentifier: 
+  Path: event:/Tutorial - Fuel
+  Guid:
+    Data1: 1191258520
+    Data2: 1097048177
+    Data3: -1673923396
+    Data4: 237062971
   Banks:
   - {fileID: 5248773632293705165}
   IsStream: 0
@@ -925,12 +1033,18 @@ MonoBehaviour:
   - {fileID: 1474144653283155269}
   - {fileID: 2136071880721314487}
   - {fileID: -8180109201132810974}
+  - {fileID: 8528480574020638282}
+  - {fileID: 5702216657895123135}
+  - {fileID: -2051599397325777274}
+  - {fileID: -2123565583372707340}
+  - {fileID: -7646589475530876492}
+  - {fileID: -2421320904023189155}
   EditorParameters: []
   MasterBanks:
   - {fileID: 5248773632293705165}
   StringsBanks:
   - {fileID: 8366652817262631463}
-  cacheTime: 638109359734924604
+  cacheTime: 638109363458423935
   cacheVersion: 131601
 --- !u!114 &62513721665859874
 MonoBehaviour:
@@ -1703,7 +1817,7 @@ MonoBehaviour:
   Path: Assets/FMODBanks/Desktop/Master.bank
   Name: Master
   StudioPath: bank:/Master
-  lastModified: 638109359734894193
+  lastModified: 638109363458373932
   FileSizes: []
   Exists: 1
 --- !u!114 &5413721087203928024
@@ -1727,6 +1841,33 @@ MonoBehaviour:
   Banks:
   - {fileID: 5248773632293705165}
   IsStream: 1
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 0
+--- !u!114 &5702216657895123135
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Tutorial - Speed Bar
+  m_EditorClassIdentifier: 
+  Path: event:/Tutorial - Speed Bar
+  Guid:
+    Data1: 57234827
+    Data2: 1274871310
+    Data3: -369174882
+    Data4: -764868373
+  Banks:
+  - {fileID: 5248773632293705165}
+  IsStream: 0
   Is3D: 0
   IsOneShot: 1
   Parameters: []
@@ -2072,8 +2213,35 @@ MonoBehaviour:
   Path: Assets/FMODBanks/Desktop/Master.strings.bank
   Name: Master.strings
   StudioPath: bank:/Master.strings
-  lastModified: 638109359734924604
+  lastModified: 638109363458423935
   FileSizes:
   - Name: 
-    Value: 3980
+    Value: 4250
   Exists: 1
+--- !u!114 &8528480574020638282
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Tutorial - Bad Souls
+  m_EditorClassIdentifier: 
+  Path: event:/Tutorial - Bad Souls
+  Guid:
+    Data1: -2070950874
+    Data2: 1150762428
+    Data3: 1654459318
+    Data4: -529839920
+  Banks:
+  - {fileID: 5248773632293705165}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 0
