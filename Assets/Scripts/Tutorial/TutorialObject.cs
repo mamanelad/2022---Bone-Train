@@ -41,8 +41,9 @@ public class TutorialObject : MonoBehaviour
     public bool stopTime;
 
     [Range(0, 1)] public float slowMotionTime = 1f; 
-    public bool closeWithTime;
+    public bool closeTheObjectWithTimer;
     public bool openWithTime = true;
+    
     public TutorialKind myKind;
     private bool _startClose;
     [SerializeField] private float closeTimer = 3f;

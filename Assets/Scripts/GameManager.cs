@@ -93,7 +93,7 @@ public class GameManager : MonoBehaviour
     private bool _firstTimeArrows = true;
     private bool _firstTimeSpecialItem = true;
     private bool _firstTimeJunction = true;
-    private bool _firstTimeArrowsTuturial = true;
+    private bool _firstTimeArrowsTutorials = true;
 
     [Header("Test")] [SerializeField] private bool testArrows0;
     [SerializeField] private bool testArrows;
@@ -118,6 +118,10 @@ public class GameManager : MonoBehaviour
 
 
     [Space(20)] [Header("Check PointS")] private CheckPointData _CheckPointData;
+    
+    [Space(10)][Header("Keyboard")] [SerializeField] private KeyCode closeTutorialsKey;
+    
+    
 
     private void Awake()
     {
@@ -158,9 +162,12 @@ public class GameManager : MonoBehaviour
             if (!_tutorial)
             {
                 _tutorial = FindObjectOfType<Tutorial>();
-                _interactionManager.SetTutorialObject(_tutorial);
             }
 
+            if (_tutorial)
+            {
+                _interactionManager.SetTutorialObject(_tutorial);
+            }
             // _tutorial.OpenNextTutorialObject();
         }
 
@@ -172,6 +179,10 @@ public class GameManager : MonoBehaviour
 
     private void Update()
     {
+        if (Input.GetKey(closeTutorialsKey))
+        {
+            CloseTutorial();
+        }
         if (!_initFinish && _uiManager)
         {
             _initFinish = true;
@@ -341,16 +352,26 @@ public class GameManager : MonoBehaviour
         print("end game");
     }
 
-    public void ChangeByGoodSouls(int addNum)
+    public void OpenGoodSoulTuturial()
     {
-        if (_firstTimeAddingGoodSouls)
+        if (_tutorial && _tutorialIsOn && _firstTimeAddingGoodSouls)
         {
             _firstTimeAddingGoodSouls = false;
-            if (_tutorialIsOn)
-                _tutorial.OpenTutorialObject(TutorialObject.TutorialKind.GoodSouls);
+            _tutorial.OpenTutorialObject(TutorialObject.TutorialKind.GoodSouls);
         }
+    }
 
+    public void OpenBadsoulTuturial()
+    {
+        if (_tutorial && _tutorialIsOn && _firstTimeAddingBadSouls)
+        {
+            _firstTimeAddingBadSouls = false;
+            _tutorial.OpenTutorialObject(TutorialObject.TutorialKind.BadSouls);
+        }
+    }
 
+    public void ChangeByGoodSouls(int addNum)
+    {
         if (GoodSouls + addNum < 0)
         {
             GoodSouls = 0;
@@ -407,6 +428,8 @@ public class GameManager : MonoBehaviour
             {
                 _interactionManager.StartInteraction(devilEvent);
             }
+
+            return;
         }
 
         if (SoulStones + addNum > maxSoulStones)
@@ -669,9 +692,9 @@ public class GameManager : MonoBehaviour
                 ChangeBySoulStones(takeDownDragFuel);
                 break;
 
-            case Furnace.BurnObject.GoodSoul:
-                ChangeByGoodSouls(takeDownDragGoodSouls);
-                break;
+            // case Furnace.BurnObject.GoodSoul:
+            //     ChangeByGoodSouls(takeDownDragGoodSouls);
+            //     break;
 
             case Furnace.BurnObject.BadSoul:
                 ChangeByBadSouls(takeDownDragBadSouls);
@@ -730,6 +753,8 @@ public class GameManager : MonoBehaviour
     public void SetTutorialIsOn(bool mood)
     {
         _tutorialIsOn = mood;
+        if (!mood)
+            CloseTutorial();
     }
 
     public bool GetTutorialIsOn()
@@ -758,23 +783,28 @@ public class GameManager : MonoBehaviour
 
     public void ArrowsTutorial()
     {
-        if (_firstTimeArrowsTuturial)
+        if (_firstTimeArrowsTutorials)
         {
-            _firstTimeArrowsTuturial = false;
+            _firstTimeArrowsTutorials = false;
             _tutorial.FirstTimeArrows();
         }
     }
-    
+
     private void CloseTutorial()
     {
+        _tutorialIsOn = false;
         if (!_tutorial)
             _tutorial = FindObjectOfType<Tutorial>();
-        
+
         if (_tutorial)
         {
             _tutorial.CloseTutorial();
             _tutorial.gameObject.SetActive(false);
         }
+    }
+
+    public void EndFuelEvent()
+    {
     }
 }
 
