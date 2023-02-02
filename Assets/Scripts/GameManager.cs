@@ -169,12 +169,6 @@ public class GameManager : MonoBehaviour
             {
                 _tutorial = FindObjectOfType<Tutorial>();
             }
-
-            if (_tutorial)
-            {
-                _interactionManager.SetTutorialObject(_tutorial);
-            }
-            // _tutorial.OpenNextTutorialObject();
         }
 
         else
