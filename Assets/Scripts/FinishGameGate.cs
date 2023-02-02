@@ -8,6 +8,8 @@ public class FinishGameGate : MonoBehaviour
 {
     [SerializeField] private Animator fadeOutAnimator;
     
+    
+    
     private void OnTriggerEnter(Collider other)
     {
         if (other.CompareTag("Train"))
